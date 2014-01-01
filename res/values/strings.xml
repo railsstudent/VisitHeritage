@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">隨時隨地遊古蹟</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>香港法定古蹟</item>
+        <item>我周圍的法定古蹟</item>
+        <item>參觀古蹟須知</item>
+        <item>聯絡我們</item>
+        <item>給我的程式評分</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_people</item>
+        <item>@drawable/ic_photos</item>
+        <item>@drawable/ic_communities</item>
+        <item>@drawable/ic_pages</item>
+        <item>@drawable/ic_whats_hot</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+    <string name="menu_item_clear_memory_cache">清除內存圖像</string>
+    <string name="menu_item_clear_disc_cache">清除外置卡圖像</string>
+    <string name="menu_item_about">關於</string>
+    
+    <string name="visit_title">參觀古蹟須知</string>
+    <string name="visit_text1">1.	法定古蹟位置資料是由古物古蹟辦事處提供，只作識別用。</string>
+    <string name="visit_text2">2.	開放時間只作參考，並以相關團體或機構的最新公布為準。</string>
+    <string name="visit_text3">3.	基於公眾安全或避免影響日常運作，部分法定古蹟並不對外開放。</string>
+    <string name="visit_text4">4.	部分法定古蹟設有預約導賞團或開放日，請與相關團體或機構查詢最新安排。</string>
+    <string name="visit_text5">5.	請愛護我們的文化遺產。不要破壞遺址、建築物或設施。</string>
+    <string name="visit_text6">6.	參觀時，請避免對建築物業主及使用者造成滋擾。</string>
+        
+    <string name="contact_title">聯絡資料</string>
+    <string name="dept_heritage">文物保育專員辦事處</string>
+    <string name="label_address">地址</string>
+    <string name="label_phone">電話號碼</string>
+    <string name="label_fax">傳真號碼</string>
+    <string name="label_web">網址</string>
+    <string name="label_email">電郵地址</string>
+    <string name="label_map">地圖</string>
+    <string name="dept_monument">古物古蹟辦事處</string>
+    
+    <string name="address_dept_heritage">香港添馬添美道2號\n政府總部西翼19樓\n發展局\n文物保育專員辦事處</string>
+    <string name="fax_dept_heritage">+ 852 2189 7264</string>
+    <string name="email_dept_heritage">wbenq@devb.gov.hk</string>
+    <string name="web_dept_heritage">http://www.heritage.gov.hk/</string>
+    <string name="desc_map_heritage">文物保育專員辦事處地圖</string>
+    
+    <string name="address_dept_monu">香港九龍尖沙咀彌敦道136號</string>
+    <string name="fax_dept_monu">+ 852 2721 6216</string>
+    <string name="phone_dept_monu">+ 852 2208 4400</string>
+    <string name="email_dept_monu">amo@lcsd.gov.hk</string>
+    <string name="web_dept_monu">http://www.amo.gov.hk/b5/main.php</string>
+    <string name="desc_map_monu">古物古蹟辦事處地圖</string>
+    
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Heritage On The Go</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Hong Kong Monuments</item>
+        <item>Monuments Around Me</item>
+        <item>Notes to Monument Visitors</item>
+        <item>Contact Us</item>
+        <item>Rate My App</item>
+    </string-array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+    <string name="menu_item_clear_memory_cache">Clear Photos From Memory</string>
+    <string name="menu_item_clear_disc_cache">Clear Photos From SD Card</string>
+    <string name="menu_item_about">About</string>
+    
+    <string name="visit_title">Notes to Monument Visitors</string>
+    <string name="visit_text1">1.	The location of declared monuments is provided by the Antiquities and Monuments Office for identification purposes only.</string>
+    <string name="visit_text2">2.	The information on opening hours is for reference only and subject to changes by the relevant management parties.</string>
+    <string name="visit_text3">3.	Not all declared monuments are open to the public for reasons of public safety or operational needs.</string>
+    <string name="visit_text4">4.	Guided visit by appointment or open day may be available for some declared monuments. Please check the latest arrangement made by the relevant management parties.</string>
+    <string name="visit_text5">5.	Please treasure our heritage. Do not deface the sites, the buildings, or facilities.</string>
+    <string name="visit_text6">6.	Do not disturb the owners and occupants during visit.</string>
+
+    <string name="contact_title">Contact Information</string>
+    <string name="dept_heritage">Commissioner for Heritage\'s Office</string>
+    <string name="label_address">Address</string>
+    <string name="label_phone">Phone Number</string>
+    <string name="label_fax">Fax Number</string>
+    <string name="label_web">Website</string>
+    <string name="label_email">Email Address</string>
+    <string name="label_map">Map</string>
+    <string name="dept_monument">The Antiquities and Monuments Office</string>
+    
+    <string name="address_dept_heritage">Commissioner for Heritage\'s Office\nDevelopment Bureau\n19/F West Wing, Central Government Offices\n2 Tim Mei Avenue, Tamar, Hong Kong</string>
+    <string name="web_dept_heritage">http://www.heritage.gov.hk/en/index.htm</string>
+    <string name="desc_map_heritage">Map of Commissioner for Heritage\'s Office</string>
+    
+    <string name="address_dept_monu">136 Nathan Road,\nTsim Sha Tsui,\nKowloon,\nHong Kong</string>
+    <string name="web_dept_monu">http://www.amo.gov.hk/en/main.php</string>
+    <string name="desc_map_monu">Map of The Antiquities and Monuments Office</string>
+    
+</resources>
