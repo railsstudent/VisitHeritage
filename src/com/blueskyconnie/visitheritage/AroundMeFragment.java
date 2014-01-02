@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.blueskyconnie.visitheritage.R;
 
-public class FindPeopleFragment extends BaseFragment {
+public class AroundMeFragment extends BaseFragment {
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

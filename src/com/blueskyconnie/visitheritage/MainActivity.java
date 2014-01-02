@@ -3,6 +3,11 @@ package com.blueskyconnie.visitheritage;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
@@ -14,6 +19,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -25,13 +31,18 @@ import com.blueskyconnie.visitheritage.adapter.NavDrawerListAdapter;
 import com.blueskyconnie.visitheritage.model.NavDrawerItem;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
+
 public class MainActivity extends  FragmentActivity {
 
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
 	private ImageLoader imageLoader = ImageLoader.getInstance();
-
+	private String appPath =  "";
+	private String appUrl =  "";
+	
 	// nav drawer title
 	private CharSequence mDrawerTitle;
 
@@ -103,6 +114,11 @@ public class MainActivity extends  FragmentActivity {
 			 	.replace(R.id.frame_container, new HomeFragment(), Constant.HOME_TAG)
 			 	.commit();
 		 }
+		 
+//		 appPath = "market://details?id=" + getPackageName();
+//		 appUrl = "http://play.google.com/store/apps/details?id=" + getPackageName();
+		 appPath = "market://details?id=" + "com.blueskyconnie.heritagefiesta";
+		 appUrl = "http://play.google.com/store/apps/details?id=" + "com.blueskyconnie.heritagefiesta";
 	}
 
 	/**
@@ -125,12 +141,12 @@ public class MainActivity extends  FragmentActivity {
 		
 		 switch (position) {
 		 	case 0:
-//			    fragment = new FindPeopleFragment();
-//			    tagname = Constant.PEOPLE_TAG;
+			    fragment = new ChooseAreaFragment();
+			    tagname = Constant.CHOOSE_AREA_TAG;
 			    break;
 		 	case 1:
-//  			    fragment = new PhotosFragment();
-//			    tagname = Constant.PHOTO_TAG;
+  			    fragment = new AroundMeFragment();
+			    tagname = Constant.AROUND_ME_TAG;
 			    break;
 			case 2:
 				 // Notes To Visitor
@@ -144,9 +160,10 @@ public class MainActivity extends  FragmentActivity {
 				 break;
 			case 4:
 				 // rate my app 
-				String path = "market://details?id=" + getPackageName();
-				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(path));
-				Log.i("MainActivity", "Rate My App path - " + path);
+				//String path = "market://details?id=" + getPackageName();
+				//Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(path));
+				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(appPath));
+				Log.i("MainActivity", "Rate My App path - " + appPath);
 				 startActivity(intent);
 				 break;
 			default:
@@ -195,11 +212,49 @@ public class MainActivity extends  FragmentActivity {
 				return true;
 			case R.id.item_about:
 				Log.i("MainActivity", "Show About Dialog");
+				createAboutDialog();
+				return true;
+			case R.id.item_share:
+				Log.i("MainActivity", "Tell a friend about application");
+				createShareIntent();
 				return true;
 		}
 		return false;
 	}
 
+	private void createShareIntent() {
+		
+		// http://stackoverflow.com/questions/10922762/open-link-of-google-play-store-in-mobile-version-android
+		Intent intent = new Intent(Intent.ACTION_SEND);
+		intent.setType("text/plain");
+		intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subject));
+		intent.putExtra(Intent.EXTRA_TEXT, String.format(getString(R.string.body), appUrl));
+		try {
+			startActivity(Intent.createChooser(intent, getString(R.string.share_app)));
+		} catch (ActivityNotFoundException ex) {
+			Crouton.makeText(this, R.string.app_not_found, Style.ALERT).show();
+		}
+	}
+	
+	private void createAboutDialog() {
+		String title = getString(R.string.dialog_about_title) + " " + getString(R.string.app_name);
+		LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		View view = inflater.inflate(R.layout.layout_about, null); 
+		
+		new AlertDialog.Builder(this)
+				.setIcon(android.R.drawable.ic_dialog_info)
+				.setTitle(title)
+				.setView(view)
+				.setNeutralButton(R.string.close, new OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+				})
+				.create()
+				.show();
+	}
+	
 	/***
 	 * Called when invalidateOptionsMenu() is triggered
 	 */
@@ -210,6 +265,7 @@ public class MainActivity extends  FragmentActivity {
 		menu.findItem(R.id.item_clear_disc_cache).setVisible(!drawerOpen);
   	    menu.findItem(R.id.item_clear_memory_cache).setVisible(!drawerOpen);
   	    menu.findItem(R.id.item_about).setVisible(!drawerOpen);
+  	    menu.findItem(R.id.item_share).setVisible(!drawerOpen);
 		return super.onPrepareOptionsMenu(menu);
 	}
 
@@ -285,4 +341,11 @@ public class MainActivity extends  FragmentActivity {
 		}
 		return super.dispatchTouchEvent(event);
 	}
+
+	@Override
+	protected void onDestroy() {
+		Crouton.cancelAllCroutons();
+		super.onDestroy();
+	}
+	
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:id="@+id/linearLayout2"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical" >
+
+       <TextView
+           android:id="@+id/tvSoftwareUsed"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_margin="8dp"
+           android:text="@string/software_used"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+       <TextView
+           android:id="@+id/tvUIL"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginLeft="8dp"
+           android:layout_marginRight="8dp"
+           android:layout_marginTop="4dp"
+           android:text="@string/uil_software"
+           android:textAppearance="?android:attr/textAppearanceSmall" />
+       
+       <TextView
+           android:id="@+id/tvUILCopyright"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginLeft="8dp"
+           android:layout_marginRight="8dp"
+           android:layout_marginTop="4dp"
+           android:text="@string/uil_copyright"
+           android:textAppearance="?android:attr/textAppearanceSmall" />
+       
+        <TextView
+           android:id="@+id/tvCrouton"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginLeft="8dp"
+           android:layout_marginRight="8dp"
+           android:layout_marginTop="18dp"
+           android:text="@string/crouton_software"
+           android:textAppearance="?android:attr/textAppearanceSmall" />
+       
+       <TextView
+           android:id="@+id/tvCroutonCopyright"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginLeft="8dp"
+           android:layout_marginRight="8dp"
+           android:layout_marginTop="4dp"
+           android:layout_marginBottom="8dp"
+           android:text="@string/crouton_copyright"
+           android:textAppearance="?android:attr/textAppearanceSmall" />
+   </LinearLayout>

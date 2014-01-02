@@ -30,6 +30,7 @@
     <string name="menu_item_clear_memory_cache">清除內存圖像</string>
     <string name="menu_item_clear_disc_cache">清除外置卡圖像</string>
     <string name="menu_item_about">關於</string>
+    <string name="menu_item_share">分享</string>
     
     <string name="visit_title">參觀古蹟須知</string>
     <string name="visit_text1">1.	法定古蹟位置資料是由古物古蹟辦事處提供，只作識別用。</string>
@@ -62,4 +63,19 @@
     <string name="web_dept_monu">http://www.amo.gov.hk/b5/main.php</string>
     <string name="desc_map_monu">古物古蹟辦事處地圖</string>
     
+    <string name="subject">分享我的應用程式</string>
+    <string name="body">我想和你們分享這個應用程序。請瀏覽 %s。</string>
+    <string name="share_app">分享經由&#8230;</string>
+    <string name="app_not_found">沒有合適的應用程式。</string>
+   <string name="dialog_about_title">關於</string>
+   <string name="close">關閉</string>
+   
+   <string name="software_used">使用的軟件：</string>
+   
+   <string name="uil_software">Universal Image Loader</string>
+   <string name="uil_copyright">Copyright 2011&#8211;2013, Sergey Tarasevich</string>
+
+   <string name="crouton_software">Crouton</string>
+   <string name="crouton_copyright">Copyright 2013, Benjamin Weiss</string>
+   
 </resources>

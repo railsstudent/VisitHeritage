@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import com.blueskyconnie.visitheritage.R;
 
-public class PagesFragment extends BaseFragment {
+public class ChooseAreaFragment extends BaseFragment {
 	
 	private Button btnPress;
 	
@@ -19,7 +19,7 @@ public class PagesFragment extends BaseFragment {
 			switch (v.getId()) {
 				case R.id.btnPress:
 					ChildFragment fragment = new ChildFragment();
-					FragmentManager fragmentManager = PagesFragment.this.getFragmentManager();
+					FragmentManager fragmentManager = ChooseAreaFragment.this.getFragmentManager();
 					// remember parent fragment
 					fragmentManager.beginTransaction()
 						.replace(R.id.frame_container, fragment, Constant.CHILD_TAG)
