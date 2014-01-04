@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.blueskyconnie.visitheritage.model.Place;
 import com.google.android.gms.common.ConnectionResult;
@@ -23,9 +24,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
-
  
 public class LocationMapFragment extends BaseFragment {
 
@@ -33,6 +31,7 @@ public class LocationMapFragment extends BaseFragment {
 
 	private static final int RQS_GooglePlayServices = 1;
 	private MapView mapView;
+	private TextView tvTitle;
 	private List<Place> lstPlace;
 	private GoogleMap map;
 	
@@ -50,11 +49,11 @@ public class LocationMapFragment extends BaseFragment {
 		try {
 			super.onCreate(savedInstanceState);
 			// initialize mapview 
-			MapsInitializer.initialize(getActivity());
+			if (savedInstanceState == null) {
+				MapsInitializer.initialize(getActivity());
+			}
 		} catch (GooglePlayServicesNotAvailableException e) {
 			Log.e("LocationMapFragment", "onCreate - " + e.getMessage());
-			Crouton.makeText(getActivity(), e.getMessage(), Style.ALERT)
-				.show();
 		}
 	}
 
@@ -134,7 +133,7 @@ public class LocationMapFragment extends BaseFragment {
 					mapView.onResume();				
 				}
 			} else {
-				 GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(), RQS_GooglePlayServices);
+				 GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(), RQS_GooglePlayServices).show();
 			}
 		}
 	}
