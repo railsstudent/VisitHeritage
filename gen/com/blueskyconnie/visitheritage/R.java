@@ -296,14 +296,15 @@ containing a value of this type.
         public static final int mytheme_spinner_disabled_holo_light=0x7f020060;
         public static final int mytheme_spinner_focused_holo_light=0x7f020061;
         public static final int mytheme_spinner_pressed_holo_light=0x7f020062;
-        public static final int progress_bar_circles_01=0x7f020063;
-        public static final int progress_bar_circles_02=0x7f020064;
-        public static final int progress_bar_circles_03=0x7f020065;
-        public static final int progress_bar_circles_04=0x7f020066;
-        public static final int progress_bar_circles_05=0x7f020067;
-        public static final int progress_bar_circles_06=0x7f020068;
-        public static final int progress_bar_circles_07=0x7f020069;
-        public static final int progress_bar_circles_08=0x7f02006a;
+        public static final int pin_red=0x7f020063;
+        public static final int progress_bar_circles_01=0x7f020064;
+        public static final int progress_bar_circles_02=0x7f020065;
+        public static final int progress_bar_circles_03=0x7f020066;
+        public static final int progress_bar_circles_04=0x7f020067;
+        public static final int progress_bar_circles_05=0x7f020068;
+        public static final int progress_bar_circles_06=0x7f020069;
+        public static final int progress_bar_circles_07=0x7f02006a;
+        public static final int progress_bar_circles_08=0x7f02006b;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f06000b;

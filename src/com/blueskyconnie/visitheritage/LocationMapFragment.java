@@ -61,9 +61,20 @@ public class LocationMapFragment extends BaseFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		
+		super.onCreateView(inflater, container, savedInstanceState);
 		View rootView = (View) inflater.inflate(R.layout.fragment_location, null);
 		mapView = (MapView) rootView.findViewById(R.id.mapView);
 		return rootView;
+	}
+	
+	
+
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		if (mapView != null) {
+			mapView.onCreate(savedInstanceState);
+		}
 	}
 
 	@Override
@@ -93,13 +104,12 @@ public class LocationMapFragment extends BaseFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		if (mapView != null) {
-			// add markers on the map
-			int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getActivity());
-			if (resultCode == ConnectionResult.SUCCESS) {
-				if (mapView != null) { 
-					map = mapView.getMap();
-					
+		// add markers on the map
+		int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getActivity());
+		if (resultCode == ConnectionResult.SUCCESS) {
+			if (mapView != null) { 
+				map = mapView.getMap();
+				if (map != null) {
 					// remove all markers in the fragment
 					map.clear();
 					
@@ -110,7 +120,7 @@ public class LocationMapFragment extends BaseFragment {
                      map.addMarker(new MarkerOptions().position(PRIMARY_SECTION_LATLNG)
                                      .title("title")
                                      .snippet("snippet")
-                                     .icon(BitmapDescriptorFactory.fromResource(android.R.drawable.btn_star)));
+                                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
 
                      
                      // 1) loop the lstPlace list 
@@ -130,11 +140,11 @@ public class LocationMapFragment extends BaseFragment {
                      
                      // show a custom information marker
                      map.setInfoWindowAdapter(new PlaceInfoWindowAdapter());
-					mapView.onResume();				
 				}
-			} else {
-				 GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(), RQS_GooglePlayServices).show();
+				mapView.onResume();				
 			}
+		} else {
+			 GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(), RQS_GooglePlayServices).show();
 		}
 	}
 	
