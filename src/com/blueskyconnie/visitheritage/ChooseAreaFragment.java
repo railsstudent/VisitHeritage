@@ -16,6 +16,7 @@ public class ChooseAreaFragment extends BaseFragment {
 	private Button btnKowloon;
 	private Button btnNT;
 	private Button btnIsland;
+	private MainActivity mainActivity;
 	
 	private OnClickListener clickListener =  new OnClickListener() {
 
@@ -23,7 +24,8 @@ public class ChooseAreaFragment extends BaseFragment {
 			switch (v.getId()) {
 				case R.id.btnHK:
 					setButtonEnabled(false, false, false, false);
-					ChildFragment fragment = new ChildFragment();
+					LocationMapFragment fragment = new LocationMapFragment();
+					fragment.setListPlace(mainActivity.getLstHK());
 					FragmentManager fragmentManager = ChooseAreaFragment.this.getFragmentManager();
 					// remember parent fragment
 					fragmentManager.beginTransaction()
@@ -64,7 +66,13 @@ public class ChooseAreaFragment extends BaseFragment {
         btnIsland.setOnClickListener(clickListener);
         return rootView;
     }
-
+	
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		mainActivity = (MainActivity) getActivity();
+	}
+	
 	private void setButtonEnabled(boolean hkEnabled, boolean klnEnabled, 
 			boolean ntEnabled, boolean islandEnabled) {
 		btnHK.setEnabled(hkEnabled);

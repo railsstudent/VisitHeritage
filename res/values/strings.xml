@@ -76,4 +76,6 @@
      <string name="strKowloon">九龍</string>
      <string name="strNT">新界</string>
      <string name="strIsland">離島</string>
+     
+     <string name="placeholder">placeholder</string>
 </resources>
