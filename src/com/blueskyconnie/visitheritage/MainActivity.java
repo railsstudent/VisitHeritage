@@ -29,6 +29,7 @@ import android.widget.ListView;
 
 import com.blueskyconnie.visitheritage.adapter.NavDrawerListAdapter;
 import com.blueskyconnie.visitheritage.model.NavDrawerItem;
+import com.blueskyconnie.visitheritage.model.Place;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
@@ -54,6 +55,11 @@ public class MainActivity extends  FragmentActivity {
 
 	private List<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
+	
+	private ArrayList<Place> lstHK;
+	private ArrayList<Place> lstKowloon;
+	private ArrayList<Place> lstNT;
+	private ArrayList<Place> lstIsland;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -111,14 +117,25 @@ public class MainActivity extends  FragmentActivity {
 			 // on first time display home screen
 			 getSupportFragmentManager()
 			 	.beginTransaction()
-			 	.replace(R.id.frame_container, new HomeFragment(), Constant.HOME_TAG)
+			 	.replace(R.id.frame_container, new HomeFragment(), Constants.HOME_TAG)
 			 	.commit();
 		 }
 		 
-//		 appPath = "market://details?id=" + getPackageName();
-//		 appUrl = "http://play.google.com/store/apps/details?id=" + getPackageName();
-		 appPath = "market://details?id=" + "com.blueskyconnie.heritagefiesta";
-		 appUrl = "http://play.google.com/store/apps/details?id=" + "com.blueskyconnie.heritagefiesta";
+		 // TODO: willl change it package name before deployment
+ 		 // String packageName = getPackageName();
+		 String packageName = "com.blueskyconnie.heritagefiesta";
+		 appPath = "market://details?id=" + packageName;
+		 appUrl = "http://play.google.com/store/apps/details?id=" + packageName;
+		 
+		 if (getIntent() != null) {
+			 
+			 Intent intent = getIntent();
+			 // get data pass from SplashActivity. Will use in Map Fragment, Detail Place Fragment
+			 lstHK = intent.getParcelableArrayListExtra(Constants.HK_KEY);
+			 lstKowloon = intent.getParcelableArrayListExtra(Constants.KOWLOON_KEY);
+			 lstNT = intent.getParcelableArrayListExtra(Constants.NT_KEY);
+			 lstIsland = intent.getParcelableArrayListExtra(Constants.ISLAND_KEY);
+		 }
 	}
 
 	/**
@@ -142,26 +159,24 @@ public class MainActivity extends  FragmentActivity {
 		 switch (position) {
 		 	case 0:
 			    fragment = new ChooseAreaFragment();
-			    tagname = Constant.CHOOSE_AREA_TAG;
+			    tagname = Constants.CHOOSE_AREA_TAG;
 			    break;
 		 	case 1:
   			    fragment = new AroundMeFragment();
-			    tagname = Constant.AROUND_ME_TAG;
+			    tagname = Constants.AROUND_ME_TAG;
 			    break;
 			case 2:
 				 // Notes To Visitor
 				 fragment = new VisitorFragment();
-				 tagname = Constant.VISITOR_TAG;
+				 tagname = Constants.VISITOR_TAG;
 				 break;
 			case 3:
-//				 // contact us
+				 // contact us
 				 fragment = new ContactUsFragment();
-				 tagname = Constant.CONTACT_TAG;
+				 tagname = Constants.CONTACT_TAG;
 				 break;
 			case 4:
 				 // rate my app 
-				//String path = "market://details?id=" + getPackageName();
-				//Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(path));
 				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(appPath));
 				Log.i("MainActivity", "Rate My App path - " + appPath);
 				 startActivity(intent);
@@ -172,6 +187,12 @@ public class MainActivity extends  FragmentActivity {
 	
 		 if (fragment != null) {
 			 FragmentManager fragmentManager = getSupportFragmentManager();
+			 
+			 // clear all fragments in backstack 
+			 Fragment currentFragment = fragmentManager.findFragmentById(R.id.frame_container);
+			 currentFragment.getFragmentManager().popBackStack(null,
+			 			FragmentManager.POP_BACK_STACK_INCLUSIVE);
+			 
 			 fragmentManager.beginTransaction()
 			 .replace(R.id.frame_container, fragment, tagname)
 			 .commit();
@@ -305,19 +326,19 @@ public class MainActivity extends  FragmentActivity {
 			 BaseFragment baseFragment = (BaseFragment) currentFragment;
 			 String tagname = baseFragment.getTag();
 			 if (baseFragment.isTopFragment()) {
-				 if (!Constant.HOME_TAG.equals(tagname)) {
+				 if (!Constants.HOME_TAG.equals(tagname)) {
 					 fm.beginTransaction().replace(R.id.frame_container, new HomeFragment(),
-							 Constant.HOME_TAG)
+							 Constants.HOME_TAG)
 							 .commit();
 					 return;
-				 } else {
+				 } /*else {
 					 // Home fragment. Remove all fragments in the backstack, so
 					 // super.onBackPressed will simply exit
 					 if (currentFragment.getFragmentManager().getBackStackEntryCount() > 0) {
 						 	currentFragment.getFragmentManager().popBackStack(null,
 						 			FragmentManager.POP_BACK_STACK_INCLUSIVE);
 					 }
-				 }
+				 }*/
 			 }
 			 super.onBackPressed();
 		 } else {
@@ -336,7 +357,7 @@ public class MainActivity extends  FragmentActivity {
 		// find current fragment
 		FragmentManager fm = this.getSupportFragmentManager();
   	    Fragment currentFragment = fm.findFragmentById(R.id.frame_container);
-		if (currentFragment != null && Constant.CONTACT_TAG.equals(currentFragment.getTag())) {
+		if (currentFragment != null && Constants.CONTACT_TAG.equals(currentFragment.getTag())) {
 			((ContactUsFragment) currentFragment).getGestureDetector().onTouchEvent(event);
 		}
 		return super.dispatchTouchEvent(event);
@@ -346,6 +367,22 @@ public class MainActivity extends  FragmentActivity {
 	protected void onDestroy() {
 		Crouton.cancelAllCroutons();
 		super.onDestroy();
+	}
+
+	public ArrayList<Place> getLstHK() {
+		return lstHK;
+	}
+
+	public ArrayList<Place> getLstKowloon() {
+		return lstKowloon;
+	}
+
+	public ArrayList<Place> getLstNT() {
+		return lstNT;
+	}
+
+	public ArrayList<Place> getLstIsland() {
+		return lstIsland;
 	}
 	
 }

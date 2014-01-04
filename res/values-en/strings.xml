@@ -54,4 +54,8 @@
     <string name="close">Close</string>
     
     <string name="software_used">Software Used:</string>
+     <string name="strHK">Hong Kong</string>
+     <string name="strKowloon">Kowloon</string>
+     <string name="strNT">New Territories</string>
+     <string name="strIsland">Island</string>
 </resources>

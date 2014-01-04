@@ -21,7 +21,7 @@ public class ChildFragment extends BaseFragment {
 					FragmentManager fragmentManager = ChildFragment.this.getFragmentManager();
 					// remember parent fragment
 					fragmentManager.beginTransaction()
-						.replace(R.id.frame_container, fragment, Constant.GRANDCHILD_TAG)
+						.replace(R.id.frame_container, fragment, Constants.DETAIL_TAG)
 						.addToBackStack(null)
 						.commit();
 					break;
