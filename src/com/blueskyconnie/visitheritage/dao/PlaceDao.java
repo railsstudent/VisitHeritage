@@ -77,6 +77,7 @@ public class PlaceDao {
 //		cursor.moveToFirst();
 //		while (!cursor.isAfterLast()) {
 //			Place place = convertToPlace(cursor);
+//			place.setDistance(0);
 //			lstPlace.add(place);
 //			cursor.moveToNext();
 //		}
@@ -103,6 +104,7 @@ public class PlaceDao {
 						.lat(cursor.getDouble(colIdx++))
 						.lng(cursor.getDouble(colIdx++))
 						.district(cursor.getInt(colIdx++))
+						.distance(0)
 						.build();
 		return place;
 	}

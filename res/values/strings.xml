@@ -78,4 +78,5 @@
      <string name="strIsland">離島</string>
      
      <string name="placeholder">placeholder</string>
+     <string name="no_monument">沒有古蹟。</string>
 </resources>

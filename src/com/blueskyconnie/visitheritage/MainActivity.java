@@ -322,23 +322,16 @@ public class MainActivity extends  FragmentActivity {
 		 // If the fragment exists and has some back-stack entry
 		 FragmentManager fm = this.getSupportFragmentManager();
 		 Fragment currentFragment = fm.findFragmentById(R.id.frame_container);
-		 if (currentFragment != null && currentFragment instanceof BaseFragment) {
-			 BaseFragment baseFragment = (BaseFragment) currentFragment;
-			 String tagname = baseFragment.getTag();
-			 if (baseFragment.isTopFragment()) {
+		 if (currentFragment != null && currentFragment instanceof FragmentLevel) {
+			 //Fragment baseFragment = (BaseFragment) currentFragment;
+			 String tagname = currentFragment.getTag();
+			 if (((FragmentLevel) currentFragment).isTopFragment()) {
 				 if (!Constants.HOME_TAG.equals(tagname)) {
 					 fm.beginTransaction().replace(R.id.frame_container, new HomeFragment(),
 							 Constants.HOME_TAG)
 							 .commit();
 					 return;
-				 } /*else {
-					 // Home fragment. Remove all fragments in the backstack, so
-					 // super.onBackPressed will simply exit
-					 if (currentFragment.getFragmentManager().getBackStackEntryCount() > 0) {
-						 	currentFragment.getFragmentManager().popBackStack(null,
-						 			FragmentManager.POP_BACK_STACK_INCLUSIVE);
-					 }
-				 }*/
+				 } 
 			 }
 			 super.onBackPressed();
 		 } else {

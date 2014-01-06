@@ -28,7 +28,9 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 	private double lat;
 	private double lng;
 	private int district;
-	//private double distance;
+	private double distance;
+	private String address;
+	private String address_en;
 	
 	public Place(PlaceBuilder builder) {
 		this.id = builder.id;
@@ -46,14 +48,31 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		this.lat = builder.lat;
 		this.lng = builder.lng;
 		this.district = builder.district;
-	//	this.distance = builder.distance;
+		this.distance = builder.distance;
 		this.openingHour_en = builder.openingHour_en;
+		this.address = builder.address;
+		this.address = builder.address_en;
 	}
 	
 	public Place(Parcel in) {
-	//	categoryId = in.readInt();
-	//	category = in.readString();
-	//	in.readStringList(imageUrl);
+		id = in.readInt();
+		name = in.readString();
+		imgUrl = in.readString();
+		description = in.readString();
+		email = in.readString();
+		homepage = in.readString();
+		remark = in.readString();
+		openingHour = in.readString();
+		phone = in.readString();
+		name_en = in.readString();
+		description_en = in.readString();
+		remark_en = in.readString();
+		openingHour_en = in.readString();
+		lat = in.readDouble();
+		lng = in.readDouble();
+		district = in.readInt();
+		address = in.readString();
+		address_en = in.readString();
 	}
 
 	public int getId() {
@@ -172,13 +191,13 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		this.district = district;
 	}
 
-//	public void setDistance(double distance) {
-//		this.distance = distance;
-//	}
-//	
-//	public double getDistance() {
-//		return distance;
-//	}
+	public void setDistance(double distance) {
+		this.distance = distance;
+	}
+	
+	public double getDistance() {
+		return distance;
+	}
 
 	public String getOpeningHour_en() {
 		return openingHour_en;
@@ -186,6 +205,22 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 
 	public void setOpeningHour_en(String openingHour_en) {
 		this.openingHour_en = openingHour_en;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getAddress_en() {
+		return address_en;
+	}
+
+	public void setAddress_en(String address_en) {
+		this.address_en = address_en;
 	}
 
 	@Override
@@ -211,8 +246,10 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		private double lat;
 		private double lng;
 		private int district;
-//		private double distance;
+		private double distance;
 		private String openingHour_en;
+		private String address;
+		private String address_en;
 
 		public PlaceBuilder id(int id) {
 			this.id = id;
@@ -289,16 +326,26 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 			return this;
 		}
 		
-//		public PlaceBuilder distance(double distance) {
-//			this.distance = distance;
-//			return this;
-//		}
+		public PlaceBuilder distance(double distance) {
+			this.distance = distance;
+			return this;
+		}
 
 		public PlaceBuilder openingHour_en(String openingHour_en) {
 			this.openingHour_en = Strings.nullToEmpty(openingHour_en);
 			return this;
 		}
 
+		public PlaceBuilder address(String address) {
+			this.address = Strings.nullToEmpty(address);
+			return this;
+		}
+		
+		public PlaceBuilder address_en(String address_en) {
+			this.address_en = Strings.nullToEmpty(address_en);
+			return this;
+		}
+		
 		public Place build() {
 			return new Place(this);
 		}
@@ -327,6 +374,9 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		dest.writeDouble(lat);
 		dest.writeDouble(lng);
 		dest.writeInt(district);
+		dest.writeDouble(distance);
+		dest.writeString(address);
+		dest.writeString(address_en);
 	}
 	
 	public static final Parcelable.Creator<Place> CREATOR = new Parcelable.Creator<Place>() {

@@ -58,4 +58,6 @@
      <string name="strKowloon">Kowloon</string>
      <string name="strNT">New Territories</string>
      <string name="strIsland">Island</string>
+     
+    <string name="no_monument">No declared monuments.</string>
 </resources>

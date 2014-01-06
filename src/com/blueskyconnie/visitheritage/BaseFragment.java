@@ -3,7 +3,7 @@ package com.blueskyconnie.visitheritage;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements FragmentLevel {
 	
 	private boolean isTopFragment;
 	
@@ -21,7 +21,12 @@ public abstract class BaseFragment extends Fragment {
 		setRetainInstance(true);
 	}
 	
+	public void setTopFragment(boolean isTopFragment) {
+		this.isTopFragment = isTopFragment;
+	}
+
+	@Override
 	public boolean isTopFragment() {
 		return isTopFragment;
-	}
+	}	
 }

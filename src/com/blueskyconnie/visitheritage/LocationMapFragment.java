@@ -147,8 +147,7 @@ public class LocationMapFragment extends BaseFragment {
 			 GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(), RQS_GooglePlayServices).show();
 		}
 	}
-	
-	
+		
 	private final class PlaceInfoWindowAdapter implements InfoWindowAdapter {
 
 		// @TODO: implement this button click listener
