@@ -326,13 +326,13 @@ containing a value of this type.
         public static final int icon=0x7f060009;
         public static final int imgHeritage=0x7f060029;
         public static final int imgMonu=0x7f06003f;
-        public static final int imgPlaceThumbnail=0x7f060053;
-        public static final int imgRightArrow=0x7f060055;
+        public static final int imgPlaceThumbnail=0x7f060054;
+        public static final int imgRightArrow=0x7f060056;
         public static final int imgSplash=0x7f060008;
-        public static final int item_about=0x7f06005c;
-        public static final int item_clear_disc_cache=0x7f06005b;
-        public static final int item_clear_memory_cache=0x7f06005a;
-        public static final int item_share=0x7f060059;
+        public static final int item_about=0x7f06005d;
+        public static final int item_clear_disc_cache=0x7f06005c;
+        public static final int item_clear_memory_cache=0x7f06005b;
+        public static final int item_share=0x7f06005a;
         public static final int linearLayout1=0x7f060011;
         public static final int linearLayout2=0x7f060018;
         public static final int linearLayout3=0x7f06002b;
@@ -364,23 +364,24 @@ containing a value of this type.
         public static final int tvCroutonCopyright=0x7f060050;
         public static final int tvDeptHeritage=0x7f060019;
         public static final int tvDeptMonument=0x7f06002c;
-        public static final int tvDistance=0x7f060058;
+        public static final int tvDistance=0x7f060059;
         public static final int tvGuava=0x7f060051;
         public static final int tvGuavaCopyright=0x7f060052;
+        public static final int tvHeader=0x7f060053;
         public static final int tvHeritageAddress=0x7f06001d;
         public static final int tvHeritageEmail=0x7f060026;
         public static final int tvHeritageFax=0x7f060023;
         public static final int tvHeritageWeb=0x7f060020;
         public static final int tvLabelMap=0x7f060028;
         public static final int tvLabelMap1=0x7f06003e;
-        public static final int tvLat=0x7f060056;
-        public static final int tvLng=0x7f060057;
+        public static final int tvLat=0x7f060057;
+        public static final int tvLng=0x7f060058;
         public static final int tvMonuAddress=0x7f060030;
         public static final int tvMonuEmail=0x7f06003c;
         public static final int tvMonuFax=0x7f060039;
         public static final int tvMonuPhone=0x7f060036;
         public static final int tvMonuWeb=0x7f060033;
-        public static final int tvName=0x7f060054;
+        public static final int tvName=0x7f060055;
         public static final int tvSoftwareUsed=0x7f06004c;
         public static final int tvTerms=0x7f060046;
         public static final int tvTerms2=0x7f060047;
@@ -418,7 +419,8 @@ containing a value of this type.
         public static final int fragment_visitor=0x7f030009;
         public static final int fragment_whats_hot=0x7f03000a;
         public static final int layout_about=0x7f03000b;
-        public static final int list_item_aroundme=0x7f03000c;
+        public static final int layout_around_me_heading=0x7f03000c;
+        public static final int list_item_aroundme=0x7f03000d;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -452,6 +454,7 @@ containing a value of this type.
          */
         public static final int auth_client_using_bad_version_title=0x7f070014;
         public static final int body=0x7f07003e;
+        public static final int city_name=0x7f070051;
         public static final int close=0x7f070042;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
@@ -540,6 +543,7 @@ containing a value of this type.
         public static final int drawer_open=0x7f07001b;
         public static final int email_dept_heritage=0x7f070034;
         public static final int email_dept_monu=0x7f07003a;
+        public static final int error_connectionfailed=0x7f070052;
         public static final int fax_dept_heritage=0x7f070033;
         public static final int fax_dept_monu=0x7f070038;
         public static final int guava_copyright=0x7f070049;

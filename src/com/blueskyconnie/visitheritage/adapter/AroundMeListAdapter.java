@@ -90,7 +90,6 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 							public void onLoadingFailed(String imageUri,
 									View view, FailReason failReason) {
 								super.onLoadingFailed(imageUri, view, failReason);
-								String message = null;
 								switch (failReason.getType()) {
 									case IO_ERROR:
 										Log.e("AroundMeAdapter", "Input/Output error");
@@ -99,7 +98,6 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 										Log.e("AroundMeAdapter", "Image can't be decoded");
 										break;
 									case NETWORK_DENIED:
-										message = "Downloads are denied";
 										Log.e("AroundMeAdapter", "Downloads are denied");
 										break;
 									case OUT_OF_MEMORY:

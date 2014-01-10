@@ -67,22 +67,23 @@ public class PlaceDao {
 	}
 
 	// to do later pass location
-//	public List<Place> getAroundMePlaces() {
-//		
-//		List<Place> lstPlace = new ArrayList<Place>();
-//		Cursor cursor = database.query(PlaceSqliteOpenHelper.TABLE_PLACE, PlaceSqliteOpenHelper.ALL_COLUMNS, 
-//							null, null, null, null, null);
-//		
-//		// iterate cursor and convert the sql object to Place bean
-//		cursor.moveToFirst();
-//		while (!cursor.isAfterLast()) {
-//			Place place = convertToPlace(cursor);
-//			place.setDistance(0);
-//			lstPlace.add(place);
-//			cursor.moveToNext();
-//		}
-//		return lstPlace;
-//	}
+	public List<Place> getAroundMePlaces() {
+		
+		List<Place> lstPlace = new ArrayList<Place>();
+		Cursor cursor = database.query(PlaceSqliteOpenHelper.TABLE_PLACE, PlaceSqliteOpenHelper.ALL_COLUMNS,
+							null, null, null, null, "");
+
+		
+		// iterate cursor and convert the sql object to Place bean
+		cursor.moveToFirst();
+		while (!cursor.isAfterLast()) {
+			Place place = convertToPlace(cursor);
+			place.setDistance(0);
+			lstPlace.add(place);
+			cursor.moveToNext();
+		}
+		return lstPlace;
+	}
 	
 	private Place convertToPlace(Cursor cursor) {
 		int colIdx = 0;

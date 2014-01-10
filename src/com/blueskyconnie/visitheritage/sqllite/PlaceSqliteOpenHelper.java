@@ -132,8 +132,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.482106");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.013152");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		

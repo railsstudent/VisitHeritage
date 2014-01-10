@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class ChooseAreaFragment extends BaseFragment {
 	
@@ -21,30 +19,49 @@ public class ChooseAreaFragment extends BaseFragment {
 	private OnClickListener clickListener =  new OnClickListener() {
 
 		public void onClick(View v) {
+			FragmentManager fragmentManager = ChooseAreaFragment.this.getFragmentManager();
+			setButtonEnabled(false, false, false, false);
+			LocationMapFragment fragment = new LocationMapFragment();
+			Bundle bundle = new Bundle();
 			switch (v.getId()) {
 				case R.id.btnHK:
-					setButtonEnabled(false, false, false, false);
-					LocationMapFragment fragment = new LocationMapFragment();
-					fragment.setListPlace(mainActivity.getLstHK());
-					FragmentManager fragmentManager = ChooseAreaFragment.this.getFragmentManager();
-					// remember parent fragment
+//					fragment.setListPlace(mainActivity.getLstHK());
+					bundle.putString(Constants.PLACE_KEY, getString(R.string.strHK));
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstHK());
+					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()
 						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
 						.addToBackStack(null)
 						.commit();
 					break;
 				case R.id.btnKowloon:
-					Crouton.makeText(ChooseAreaFragment.this.getActivity(), "Todo: Show map (kowloon)", Style.INFO).show();
-					// disable all buttons, so user either waits for Map to load and display or select drawer to go to other fragment
-					setButtonEnabled(false, false, false, false);
+					bundle.putString(Constants.PLACE_KEY, getString(R.string.strKowloon));
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstKowloon());
+					fragment.setArguments(bundle);
+					fragmentManager.beginTransaction()
+						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
+						.addToBackStack(null)
+						.commit();
 					break;
 				case R.id.btnNT:
-					Crouton.makeText(ChooseAreaFragment.this.getActivity(), "Todo: Show map (NT)", Style.INFO).show();
-					setButtonEnabled(false, false, false, false);
+//					fragment.setListPlace(mainActivity.getLstNT());
+					bundle.putString(Constants.PLACE_KEY, getString(R.string.strNT));
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstNT());
+					fragment.setArguments(bundle);
+					fragmentManager.beginTransaction()
+						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
+						.addToBackStack(null)
+						.commit();
 					break;
 				case R.id.btnIsland:
-					Crouton.makeText(ChooseAreaFragment.this.getActivity(), "Todo: Show map (Island)", Style.INFO).show();
-					setButtonEnabled(false, false, false, false);
+//					fragment.setListPlace(mainActivity.getLstIsland());
+					bundle.putString(Constants.PLACE_KEY, getString(R.string.strIsland));
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstIsland());
+					fragment.setArguments(bundle);
+					fragmentManager.beginTransaction()
+						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
+						.addToBackStack(null)
+						.commit();
 					break;
 			}
 		}
@@ -84,7 +101,6 @@ public class ChooseAreaFragment extends BaseFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		Crouton.makeText(getActivity(), "ChooseAreaFragment: onResume)", Style.INFO).show();
 		// enable the buttons when this fragment is revisited
 		setButtonEnabled(true, true, true, true);
 	}

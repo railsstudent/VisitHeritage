@@ -21,6 +21,8 @@ public final class Constants {
 	public static final String KOWLOON_KEY = "KOWLOON";
 	public static final String NT_KEY = "NEW TERRITORIES";
 	public static final String ISLAND_KEY = "ISLAND";
+	public static final String PLACES = "PLACES";
+	public static final String PLACE_KEY = "PLACE_KEY";
 	
 	private Constants() {}
 	

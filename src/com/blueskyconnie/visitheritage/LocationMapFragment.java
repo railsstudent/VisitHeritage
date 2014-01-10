@@ -1,5 +1,6 @@
 package com.blueskyconnie.visitheritage;
 
+
 import java.util.List;
 
 import android.os.Bundle;
@@ -23,7 +24,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-
  
 public class LocationMapFragment extends BaseFragment {
 
@@ -38,10 +38,6 @@ public class LocationMapFragment extends BaseFragment {
 	public LocationMapFragment() {
 		// not a top level fragment
 		super(false);
-	}
-	
-	public void setListPlace (List<Place> lstPlace) {
-		this.lstPlace = lstPlace;
 	}
 	
 	@Override
@@ -64,11 +60,15 @@ public class LocationMapFragment extends BaseFragment {
 		super.onCreateView(inflater, container, savedInstanceState);
 		View rootView = (View) inflater.inflate(R.layout.fragment_location, null);
 		mapView = (MapView) rootView.findViewById(R.id.mapView);
+	
+		String placeKey = getArguments().getString(Constants.PLACE_KEY);
+		TextView tvArea = (TextView) rootView.findViewById(R.id.tvArea);
+		tvArea.setText(placeKey);
+
+		lstPlace = getArguments().getParcelableArrayList(Constants.PLACES)  ; 
 		return rootView;
 	}
 	
-	
-
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
@@ -125,7 +125,7 @@ public class LocationMapFragment extends BaseFragment {
                      
                      // 1) loop the lstPlace list 
               	    // 1a)  create markeroption, set title, snippet and icon, and add to map   
-
+                     
                      
                      map.setMyLocationEnabled(true);
                                           

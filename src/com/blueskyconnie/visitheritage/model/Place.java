@@ -225,7 +225,7 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 
 	@Override
 	public int compareTo(Place other) {
-		// sort distance in ascending order
+		// sort id in ascending order
 		return ComparisonChain.start().compare(id, other.id).result();
 	}
 	

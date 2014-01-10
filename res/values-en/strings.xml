@@ -58,6 +58,9 @@
      <string name="strKowloon">Kowloon</string>
      <string name="strNT">New Territories</string>
      <string name="strIsland">Island</string>
-     
+
+    <string name="placeholder">Please choose region</string> 
     <string name="no_monument">No declared monuments.</string>
+	<string name="city_name">City name</string>
+	<string name="error_connectionfailed">Connection failed</string>
 </resources>

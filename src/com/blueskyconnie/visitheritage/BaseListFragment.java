@@ -5,7 +5,7 @@ import android.support.v4.app.ListFragment;
 
 public class BaseListFragment extends ListFragment implements FragmentLevel {
 
-	private boolean isTopFragment;
+	protected boolean topFragment;
 	
 	public BaseListFragment() {
 	}
@@ -18,11 +18,11 @@ public class BaseListFragment extends ListFragment implements FragmentLevel {
 
 	@Override
 	public boolean isTopFragment() {
-		return isTopFragment;
+		return topFragment;
 	}
 
 	@Override
 	public void setTopFragment(boolean topFragment) {
-		this.isTopFragment = topFragment;
+		this.topFragment = topFragment;
 	}
 }

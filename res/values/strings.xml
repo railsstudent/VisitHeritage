@@ -77,6 +77,9 @@
      <string name="strNT">新界</string>
      <string name="strIsland">離島</string>
      
-     <string name="placeholder">placeholder</string>
+     <string name="placeholder">請選擇地區</string>
      <string name="no_monument">沒有古蹟。</string>
+     <string name="city_name">城市名稱</string>
+	 <string name="error_connectionfailed">連線失敗</string>
 </resources>
+
