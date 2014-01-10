@@ -417,10 +417,9 @@ containing a value of this type.
         public static final int fragment_home=0x7f030007;
         public static final int fragment_location=0x7f030008;
         public static final int fragment_visitor=0x7f030009;
-        public static final int fragment_whats_hot=0x7f03000a;
-        public static final int layout_about=0x7f03000b;
-        public static final int layout_around_me_heading=0x7f03000c;
-        public static final int list_item_aroundme=0x7f03000d;
+        public static final int layout_about=0x7f03000a;
+        public static final int layout_around_me_heading=0x7f03000b;
+        public static final int list_item_aroundme=0x7f03000c;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
