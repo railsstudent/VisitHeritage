@@ -8,7 +8,7 @@
         <item>Hong Kong Monuments</item>
         <item>Monuments Around Me</item>
         <item>Notes to Monument Visitors</item>
-        <item>Contact Us</item>
+        <item>Contact</item>
         <item>Rate My App</item>
     </string-array>
 
@@ -63,4 +63,10 @@
     <string name="no_monument">No declared monuments.</string>
 	<string name="city_name">City name</string>
 	<string name="error_connectionfailed">Connection failed</string>
+	
+	<string name="strLat">Latitude:</string>
+	<string name="strLng">Longtitude:</string>
+	 <string name="strDistance">Distance:</string>
+	 <string name="strMeter">Meter</string>
+	
 </resources>

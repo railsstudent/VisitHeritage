@@ -58,6 +58,16 @@
             android:name="com.blueskyconnie.visitheritage.MainActivity"
             android:screenOrientation="portrait">
         </activity>
+        
+        <!--  grant permission to content provider  -->
+        <provider
+            android:name=".contentprovider.PlaceContentProvider" 
+            android:authorities="com.blueskyconnie.visitheritage"
+            android:exported="false"
+        >
+        </provider>    
+            
+        
     </application>
 
 </manifest>

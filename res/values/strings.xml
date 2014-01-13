@@ -10,7 +10,7 @@
         <item>香港法定古蹟</item>
         <item>我周圍的法定古蹟</item>
         <item>參觀古蹟須知</item>
-        <item>聯絡我們</item>
+        <item>聯絡部門</item>
         <item>給我的程式評分</item>
     </string-array>
 
@@ -81,5 +81,10 @@
      <string name="no_monument">沒有古蹟。</string>
      <string name="city_name">城市名稱</string>
 	 <string name="error_connectionfailed">連線失敗</string>
+	 
+	 <string name="strLat">緯度：</string>
+	 <string name="strLng">經線：</string>
+	 <string name="strDistance">距離：</string>
+	 <string name="strMeter">米</string>
 </resources>
 

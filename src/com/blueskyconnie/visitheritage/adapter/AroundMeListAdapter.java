@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Locale;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,6 +20,9 @@ import com.google.common.base.Strings;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class AroundMeListAdapter extends ArrayAdapter<Place> {
 
@@ -58,13 +62,13 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		if (view == null) {
 			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			view = inflater.inflate(resourceId, null);
-			view.setTag(holder);
 			holder = new AroundMeHolder();
 			holder.tvName = (TextView) view.findViewById(R.id.tvName);
 			holder.tvLat = (TextView) view.findViewById(R.id.tvLat);
 			holder.tvLng = (TextView) view.findViewById(R.id.tvLng);
 			holder.tvDistance = (TextView) view.findViewById(R.id.tvDistance);
 			holder.img = (ImageView) view.findViewById(R.id.imgPlaceThumbnail);
+			view.setTag(holder);
 		} else {
 			holder = (AroundMeHolder) view.getTag();
 		}
@@ -73,12 +77,17 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		String name = "";
 		// check current language of the device
 		Locale locale = Locale.getDefault();
-		String language = locale.getDisplayLanguage();
+		String language = locale.getLanguage();
+		
 		if ("EN".equals(Strings.nullToEmpty(language).toUpperCase(locale))) {
-			name = Strings.nullToEmpty(place.getName()); // English
+			name = Strings.nullToEmpty(place.getName_en()); // English
 		} else {
-			name = Strings.nullToEmpty(place.getName_en()); // Chinese Name 
+			name = Strings.nullToEmpty(place.getName()); // Chinese Name 
 		}
+		
+		Crouton.makeText((Activity)context, "language - " + language + ", name - " + name, 
+				Style.INFO).show();
+		
 		holder.tvName.setText(name);
 		holder.tvLat.setText(String.valueOf(place.getLat())); 
 		holder.tvLng.setText(String.valueOf(place.getLng()));

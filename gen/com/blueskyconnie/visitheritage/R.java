@@ -563,9 +563,13 @@ containing a value of this type.
         public static final int placeholder=0x7f07004f;
         public static final int share_app=0x7f07003f;
         public static final int software_used=0x7f070043;
+        public static final int strDistance=0x7f070055;
         public static final int strHK=0x7f07004b;
         public static final int strIsland=0x7f07004e;
         public static final int strKowloon=0x7f07004c;
+        public static final int strLat=0x7f070053;
+        public static final int strLng=0x7f070054;
+        public static final int strMeter=0x7f070056;
         public static final int strNT=0x7f07004d;
         public static final int subject=0x7f07003d;
         public static final int uil_copyright=0x7f070045;

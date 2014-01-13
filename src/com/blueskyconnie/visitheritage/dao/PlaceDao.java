@@ -11,6 +11,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.blueskyconnie.visitheritage.Constants;
 import com.blueskyconnie.visitheritage.model.Place;
+import com.blueskyconnie.visitheritage.sqllite.CursorUtils;
 import com.blueskyconnie.visitheritage.sqllite.PlaceSqliteOpenHelper;
 
 public class PlaceDao {
@@ -106,6 +107,8 @@ public class PlaceDao {
 						.lng(cursor.getDouble(colIdx++))
 						.district(cursor.getInt(colIdx++))
 						.distance(0)
+						.address(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS, cursor))
+						.address_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, cursor))
 						.build();
 		return place;
 	}

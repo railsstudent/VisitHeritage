@@ -32,6 +32,10 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 	private String address;
 	private String address_en;
 	
+	public Place(int id) {
+		this.id = id;
+	}
+	
 	public Place(PlaceBuilder builder) {
 		this.id = builder.id;
 		this.name = builder.name;
@@ -51,7 +55,7 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		this.distance = builder.distance;
 		this.openingHour_en = builder.openingHour_en;
 		this.address = builder.address;
-		this.address = builder.address_en;
+		this.address_en = builder.address_en;
 	}
 	
 	public Place(Parcel in) {
