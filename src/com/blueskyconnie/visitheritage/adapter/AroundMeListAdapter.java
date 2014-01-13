@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Locale;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,9 +19,6 @@ import com.google.common.base.Strings;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
-
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class AroundMeListAdapter extends ArrayAdapter<Place> {
 
@@ -84,9 +80,6 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		} else {
 			name = Strings.nullToEmpty(place.getName()); // Chinese Name 
 		}
-		
-		Crouton.makeText((Activity)context, "language - " + language + ", name - " + name, 
-				Style.INFO).show();
 		
 		holder.tvName.setText(name);
 		holder.tvLat.setText(String.valueOf(place.getLat())); 
