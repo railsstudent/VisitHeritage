@@ -64,9 +64,14 @@
 	<string name="city_name">City name</string>
 	<string name="error_connectionfailed">Connection failed</string>
 	
-	<string name="strLat">Latitude:</string>
-	<string name="strLng">Longtitude:</string>
-	 <string name="strDistance">Distance:</string>
-	 <string name="strMeter">Meter</string>
+	<string name="strLat">Lat:</string>
+	<string name="strLng">Lng:</string>
+	<string name="strDistance">Distance:</string>
+	<string name="strMeter">Meter</string>
+	<string name="strEntering">Entering&#8230;</string>
+	
+	<string name="content_thumbnail">Thumbnail</string>
+	<string name="content_rightarrow">Right arrow</string>
+	<string name="content_image">Image</string>
 	
 </resources>

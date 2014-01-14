@@ -312,7 +312,7 @@ containing a value of this type.
         public static final int RelativeLayout=0x7f060013;
         public static final int TableLayout1=0x7f06001a;
         public static final int TableLayout2=0x7f06002d;
-        public static final int adView=0x7f060041;
+        public static final int adView=0x7f060040;
         public static final int btnHK=0x7f06000d;
         public static final int btnHeritage=0x7f060014;
         public static final int btnIsland=0x7f060010;
@@ -324,6 +324,7 @@ containing a value of this type.
         public static final int frame_container=0x7f060006;
         public static final int hybrid=0x7f060004;
         public static final int icon=0x7f060009;
+        public static final int imageView1=0x7f060043;
         public static final int imgHeritage=0x7f060029;
         public static final int imgMonu=0x7f06003f;
         public static final int imgPlaceThumbnail=0x7f060054;
@@ -337,7 +338,7 @@ containing a value of this type.
         public static final int linearLayout2=0x7f060018;
         public static final int linearLayout3=0x7f06002b;
         public static final int list_slidermenu=0x7f060007;
-        public static final int mapView=0x7f060043;
+        public static final int mapView=0x7f060042;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int relativeLayoutForAds=0x7f060044;
@@ -358,7 +359,7 @@ containing a value of this type.
         public static final int tableRow9=0x7f060037;
         public static final int terrain=0x7f060003;
         public static final int title=0x7f06000a;
-        public static final int tvArea=0x7f060042;
+        public static final int tvArea=0x7f060041;
         public static final int tvContactTitle=0x7f060012;
         public static final int tvCrouton=0x7f06004f;
         public static final int tvCroutonCopyright=0x7f060050;
@@ -392,7 +393,6 @@ containing a value of this type.
         public static final int tvUIL=0x7f06004d;
         public static final int tvUILCopyright=0x7f06004e;
         public static final int txtLabel=0x7f06000c;
-        public static final int txtLabel2=0x7f060040;
         public static final int txtLabelAddress=0x7f06001c;
         public static final int txtLabelAddress1=0x7f06002f;
         public static final int txtLabelEmail=0x7f060025;
@@ -413,9 +413,9 @@ containing a value of this type.
         public static final int fragment_area=0x7f030003;
         public static final int fragment_around_me=0x7f030004;
         public static final int fragment_contact_us=0x7f030005;
-        public static final int fragment_grandchild=0x7f030006;
-        public static final int fragment_home=0x7f030007;
-        public static final int fragment_location=0x7f030008;
+        public static final int fragment_home=0x7f030006;
+        public static final int fragment_location=0x7f030007;
+        public static final int fragment_place=0x7f030008;
         public static final int fragment_visitor=0x7f030009;
         public static final int layout_about=0x7f03000a;
         public static final int layout_around_me_heading=0x7f03000b;
@@ -527,6 +527,9 @@ containing a value of this type.
          */
         public static final int common_signin_button_text_long=0x7f070013;
         public static final int contact_title=0x7f070029;
+        public static final int content_image=0x7f07005a;
+        public static final int content_rightarrow=0x7f070059;
+        public static final int content_thumbnail=0x7f070058;
         public static final int crouton_copyright=0x7f070047;
         public static final int crouton_software=0x7f070046;
         public static final int dept_heritage=0x7f07002a;
@@ -564,6 +567,7 @@ containing a value of this type.
         public static final int share_app=0x7f07003f;
         public static final int software_used=0x7f070043;
         public static final int strDistance=0x7f070055;
+        public static final int strEntering=0x7f070057;
         public static final int strHK=0x7f07004b;
         public static final int strIsland=0x7f07004e;
         public static final int strKowloon=0x7f07004c;

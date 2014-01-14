@@ -1,5 +1,8 @@
 package com.blueskyconnie.visitheritage.adapter;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.List;
 import java.util.Locale;
 
@@ -13,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blueskyconnie.visitheritage.Constants;
 import com.blueskyconnie.visitheritage.R;
 import com.blueskyconnie.visitheritage.model.Place;
 import com.google.common.base.Strings;
@@ -22,16 +26,27 @@ import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 
 public class AroundMeListAdapter extends ArrayAdapter<Place> {
 
+	private static final String TAG = "AroundMeListAdapter";
+	
 	private Context context;
 	private int resourceId;
 	private List<Place> lstPlace;
 	private ImageLoader imageLoader = ImageLoader.getInstance();
+	private String strLat = "";
+	private String strLng = "";
+	private String strMeter = "";
+	private String strDistance = "";
 	
 	public AroundMeListAdapter(Context context, int resourceId, List<Place> lstPlace) {
 		super(context, resourceId, lstPlace);
 		this.context = context;
 		this.resourceId = resourceId;
 		this.lstPlace = lstPlace;
+		
+		strLat = context.getString(R.string.strLat);
+		strLng = context.getString(R.string.strLng);
+		strMeter = context.getString(R.string.strMeter);
+		strDistance = context.getString(R.string.strDistance);
 	}
 
 	@Override
@@ -75,16 +90,20 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		Locale locale = Locale.getDefault();
 		String language = locale.getLanguage();
 		
-		if ("EN".equals(Strings.nullToEmpty(language).toUpperCase(locale))) {
+		if (Constants.LANG_CODE_EN.equals(Strings.nullToEmpty(language).toUpperCase(locale))) {
 			name = Strings.nullToEmpty(place.getName_en()); // English
 		} else {
 			name = Strings.nullToEmpty(place.getName()); // Chinese Name 
 		}
 		
 		holder.tvName.setText(name);
-		holder.tvLat.setText(String.valueOf(place.getLat())); 
-		holder.tvLng.setText(String.valueOf(place.getLng()));
-		holder.tvDistance.setText(String.valueOf(place.getDistance()));
+		holder.tvLat.setText(strLat + String.valueOf(place.getLat())); 
+		holder.tvLng.setText(strLng + String.valueOf(place.getLng()));
+		
+		BigDecimal bdDist = new BigDecimal(place.getDistance(), MathContext.UNLIMITED);
+		bdDist = bdDist.setScale(2, RoundingMode.HALF_DOWN);
+		holder.tvDistance.setText(strDistance + bdDist.toPlainString() + " " + strMeter);
+		
 		if (holder.img != null && !Strings.isNullOrEmpty(place.getUrl())) {
 			imageLoader.displayImage(place.getUrl(), holder.img, 
 					new SimpleImageLoadingListener() {
@@ -94,19 +113,19 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 								super.onLoadingFailed(imageUri, view, failReason);
 								switch (failReason.getType()) {
 									case IO_ERROR:
-										Log.e("AroundMeAdapter", "Input/Output error");
+										Log.e(TAG, "Input/Output error");
 										break;
 									case DECODING_ERROR:
-										Log.e("AroundMeAdapter", "Image can't be decoded");
+										Log.e(TAG, "Image can't be decoded");
 										break;
 									case NETWORK_DENIED:
-										Log.e("AroundMeAdapter", "Downloads are denied");
+										Log.e(TAG, "Downloads are denied");
 										break;
 									case OUT_OF_MEMORY:
-										Log.e("AroundMeAdapter", "Out Of Memory error");
+										Log.e(TAG, "Out Of Memory error");
 										break;
 									case UNKNOWN:
-										Log.e("AroundMeAdapter", "Unknown error");
+										Log.e(TAG, "Unknown error");
 										break;
 								}
 							}

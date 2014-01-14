@@ -12,6 +12,8 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -35,7 +37,6 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
-import com.google.common.base.Strings;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.PauseOnScrollListener;
 
@@ -66,8 +67,11 @@ public class AroundMeFragment extends BaseListFragment implements
 	private View headerView;
 	private Activity activity;
 	private boolean isItemClicked = false;
+	private String strLat;
+	private String strLng;
 
 	private DistanceComparator distanceComparator;
+	private ConnectionDetector connectionDetector;
 
 	public AroundMeFragment() {
 		topFragment = true;
@@ -105,6 +109,8 @@ public class AroundMeFragment extends BaseListFragment implements
 		headerView = View.inflate(getActivity(),
 				R.layout.layout_around_me_heading, null);
 		tvHeader = (TextView) headerView.findViewById(R.id.tvHeader);
+		strLat = getString(R.string.strLat);
+		strLng = getString(R.string.strLng);
 		return rootView;
 	}
 
@@ -116,14 +122,18 @@ public class AroundMeFragment extends BaseListFragment implements
 				.getInstance(), false, true));
 		lv.addHeaderView(headerView);
 		setListAdapter(aroundmeListAdapter);
+		connectionDetector = new ConnectionDetector(getActivity());
+
 	}
 
 	@Override
 	public void onConnected(Bundle bundle) {
 		mLocationClient.requestLocationUpdates(mRequest, this);
-		if (mLocationClient.isConnected()) {
-			mCurrentLocation = mLocationClient.getLastLocation();
-			getLoaderManager().initLoader(LOADER_ID, null, this);
+		if (connectionDetector.isConnectingToInternet()) {
+			if (mLocationClient.isConnected()) {
+				mCurrentLocation = mLocationClient.getLastLocation();
+				getLoaderManager().initLoader(LOADER_ID, null, this);
+			}
 		}
 	}
 
@@ -135,15 +145,18 @@ public class AroundMeFragment extends BaseListFragment implements
 	@Override
 	public void onPause() {
 		super.onPause();
-		if (mLocationClient.isConnected()) {
-			mLocationClient.removeLocationUpdates(this);
-			mLocationClient.disconnect();
+		if (connectionDetector.isConnectingToInternet()) {
+			if (mLocationClient.isConnected()) {
+				mLocationClient.removeLocationUpdates(this);
+				mLocationClient.disconnect();
+			}
 		}
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
+		isItemClicked = false;
 		int resultCode = GooglePlayServicesUtil
 				.isGooglePlayServicesAvailable(getActivity());
 		if (resultCode == ConnectionResult.SUCCESS) {
@@ -167,29 +180,22 @@ public class AroundMeFragment extends BaseListFragment implements
 
 	@Override
 	public void onLocationChanged(Location location) {
-		Log.i("INFO LOG",
-				"AroundMeFragment - onLocationChanged, new location - "
-						+ location);
+		Log.i("INFO LOG", "AroundMeFragment - onLocationChanged, new location - " + location);
 
 		// get current address
 		try {
 			if (location != null) {
 				mCurrentLocation = location;
-				ConnectionDetector connector = new ConnectionDetector(activity);
-				if (connector.isConnectingToInternet()) {
+				if (connectionDetector.isConnectingToInternet()) {
 					List<Address> addresses = mGeocoder.getFromLocation(
 							location.getLatitude(), location.getLongitude(), 1);
 					if (addresses != null && addresses.size() > 0) {
 						Address address = addresses.get(0);
-						tvHeader.setText(Strings.nullToEmpty(address
-								.getLocality())
-								+ "("
-								+ address.getCountryName() + ")");
+						tvHeader.setText(address.getCountryName());
 					}
 				} else {
-
-					tvHeader.setText("(lat: " + location.getLatitude()
-							+ ", lng: " + location.getLongitude());
+					tvHeader.setText(strLat + location.getLatitude() 
+							+ strLng + location.getLongitude());
 				}
 				// fire location changed, restart loader
 				getLoaderManager().restartLoader(LOADER_ID, null, this);
@@ -222,8 +228,7 @@ public class AroundMeFragment extends BaseListFragment implements
 						mCurrentLocation.getLongitude(), 1);
 				if (addresses != null && addresses.size() > 0) {
 					Address address = addresses.get(0);
-					tvHeader.setText(Strings.nullToEmpty(address.getLocality())
-							+ "(" + address.getCountryName() + ")");
+					tvHeader.setText(address.getCountryName());
 				}
 
 				Uri uri = PlaceContentProvider.CONTENT_URI;
@@ -316,10 +321,21 @@ public class AroundMeFragment extends BaseListFragment implements
 	}
 
 	@Override
-	public void onListItemClick(ListView l, View v, int position, long id) {
-		// TODO Auto-generated method stub
+	public void onListItemClick(ListView listView, View v, int position, long id) {
 		if (!isItemClicked) {
 			isItemClicked = true;
+			Crouton.makeText(activity, R.string.strEntering, Style.INFO).show();
+			// show place fragment
+			Place place = (Place) listView.getItemAtPosition(position);
+			Bundle bundle = new Bundle();
+			bundle.putParcelable(Constants.PLACE_KEY, place);
+			Fragment placeFragment = new PlaceFragment();
+			placeFragment.setArguments(bundle);
+			FragmentManager fragManager = this.getFragmentManager();
+			fragManager.beginTransaction()
+				.replace(R.id.frame_container, placeFragment)
+				.addToBackStack(null)
+				.commit();
 		}
 	}
 }

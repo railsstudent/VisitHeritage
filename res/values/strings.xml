@@ -86,5 +86,10 @@
 	 <string name="strLng">經線：</string>
 	 <string name="strDistance">距離：</string>
 	 <string name="strMeter">米</string>
+	 <string name="strEntering">進入&#8230;</string>
+	 
+	<string name="content_thumbnail">縮圖</string>
+	<string name="content_rightarrow">右箭嘴</string>
+	<string name="content_image">圖片</string>
 </resources>
 

@@ -12,6 +12,7 @@
         android:scaleType="fitCenter"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:contentDescription="@string/content_thumbnail"
         android:src="@drawable/img_stub" />
 
     <TextView
@@ -49,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/imgPlaceThumbnail"
         android:layout_toLeftOf="@+id/imgRightArrow"
-        android:layout_below="@+id/tvLat"
+        android:layout_below="@+id/tvLng"
         android:textAppearance="?android:attr/textAppearanceSmall" />
         
     <ImageView
@@ -60,6 +61,7 @@
         android:layout_alignBottom="@+id/tvDistance"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"
+        android:contentDescription="@string/content_rightarrow"
         android:src="@drawable/img_right_arrow" />
     
 </RelativeLayout>

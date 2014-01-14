@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.blueskyconnie.visitheritage.R;
 
-public class GrandchildFragment extends BaseFragment {
+public class PlaceFragment extends BaseFragment {
 	
-	public GrandchildFragment() {
+	public PlaceFragment() {
 		// not a top level fragment
 		super(false);
 	}
@@ -16,7 +16,7 @@ public class GrandchildFragment extends BaseFragment {
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_grandchild, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_place, container, false);
         return rootView;
     }
 }

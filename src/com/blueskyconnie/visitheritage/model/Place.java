@@ -75,6 +75,7 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		lat = in.readDouble();
 		lng = in.readDouble();
 		district = in.readInt();
+		distance = in.readDouble();
 		address = in.readString();
 		address_en = in.readString();
 	}

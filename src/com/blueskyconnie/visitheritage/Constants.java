@@ -24,6 +24,8 @@ public final class Constants {
 	public static final String PLACES = "PLACES";
 	public static final String PLACE_KEY = "PLACE_KEY";
 	
+	public static final String LANG_CODE_EN = "EN";
+	
 	private Constants() {}
 	
 }
