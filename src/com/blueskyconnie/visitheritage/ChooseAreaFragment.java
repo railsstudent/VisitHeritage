@@ -25,7 +25,6 @@ public class ChooseAreaFragment extends BaseFragment {
 			Bundle bundle = new Bundle();
 			switch (v.getId()) {
 				case R.id.btnHK:
-//					fragment.setListPlace(mainActivity.getLstHK());
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strHK));
 					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstHK());
 					fragment.setArguments(bundle);
@@ -44,7 +43,6 @@ public class ChooseAreaFragment extends BaseFragment {
 						.commit();
 					break;
 				case R.id.btnNT:
-//					fragment.setListPlace(mainActivity.getLstNT());
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strNT));
 					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstNT());
 					fragment.setArguments(bundle);
@@ -54,7 +52,6 @@ public class ChooseAreaFragment extends BaseFragment {
 						.commit();
 					break;
 				case R.id.btnIsland:
-//					fragment.setListPlace(mainActivity.getLstIsland());
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strIsland));
 					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstIsland());
 					fragment.setArguments(bundle);

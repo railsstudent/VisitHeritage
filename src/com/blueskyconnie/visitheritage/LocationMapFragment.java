@@ -2,6 +2,7 @@ package com.blueskyconnie.visitheritage;
 
 
 import java.util.List;
+import java.util.Locale;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -24,14 +25,12 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.common.base.Strings;
  
 public class LocationMapFragment extends BaseFragment {
 
-	private static final LatLng PRIMARY_SECTION_LATLNG = new LatLng(22.327365,114.179094);
-
 	private static final int RQS_GooglePlayServices = 1;
 	private MapView mapView;
-	private TextView tvTitle;
 	private List<Place> lstPlace;
 	private GoogleMap map;
 	
@@ -112,21 +111,35 @@ public class LocationMapFragment extends BaseFragment {
 				if (map != null) {
 					// remove all markers in the fragment
 					map.clear();
-					
-					 map.moveCamera(CameraUpdateFactory.newLatLng(PRIMARY_SECTION_LATLNG));
-                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
 
-                     // example, remove it later	
-                     map.addMarker(new MarkerOptions().position(PRIMARY_SECTION_LATLNG)
-                                     .title("title")
-                                     .snippet("snippet")
-                                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
-
+                     // check current language of the device
+              		 Locale locale = Locale.getDefault();
+              		 String language = locale.getLanguage();
+              		 String name = "";
+              		 String address = "";
+                 	 LatLng latlng = null;
                      
                      // 1) loop the lstPlace list 
-              	    // 1a)  create markeroption, set title, snippet and icon, and add to map   
-                     
-                     
+              	    // 1a)  create markeroption, set title, snippet and icon, and add to map  
+                     for (Place place : lstPlace) {
+                    	 latlng = new LatLng(place.getLat(), place.getLng());
+                    	
+                 		if (Constants.LANG_CODE_EN.equals(Strings.nullToEmpty(language).toUpperCase(locale))) {
+                 			name = Strings.nullToEmpty(place.getName_en()); // English
+                 			address = Strings.nullToEmpty(place.getAddress_en()); // English
+                 		} else {
+                 			name = Strings.nullToEmpty(place.getName()); // Chinese Name 
+                 			address = Strings.nullToEmpty(place.getAddress()); // Chinese Address
+                 		}
+                        map.addMarker(new MarkerOptions().position(latlng)
+                                 .title(name)
+                                 .snippet(address)
+                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
+                     }
+                     if (latlng != null) {
+                    	 map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+                     }
+                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
                      map.setMyLocationEnabled(true);
                                           
                      // open info marker when pin is clicked
