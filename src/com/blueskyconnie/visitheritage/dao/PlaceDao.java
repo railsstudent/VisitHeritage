@@ -74,7 +74,6 @@ public class PlaceDao {
 		Cursor cursor = database.query(PlaceSqliteOpenHelper.TABLE_PLACE, PlaceSqliteOpenHelper.ALL_COLUMNS,
 							null, null, null, null, "");
 
-		
 		// iterate cursor and convert the sql object to Place bean
 		cursor.moveToFirst();
 		while (!cursor.isAfterLast()) {

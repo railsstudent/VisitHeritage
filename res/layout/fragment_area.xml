@@ -3,6 +3,7 @@
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/linen"
     android:orientation="vertical" >
 
     <TextView
@@ -11,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center|center_horizontal"
         android:text="@string/placeholder"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:layout_marginTop="8dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/btnHK"
@@ -19,7 +21,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:drawableLeft="@drawable/ic_pages"
         android:text="@string/strHK" />
 
     <Button
@@ -28,7 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:drawableLeft="@drawable/ic_pages"
         android:text="@string/strKowloon" />
     
     <Button
@@ -37,7 +37,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:drawableLeft="@drawable/ic_pages"
         android:text="@string/strNT" />
      
     <Button
@@ -46,7 +45,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:drawableLeft="@drawable/ic_pages"
         android:text="@string/strIsland" />
         
 </LinearLayout>

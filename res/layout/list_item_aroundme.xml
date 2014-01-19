@@ -4,16 +4,16 @@
     android:layout_height="match_parent" >
     
    <ImageView
-        android:id="@+id/imgPlaceThumbnail"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:scaleType="fitCenter"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:contentDescription="@string/content_thumbnail"
-        android:src="@drawable/img_stub" />
+       android:id="@+id/imgPlaceThumbnail"
+       android:layout_width="60dp"
+       android:layout_height="60dp"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentTop="true"
+       android:layout_marginLeft="8dp"
+       android:layout_marginRight="8dp"
+       android:contentDescription="@string/content_thumbnail"
+       android:scaleType="centerInside"
+       android:src="@drawable/img_stub" />
 
     <TextView
         android:id="@+id/tvName"
@@ -22,7 +22,7 @@
         android:layout_toRightOf="@+id/imgPlaceThumbnail"
         android:layout_toLeftOf="@+id/imgRightArrow"
         android:singleLine="false"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
      <TextView
         android:id="@+id/tvLat"

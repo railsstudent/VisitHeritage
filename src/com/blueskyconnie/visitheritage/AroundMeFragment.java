@@ -40,15 +40,14 @@ import com.google.android.gms.location.LocationRequest;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.PauseOnScrollListener;
 
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
-
 // http://www.michenux.net/android-around-me-tutorial-974.html
 public class AroundMeFragment extends BaseListFragment implements
 		GooglePlayServicesClient.ConnectionCallbacks,
 		GooglePlayServicesClient.OnConnectionFailedListener, LocationListener,
 		LoaderManager.LoaderCallbacks<Cursor> {
 
+	private static final String TAG = "AroundMeFragment";
+	
 	private static final int FIFTEEN_SEC = 15 * 1000;
 	private static final int FIVE_MIN = 5 * 60 * 1000;
 	private static final int DIST = 100;
@@ -69,6 +68,7 @@ public class AroundMeFragment extends BaseListFragment implements
 	private boolean isItemClicked = false;
 	private String strLat;
 	private String strLng;
+	private boolean isHeadViewAdded;
 
 	private DistanceComparator distanceComparator;
 	private ConnectionDetector connectionDetector;
@@ -98,6 +98,7 @@ public class AroundMeFragment extends BaseListFragment implements
 				.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
 
 		mGeocoder = new Geocoder(getActivity());
+		isHeadViewAdded = false;
 	}
 
 	@Override
@@ -120,7 +121,10 @@ public class AroundMeFragment extends BaseListFragment implements
 		ListView lv = getListView();
 		lv.setOnScrollListener(new PauseOnScrollListener(ImageLoader
 				.getInstance(), false, true));
-		lv.addHeaderView(headerView);
+		if (!isHeadViewAdded) {
+			isHeadViewAdded = true;
+			lv.addHeaderView(headerView);
+		} 
 		setListAdapter(aroundmeListAdapter);
 		connectionDetector = new ConnectionDetector(getActivity());
 
@@ -128,12 +132,16 @@ public class AroundMeFragment extends BaseListFragment implements
 
 	@Override
 	public void onConnected(Bundle bundle) {
-		mLocationClient.requestLocationUpdates(mRequest, this);
-		if (connectionDetector.isConnectingToInternet()) {
-			if (mLocationClient.isConnected()) {
-				mCurrentLocation = mLocationClient.getLastLocation();
-				getLoaderManager().initLoader(LOADER_ID, null, this);
+		try {
+			mLocationClient.requestLocationUpdates(mRequest, this);
+			if (connectionDetector.isConnectingToInternet()) {
+				if (mLocationClient.isConnected()) {
+					mCurrentLocation = mLocationClient.getLastLocation();
+					getLoaderManager().initLoader(LOADER_ID, null, this);
+				}
 			}
+		} catch (Exception ex) {
+			Log.e(TAG, ex.getMessage());
 		}
 	}
 
@@ -171,16 +179,12 @@ public class AroundMeFragment extends BaseListFragment implements
 
 	@Override
 	public void onConnectionFailed(ConnectionResult result) {
-		if (activity != null) {
-			Crouton.makeText(activity,
-					getString(R.string.error_connectionfailed), Style.ALERT)
-					.show();
-		}
+		Log.e(TAG, getString(R.string.error_connectionfailed));
 	}
 
 	@Override
 	public void onLocationChanged(Location location) {
-		Log.i("INFO LOG", "AroundMeFragment - onLocationChanged, new location - " + location);
+		Log.i(TAG, "AroundMeFragment - onLocationChanged, new location - " + location);
 
 		// get current address
 		try {
@@ -200,11 +204,10 @@ public class AroundMeFragment extends BaseListFragment implements
 				// fire location changed, restart loader
 				getLoaderManager().restartLoader(LOADER_ID, null, this);
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
-			if (activity != null) {
-				Crouton.makeText(activity, e.getMessage(), Style.ALERT).show();
-			}
+		} catch (IOException ex) {
+			Log.e(TAG, ex.getMessage());
+		} catch (Exception ex) {
+			Log.e(TAG, ex.getMessage());
 		}
 	}
 
@@ -221,7 +224,7 @@ public class AroundMeFragment extends BaseListFragment implements
 				sbSort.append(PlaceSqliteOpenHelper.COLUMN_LNG);
 				sbSort.append(" - ");
 				sbSort.append(mCurrentLocation.getLongitude());
-				sbSort.append(") LIMIT 5 ");
+				sbSort.append(") LIMIT 10 ");
 
 				List<Address> addresses = mGeocoder.getFromLocation(
 						mCurrentLocation.getLatitude(),
@@ -240,7 +243,6 @@ public class AroundMeFragment extends BaseListFragment implements
 				return null;
 			}
 		} catch (Exception ex) {
-			Crouton.makeText(activity, ex.getMessage(), Style.ALERT).show();
 			return null;
 		}
 	}
@@ -253,47 +255,27 @@ public class AroundMeFragment extends BaseListFragment implements
 			if (cursor != null) {
 				for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor
 						.moveToNext()) {
-					Place place = new Place(CursorUtils.getInt(
-							PlaceSqliteOpenHelper.COLUMN_ID, cursor));
-					place.setAddress(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_ADDRESS, cursor));
-					place.setAddress_en(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, cursor));
-					place.setDescription(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_DESC, cursor));
-					place.setDescription_en(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_DESC_EN, cursor));
-					place.setDistrict(CursorUtils.getInt(
-							PlaceSqliteOpenHelper.COLUMN_DISTRICT, cursor));
-					place.setEmail(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_EMAIL, cursor));
-					place.setHomepage(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, cursor));
-					place.setLat(CursorUtils.getDouble(
-							PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
-					place.setLng(CursorUtils.getDouble(
-							PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
-					place.setName(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_NAME, cursor));
-					place.setName_en(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_NAME_EN, cursor));
-					place.setOpeningHour(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_HOUR, cursor));
-					place.setOpeningHour_en(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_HOUR_EN, cursor));
-					place.setPhone(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_PHONE, cursor));
-					place.setRemark(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_REMARK, cursor));
-					place.setRemark_en(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_REMARK, cursor));
-					place.setUrl(CursorUtils.getString(
-							PlaceSqliteOpenHelper.COLUMN_IMG_URL, cursor));
+					Place place = new Place(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_ID, cursor));
+					place.setAddress(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS, cursor));
+					place.setAddress_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, cursor));
+					place.setDescription(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC, cursor));
+					place.setDescription_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC_EN, cursor));
+					place.setDistrict(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_DISTRICT, cursor));
+					place.setEmail(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_EMAIL, cursor));
+					place.setHomepage(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, cursor));
+					place.setLat(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
+					place.setLng(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
+					place.setName(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME, cursor));
+					place.setName_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME_EN, cursor));
+					place.setOpeningHour(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR, cursor));
+					place.setOpeningHour_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, cursor));
+					place.setPhone(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_PHONE, cursor));
+					place.setRemark(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK, cursor));
+					place.setRemark_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, cursor));
+					place.setUrl(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_IMG_URL, cursor));
 					Location loc = new Location("database");
-					loc.setLatitude(CursorUtils.getDouble(
-							PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
-					loc.setLongitude(CursorUtils.getDouble(
-							PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
+					loc.setLatitude(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
+					loc.setLongitude(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
 					place.setDistance(loc.distanceTo(mCurrentLocation));
 					places.add(place);
 				}
@@ -301,10 +283,8 @@ public class AroundMeFragment extends BaseListFragment implements
 			Collections.sort(places, distanceComparator);
 			onPlaceLoadFinished(places);
 		} catch (IllegalArgumentException ex) {
-			if (activity != null) {
-				Crouton.makeText(activity, ex.getMessage(), Style.ALERT).show();
-			}
-		}
+			Log.e(TAG, ex.getMessage());
+		} 
 	}
 
 	@Override
@@ -324,7 +304,6 @@ public class AroundMeFragment extends BaseListFragment implements
 	public void onListItemClick(ListView listView, View v, int position, long id) {
 		if (!isItemClicked) {
 			isItemClicked = true;
-			Crouton.makeText(activity, R.string.strEntering, Style.INFO).show();
 			// show place fragment
 			Place place = (Place) listView.getItemAtPosition(position);
 			Bundle bundle = new Bundle();

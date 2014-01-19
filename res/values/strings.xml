@@ -20,7 +20,7 @@
         <item>@drawable/ic_people</item>
         <item>@drawable/ic_photos</item>
         <item>@drawable/ic_communities</item>
-        <item>@drawable/ic_pages</item>
+        <item>@drawable/ic_communities</item>
         <item>@drawable/ic_whats_hot</item>
     </array>
 
@@ -91,5 +91,14 @@
 	<string name="content_thumbnail">縮圖</string>
 	<string name="content_rightarrow">右箭嘴</string>
 	<string name="content_image">圖片</string>
+	
+	<string name="lblName">名稱：</string>
+	<string name="lblDescription">介紹：</string>
+	<string name="lblHomepage">網頁：</string>
+	<string name="lblEmail">電郵：</string>
+	<string name="lblPhone">電話：</string>
+	<string name="lblAddress">地址：</string>
+	<string name="lblHour">開放時間：</string>
+	<string name="lblRemark">備註：</string>
 </resources>
 

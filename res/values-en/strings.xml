@@ -15,8 +15,8 @@
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
 
-    <string name="menu_item_clear_memory_cache">Clear Photos From Memory</string>
-    <string name="menu_item_clear_disc_cache">Clear Photos From SD Card</string>
+    <string name="menu_item_clear_memory_cache">Clear Images From Memory</string>
+    <string name="menu_item_clear_disc_cache">Clear Images From SD Card</string>
     <string name="menu_item_about">About</string>
     <string name="menu_item_share">Share</string>
     
@@ -73,5 +73,14 @@
 	<string name="content_thumbnail">Thumbnail</string>
 	<string name="content_rightarrow">Right arrow</string>
 	<string name="content_image">Image</string>
+	
+	<string name="lblName">Name:</string>
+	<string name="lblDescription">Description:</string>
+	<string name="lblHomepage">Homepage:</string>
+	<string name="lblEmail">Email:</string>
+	<string name="lblPhone">Phone:</string>
+	<string name="lblAddress">Address:</string>
+	<string name="lblHour">Opening Hour:</string>
+	<string name="lblRemark">Remark:</string>
 	
 </resources>
