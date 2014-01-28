@@ -31,6 +31,7 @@ public class PlaceFragment extends BaseFragment {
 	private TextView tvEmail;
 	private TextView tvRemark;
 	private ImageView imgPlace;
+	private TextView tvLocation;
 
 	private ImageLoader imageLoader = ImageLoader.getInstance();
 	
@@ -60,6 +61,7 @@ public class PlaceFragment extends BaseFragment {
         tvEmail = (TextView) rootView.findViewById(R.id.tvEmail);
         tvRemark = (TextView) rootView.findViewById(R.id.tvRemark);
         imgPlace = (ImageView) rootView.findViewById(R.id.imgPlace);
+        tvLocation = (TextView) rootView.findViewById(R.id.tvLocation);
 
         if (place != null) {
         	
@@ -72,12 +74,14 @@ public class PlaceFragment extends BaseFragment {
     			tvHour.setText(Strings.nullToEmpty(place.getOpeningHour_en()));
     			tvDescription.setText(Strings.nullToEmpty(place.getDescription_en()));
     			tvRemark.setText(Strings.nullToEmpty(place.getRemark_en()));
+    			tvLocation.setText(Strings.nullToEmpty(place.getLocation_en()));
     		} else {
     			tvName.setText(Strings.nullToEmpty(place.getName()));
     			tvAddress.setText(Strings.nullToEmpty(place.getAddress()));
     			tvHour.setText(Strings.nullToEmpty(place.getOpeningHour()));
     			tvDescription.setText(Strings.nullToEmpty(place.getDescription()));
     			tvRemark.setText(Strings.nullToEmpty(place.getRemark()));
+    			tvLocation.setText(Strings.nullToEmpty(place.getLocation()));
     		}
 			tvHomePage.setText(Strings.nullToEmpty(place.getHomepage()));
 			tvEmail.setText(Strings.nullToEmpty(place.getEmail()));

@@ -247,7 +247,8 @@ public class MainActivity extends  FragmentActivity {
 		
 		// http://stackoverflow.com/questions/10922762/open-link-of-google-play-store-in-mobile-version-android
 		Intent intent = new Intent(Intent.ACTION_SEND);
-		intent.setType("text/plain");
+		//intent.setType("text/plain");
+		intent.setType("message/rfc882");
 		intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subject));
 		intent.putExtra(Intent.EXTRA_TEXT, String.format(getString(R.string.body), appUrl));
 		try {

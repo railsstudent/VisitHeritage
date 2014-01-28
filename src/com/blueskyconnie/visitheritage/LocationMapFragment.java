@@ -4,9 +4,15 @@ package com.blueskyconnie.visitheritage;
 import java.util.List;
 import java.util.Locale;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -18,6 +24,7 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
@@ -26,6 +33,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.common.base.Strings;
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
  
 public class LocationMapFragment extends BaseFragment {
 
@@ -33,6 +43,8 @@ public class LocationMapFragment extends BaseFragment {
 	private MapView mapView;
 	private List<Place> lstPlace;
 	private GoogleMap map;
+	private SparseArray<Place> hmNamePlace;
+	private String language;
 	
 	public LocationMapFragment() {
 		// not a top level fragment
@@ -47,6 +59,7 @@ public class LocationMapFragment extends BaseFragment {
 			if (savedInstanceState == null) {
 				MapsInitializer.initialize(getActivity());
 			}
+			setHasOptionsMenu(true);
 		} catch (GooglePlayServicesNotAvailableException e) {
 			Log.e("LocationMapFragment", "onCreate - " + e.getMessage());
 		}
@@ -64,7 +77,14 @@ public class LocationMapFragment extends BaseFragment {
 		TextView tvArea = (TextView) rootView.findViewById(R.id.tvArea);
 		tvArea.setText(placeKey);
 
-		lstPlace = getArguments().getParcelableArrayList(Constants.PLACES)  ; 
+		lstPlace = getArguments().getParcelableArrayList(Constants.PLACES);
+		
+		hmNamePlace = new SparseArray<Place>();
+		if (lstPlace != null) {
+			for (Place place : lstPlace) {
+				hmNamePlace.put(place.getId(), place);
+			}
+		}
 		return rootView;
 	}
 	
@@ -74,6 +94,8 @@ public class LocationMapFragment extends BaseFragment {
 		if (mapView != null) {
 			mapView.onCreate(savedInstanceState);
 		}
+		// check current language of the device
+ 		language = Locale.getDefault().getLanguage();
 	}
 
 	@Override
@@ -112,30 +134,18 @@ public class LocationMapFragment extends BaseFragment {
 					// remove all markers in the fragment
 					map.clear();
 
-                     // check current language of the device
-              		 Locale locale = Locale.getDefault();
-              		 String language = locale.getLanguage();
-              		 String name = "";
-              		 String address = "";
                  	 LatLng latlng = null;
                      
                      // 1) loop the lstPlace list 
               	    // 1a)  create markeroption, set title, snippet and icon, and add to map  
                      for (Place place : lstPlace) {
-                    	 latlng = new LatLng(place.getLat(), place.getLng());
-                    	
-                 		if (Constants.LANG_CODE_EN.equals(Strings.nullToEmpty(language).toUpperCase(locale))) {
-                 			name = Strings.nullToEmpty(place.getName_en()); // English
-                 			address = Strings.nullToEmpty(place.getAddress_en()); // English
-                 		} else {
-                 			name = Strings.nullToEmpty(place.getName()); // Chinese Name 
-                 			address = Strings.nullToEmpty(place.getAddress()); // Chinese Address
-                 		}
+                    	latlng = new LatLng(place.getLat(), place.getLng());
                         map.addMarker(new MarkerOptions().position(latlng)
-                                 .title(name)
-                                 .snippet(address)
+                                 .title(String.valueOf(place.getId()))
                                  .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
                      }
+                     
+                     // move the camera to the last marker
                      if (latlng != null) {
                     	 map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
                      }
@@ -150,6 +160,30 @@ public class LocationMapFragment extends BaseFragment {
                                      return false;
                              }
                      });
+                     map.setOnInfoWindowClickListener(new OnInfoWindowClickListener(){
+
+						public void onInfoWindowClick(Marker marker) {
+							// open place fragment
+							int placeId = -1;
+			            	String strId = Strings.nullToEmpty(marker.getTitle());
+			            	placeId = Integer.parseInt(strId);
+			            	Place place = hmNamePlace.get(placeId, null);
+			            	if (place != null) {
+			    				Bundle bundle = new Bundle();
+			    				bundle.putParcelable(Constants.PLACE_KEY, place);
+			    				PlaceFragment fragment = new PlaceFragment();
+			    				fragment.setArguments(bundle);
+			    				FragmentManager fragManager = LocationMapFragment.this.getFragmentManager();
+			    				fragManager.beginTransaction()
+			    					.replace(R.id.frame_container, fragment)
+			    					.addToBackStack(null)
+			    					.commit();
+			    			} else {
+			    				Crouton.makeText(LocationMapFragment.this.getActivity(), "Monument information does not exist", 
+			    						Style.ALERT).show();
+			    			}
+						}
+                     });
                      
                      // show a custom information marker
                      map.setInfoWindowAdapter(new PlaceInfoWindowAdapter());
@@ -161,45 +195,98 @@ public class LocationMapFragment extends BaseFragment {
 		}
 	}
 		
-	private final class PlaceInfoWindowAdapter implements InfoWindowAdapter {
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		super.onCreateOptionsMenu(menu, inflater);
+		inflater.inflate(R.menu.menu_location, menu);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (item.getItemId() == R.id.menu_legalnotices) {
+			String LicenseInfo = GooglePlayServicesUtil.getOpenSourceSoftwareLicenseInfo(getActivity());
+			AlertDialog.Builder LicenseDialog = new AlertDialog.Builder(getActivity());
+   		    LicenseDialog.setTitle(getString(R.string.menu_legalnotices));
+			LicenseDialog.setMessage(LicenseInfo);
+			LicenseDialog.show();
+			return true;
+		} 	
+		return super.onOptionsItemSelected(item);
+	}
 
-		// @TODO: implement this button click listener
-//		private OnClickListener listener = new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View view) {
-//				switch (view.getId()) {
-//					case 1:
-//						break;
-//					default: 
-//						break;
-//				}
-//			}
-//		};
-		
+	private final class PlaceInfoWindowAdapter implements InfoWindowAdapter /*, View.OnClickListener*/ {
+
         @Override
         public View getInfoContents(Marker marker) {
+        	
+        	String err_msg = getResources().getString(R.string.no_monument_errmsg);
 
-//                String marker_title = marker.getTitle();
-//                String marker_snippet = marker.getSnippet();
-        	
-//        		@TODO  implement this method
-        	    // 1) Inflate the view 
-        	    // 2) call view.findViewById to get textview, imageview, button, etc
-        	    // 2a)  set text of textview
-                // 2b)  use universal image loader to show image (may not do it if too hard)
-        	    // 2c)  set onclick listener to button. When button is clicked, another fragment is shown 
-//        	    LayoutInflater inflater = (LayoutInflater) getActivity().getLayoutInflater();
-//        	    View view = inflater.inflate(1, null);
-        	
-        	    
-                return null;
+            try {
+            	String not_avail = getResources().getString(R.string.not_avail);
+            	String name = not_avail;
+            	String address = not_avail;
+            	String location = not_avail;
+            	int placeId = -1;
+                
+            	String strId = Strings.nullToEmpty(marker.getTitle());
+            	placeId = Integer.parseInt(strId);
+            	Place place = hmNamePlace.get(placeId, null);
+            	if (place != null) {
+            		// check current language of the device
+             		if (Constants.LANG_CODE_EN.equals(Strings.nullToEmpty(language).toUpperCase(Locale.getDefault()))) {
+             			name = Strings.nullToEmpty(place.getName_en()); // English Name
+             			address = Strings.nullToEmpty(place.getAddress_en()); // English Address
+             			location = Strings.nullToEmpty(place.getLocation_en()); // English Location
+             		} else {
+             			name = Strings.nullToEmpty(place.getName()); // Chinese Name 
+             			address = Strings.nullToEmpty(place.getAddress()); // Chinese Address
+             			location = Strings.nullToEmpty(place.getLocation()); // English Location
+             		}
+             		
+             		// 1) Inflate the view 
+            	    // 2) call view.findViewById to get textview, imageview, button, etc
+            	    // 2a)  set text of textview
+            	    // 2b)  set onclick listener to button. When button is clicked, another fragment is shown 
+            	    LayoutInflater inflater =  getActivity().getLayoutInflater();
+            	    View view = inflater.inflate(R.layout.layout_infomarker, null);
+            	    TextView tvInfoName = (TextView) view.findViewById(R.id.tvInfoName);
+            	    TextView tvInfoAddress = (TextView) view.findViewById(R.id.tvInfoAddress);
+            	    TextView tvInfoLocation = (TextView) view.findViewById(R.id.tvInfoLocation);
+            	    tvInfoName.setText(getResources().getString(R.string.lblName) + name);
+            	    tvInfoAddress.setText(getResources().getString(R.string.lblAddress) +address);
+            	    tvInfoLocation.setText(getResources().getString(R.string.lblLocation) + location);
+                    return view;
+            	} else {
+            		Crouton.makeText(LocationMapFragment.this.getActivity(), err_msg, Style.ALERT).show();
+            	}
+            } catch (NumberFormatException ex) {
+        		Crouton.makeText(LocationMapFragment.this.getActivity(), err_msg, Style.ALERT).show();
+            }
+    	    return null;
         }
 
         @Override
         public View getInfoWindow(Marker marker) {
-                return null;
+           return null;
         }
-}
+
+//		@Override
+//		public void onClick(View v) {
+//			if (place != null) {
+//				Bundle bundle = new Bundle();
+//				bundle.putParcelable(Constants.PLACE_KEY, place);
+//				PlaceFragment fragment = new PlaceFragment();
+//				fragment.setArguments(bundle);
+//				FragmentManager fragManager = LocationMapFragment.this.getFragmentManager();
+//				fragManager.beginTransaction()
+//					.replace(R.id.frame_container, fragment)
+//					.addToBackStack(null)
+//					.commit();
+//			} else {
+//				Crouton.makeText(LocationMapFragment.this.getActivity(), "Monument information does not exist", 
+//						Style.ALERT).show();
+//			}
+//		}
+	}
 	
 }

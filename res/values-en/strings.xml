@@ -8,7 +8,7 @@
         <item>Hong Kong Monuments</item>
         <item>Monuments Around Me</item>
         <item>Notes to Monument Visitors</item>
-        <item>Contact</item>
+        <item>Contact Office</item>
         <item>Rate My App</item>
     </string-array>
 
@@ -61,12 +61,13 @@
 
     <string name="placeholder">Please choose region</string> 
     <string name="no_monument">No declared monuments.</string>
-	<string name="city_name">City name</string>
+	<string name="city_name">Unknown</string>
 	<string name="error_connectionfailed">Connection failed</string>
+	<string name="not_avail">Not Available</string>
 	
-	<string name="strLat">Lat:</string>
-	<string name="strLng">Lng:</string>
-	<string name="strDistance">Distance:</string>
+	<string name="strLat">Lat: </string>
+	<string name="strLng">Lng: </string>
+	<string name="strDistance">Distance: </string>
 	<string name="strMeter">Meter</string>
 	<string name="strEntering">Entering&#8230;</string>
 	
@@ -80,7 +81,11 @@
 	<string name="lblEmail">Email:</string>
 	<string name="lblPhone">Phone:</string>
 	<string name="lblAddress">Address:</string>
+	<string name="lblLocation">Location:</string>
 	<string name="lblHour">Opening Hour:</string>
 	<string name="lblRemark">Remark:</string>
 	
+	<string name="dist_remark">Distance from nearest to farthest (Measured in meters)</string>
+	<string name="menu_legalnotices">Legal Notice</string>
+	<string name="no_monument_errmsg">Monument information does not exist.</string>
 </resources>

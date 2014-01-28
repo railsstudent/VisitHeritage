@@ -31,6 +31,8 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 	private double distance;
 	private String address;
 	private String address_en;
+	private String location;
+	private String location_en;
 	
 	public Place(int id) {
 		this.id = id;
@@ -56,6 +58,8 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		this.openingHour_en = builder.openingHour_en;
 		this.address = builder.address;
 		this.address_en = builder.address_en;
+		this.location = builder.location;
+		this.location_en = builder.location_en;
 	}
 	
 	public Place(Parcel in) {
@@ -78,6 +82,8 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		distance = in.readDouble();
 		address = in.readString();
 		address_en = in.readString();
+		location = in.readString();
+		location_en = in.readString();
 	}
 
 	public int getId() {
@@ -228,6 +234,22 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		this.address_en = address_en;
 	}
 
+	public String getLocation_en() {
+		return location_en;
+	}
+
+	public void setLocation_en(String location_en) {
+		this.location_en = location_en;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
 	@Override
 	public int compareTo(Place other) {
 		// sort id in ascending order
@@ -255,6 +277,8 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		private String openingHour_en;
 		private String address;
 		private String address_en;
+		private String location;
+		private String location_en;
 
 		public PlaceBuilder id(int id) {
 			this.id = id;
@@ -351,6 +375,16 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 			return this;
 		}
 		
+		public PlaceBuilder location(String location) {
+			this.location = Strings.nullToEmpty(location);
+			return this;
+		}
+		
+		public PlaceBuilder location_en(String location_en) {
+			this.location_en = Strings.nullToEmpty(location_en);
+			return this;
+		}
+		
 		public Place build() {
 			return new Place(this);
 		}
@@ -382,6 +416,8 @@ public class Place implements Comparable<Place>, Parcelable, Serializable {
 		dest.writeDouble(distance);
 		dest.writeString(address);
 		dest.writeString(address_en);
+		dest.writeString(location);
+		dest.writeString(location_en);
 	}
 	
 	public static final Parcelable.Creator<Place> CREATOR = new Parcelable.Creator<Place>() {

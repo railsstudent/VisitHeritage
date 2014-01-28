@@ -16,12 +16,20 @@
        android:src="@drawable/img_stub" />
 
     <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgPlaceThumbnail"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+   
+    <TextView
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/imgPlaceThumbnail"
+        android:layout_toRightOf="@+id/tvCount"
         android:layout_toLeftOf="@+id/imgRightArrow"
         android:singleLine="false"
+        android:layout_marginLeft="8dp"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
      <TextView

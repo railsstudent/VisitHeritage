@@ -23,7 +23,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    
     <!-- android:theme="@style/AppTheme" -->
 
     <application
@@ -39,6 +40,7 @@
         <activity
             android:name="com.blueskyconnie.visitheritage.SplashActivity"
             android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

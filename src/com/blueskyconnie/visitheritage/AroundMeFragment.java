@@ -28,8 +28,8 @@ import com.blueskyconnie.visitheritage.adapter.AroundMeListAdapter;
 import com.blueskyconnie.visitheritage.contentprovider.PlaceContentProvider;
 import com.blueskyconnie.visitheritage.helper.ConnectionDetector;
 import com.blueskyconnie.visitheritage.helper.DistanceComparator;
+import com.blueskyconnie.visitheritage.helper.PlaceCursorHelper;
 import com.blueskyconnie.visitheritage.model.Place;
-import com.blueskyconnie.visitheritage.sqllite.CursorUtils;
 import com.blueskyconnie.visitheritage.sqllite.PlaceSqliteOpenHelper;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
@@ -63,12 +63,12 @@ public class AroundMeFragment extends BaseListFragment implements
 	private Location mCurrentLocation;
 
 	private TextView tvHeader;
-	private View headerView;
+	//private View headerView;
 	private Activity activity;
 	private boolean isItemClicked = false;
 	private String strLat;
 	private String strLng;
-	private boolean isHeadViewAdded;
+	//private boolean isHeaderViewAdded;
 
 	private DistanceComparator distanceComparator;
 	private ConnectionDetector connectionDetector;
@@ -83,8 +83,6 @@ public class AroundMeFragment extends BaseListFragment implements
 		super.onCreate(savedInstanceState);
 
 		activity = getActivity();
-		aroundmeListAdapter = new AroundMeListAdapter(activity,
-				R.layout.list_item_aroundme, new ArrayList<Place>());
 		mLocationClient = new LocationClient(activity, this, this);
 
 		// We don’t need a high accuracy
@@ -96,9 +94,8 @@ public class AroundMeFragment extends BaseListFragment implements
 				.setFastestInterval(FIVE_MIN).setSmallestDisplacement(DIST) // in
 																			// meter
 				.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-
+		//isHeaderViewAdded = false;
 		mGeocoder = new Geocoder(getActivity());
-		isHeadViewAdded = false;
 	}
 
 	@Override
@@ -107,9 +104,11 @@ public class AroundMeFragment extends BaseListFragment implements
 
 		View rootView = inflater.inflate(R.layout.fragment_around_me,
 				container, false);
-		headerView = View.inflate(getActivity(),
-				R.layout.layout_around_me_heading, null);
-		tvHeader = (TextView) headerView.findViewById(R.id.tvHeader);
+//		headerView = View.inflate(getActivity(),
+//				R.layout.layout_around_me_heading, null);
+		aroundmeListAdapter = new AroundMeListAdapter(activity,
+				R.layout.list_item_aroundme, new ArrayList<Place>());
+		tvHeader = (TextView) rootView.findViewById(R.id.tvHeader);
 		strLat = getString(R.string.strLat);
 		strLng = getString(R.string.strLng);
 		return rootView;
@@ -121,13 +120,12 @@ public class AroundMeFragment extends BaseListFragment implements
 		ListView lv = getListView();
 		lv.setOnScrollListener(new PauseOnScrollListener(ImageLoader
 				.getInstance(), false, true));
-		if (!isHeadViewAdded) {
-			isHeadViewAdded = true;
-			lv.addHeaderView(headerView);
-		} 
+//		if (!isHeaderViewAdded) {
+//			lv.addHeaderView(headerView);
+//			isHeaderViewAdded = true;
+//		} 
 		setListAdapter(aroundmeListAdapter);
 		connectionDetector = new ConnectionDetector(getActivity());
-
 	}
 
 	@Override
@@ -168,8 +166,10 @@ public class AroundMeFragment extends BaseListFragment implements
 		int resultCode = GooglePlayServicesUtil
 				.isGooglePlayServicesAvailable(getActivity());
 		if (resultCode == ConnectionResult.SUCCESS) {
-			if (!mLocationClient.isConnected()) {
-				mLocationClient.connect();
+			if (connectionDetector.isConnectingToInternet()) {
+				if (!mLocationClient.isConnected()) {
+					mLocationClient.connect();
+				}
 			}
 		} else {
 			GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(),
@@ -224,7 +224,7 @@ public class AroundMeFragment extends BaseListFragment implements
 				sbSort.append(PlaceSqliteOpenHelper.COLUMN_LNG);
 				sbSort.append(" - ");
 				sbSort.append(mCurrentLocation.getLongitude());
-				sbSort.append(") LIMIT 10 ");
+				sbSort.append(") LIMIT 20 ");
 
 				List<Address> addresses = mGeocoder.getFromLocation(
 						mCurrentLocation.getLatitude(),
@@ -250,41 +250,52 @@ public class AroundMeFragment extends BaseListFragment implements
 	@Override
 	public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
 
-		try {
-			List<Place> places = new ArrayList<Place>();
-			if (cursor != null) {
-				for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor
-						.moveToNext()) {
-					Place place = new Place(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_ID, cursor));
-					place.setAddress(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS, cursor));
-					place.setAddress_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, cursor));
-					place.setDescription(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC, cursor));
-					place.setDescription_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC_EN, cursor));
-					place.setDistrict(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_DISTRICT, cursor));
-					place.setEmail(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_EMAIL, cursor));
-					place.setHomepage(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, cursor));
-					place.setLat(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
-					place.setLng(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
-					place.setName(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME, cursor));
-					place.setName_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME_EN, cursor));
-					place.setOpeningHour(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR, cursor));
-					place.setOpeningHour_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, cursor));
-					place.setPhone(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_PHONE, cursor));
-					place.setRemark(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK, cursor));
-					place.setRemark_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, cursor));
-					place.setUrl(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_IMG_URL, cursor));
-					Location loc = new Location("database");
-					loc.setLatitude(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
-					loc.setLongitude(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
-					place.setDistance(loc.distanceTo(mCurrentLocation));
-					places.add(place);
-				}
-			}
-			Collections.sort(places, distanceComparator);
-			onPlaceLoadFinished(places);
-		} catch (IllegalArgumentException ex) {
-			Log.e(TAG, ex.getMessage());
-		} 
+//		try {
+//			List<Place> places = new ArrayList<Place>();
+//			if (cursor != null) {
+//				for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor
+//						.moveToNext()) {
+//					Place place = new Place(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_ID, cursor));
+//					place.setAddress(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS, cursor));
+//					place.setAddress_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, cursor));
+//					place.setDescription(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC, cursor));
+//					place.setDescription_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC_EN, cursor));
+//					place.setDistrict(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_DISTRICT, cursor));
+//					place.setEmail(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_EMAIL, cursor));
+//					place.setHomepage(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, cursor));
+//					place.setLat(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
+//					place.setLng(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
+//					place.setName(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME, cursor));
+//					place.setName_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME_EN, cursor));
+//					place.setOpeningHour(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR, cursor));
+//					place.setOpeningHour_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, cursor));
+//					place.setPhone(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_PHONE, cursor));
+//					place.setRemark(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK, cursor));
+//					place.setRemark_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, cursor));
+//					place.setUrl(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_IMG_URL, cursor));
+//					place.setLocation(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_LOCATION, cursor));
+//					place.setLocation_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, cursor));
+//					Location loc = new Location("database");
+//					loc.setLatitude(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
+//					loc.setLongitude(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
+//					place.setDistance(loc.distanceTo(mCurrentLocation));
+//					places.add(place);
+//				}
+//			}
+//			Collections.sort(places, distanceComparator);
+//			onPlaceLoadFinished(places);
+//		} catch (IllegalArgumentException ex) {
+//			Log.e(TAG, ex.getMessage());
+//		} 
+		List<Place> places = PlaceCursorHelper.loadFromCursor(cursor);
+		for (Place place : places) {
+			Location loc = new Location("database");
+			loc.setLatitude(place.getLat());
+			loc.setLongitude(place.getLng());
+			place.setDistance(loc.distanceTo(mCurrentLocation));
+		}
+		Collections.sort(places, distanceComparator);
+		onPlaceLoadFinished(places);
 	}
 
 	@Override
@@ -306,15 +317,19 @@ public class AroundMeFragment extends BaseListFragment implements
 			isItemClicked = true;
 			// show place fragment
 			Place place = (Place) listView.getItemAtPosition(position);
-			Bundle bundle = new Bundle();
-			bundle.putParcelable(Constants.PLACE_KEY, place);
-			Fragment placeFragment = new PlaceFragment();
-			placeFragment.setArguments(bundle);
-			FragmentManager fragManager = this.getFragmentManager();
-			fragManager.beginTransaction()
-				.replace(R.id.frame_container, placeFragment)
-				.addToBackStack(null)
-				.commit();
+			if (place != null) {
+				Bundle bundle = new Bundle();
+				bundle.putParcelable(Constants.PLACE_KEY, place);
+				Fragment placeFragment = new PlaceFragment();
+				placeFragment.setArguments(bundle);
+				FragmentManager fragManager = this.getFragmentManager();
+				fragManager.beginTransaction()
+					.replace(R.id.frame_container, placeFragment)
+					.addToBackStack(null)
+					.commit();
+			}  else {
+				isItemClicked = false;
+			}
 		}
 	}
 }

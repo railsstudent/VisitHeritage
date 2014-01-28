@@ -5,10 +5,29 @@
     android:layout_height="match_parent"
     android:background="@color/linen"
     android:orientation="vertical" >
-
+    
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:background="@color/linen"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/city_name" />
+    
+    <TextView
+        android:id="@+id/tvRemark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:background="@color/linen"
+        android:layout_gravity="left"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/dist_remark" />
+    
     <ListView
         android:id="@id/android:list"
-        android:divider="#ff00ff"
+        android:divider="@color/magenta"
         android:dividerHeight="1dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >

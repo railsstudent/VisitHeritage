@@ -20,6 +20,7 @@ encoding//src/com/blueskyconnie/visitheritage/contentprovider/PlaceContentProvid
 encoding//src/com/blueskyconnie/visitheritage/dao/PlaceDao.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/helper/ConnectionDetector.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/helper/DistanceComparator.java=UTF-8
+encoding//src/com/blueskyconnie/visitheritage/helper/PlaceCursorHelper.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/model/NavDrawerItem.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/model/Place.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/sqllite/CursorUtils.java=UTF-8

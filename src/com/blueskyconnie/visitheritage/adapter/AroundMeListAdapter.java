@@ -64,9 +64,36 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		return getItem(position).hashCode();
 	}
 
+//	@Override
+//	public int getItemViewType(int position) {
+//		if (position == 0) {
+//			// header
+//			return HEADER;
+//		} else {
+//			// cell
+//			return CELL;
+//		}
+//	}
+//	
+//	@Override
+//	public int getViewTypeCount() {
+//		return 2;
+//	}
+
 	@SuppressLint("DefaultLocale")
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		
+//		// return header view
+//		if (getItemViewType(position) == HEADER) {
+//			if (convertView == null) {
+//				LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//				convertView = inflater.inflate(R.layout.layout_around_me_heading, null);
+//				TextView tvHeader = (TextView) convertView.findViewById(R.id.tvHeader);
+//				tvHeader.setText("");
+//			}
+//			return convertView;
+//		}
 		
 		AroundMeHolder holder = null;
 		View view = convertView;
@@ -79,6 +106,7 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 			holder.tvLng = (TextView) view.findViewById(R.id.tvLng);
 			holder.tvDistance = (TextView) view.findViewById(R.id.tvDistance);
 			holder.img = (ImageView) view.findViewById(R.id.imgPlaceThumbnail);
+			holder.tvCount = (TextView) view.findViewById(R.id.tvCount);
 			view.setTag(holder);
 		} else {
 			holder = (AroundMeHolder) view.getTag();
@@ -96,13 +124,14 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 			name = Strings.nullToEmpty(place.getName()); // Chinese Name 
 		}
 		
+		holder.tvCount.setText(String.valueOf((position + 1) + ")"));
 		holder.tvName.setText(name);
-		holder.tvLat.setText(strLat + String.valueOf(place.getLat())); 
-		holder.tvLng.setText(strLng + String.valueOf(place.getLng()));
+		holder.tvLat.setText(strLat + " " + String.valueOf(place.getLat())); 
+		holder.tvLng.setText(strLng + " " + String.valueOf(place.getLng()));
 		
 		BigDecimal bdDist = new BigDecimal(place.getDistance(), MathContext.UNLIMITED);
 		bdDist = bdDist.setScale(2, RoundingMode.HALF_DOWN);
-		holder.tvDistance.setText(strDistance + bdDist.toPlainString() + " " + strMeter);
+		holder.tvDistance.setText(strDistance + " " + bdDist.toPlainString() + " " + strMeter);
 		
 		if (holder.img != null && !Strings.isNullOrEmpty(place.getUrl())) {
 			imageLoader.displayImage(place.getUrl(), holder.img, 
@@ -140,6 +169,6 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		TextView tvLng;
 		TextView tvDistance;
 		ImageView img;
+		TextView tvCount;
 	}
-	
 }

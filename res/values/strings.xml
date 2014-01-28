@@ -79,8 +79,9 @@
      
      <string name="placeholder">請選擇地區</string>
      <string name="no_monument">沒有古蹟。</string>
-     <string name="city_name">城市名稱</string>
+     <string name="city_name">不詳</string>
 	 <string name="error_connectionfailed">連線失敗</string>
+	 <string name="not_avail">不詳</string>
 	 
 	 <string name="strLat">緯度：</string>
 	 <string name="strLng">經線：</string>
@@ -98,7 +99,14 @@
 	<string name="lblEmail">電郵：</string>
 	<string name="lblPhone">電話：</string>
 	<string name="lblAddress">地址：</string>
+	<string name="lblLocation">地區：</string>
 	<string name="lblHour">開放時間：</string>
 	<string name="lblRemark">備註：</string>
+	
+	<string name="dist_remark">從最近到最遠的距離 (以米計算)</string>
+	<string name="menu_legalnotices">法律聲明</string>
+	
+	<string name="no_monument_errmsg">法定古蹟資料不存在。</string>
+	
 </resources>
 
