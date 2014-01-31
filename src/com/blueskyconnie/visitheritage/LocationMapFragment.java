@@ -149,7 +149,7 @@ public class LocationMapFragment extends BaseFragment {
                      if (latlng != null) {
                     	 map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
                      }
-                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
+                     map.animateCamera(CameraUpdateFactory.zoomTo(10));
                      map.setMyLocationEnabled(true);
                                           
                      // open info marker when pin is clicked
@@ -179,7 +179,8 @@ public class LocationMapFragment extends BaseFragment {
 			    					.addToBackStack(null)
 			    					.commit();
 			    			} else {
-			    				Crouton.makeText(LocationMapFragment.this.getActivity(), "Monument information does not exist", 
+			    				Crouton.makeText(LocationMapFragment.this.getActivity(), 
+			    						getResources().getString(R.string.no_monument_errmsg),
 			    						Style.ALERT).show();
 			    			}
 						}
@@ -269,24 +270,6 @@ public class LocationMapFragment extends BaseFragment {
         public View getInfoWindow(Marker marker) {
            return null;
         }
-
-//		@Override
-//		public void onClick(View v) {
-//			if (place != null) {
-//				Bundle bundle = new Bundle();
-//				bundle.putParcelable(Constants.PLACE_KEY, place);
-//				PlaceFragment fragment = new PlaceFragment();
-//				fragment.setArguments(bundle);
-//				FragmentManager fragManager = LocationMapFragment.this.getFragmentManager();
-//				fragManager.beginTransaction()
-//					.replace(R.id.frame_container, fragment)
-//					.addToBackStack(null)
-//					.commit();
-//			} else {
-//				Crouton.makeText(LocationMapFragment.this.getActivity(), "Monument information does not exist", 
-//						Style.ALERT).show();
-//			}
-//		}
 	}
 	
 }

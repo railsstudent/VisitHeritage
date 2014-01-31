@@ -8,6 +8,12 @@
         android:icon="@drawable/ic_share"
         android:title="@string/menu_item_share"/>
     <item
+        android:id="@+id/item_setting"
+        android:showAsAction="ifRoom" 
+        android:orderInCategory="101"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/menu_item_setting"/>
+    <item
         android:id="@+id/item_clear_memory_cache"
         android:showAsAction="never" 
         android:orderInCategory="200"
@@ -17,9 +23,4 @@
         android:showAsAction="never"
         android:orderInCategory="210"
         android:title="@string/menu_item_clear_disc_cache"/>
-    <item
-        android:id="@+id/item_about"
-        android:showAsAction="never"
-        android:orderInCategory="500"
-        android:title="@string/menu_item_about"/>
 </menu>

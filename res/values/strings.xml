@@ -30,6 +30,7 @@
     <string name="menu_item_clear_disc_cache">清除外置卡圖像</string>
     <string name="menu_item_about">關於</string>
     <string name="menu_item_share">分享</string>
+    <string name="menu_item_setting">設定</string>
     <string name="visit_title">參觀古蹟須知</string>
     <string name="visit_text1">1.	法定古蹟位置資料是由古物古蹟辦事處提供，只作識別用。</string>
     <string name="visit_text2">2.	開放時間只作參考，並以相關團體或機構的最新公布為準。</string>
@@ -70,43 +71,53 @@
     <string name="crouton_copyright">Copyright 2013, Benjamin Weiss</string>
     <string name="guava_software">Google Guava</string>
     <string name="guava_copyright">Copyright 2011, Guava Authors</string>
-    
-     <string name="loading">載入&#8230;</string>
-     <string name="strHK">香港島</string>
-     <string name="strKowloon">九龍</string>
-     <string name="strNT">新界</string>
-     <string name="strIsland">離島</string>
-     
-     <string name="placeholder">請選擇地區</string>
-     <string name="no_monument">沒有古蹟。</string>
-     <string name="city_name">不詳</string>
-	 <string name="error_connectionfailed">連線失敗</string>
-	 <string name="not_avail">不詳</string>
-	 
-	 <string name="strLat">緯度：</string>
-	 <string name="strLng">經線：</string>
-	 <string name="strDistance">距離：</string>
-	 <string name="strMeter">米</string>
-	 <string name="strEntering">進入&#8230;</string>
-	 
-	<string name="content_thumbnail">縮圖</string>
-	<string name="content_rightarrow">右箭嘴</string>
-	<string name="content_image">圖片</string>
+    <string name="loading">載入&#8230;</string>
+    <string name="strHK">香港島</string>
+    <string name="strKowloon">九龍</string>
+    <string name="strNT">新界</string>
+    <string name="strIsland">離島</string>
+    <string name="placeholder">請選擇地區</string>
+    <string name="no_monument">沒有古蹟。</string>
+    <string name="city_name">不詳</string>
+    <string name="error_connectionfailed">連線失敗</string>
+    <string name="not_avail">不詳</string>
+    <string name="strLat">緯度：</string>
+    <string name="strLng">經線：</string>
+    <string name="strDistance">距離：</string>
+    <string name="strMeter">米</string>
+    <string name="strEntering">進入&#8230;</string>
+    <string name="content_thumbnail">縮圖</string>
+    <string name="content_rightarrow">右箭嘴</string>
+    <string name="content_image">圖片</string>
+    <string name="content_pin">標記</string>
+    <string name="lblName">名稱：</string>
+    <string name="lblDescription">介紹：</string>
+    <string name="lblHomepage">網頁：</string>
+    <string name="lblEmail">電郵：</string>
+    <string name="lblPhone">電話：</string>
+    <string name="lblAddress">地址：</string>
+    <string name="lblLocation">地區：</string>
+    <string name="lblHour">開放時間：</string>
+    <string name="lblRemark">備註：</string>
+    <string name="dist_remark">從最近到最遠的距離 (以米計算)</string>
+    <string name="menu_legalnotices">法律聲明</string>
+    <string name="no_monument_errmsg">法定古蹟資料不存在。</string>
+    <string name="strSetting">設定</string>
+	<string name="strAbout">關於隨時隨地遊古蹟</string>
+	<string name="strDatasetSource">數據集的來源：</string>
+	<string name="strChiDS">http://data.one.gov.hk/dataset/17/tc</string>
+	<string name="strEngDS">http://data.one.gov.hk/dataset/17/en</string>
+	<string name="copyright_year">2014</string>
+	<string name="strDeveloper">開發人員</string>
+    <string name="developer_resp1">構思應用程序的用法，設計程序界面，設計SQLite數據庫。</string>
+    <string name="developer_resp2">構思應用程序的用法，收集數據，輸入數據，設計ICON。</string>
 	
-	<string name="lblName">名稱：</string>
-	<string name="lblDescription">介紹：</string>
-	<string name="lblHomepage">網頁：</string>
-	<string name="lblEmail">電郵：</string>
-	<string name="lblPhone">電話：</string>
-	<string name="lblAddress">地址：</string>
-	<string name="lblLocation">地區：</string>
-	<string name="lblHour">開放時間：</string>
-	<string name="lblRemark">備註：</string>
+	<string name="strChi">中文：</string>
+	<string name="strEng">英文：</string>
+	<string name="copyright">版權所有</string>
 	
-	<string name="dist_remark">從最近到最遠的距離 (以米計算)</string>
-	<string name="menu_legalnotices">法律聲明</string>
-	
-	<string name="no_monument_errmsg">法定古蹟資料不存在。</string>
-	
+    <string-array name="setting_array">
+        <item>聯絡開發人員</item>
+        <item>關於隨時隨地遊古蹟</item>
+    </string-array>
 </resources>
-

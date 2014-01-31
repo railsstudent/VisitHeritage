@@ -3,11 +3,7 @@ package com.blueskyconnie.visitheritage;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
@@ -19,7 +15,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -231,13 +226,19 @@ public class MainActivity extends  FragmentActivity {
 				imageLoader.clearMemoryCache();
 				Log.i("MainActivity", "Clear memory from memory");
 				return true;
-			case R.id.item_about:
-				Log.i("MainActivity", "Show About Dialog");
-				createAboutDialog();
-				return true;
+//			case R.id.item_about:
+//				Log.i("MainActivity", "Show About Dialog");
+//				createAboutDialog();
+//				return true;
 			case R.id.item_share:
 				Log.i("MainActivity", "Tell a friend about application");
 				createShareIntent();
+				return true;
+			// launch setting activity
+			case R.id.item_setting:
+				Log.i("MainActivity", "Show settings activity");
+				Intent intent = new Intent(this, SettingActivity.class);
+				startActivity(intent);
 				return true;
 		}
 		return false;
@@ -258,24 +259,24 @@ public class MainActivity extends  FragmentActivity {
 		}
 	}
 	
-	private void createAboutDialog() {
-		String title = getString(R.string.dialog_about_title) + " " + getString(R.string.app_name);
-		LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View view = inflater.inflate(R.layout.layout_about, null); 
-		
-		new AlertDialog.Builder(this)
-				.setIcon(android.R.drawable.ic_dialog_info)
-				.setTitle(title)
-				.setView(view)
-				.setNeutralButton(R.string.close, new OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.dismiss();
-					}
-				})
-				.create()
-				.show();
-	}
+//	private void createAboutDialog() {
+//		String title = getString(R.string.dialog_about_title) + " " + getString(R.string.app_name);
+//		LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//		View view = inflater.inflate(R.layout.layout_about, null); 
+//		
+//		new AlertDialog.Builder(this)
+//				.setIcon(android.R.drawable.ic_dialog_info)
+//				.setTitle(title)
+//				.setView(view)
+//				.setNeutralButton(R.string.close, new OnClickListener() {
+//					@Override
+//					public void onClick(DialogInterface dialog, int which) {
+//						dialog.dismiss();
+//					}
+//				})
+//				.create()
+//				.show();
+//	}
 	
 	/***
 	 * Called when invalidateOptionsMenu() is triggered
@@ -286,9 +287,10 @@ public class MainActivity extends  FragmentActivity {
 		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
 		menu.findItem(R.id.item_clear_disc_cache).setVisible(!drawerOpen);
   	    menu.findItem(R.id.item_clear_memory_cache).setVisible(!drawerOpen);
-  	    menu.findItem(R.id.item_about).setVisible(!drawerOpen);
+//  	    menu.findItem(R.id.item_about).setVisible(!drawerOpen);
   	    menu.findItem(R.id.item_share).setVisible(!drawerOpen);
-		return super.onPrepareOptionsMenu(menu);
+  	    menu.findItem(R.id.item_setting).setVisible(!drawerOpen);
+  	    return super.onPrepareOptionsMenu(menu);
 	}
 
 	@Override

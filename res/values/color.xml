@@ -7,4 +7,7 @@
        <color name="magenta">#ff00ff</color>
        <color name="white">#ffffff</color>
        <color name="linen">#faf0e6</color>
+       <color name="list_setting_divider">#ffff00</color>
+       <color name="lightblue">#e7f1fb</color>
+       <color name="black">#000000</color>
 </resources>

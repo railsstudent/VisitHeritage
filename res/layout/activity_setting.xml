@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/linen"
+    tools:context=".SettingActivity" >
+
+   <RelativeLayout
+        android:id="@+id/rellayout1"
+        android:layout_width="match_parent"
+	        android:background="@color/lightblue"
+        android:layout_height="wrap_content" >
+	    <TextView
+	        android:id="@+id/tvSetting"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:text="@string/strSetting"
+	        android:textColor="@color/black"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+   </RelativeLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="2dp"
+        android:divider="@color/list_setting_divider"
+        android:layout_below="@+id/rellayout1" >
+    </ListView>
+
+
+   
+</RelativeLayout>

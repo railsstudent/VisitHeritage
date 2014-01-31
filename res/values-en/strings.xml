@@ -19,6 +19,7 @@
     <string name="menu_item_clear_disc_cache">Clear Images From SD Card</string>
     <string name="menu_item_about">About</string>
     <string name="menu_item_share">Share</string>
+    <string name="menu_item_setting">Settings</string>
     
     <string name="visit_title">Notes to Monument Visitors</string>
     <string name="visit_text1">1.	The location of declared monuments is provided by the Antiquities and Monuments Office for identification purposes only.</string>
@@ -74,7 +75,8 @@
 	<string name="content_thumbnail">Thumbnail</string>
 	<string name="content_rightarrow">Right arrow</string>
 	<string name="content_image">Image</string>
-	
+	<string name="content_pin">marker</string>
+		
 	<string name="lblName">Name:</string>
 	<string name="lblDescription">Description:</string>
 	<string name="lblHomepage">Homepage:</string>
@@ -88,4 +90,18 @@
 	<string name="dist_remark">Distance from nearest to farthest (Measured in meters)</string>
 	<string name="menu_legalnotices">Legal Notice</string>
 	<string name="no_monument_errmsg">Monument information does not exist.</string>
+	<string name="strSetting">Settings</string>
+    <string name="strAbout">About Heritage On The Go</string>
+    <string name="strDatasetSource">Source of Dataset:</string>
+    <string name="strDeveloper">Developers</string>
+    <string name="developer_resp1">Brainstorm application idea, design user interfaces and SQLite database.</string>
+    <string name="developer_resp2">Brainstorm application idea, collect data, data entry and design ICON.</string>
+	<string name="strChi">Chinese:</string>
+	<string name="strEng">English:</string>
+	<string name="copyright">Copyright</string>
+		
+	<string-array name="setting_array" >
+	    <item >Contact Developer</item>
+	    <item >About Heritage On The Go</item>
+	</string-array>
 </resources>
