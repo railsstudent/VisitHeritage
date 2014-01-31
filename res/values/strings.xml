@@ -120,4 +120,8 @@
         <item>聯絡開發人員</item>
         <item>關於隨時隨地遊古蹟</item>
     </string-array>
+    
+    <string name="monument_heading">香港法定古蹟</string>
+    <string name="monument_definition">香港法定古蹟，是指受到香港法例第53章《古物及古蹟條例》所保護的歷史建築、以及考古或古生物地點與構築物。古物事務監督經諮詢古物諮詢委員會，並經行政長官批准後，可刊憲公告宣布個別地方、建築物、地點或構築物為法定古蹟。</string>
+    <string name="monument_source">資料來源：http://zh.wikipedia.org/wiki/香港法定古蹟</string>
 </resources>

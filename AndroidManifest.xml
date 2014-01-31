@@ -64,19 +64,22 @@
         <activity
             android:name="com.blueskyconnie.visitheritage.SettingActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:parentActivityName="com.blueskyconnie.visitheritage.MainActivity"
+            android:label="@string/strSetting" >
         </activity>
         
         <activity
             android:name="com.blueskyconnie.visitheritage.AboutActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:parentActivityName="com.blueskyconnie.visitheritage.SettingActivity"
+            android:label="@string/strAbout" >
         </activity>
 
         <activity
             android:name="com.blueskyconnie.visitheritage.ContactDeveloperActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:parentActivityName="com.blueskyconnie.visitheritage.SettingActivity"
+            android:label="@string/strDeveloper" >
         </activity>
         
         <!-- grant permission to content provider -->

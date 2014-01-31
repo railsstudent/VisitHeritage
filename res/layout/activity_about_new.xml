@@ -5,21 +5,6 @@
        android:background="@color/linen"
        android:orientation="vertical" >
     
-	  <RelativeLayout
-        	android:id="@+id/rellayout1"
-        	android:layout_width="match_parent"
-	        android:background="@color/lightblue"
-        	android:layout_height="wrap_content" >
-		    <TextView
-		        android:id="@+id/tvAbout"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_centerHorizontal="true"
-		        android:text="@string/strAbout"
-		        android:textColor="@color/black"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
-   	   </RelativeLayout>
-   	   
        <TextView
            android:id="@+id/tvDataset"
            android:layout_width="match_parent"

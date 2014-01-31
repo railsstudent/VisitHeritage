@@ -1,30 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/linen"
-    android:layout_height="match_parent">
-    
+    android:layout_height="match_parent"
+    android:background="@color/linen" >
+
     <TextView
         android:id="@+id/txtLabel"
-         android:layout_width="wrap_content"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="16dp"
-        android:text="Home View"/>
-    
-    <ImageView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtLabel"
-        android:src="@drawable/ic_home"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
-    
-   <com.google.android.gms.ads.AdView android:id="@+id/adView"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_alignParentBottom="true"
-                      ads:adUnitId="a152c43d94a11ca"
-                      ads:adSize="SMART_BANNER"/>
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/monument_heading"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLabel"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_vert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/monument_definition"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <TextView
+		        android:id="@+id/txtWiki"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="16dp"
+		        android:text="@string/monument_source"
+		        android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="a152c43d94a11ca" />
 
 </RelativeLayout>
