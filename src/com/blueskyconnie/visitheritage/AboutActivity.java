@@ -1,11 +1,12 @@
 package com.blueskyconnie.visitheritage;
 
-import android.app.ActionBar;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 
+@SuppressLint("NewApi")
 public class AboutActivity extends Activity {
 
 	@Override
@@ -24,9 +25,8 @@ public class AboutActivity extends Activity {
 		tvCopyright.setText(String.format("%s %s %s", getString(R.string.app_name), getString(R.string.copyright), 
 				getString(R.string.copyright_year)));
 		
-		ActionBar actionBar = this.getActionBar();
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-			actionBar.setDisplayHomeAsUpEnabled(true);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
 	}
 }

@@ -142,8 +142,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "灣仔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Wan Chai");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		values = new ContentValues();
@@ -178,8 +178,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -215,8 +215,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -253,8 +253,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "沙田");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Shatin");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -290,9 +290,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.137412");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -328,9 +328,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.260295");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -366,9 +366,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.154122");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -404,8 +404,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -442,8 +442,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -479,8 +479,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -516,9 +516,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.156724");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -554,8 +554,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -591,8 +591,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -629,8 +629,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -666,8 +666,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界大嶼山分流");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -703,8 +703,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -739,9 +739,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.16217");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -776,9 +776,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.155132");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -813,9 +813,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.159424");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -851,9 +851,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.172298");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "油尖旺");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yau Tsim Mong");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -889,9 +889,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.169552");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "油尖旺");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yau Tsim Mong");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -927,9 +927,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.169037");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "油尖旺");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yau Tsim Mong");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -965,9 +965,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.190323");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "九龍城");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Kowloon City");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -999,14 +999,15 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.446572");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.943908");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.424755");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.940913");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		
 		
 		
 		values = new ContentValues();
@@ -1040,9 +1041,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.145691");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1078,9 +1079,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.156849");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1112,13 +1113,15 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.370714");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.112917");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.370714");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.112917");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.283473");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.111243");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1154,8 +1157,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ho Sheung Heung, Sheung Shui, North");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "上水河上鄉");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "上水");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sheung Shui");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1191,9 +1194,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.173843");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "油尖旺");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yau Tsim Mong");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1230,8 +1233,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1268,8 +1271,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1300,15 +1303,15 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.270631");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.158365");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.445945");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.178743");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
-		
+
 		
 		
 		values = new ContentValues();
@@ -1343,8 +1346,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1381,8 +1384,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1414,14 +1417,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.267573");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.18073");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.266719");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.180862");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
-		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "灣仔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Wan Chai");
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);  
 		
 		
 		values = new ContentValues();
@@ -1455,9 +1458,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.14069");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1493,9 +1496,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.150818");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1531,8 +1534,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1568,9 +1571,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.235641");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "東區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Eastern");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1605,7 +1608,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.159985");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "No. 41 Tonkin Street, Sham Shui Po");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "深水埗東京街41號");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "深水埗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sham Shui Po");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
@@ -1644,8 +1647,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1682,8 +1685,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1719,9 +1722,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.144146");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1758,8 +1761,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1795,8 +1798,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1832,9 +1835,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.150669");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1866,13 +1869,13 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.287349");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.150669");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.32747");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.179231");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "九龍城");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Kowloon City");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1909,8 +1912,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "葵青");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Kwai Tsing");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -1978,14 +1981,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.291638");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.158828");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.276555");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.158726");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
-		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK); 
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);  
 		
 		
 		
@@ -2021,8 +2024,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2096,8 +2099,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "沙田");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Shatin");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2133,9 +2136,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.148055");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2167,13 +2170,13 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.221257");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.213325");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.218258");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.213435");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");  
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2210,8 +2213,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2248,8 +2251,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "灣仔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Wan Chai");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2286,8 +2289,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2323,9 +2326,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.190494");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "九龍城");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Kowloon City");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2362,8 +2365,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2394,14 +2397,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.245748");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.250256");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.246145");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.248831");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
-		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);   
 		
 		
 		values = new ContentValues();
@@ -2417,8 +2420,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
-		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving at Big Wave Bay");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carving at Big Wave Bay, is situated adjacent to Tang Ancestral Hall, "
+		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving at Lung Ha Wan");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carving at Lung Ha Wan, is situated adjacent to Tang Ancestral Hall, "
 				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
 				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
 				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
@@ -2436,8 +2439,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2473,8 +2476,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2510,8 +2513,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2547,8 +2550,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2584,9 +2587,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.175065");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2621,9 +2624,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.032709");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2658,9 +2661,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.256175");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2696,8 +2699,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2734,8 +2737,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "荃灣");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tsuen Wan");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2767,14 +2770,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.220304");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.21693");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.215745");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.215948");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
-		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);  
 		
 		
 		
@@ -2810,8 +2813,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2847,8 +2850,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2884,9 +2887,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.158909");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2922,9 +2925,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.849252");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2961,8 +2964,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -2999,8 +3002,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3036,8 +3039,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3074,8 +3077,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3112,8 +3115,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3149,8 +3152,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "荃灣");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tsuen Wan");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3185,9 +3188,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.137857");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3222,9 +3225,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.139942");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3260,9 +3263,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.135243");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3298,9 +3301,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.15858");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3335,9 +3338,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.137916");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3372,9 +3375,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.160302");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3410,9 +3413,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.192739");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "東區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Eastern");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3448,8 +3451,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3485,8 +3488,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3521,9 +3524,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.935987");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3559,9 +3562,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.935751");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3598,8 +3601,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3635,13 +3638,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.172298");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "油尖旺");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yau Tsim Mong");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
-		
-		
-		
+				
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "域多利監獄"); //data95
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
@@ -3673,9 +3674,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.15346");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3711,9 +3712,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.305329");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3749,9 +3750,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.150404");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3787,8 +3788,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3825,8 +3826,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3863,8 +3864,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
 		
@@ -3901,8 +3902,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 	}
 		

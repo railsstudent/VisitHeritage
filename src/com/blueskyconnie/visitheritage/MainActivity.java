@@ -3,17 +3,19 @@ package com.blueskyconnie.visitheritage;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,7 +32,9 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 
-public class MainActivity extends  FragmentActivity {
+//public class MainActivity extends  FragmentActivity {
+@SuppressLint("NewApi")
+public class MainActivity extends ActionBarActivity {
 
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
@@ -84,7 +88,9 @@ public class MainActivity extends  FragmentActivity {
 				navDrawerItems);
 		mDrawerList.setAdapter(adapter);
 
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			getActionBar().setDisplayHomeAsUpEnabled(true);
+		}
 
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.drawable.ic_drawer, // nav menu toggle icon

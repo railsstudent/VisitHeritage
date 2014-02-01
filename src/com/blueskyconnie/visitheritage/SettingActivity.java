@@ -1,6 +1,6 @@
 package com.blueskyconnie.visitheritage;
 
-import android.app.ActionBar;
+import android.annotation.SuppressLint;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+@SuppressLint("NewApi")
 public class SettingActivity extends ListActivity {
 
 	@Override
@@ -32,9 +33,8 @@ public class SettingActivity extends ListActivity {
 		};
 		this.setListAdapter(adapter);
 		
-		ActionBar actionBar = this.getActionBar();
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-			actionBar.setDisplayHomeAsUpEnabled(true);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
 	}
 

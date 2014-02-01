@@ -27,6 +27,7 @@ public class ChooseAreaFragment extends BaseFragment {
 				case R.id.btnHK:
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strHK));
 					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstHK());
+					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_HK);
 					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()
 						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
@@ -36,6 +37,7 @@ public class ChooseAreaFragment extends BaseFragment {
 				case R.id.btnKowloon:
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strKowloon));
 					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstKowloon());
+					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_KLN);
 					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()
 						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
@@ -45,6 +47,7 @@ public class ChooseAreaFragment extends BaseFragment {
 				case R.id.btnNT:
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strNT));
 					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstNT());
+					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_NT);
 					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()
 						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
@@ -54,6 +57,7 @@ public class ChooseAreaFragment extends BaseFragment {
 				case R.id.btnIsland:
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strIsland));
 					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstIsland());
+					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_ISLAND);
 					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()
 						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)

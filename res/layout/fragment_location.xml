@@ -13,6 +13,16 @@
         android:layout_margin="8dp"
         android:text="@string/placeholder"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:id="@+id/tvInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/strInstruction"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <com.google.android.gms.maps.MapView
         xmlns:android="http://schemas.android.com/apk/res/android"

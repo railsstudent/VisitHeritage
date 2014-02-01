@@ -61,6 +61,7 @@
      <string name="strIsland">Island</string>
 
     <string name="placeholder">Please choose region</string> 
+	<string name="strInstruction">Click marker window to view detailed information</string>
     <string name="no_monument">No declared monuments.</string>
 	<string name="city_name">Unknown</string>
 	<string name="error_connectionfailed">Connection failed</string>

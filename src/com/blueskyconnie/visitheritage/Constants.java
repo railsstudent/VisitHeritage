@@ -23,6 +23,13 @@ public final class Constants {
 	public static final String ISLAND_KEY = "ISLAND";
 	public static final String PLACES = "PLACES";
 	public static final String PLACE_KEY = "PLACE_KEY";
+
+	public static final String REGION_KEY = "REGION_KEY";
+	public static final String SHARE_PREF_HK = "share_pref_hk";
+	public static final String SHARE_PREF_KLN = "share_pref_kln";
+	public static final String SHARE_PREF_NT = "share_pref_nt";
+	public static final String SHARE_PREF_ISLAND = "share_pref_island";
+	
 	
 	public static final String LANG_CODE_EN = "EN";
 	

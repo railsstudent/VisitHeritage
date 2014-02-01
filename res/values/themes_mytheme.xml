@@ -5,23 +5,17 @@
 
   <style name="MyTheme" parent="@style/_MyTheme"/>
 
-  <style name="_MyTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-
-    <item name="android:listChoiceIndicatorMultiple">@drawable/mytheme_btn_check_holo_light</item>
-
-    <item name="android:listChoiceIndicatorSingle">@drawable/mytheme_btn_radio_holo_light</item>
+  <style name="_MyTheme" parent="Theme.AppCompat.Light">
 
     <item name="android:buttonStyle">@style/ButtonMyTheme</item>
 
     <item name="android:imageButtonStyle">@style/ImageButtonMyTheme</item>
 
-    <item name="android:dropDownSpinnerStyle">@style/SpinnerMyTheme</item>
+    <item name="android:listViewStyle">@style/ListViewMyTheme</item>
 
-    <item name="android:progressBarStyleHorizontal">@style/ProgressBarMyTheme</item>
+    <item name="android:listViewWhiteStyle">@style/ListViewMyTheme.White</item>
 
-    <item name="android:listChoiceBackgroundIndicator">@drawable/mytheme_list_selector_holo_light</item>
-
-    <item name="android:activatedBackgroundIndicator">@drawable/mytheme_activated_background_holo_light</item>
+    <item name="android:spinnerItemStyle">@style/SpinnerItemMyTheme</item>
 
   </style>
 

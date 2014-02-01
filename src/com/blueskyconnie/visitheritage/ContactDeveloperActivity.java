@@ -1,10 +1,11 @@
 package com.blueskyconnie.visitheritage;
 
-import android.app.ActionBar;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 
+@SuppressLint("NewApi")
 public class ContactDeveloperActivity extends Activity {
 
 	@Override
@@ -12,9 +13,8 @@ public class ContactDeveloperActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_contact_developer);
 		
-		ActionBar actionBar = this.getActionBar();
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-			actionBar.setDisplayHomeAsUpEnabled(true);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
 	}
 }

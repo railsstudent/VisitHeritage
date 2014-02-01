@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Locale;
 
 import android.app.AlertDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
@@ -39,12 +41,16 @@ import de.keyboardsurfer.android.widget.crouton.Style;
  
 public class LocationMapFragment extends BaseFragment {
 
+	private static final String SHARE_PREF_NAME = "pref_marker";
 	private static final int RQS_GooglePlayServices = 1;
+	
 	private MapView mapView;
 	private List<Place> lstPlace;
 	private GoogleMap map;
 	private SparseArray<Place> hmNamePlace;
 	private String language;
+	private String region_key = "";
+	private int pref_placeId;
 	
 	public LocationMapFragment() {
 		// not a top level fragment
@@ -78,7 +84,6 @@ public class LocationMapFragment extends BaseFragment {
 		tvArea.setText(placeKey);
 
 		lstPlace = getArguments().getParcelableArrayList(Constants.PLACES);
-		
 		hmNamePlace = new SparseArray<Place>();
 		if (lstPlace != null) {
 			for (Place place : lstPlace) {
@@ -96,6 +101,12 @@ public class LocationMapFragment extends BaseFragment {
 		}
 		// check current language of the device
  		language = Locale.getDefault().getLanguage();
+ 		
+ 		// get the region that is being displayed in fragment
+ 		region_key = getArguments().getString(Constants.REGION_KEY);
+		if (Strings.isNullOrEmpty(region_key)) {
+			region_key = Constants.SHARE_PREF_HK;
+		}
 	}
 
 	@Override
@@ -117,6 +128,7 @@ public class LocationMapFragment extends BaseFragment {
 	@Override
 	public void onPause() {
 		super.onPause();
+		savePreference();
 		if (mapView != null) {
 			mapView.onPause();
 		}
@@ -134,57 +146,50 @@ public class LocationMapFragment extends BaseFragment {
 					// remove all markers in the fragment
 					map.clear();
 
-                 	 LatLng latlng = null;
-                     
-                     // 1) loop the lstPlace list 
-              	    // 1a)  create markeroption, set title, snippet and icon, and add to map  
-                     for (Place place : lstPlace) {
-                    	latlng = new LatLng(place.getLat(), place.getLng());
-                        map.addMarker(new MarkerOptions().position(latlng)
-                                 .title(String.valueOf(place.getId()))
-                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
-                     }
-                     
-                     // move the camera to the last marker
-                     if (latlng != null) {
-                    	 map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
-                     }
-                     map.animateCamera(CameraUpdateFactory.zoomTo(10));
+                 	 if (lstPlace != null) {
+                    	 LatLng latlng = null;
+                    	 int lastPlaceId = -1;
+
+	                     // 1) loop the lstPlace list 
+	              	     // 1a)  create markeroption, set title, snippet and icon, and add to map  
+	                     for (Place place : lstPlace) {
+	                    	latlng = new LatLng(place.getLat(), place.getLng());
+	                    	lastPlaceId = place.getId();
+	                        map.addMarker(new MarkerOptions().position(latlng)
+	                                 .title(String.valueOf(place.getId()))
+	                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
+	                     }
+	                     
+	                 	 // load the marker from shared preference
+	                     loadPreference(lastPlaceId);
+//	                     SharedPreferences pref = getActivity().getSharedPreferences(SHARE_PREF_NAME, Context.MODE_PRIVATE);
+//	                     int placeId = pref.getInt(region_key, lastPlaceId);
+//	                     if (placeId > -1) {
+//	                    	 Place sharedPrefPlace = hmNamePlace.get(placeId);
+//                    		 // update shared preference 
+//	                    	 pref.edit().putInt(region_key, placeId).commit();
+//		                     latlng = new LatLng(sharedPrefPlace.getLat(), sharedPrefPlace.getLng());
+//	                    	 map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+//	                     } 
+                 	 }
+
+                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
                      map.setMyLocationEnabled(true);
                                           
                      // open info marker when pin is clicked
                      map.setOnMarkerClickListener(new OnMarkerClickListener() {
                              @Override
                              public boolean onMarkerClick(Marker marker) {
+                            	 	 // update shared preference
+                            	     if (!Strings.isNullOrEmpty(marker.getTitle())) {
+                            	    	 pref_placeId = Integer.parseInt(marker.getTitle());
+                            	    	 savePreference();
+                            	     }
                                      marker.showInfoWindow();
                                      return false;
                              }
                      });
-                     map.setOnInfoWindowClickListener(new OnInfoWindowClickListener(){
-
-						public void onInfoWindowClick(Marker marker) {
-							// open place fragment
-							int placeId = -1;
-			            	String strId = Strings.nullToEmpty(marker.getTitle());
-			            	placeId = Integer.parseInt(strId);
-			            	Place place = hmNamePlace.get(placeId, null);
-			            	if (place != null) {
-			    				Bundle bundle = new Bundle();
-			    				bundle.putParcelable(Constants.PLACE_KEY, place);
-			    				PlaceFragment fragment = new PlaceFragment();
-			    				fragment.setArguments(bundle);
-			    				FragmentManager fragManager = LocationMapFragment.this.getFragmentManager();
-			    				fragManager.beginTransaction()
-			    					.replace(R.id.frame_container, fragment)
-			    					.addToBackStack(null)
-			    					.commit();
-			    			} else {
-			    				Crouton.makeText(LocationMapFragment.this.getActivity(), 
-			    						getResources().getString(R.string.no_monument_errmsg),
-			    						Style.ALERT).show();
-			    			}
-						}
-                     });
+                     map.setOnInfoWindowClickListener(infoWinClickListener);
                      
                      // show a custom information marker
                      map.setInfoWindowAdapter(new PlaceInfoWindowAdapter());
@@ -215,6 +220,37 @@ public class LocationMapFragment extends BaseFragment {
 		return super.onOptionsItemSelected(item);
 	}
 
+	private OnInfoWindowClickListener infoWinClickListener = new OnInfoWindowClickListener(){
+
+		public void onInfoWindowClick(Marker marker) {
+			// open place fragment
+			int placeId = -1;
+        	String strId = Strings.nullToEmpty(marker.getTitle());
+        	placeId = Integer.parseInt(strId);
+        	Place place = hmNamePlace.get(placeId, null);
+        	if (place != null) {
+        		// update shared preference 
+        		pref_placeId = placeId;
+        		savePreference();
+        		
+				Bundle bundle = new Bundle();
+				bundle.putParcelable(Constants.PLACE_KEY, place);
+				PlaceFragment fragment = new PlaceFragment();
+				fragment.setArguments(bundle);
+				FragmentManager fragManager = LocationMapFragment.this.getFragmentManager();
+				fragManager.beginTransaction()
+					.replace(R.id.frame_container, fragment)
+					.addToBackStack(null)
+					.commit();
+			} else {
+				Crouton.makeText(LocationMapFragment.this.getActivity(), 
+						getResources().getString(R.string.no_monument_errmsg),
+						Style.ALERT).show();
+			}
+		}
+     };
+	
+	
 	private final class PlaceInfoWindowAdapter implements InfoWindowAdapter /*, View.OnClickListener*/ {
 
         @Override
@@ -272,4 +308,23 @@ public class LocationMapFragment extends BaseFragment {
         }
 	}
 	
+	private void loadPreference(int defaultPlaceId) {
+		// load the marker from shared preference
+        SharedPreferences pref = getActivity().getSharedPreferences(SHARE_PREF_NAME, Context.MODE_PRIVATE);
+        pref_placeId = pref.getInt(region_key, defaultPlaceId);
+        if (pref_placeId > -1) {
+           Place sharedPrefPlace = hmNamePlace.get(pref_placeId);
+   		   // update shared preference 
+       	   pref.edit().putInt(region_key, pref_placeId).commit();
+           LatLng latlng = new LatLng(sharedPrefPlace.getLat(), sharedPrefPlace.getLng());
+       	   map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+        }
+	}
+	
+	private void savePreference() {
+		// load the marker from shared preference
+        SharedPreferences pref = getActivity().getSharedPreferences(SHARE_PREF_NAME, Context.MODE_PRIVATE);
+ 		// update shared preference 
+       	pref.edit().putInt(region_key, pref_placeId).commit();
+	}
 }

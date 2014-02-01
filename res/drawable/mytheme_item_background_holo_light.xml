@@ -14,8 +14,6 @@
      limitations under the License.
 -->
 
-
-
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Even though these two point to the same resource, have two states so the drawable will invalidate itself when coming out of pressed state. -->
@@ -24,6 +22,6 @@
     <item android:state_focused="true"                                android:state_pressed="true" android:drawable="@drawable/mytheme_list_selector_background_transition_holo_light" />
     <item android:state_focused="false"                               android:state_pressed="true" android:drawable="@drawable/mytheme_list_selector_background_transition_holo_light" />
     <item android:state_focused="true"                                                             android:drawable="@drawable/mytheme_list_focused_holo" />
-    <item android:state_activated="true"                                                           android:drawable="@drawable/mytheme_list_focused_holo" />     
-    <item                                                                                          android:drawable="@android:color/transparent" />     
+    <item android:state_activated="true"                                                           android:drawable="@drawable/mytheme_list_focused_holo" />
+    <item                                                                                          android:drawable="@android:color/transparent" />
 </selector>
