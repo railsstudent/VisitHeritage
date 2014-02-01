@@ -36,6 +36,7 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 	private String strLng = "";
 	private String strMeter = "";
 	private String strDistance = "";
+	private String strLocation = "";
 	
 	public AroundMeListAdapter(Context context, int resourceId, List<Place> lstPlace) {
 		super(context, resourceId, lstPlace);
@@ -47,6 +48,7 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		strLng = context.getString(R.string.strLng);
 		strMeter = context.getString(R.string.strMeter);
 		strDistance = context.getString(R.string.strDistance);
+		strLocation = context.getString(R.string.lblLocation);
 	}
 
 	@Override
@@ -107,6 +109,7 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 			holder.tvDistance = (TextView) view.findViewById(R.id.tvDistance);
 			holder.img = (ImageView) view.findViewById(R.id.imgPlaceThumbnail);
 			holder.tvCount = (TextView) view.findViewById(R.id.tvCount);
+			holder.tvLocation = (TextView) view.findViewById(R.id.tvLocation);
 			view.setTag(holder);
 		} else {
 			holder = (AroundMeHolder) view.getTag();
@@ -114,20 +117,24 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 
 		Place place = getItem(position);
 		String name = "";
+		String location = "";
 		// check current language of the device
 		Locale locale = Locale.getDefault();
 		String language = locale.getLanguage();
 		
 		if (Constants.LANG_CODE_EN.equals(Strings.nullToEmpty(language).toUpperCase(locale))) {
 			name = Strings.nullToEmpty(place.getName_en()); // English
+			location = Strings.nullToEmpty(place.getLocation_en());
 		} else {
 			name = Strings.nullToEmpty(place.getName()); // Chinese Name 
+			location = Strings.nullToEmpty(place.getLocation());
 		}
 		
 		holder.tvCount.setText(String.valueOf((position + 1) + ")"));
 		holder.tvName.setText(name);
 		holder.tvLat.setText(strLat + " " + String.valueOf(place.getLat())); 
 		holder.tvLng.setText(strLng + " " + String.valueOf(place.getLng()));
+		holder.tvLocation.setText(strLocation + " " + location);
 		
 		BigDecimal bdDist = new BigDecimal(place.getDistance(), MathContext.UNLIMITED);
 		bdDist = bdDist.setScale(2, RoundingMode.HALF_DOWN);
@@ -170,5 +177,6 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		TextView tvDistance;
 		ImageView img;
 		TextView tvCount;
+		TextView tvLocation;
 	}
 }
