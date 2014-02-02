@@ -661,14 +661,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.201233");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.85421");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.197995");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.853761");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界大嶼山分流");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
-		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);  
 		
 		
 		values = new ContentValues();
@@ -1445,9 +1445,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
 				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
 				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
+						+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
+						+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
+						+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
 				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
 				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
 				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
@@ -2921,14 +2921,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				+ "declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.200359");
-		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.849252");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.197895");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.84771");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
-		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);  
 		
 		
 		

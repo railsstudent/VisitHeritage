@@ -51,6 +51,7 @@ public class LocationMapFragment extends BaseFragment {
 	private String language;
 	private String region_key = "";
 	private int pref_placeId;
+	private SparseArray<Marker> markerArray;
 	
 	public LocationMapFragment() {
 		// not a top level fragment
@@ -90,6 +91,7 @@ public class LocationMapFragment extends BaseFragment {
 				hmNamePlace.put(place.getId(), place);
 			}
 		}
+		markerArray = new SparseArray<Marker>();
 		return rootView;
 	}
 	
@@ -151,8 +153,18 @@ public class LocationMapFragment extends BaseFragment {
 					if (map != null) {
 						// remove all markers in the fragment
 						map.clear();
-	
-	                 	 if (lstPlace != null) {
+						markerArray.clear();
+
+	                     map.setOnMarkerClickListener(markerClickListener);
+	                     map.setOnInfoWindowClickListener(infoWinClickListener);
+	                     
+	                     // show a custom information marker
+	                     map.setInfoWindowAdapter(new PlaceInfoWindowAdapter());
+	                     
+	                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
+	                     map.setMyLocationEnabled(true);
+
+	                 	if (lstPlace != null) {
 	                    	 LatLng latlng = null;
 	                    	 int lastPlaceId = -1;
 	
@@ -161,35 +173,38 @@ public class LocationMapFragment extends BaseFragment {
 		                     for (Place place : lstPlace) {
 		                    	latlng = new LatLng(place.getLat(), place.getLng());
 		                    	lastPlaceId = place.getId();
-		                        map.addMarker(new MarkerOptions().position(latlng)
+		                        Marker marker = map.addMarker(new MarkerOptions().position(latlng)
 		                                 .title(String.valueOf(place.getId()))
 		                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
+		                        markerArray.put(lastPlaceId, marker);
 		                     }
 		                     
 		                 	 // load the marker from shared preference
 		                     loadPreference(lastPlaceId);
 	                 	 }
 	
-	                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
-	                     map.setMyLocationEnabled(true);
+//	                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
+//	                     map.setMyLocationEnabled(true);
 	                                          
 	                     // open info marker when pin is clicked
-	                     map.setOnMarkerClickListener(new OnMarkerClickListener() {
-	                             @Override
-	                             public boolean onMarkerClick(Marker marker) {
-	                            	 	 // update shared preference
-	                            	     if (!Strings.isNullOrEmpty(marker.getTitle())) {
-	                            	    	 pref_placeId = Integer.parseInt(marker.getTitle());
-	                            	    	 savePreference();
-	                            	     }
-	                                     marker.showInfoWindow();
-	                                     return false;
-	                             }
-	                     });
-	                     map.setOnInfoWindowClickListener(infoWinClickListener);
+//	                     map.setOnMarkerClickListener(new OnMarkerClickListener() {
+//	                             @Override
+//	                             public boolean onMarkerClick(Marker marker) {
+//	                            	 	 // update shared preference
+//	                            	     if (!Strings.isNullOrEmpty(marker.getTitle())) {
+//	                            	    	 pref_placeId = Integer.parseInt(marker.getTitle());
+//	                            	    	 savePreference();
+//	                            	     }
+//	                                     marker.showInfoWindow();
+//	                                     return false;
+//	                             }
+//	                     });
 	                     
-	                     // show a custom information marker
-	                     map.setInfoWindowAdapter(new PlaceInfoWindowAdapter());
+//	                     map.setOnMarkerClickListener(markerClickListener);
+//	                     map.setOnInfoWindowClickListener(infoWinClickListener);
+//	                     
+//	                     // show a custom information marker
+//	                     map.setInfoWindowAdapter(new PlaceInfoWindowAdapter());
 					}
 					mapView.onResume();				
 				}
@@ -197,7 +212,8 @@ public class LocationMapFragment extends BaseFragment {
 				 GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(), RQS_GooglePlayServices).show();
 			}
 		} catch (Exception ex) {
-			Crouton.makeText(getActivity(), "onResume: " + ex.getMessage(), Style.ALERT).show();
+			Crouton.makeText(getActivity(), "onResume: Unable to load markers, please relaunch app and visit map again.",
+					Style.ALERT).show();
 		}
 	}
 		
@@ -219,6 +235,19 @@ public class LocationMapFragment extends BaseFragment {
 		} 	
 		return super.onOptionsItemSelected(item);
 	}
+	
+	private OnMarkerClickListener markerClickListener = new OnMarkerClickListener() {
+        @Override
+        public boolean onMarkerClick(Marker marker) {
+       	 	 // update shared preference
+       	     if (!Strings.isNullOrEmpty(marker.getTitle())) {
+       	    	 pref_placeId = Integer.parseInt(marker.getTitle());
+       	    	 savePreference();
+       	     }
+                marker.showInfoWindow();
+                return false;
+        }
+	};
 
 	private OnInfoWindowClickListener infoWinClickListener = new OnInfoWindowClickListener(){
 
@@ -316,8 +345,16 @@ public class LocationMapFragment extends BaseFragment {
            Place sharedPrefPlace = hmNamePlace.get(pref_placeId);
    		   // update shared preference 
        	   pref.edit().putInt(region_key, pref_placeId).commit();
+       	   // open marker window
+       	   if (markerClickListener != null) {
+       		   Marker marker = markerArray.get(pref_placeId, null);
+       		   if (marker != null) {
+       			   markerClickListener.onMarkerClick(marker);
+       		   }
+       	   }
            LatLng latlng = new LatLng(sharedPrefPlace.getLat(), sharedPrefPlace.getLng());
        	   map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+           map.animateCamera(CameraUpdateFactory.zoomTo(14));
         }
 	}
 	
