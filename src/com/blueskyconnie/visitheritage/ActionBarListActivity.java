@@ -1,7 +1,6 @@
 package com.blueskyconnie.visitheritage;
 
 import android.support.v7.app.ActionBarActivity;
-import android.view.View;
 import android.widget.HeaderViewListAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -28,9 +27,5 @@ public abstract class ActionBarListActivity extends ActionBarActivity {
 	    } else {
 	        return adapter;
 	    }
-	}
-	
-	protected void onListItemClick(ListView lv, View v, int position, long id) {
-	    getListView().getOnItemClickListener().onItemClick(lv, v, position, id);
 	}
 }

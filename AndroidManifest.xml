@@ -65,6 +65,9 @@
             android:label="@string/strInfo"
             android:parentActivityName="com.blueskyconnie.visitheritage.MainActivity"
             android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blueskyconnie.visitheritage.MainActivity" />
         </activity>
         <activity
             android:name="com.blueskyconnie.visitheritage.AboutActivity"

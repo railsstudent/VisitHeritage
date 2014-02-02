@@ -5,12 +5,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
-//@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-//public class SettingActivity extends ListActivity {
 public class SettingActivity extends ActionBarListActivity {
 
 	@Override
@@ -29,31 +28,31 @@ public class SettingActivity extends ActionBarListActivity {
 		            return view;
 			}
 		};
-		this.setListAdapter(adapter);
-		
-//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-//			getActionBar().setDisplayHomeAsUpEnabled(true);
-//		}
+		setListAdapter(adapter);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-	}
-
-	@Override
-	protected void onListItemClick(ListView lv, View view, int position, long id) {
 		
-		Intent intent = null;
-		switch (position) {
-			case 0:
-				intent = new Intent(this, WikiActivity.class);
-				startActivity(intent);
-				break;
-			case 1:
-				intent = new Intent(this, ContactDeveloperActivity.class);
-				startActivity(intent);
-				break;
-			case 2:
-				intent = new Intent(this, AboutActivity.class);
-				startActivity(intent);
-				break;
-		}
+		getListView().setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View view, int position,
+					long id) {
+				Intent intent = null;
+				switch (position) {
+					case 0:
+						intent = new Intent(SettingActivity.this, WikiActivity.class);
+						startActivity(intent);
+						break;
+					case 1:
+						intent = new Intent(SettingActivity.this, ContactDeveloperActivity.class);
+						startActivity(intent);
+						break;
+					case 2:
+						intent = new Intent(SettingActivity.this, AboutActivity.class);
+						startActivity(intent);
+						break;
+				}
+			}
+			
+		});
 	}
 }
