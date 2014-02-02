@@ -118,4 +118,5 @@
     <string name="monument_definition">Declared monuments of Hong Kong are places, structures or buildings legally declared to be "protected". In Hong Kong, declaring a monument requires consulting the Antiquities Advisory Board, the approval of the chief executive as well as the publication of the notice in government gazette.</string>
     <string name="monument_source">Source: http://en.wikipedia.org/wiki/Declared_monuments_of_Hong_Kong</string>
 	
+    <string name="errUnknownBtnAction">Unknown button action is triggered.</string>
 </resources>

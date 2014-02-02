@@ -9,6 +9,7 @@
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+  		android:layout_above="@+id/adView"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp" >
@@ -20,12 +21,39 @@
             android:orientation="vertical" >
             
 		    <Button
-		        android:id="@+id/btnRegion"
+		        android:id="@+id/btnMonument"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:text="@string/monument" />
             
-
+		    <Button
+		        android:id="@+id/btnAroundMe"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="16dp"
+		        android:text="@string/around_me" />
+		    
+   		    <Button
+		        android:id="@+id/btnNotice"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="16dp"
+		        android:text="@string/visitor_notice" />
+		    
+   		    <Button
+		        android:id="@+id/btnContactOffice"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="16dp"
+		        android:text="@string/contact_office" />
+		    		    
+   		    <Button
+		        android:id="@+id/btnRating"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="16dp"
+		        android:text="@string/rating" />
+		    		    		    
         </LinearLayout>
     </ScrollView>
 

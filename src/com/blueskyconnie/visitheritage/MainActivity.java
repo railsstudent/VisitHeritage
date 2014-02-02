@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
 	private ArrayList<Place> lstKowloon;
 	private ArrayList<Place> lstNT;
 	private ArrayList<Place> lstIsland;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -112,6 +112,7 @@ public class MainActivity extends ActionBarActivity {
 			}
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
+		
 		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
 		 if (savedInstanceState == null) {
@@ -142,8 +143,7 @@ public class MainActivity extends ActionBarActivity {
 	/**
 	 * Slide menu item click listener
 	 * */
-	private class SlideMenuClickListener implements
-			ListView.OnItemClickListener {
+	private class SlideMenuClickListener implements ListView.OnItemClickListener {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
@@ -232,10 +232,6 @@ public class MainActivity extends ActionBarActivity {
 				imageLoader.clearMemoryCache();
 				Log.i("MainActivity", "Clear memory from memory");
 				return true;
-//			case R.id.item_about:
-//				Log.i("MainActivity", "Show About Dialog");
-//				createAboutDialog();
-//				return true;
 			case R.id.item_share:
 				Log.i("MainActivity", "Tell a friend about application");
 				createShareIntent();
@@ -265,25 +261,6 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}
 	
-//	private void createAboutDialog() {
-//		String title = getString(R.string.dialog_about_title) + " " + getString(R.string.app_name);
-//		LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//		View view = inflater.inflate(R.layout.layout_about, null); 
-//		
-//		new AlertDialog.Builder(this)
-//				.setIcon(android.R.drawable.ic_dialog_info)
-//				.setTitle(title)
-//				.setView(view)
-//				.setNeutralButton(R.string.close, new OnClickListener() {
-//					@Override
-//					public void onClick(DialogInterface dialog, int which) {
-//						dialog.dismiss();
-//					}
-//				})
-//				.create()
-//				.show();
-//	}
-	
 	/***
 	 * Called when invalidateOptionsMenu() is triggered
 	 */
@@ -293,7 +270,6 @@ public class MainActivity extends ActionBarActivity {
 		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
 		menu.findItem(R.id.item_clear_disc_cache).setVisible(!drawerOpen);
   	    menu.findItem(R.id.item_clear_memory_cache).setVisible(!drawerOpen);
-//  	    menu.findItem(R.id.item_about).setVisible(!drawerOpen);
   	    menu.findItem(R.id.item_share).setVisible(!drawerOpen);
   	    menu.findItem(R.id.item_setting).setVisible(!drawerOpen);
   	    return super.onPrepareOptionsMenu(menu);
@@ -302,7 +278,9 @@ public class MainActivity extends ActionBarActivity {
 	@Override
 	public void setTitle(CharSequence title) {
 		mTitle = title;
-		getActionBar().setTitle(mTitle);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			getActionBar().setTitle(mTitle); 
+		}
 	}
 
 	/**
@@ -387,4 +365,13 @@ public class MainActivity extends ActionBarActivity {
 		return lstIsland;
 	}
 	
+	// expose a method to click item in nav drawer item
+	public void selectItem(int position) {
+		// get the navigation drawer item
+		mDrawerList.performItemClick(mDrawerList, position, mDrawerList.getItemIdAtPosition(position));
+	}
+	
+	public void displayViewFromHome(int position) {
+		displayView(position);
+	}
 }
