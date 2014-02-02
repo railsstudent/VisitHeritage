@@ -1,6 +1,5 @@
 package com.blueskyconnie.visitheritage;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -93,10 +92,11 @@ public class HomeFragment extends BaseFragment implements OnClickListener {
 				return;
 		}
 		
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			((MainActivity) this.getActivity()).selectItem(position);
-		} else {
-			((MainActivity) this.getActivity()).displayViewFromHome(position);
-		}
+//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+//			((MainActivity) this.getActivity()).selectItem(position);
+//		} else {
+//			((MainActivity) this.getActivity()).displayViewFromHome(position);
+//		}
+		((MainActivity) this.getActivity()).selectItem(position);
 	}
 }

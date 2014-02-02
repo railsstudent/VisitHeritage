@@ -1,10 +1,7 @@
 package com.blueskyconnie.visitheritage;
 
-import android.annotation.SuppressLint;
-import android.app.ListActivity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-@SuppressLint("NewApi")
-public class SettingActivity extends ListActivity {
+//@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+//public class SettingActivity extends ListActivity {
+public class SettingActivity extends ActionBarListActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +31,10 @@ public class SettingActivity extends ListActivity {
 		};
 		this.setListAdapter(adapter);
 		
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			getActionBar().setDisplayHomeAsUpEnabled(true);
-		}
+//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+//			getActionBar().setDisplayHomeAsUpEnabled(true);
+//		}
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override
@@ -47,7 +46,7 @@ public class SettingActivity extends ListActivity {
 				intent = new Intent(this, WikiActivity.class);
 				startActivity(intent);
 				break;
-		case 1:
+			case 1:
 				intent = new Intent(this, ContactDeveloperActivity.class);
 				startActivity(intent);
 				break;

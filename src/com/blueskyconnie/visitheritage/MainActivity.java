@@ -3,13 +3,11 @@ package com.blueskyconnie.visitheritage;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
@@ -33,7 +31,7 @@ import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 
 //public class MainActivity extends  FragmentActivity {
-@SuppressLint("NewApi")
+//@SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity {
 
 	private DrawerLayout mDrawerLayout;
@@ -88,9 +86,10 @@ public class MainActivity extends ActionBarActivity {
 				navDrawerItems);
 		mDrawerList.setAdapter(adapter);
 
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			getActionBar().setDisplayHomeAsUpEnabled(true);
-		}
+//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+//			getActionBar().setDisplayHomeAsUpEnabled(true);
+//		}
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.drawable.ic_drawer, // nav menu toggle icon
@@ -100,15 +99,19 @@ public class MainActivity extends ActionBarActivity {
 									// accessibility
 		) {
 			public void onDrawerClosed(View view) {
-				getActionBar().setTitle(mTitle);
+				//getActionBar().setTitle(mTitle);
+				getSupportActionBar().setTitle(mTitle);
 				// calling onPrepareOptionsMenu() to show action bar icons
-				invalidateOptionsMenu();
+				//invalidateOptionsMenu();
+				supportInvalidateOptionsMenu();
 			}
 
 			public void onDrawerOpened(View drawerView) {
-				getActionBar().setTitle(mDrawerTitle);
+				// getActionBar().setTitle(mDrawerTitle);
+				getSupportActionBar().setTitle(mDrawerTitle);
 				// calling onPrepareOptionsMenu() to hide action bar icons
-				invalidateOptionsMenu();
+				// invalidateOptionsMenu();
+				supportInvalidateOptionsMenu();
 			}
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
@@ -278,9 +281,10 @@ public class MainActivity extends ActionBarActivity {
 	@Override
 	public void setTitle(CharSequence title) {
 		mTitle = title;
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			getActionBar().setTitle(mTitle); 
-		}
+//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+//			getActionBar().setTitle(mTitle); 
+//		}
+		getSupportActionBar().setTitle(mTitle); 
 	}
 
 	/**
