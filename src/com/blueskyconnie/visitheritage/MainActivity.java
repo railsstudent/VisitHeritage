@@ -31,7 +31,6 @@ import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 
 //public class MainActivity extends  FragmentActivity {
-//@SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity {
 
 	private DrawerLayout mDrawerLayout;
@@ -86,9 +85,6 @@ public class MainActivity extends ActionBarActivity {
 				navDrawerItems);
 		mDrawerList.setAdapter(adapter);
 
-//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-//			getActionBar().setDisplayHomeAsUpEnabled(true);
-//		}
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
@@ -99,18 +95,14 @@ public class MainActivity extends ActionBarActivity {
 									// accessibility
 		) {
 			public void onDrawerClosed(View view) {
-				//getActionBar().setTitle(mTitle);
 				getSupportActionBar().setTitle(mTitle);
 				// calling onPrepareOptionsMenu() to show action bar icons
-				//invalidateOptionsMenu();
 				supportInvalidateOptionsMenu();
 			}
 
 			public void onDrawerOpened(View drawerView) {
-				// getActionBar().setTitle(mDrawerTitle);
 				getSupportActionBar().setTitle(mDrawerTitle);
 				// calling onPrepareOptionsMenu() to hide action bar icons
-				// invalidateOptionsMenu();
 				supportInvalidateOptionsMenu();
 			}
 		};
@@ -281,9 +273,6 @@ public class MainActivity extends ActionBarActivity {
 	@Override
 	public void setTitle(CharSequence title) {
 		mTitle = title;
-//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-//			getActionBar().setTitle(mTitle); 
-//		}
 		getSupportActionBar().setTitle(mTitle); 
 	}
 
@@ -373,9 +362,5 @@ public class MainActivity extends ActionBarActivity {
 	public void selectItem(int position) {
 		// get the navigation drawer item
 		mDrawerList.performItemClick(mDrawerList, position, mDrawerList.getItemIdAtPosition(position));
-	}
-	
-	public void displayViewFromHome(int position) {
-		displayView(position);
 	}
 }
