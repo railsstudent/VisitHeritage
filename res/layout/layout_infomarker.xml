@@ -29,6 +29,5 @@
         android:layout_alignLeft="@+id/tvInfoName"
         android:layout_below="@+id/tvInfoName"
         android:layout_marginTop="4dp"
-        android:layout_alignRight="@+id/tvInfoName"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 </RelativeLayout>

@@ -48,7 +48,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyASS3OSaZyNQGs0ndEtIgutYKTac1GIi_M" />
@@ -60,26 +60,39 @@
             android:name="com.blueskyconnie.visitheritage.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
-
         <activity
             android:name="com.blueskyconnie.visitheritage.SettingActivity"
-            android:screenOrientation="portrait"
+            android:label="@string/strInfo"
             android:parentActivityName="com.blueskyconnie.visitheritage.MainActivity"
-            android:label="@string/strSetting" >
+            android:screenOrientation="portrait" >
         </activity>
-        
         <activity
             android:name="com.blueskyconnie.visitheritage.AboutActivity"
-            android:screenOrientation="portrait"
+            android:label="@string/strAbout"
             android:parentActivityName="com.blueskyconnie.visitheritage.SettingActivity"
-            android:label="@string/strAbout" >
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blueskyconnie.visitheritage.SettingActivity" />
+        </activity>
+        <activity
+            android:name="com.blueskyconnie.visitheritage.ContactDeveloperActivity"
+            android:label="@string/strDeveloper"
+            android:parentActivityName="com.blueskyconnie.visitheritage.SettingActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blueskyconnie.visitheritage.SettingActivity" />
         </activity>
 
         <activity
-            android:name="com.blueskyconnie.visitheritage.ContactDeveloperActivity"
-            android:screenOrientation="portrait"
+            android:name="com.blueskyconnie.visitheritage.WikiActivity"
+            android:label="@string/title_activity_wiki"
             android:parentActivityName="com.blueskyconnie.visitheritage.SettingActivity"
-            android:label="@string/strDeveloper" >
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blueskyconnie.visitheritage.SettingActivity" />
         </activity>
         
         <!-- grant permission to content provider -->
@@ -89,6 +102,7 @@
             android:exported="false" >
         </provider>
 
+  
     </application>
 
 </manifest>

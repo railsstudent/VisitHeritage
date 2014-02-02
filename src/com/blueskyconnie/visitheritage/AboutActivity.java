@@ -1,12 +1,12 @@
 package com.blueskyconnie.visitheritage;
 
-import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 
-@SuppressLint("NewApi")
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class AboutActivity extends Activity {
 
 	@Override

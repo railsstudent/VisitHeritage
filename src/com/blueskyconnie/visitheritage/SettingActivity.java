@@ -41,14 +41,19 @@ public class SettingActivity extends ListActivity {
 	@Override
 	protected void onListItemClick(ListView lv, View view, int position, long id) {
 		
+		Intent intent = null;
 		switch (position) {
 			case 0:
-				Intent contactDevIntent = new Intent(this, ContactDeveloperActivity.class);
-				startActivity(contactDevIntent);
+				intent = new Intent(this, WikiActivity.class);
+				startActivity(intent);
 				break;
-			case 1:
-				Intent aboutIntent = new Intent(this, AboutActivity.class);
-				startActivity(aboutIntent);
+		case 1:
+				intent = new Intent(this, ContactDeveloperActivity.class);
+				startActivity(intent);
+				break;
+			case 2:
+				intent = new Intent(this, AboutActivity.class);
+				startActivity(intent);
 				break;
 		}
 	}

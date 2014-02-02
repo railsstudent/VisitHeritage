@@ -5,13 +5,19 @@
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
 
+    <string name="monument">香港法定古蹟</string>
+    <string name="around_me">我周圍的法定古蹟</string>
+    <string name="visitor_notice">參觀古蹟須知</string>
+    <string name="contact_office">聯絡部門</string>
+    <string name="rating">給我的程式評分</string>
+        
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
-        <item>香港法定古蹟</item>
-        <item>我周圍的法定古蹟</item>
-        <item>參觀古蹟須知</item>
-        <item>聯絡部門</item>
-        <item>給我的程式評分</item>
+        <item>@string/monument</item>
+        <item>@string/around_me</item>
+        <item>@string/visitor_notice</item>
+        <item>@string/contact_office</item>
+        <item>@string/rating</item>
     </string-array>
 
     <!-- Nav Drawer List Item Icons -->
@@ -30,7 +36,7 @@
     <string name="menu_item_clear_disc_cache">清除外置卡圖像</string>
     <string name="menu_item_about">關於</string>
     <string name="menu_item_share">分享</string>
-    <string name="menu_item_setting">設定</string>
+    <string name="menu_item_info">資訊</string>
     <string name="visit_title">參觀古蹟須知</string>
     <string name="visit_text1">1.	法定古蹟位置資料是由古物古蹟辦事處提供，只作識別用。</string>
     <string name="visit_text2">2.	開放時間只作參考，並以相關團體或機構的最新公布為準。</string>
@@ -103,26 +109,28 @@
     <string name="dist_remark">從最近到最遠的距離 (以米計算)</string>
     <string name="menu_legalnotices">法律聲明</string>
     <string name="no_monument_errmsg">法定古蹟資料不存在。</string>
-    <string name="strSetting">設定</string>
-	<string name="strAbout">關於隨時隨地遊古蹟</string>
-	<string name="strDatasetSource">數據集的來源：</string>
-	<string name="strChiDS">http://data.one.gov.hk/dataset/17/tc</string>
-	<string name="strEngDS">http://data.one.gov.hk/dataset/17/en</string>
-	<string name="copyright_year">2014</string>
-	<string name="strDeveloper">開發人員</string>
+    <string name="strInfo">資訊</string>
+    <string name="strAbout">關於隨時隨地遊古蹟</string>
+    <string name="strDatasetSource">數據集的來源：</string>
+    <string name="strChiDS">http://data.one.gov.hk/dataset/17/tc</string>
+    <string name="strEngDS">http://data.one.gov.hk/dataset/17/en</string>
+    <string name="copyright_year">2014</string>
+    <string name="strDeveloper">開發人員</string>
     <string name="developer_resp1">構思應用程序的用法，設計程序界面，設計SQLite數據庫。</string>
     <string name="developer_resp2">構思應用程序的用法，收集數據，輸入數據，設計ICON。</string>
-	
-	<string name="strChi">中文：</string>
-	<string name="strEng">英文：</string>
-	<string name="copyright">版權所有</string>
-	
+    <string name="strChi">中文：</string>
+    <string name="strEng">英文：</string>
+    <string name="copyright">版權所有</string>
+    <string name="title_activity_wiki">維基百科</string>
+    
     <string-array name="setting_array">
+        <item>法定古蹟 Wiki</item>
         <item>聯絡開發人員</item>
         <item>關於隨時隨地遊古蹟</item>
     </string-array>
-    
-    <string name="monument_heading">香港法定古蹟</string>
+
+    <string name="monument_heading">香港法定古蹟維基百科</string>
     <string name="monument_definition">香港法定古蹟，是指受到香港法例第53章《古物及古蹟條例》所保護的歷史建築、以及考古或古生物地點與構築物。古物事務監督經諮詢古物諮詢委員會，並經行政長官批准後，可刊憲公告宣布個別地方、建築物、地點或構築物為法定古蹟。</string>
     <string name="monument_source">資料來源：http://zh.wikipedia.org/wiki/香港法定古蹟</string>
+
 </resources>

@@ -3,15 +3,21 @@
 
     <string name="app_name">Heritage On The Go</string>
 
+    <string name="monument">Hong Kong Monuments</string>
+    <string name="around_me">Monuments Around Me</string>
+    <string name="visitor_notice">Notes to Monument Visitors</string>
+    <string name="contact_office">Contact Office</string>
+    <string name="rating">Rate My App</string>
+        
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
-        <item>Hong Kong Monuments</item>
-        <item>Monuments Around Me</item>
-        <item>Notes to Monument Visitors</item>
-        <item>Contact Office</item>
-        <item>Rate My App</item>
+        <item>@string/monument</item>
+        <item>@string/around_me</item>
+        <item>@string/visitor_notice</item>
+        <item>@string/contact_office</item>
+        <item>@string/rating</item>
     </string-array>
-
+    
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
 
@@ -19,7 +25,7 @@
     <string name="menu_item_clear_disc_cache">Clear Images From SD Card</string>
     <string name="menu_item_about">About</string>
     <string name="menu_item_share">Share</string>
-    <string name="menu_item_setting">Settings</string>
+    <string name="menu_item_info">Info</string>
     
     <string name="visit_title">Notes to Monument Visitors</string>
     <string name="visit_text1">1.	The location of declared monuments is provided by the Antiquities and Monuments Office for identification purposes only.</string>
@@ -91,7 +97,7 @@
 	<string name="dist_remark">Distance from nearest to farthest (Measured in meters)</string>
 	<string name="menu_legalnotices">Legal Notice</string>
 	<string name="no_monument_errmsg">Monument information does not exist.</string>
-	<string name="strSetting">Settings</string>
+	<string name="strInfo">Info</string>
     <string name="strAbout">About Heritage On The Go</string>
     <string name="strDatasetSource">Source of Dataset:</string>
     <string name="strDeveloper">Developers</string>
@@ -100,13 +106,15 @@
 	<string name="strChi">Chinese:</string>
 	<string name="strEng">English:</string>
 	<string name="copyright">Copyright</string>
-		
+    <string name="title_activity_wiki">Wikipedia</string>
+			
 	<string-array name="setting_array" >
-	    <item >Contact Developer</item>
-	    <item >About Heritage On The Go</item>
+	    <item>Declared monuments Wikipedia</item>
+	    <item>Contact Developer</item>
+	    <item>About Heritage On The Go</item>
 	</string-array>
 	
-	<string name="monument_heading">Declared monuments of Hong Kong</string>
+	<string name="monument_heading">Declared monuments of Hong Kong Wikipedia</string>
     <string name="monument_definition">Declared monuments of Hong Kong are places, structures or buildings legally declared to be "protected". In Hong Kong, declaring a monument requires consulting the Antiquities Advisory Board, the approval of the chief executive as well as the publication of the notice in government gazette.</string>
     <string name="monument_source">Source: http://en.wikipedia.org/wiki/Declared_monuments_of_Hong_Kong</string>
 	
