@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 import android.app.Activity;
 import android.database.Cursor;
 import android.location.Address;
@@ -40,6 +41,7 @@ import com.google.android.gms.location.LocationRequest;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.PauseOnScrollListener;
 
+// https://github.com/chrisbanes/ActionBar-PullToRefresh/blob/master/samples/actionbarcompat/src/uk/co/senab/actionbarpulltorefresh/samples/actionbarcompat/FragmentTabsActivity.java
 // http://www.michenux.net/android-around-me-tutorial-974.html
 public class AroundMeFragment extends BaseListFragment implements
 		GooglePlayServicesClient.ConnectionCallbacks,
@@ -72,7 +74,8 @@ public class AroundMeFragment extends BaseListFragment implements
 
 	private DistanceComparator distanceComparator;
 	private ConnectionDetector connectionDetector;
-
+	
+	
 	public AroundMeFragment() {
 		topFragment = true;
 		distanceComparator = new DistanceComparator();
@@ -104,8 +107,8 @@ public class AroundMeFragment extends BaseListFragment implements
 
 		View rootView = inflater.inflate(R.layout.fragment_around_me,
 				container, false);
-//		headerView = View.inflate(getActivity(),
-//				R.layout.layout_around_me_heading, null);
+
+
 		aroundmeListAdapter = new AroundMeListAdapter(activity,
 				R.layout.list_item_aroundme, new ArrayList<Place>());
 		tvHeader = (TextView) rootView.findViewById(R.id.tvHeader);
@@ -113,17 +116,13 @@ public class AroundMeFragment extends BaseListFragment implements
 		strLng = getString(R.string.strLng);
 		return rootView;
 	}
-
+	
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		ListView lv = getListView();
 		lv.setOnScrollListener(new PauseOnScrollListener(ImageLoader
 				.getInstance(), false, true));
-//		if (!isHeaderViewAdded) {
-//			lv.addHeaderView(headerView);
-//			isHeaderViewAdded = true;
-//		} 
 		setListAdapter(aroundmeListAdapter);
 		connectionDetector = new ConnectionDetector(getActivity());
 	}
@@ -250,43 +249,6 @@ public class AroundMeFragment extends BaseListFragment implements
 	@Override
 	public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
 
-//		try {
-//			List<Place> places = new ArrayList<Place>();
-//			if (cursor != null) {
-//				for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor
-//						.moveToNext()) {
-//					Place place = new Place(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_ID, cursor));
-//					place.setAddress(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS, cursor));
-//					place.setAddress_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, cursor));
-//					place.setDescription(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC, cursor));
-//					place.setDescription_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC_EN, cursor));
-//					place.setDistrict(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_DISTRICT, cursor));
-//					place.setEmail(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_EMAIL, cursor));
-//					place.setHomepage(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, cursor));
-//					place.setLat(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
-//					place.setLng(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
-//					place.setName(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME, cursor));
-//					place.setName_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME_EN, cursor));
-//					place.setOpeningHour(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR, cursor));
-//					place.setOpeningHour_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, cursor));
-//					place.setPhone(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_PHONE, cursor));
-//					place.setRemark(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK, cursor));
-//					place.setRemark_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, cursor));
-//					place.setUrl(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_IMG_URL, cursor));
-//					place.setLocation(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_LOCATION, cursor));
-//					place.setLocation_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, cursor));
-//					Location loc = new Location("database");
-//					loc.setLatitude(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LAT, cursor));
-//					loc.setLongitude(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LNG, cursor));
-//					place.setDistance(loc.distanceTo(mCurrentLocation));
-//					places.add(place);
-//				}
-//			}
-//			Collections.sort(places, distanceComparator);
-//			onPlaceLoadFinished(places);
-//		} catch (IllegalArgumentException ex) {
-//			Log.e(TAG, ex.getMessage());
-//		} 
 		List<Place> places = PlaceCursorHelper.loadFromCursor(cursor);
 		for (Place place : places) {
 			Location loc = new Location("database");
@@ -332,4 +294,6 @@ public class AroundMeFragment extends BaseListFragment implements
 			}
 		}
 	}
+
+
 }

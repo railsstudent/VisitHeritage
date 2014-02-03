@@ -124,7 +124,7 @@
     <string name="title_activity_wiki">維基百科</string>
     
     <string-array name="setting_array">
-        <item>法定古蹟 Wiki</item>
+        <item>法定古蹟維基百科</item>
         <item>聯絡開發人員</item>
         <item>關於隨時隨地遊古蹟</item>
     </string-array>

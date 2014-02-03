@@ -36,7 +36,7 @@ public class VisitHeritageApplication extends Application {
 			.threadPoolSize(1)
 			.denyCacheImageMultipleSizesInMemory()
 			.memoryCache(new WeakMemoryCache())
-			.discCache(new UnlimitedDiscCache(cacheDir))   // write to mcs/Cache in SD card
+			.discCache(new UnlimitedDiscCache(cacheDir))   // write to visitheritage/Cache in SD card
 			.defaultDisplayImageOptions(options)
 			.build();
 		

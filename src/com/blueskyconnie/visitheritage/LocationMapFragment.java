@@ -164,47 +164,29 @@ public class LocationMapFragment extends BaseFragment {
 	                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
 	                     map.setMyLocationEnabled(true);
 
-	                 	if (lstPlace != null) {
-	                    	 LatLng latlng = null;
-	                    	 int lastPlaceId = -1;
+	                     try {
+		                 	if (lstPlace != null) {
+		                    	 LatLng latlng = null;
+		                    	 int lastPlaceId = -1;
+		                    	 
+			                     // 1) loop the lstPlace list 
+			              	     // 1a)  create markeroption, set title, snippet and icon, and add to map  
+			                     for (Place place : lstPlace) {
+			                    	latlng = new LatLng(place.getLat(), place.getLng());
+			                    	lastPlaceId = place.getId();
+			                        Marker marker = map.addMarker(new MarkerOptions().position(latlng)
+			                                 .title(String.valueOf(place.getId()))
+			                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
+			                        markerArray.put(lastPlaceId, marker);
+			                     }
 	
-		                     // 1) loop the lstPlace list 
-		              	     // 1a)  create markeroption, set title, snippet and icon, and add to map  
-		                     for (Place place : lstPlace) {
-		                    	latlng = new LatLng(place.getLat(), place.getLng());
-		                    	lastPlaceId = place.getId();
-		                        Marker marker = map.addMarker(new MarkerOptions().position(latlng)
-		                                 .title(String.valueOf(place.getId()))
-		                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
-		                        markerArray.put(lastPlaceId, marker);
-		                     }
-		                     
-		                 	 // load the marker from shared preference
-		                     loadPreference(lastPlaceId);
-	                 	 }
-	
-//	                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
-//	                     map.setMyLocationEnabled(true);
-	                                          
-	                     // open info marker when pin is clicked
-//	                     map.setOnMarkerClickListener(new OnMarkerClickListener() {
-//	                             @Override
-//	                             public boolean onMarkerClick(Marker marker) {
-//	                            	 	 // update shared preference
-//	                            	     if (!Strings.isNullOrEmpty(marker.getTitle())) {
-//	                            	    	 pref_placeId = Integer.parseInt(marker.getTitle());
-//	                            	    	 savePreference();
-//	                            	     }
-//	                                     marker.showInfoWindow();
-//	                                     return false;
-//	                             }
-//	                     });
-	                     
-//	                     map.setOnMarkerClickListener(markerClickListener);
-//	                     map.setOnInfoWindowClickListener(infoWinClickListener);
-//	                     
-//	                     // show a custom information marker
-//	                     map.setInfoWindowAdapter(new PlaceInfoWindowAdapter());
+			                 	 // load the marker from shared preference
+			                     loadPreference(lastPlaceId);
+		                 	}
+	                     } catch (Exception ex) {
+	             			Crouton.makeText(getActivity(), "onResume: Unable to add markers to map, please reinstall app.",
+	            					Style.ALERT).show();	                    	 
+	                     }
 					}
 					mapView.onResume();				
 				}
@@ -212,7 +194,7 @@ public class LocationMapFragment extends BaseFragment {
 				 GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(), RQS_GooglePlayServices).show();
 			}
 		} catch (Exception ex) {
-			Crouton.makeText(getActivity(), "onResume: Unable to load markers, please relaunch app and visit map again.",
+			Crouton.makeText(getActivity(), "onResume: unknown exception captured, please reinstall app.",
 					Style.ALERT).show();
 		}
 	}
