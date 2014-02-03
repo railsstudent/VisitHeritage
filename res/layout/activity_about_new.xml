@@ -1,136 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:background="@color/linen"
-       android:orientation="vertical" >
-    
-       <TextView
-           android:id="@+id/tvDataset"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_margin="8dp"
-           android:textColor="@color/black"
-           android:text="@string/strDatasetSource"
-           android:textAppearance="?android:attr/textAppearanceMedium" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scview1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
-         <TextView
-           android:id="@+id/tvChiDS"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:layout_marginTop="4dp"
-           android:textColor="@color/black"
-           android:textAppearance="?android:attr/textAppearanceSmall" />
-       
-         <TextView
-           android:id="@+id/tvEngDS"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:layout_marginTop="4dp"
-           android:textColor="@color/black"
-           android:textAppearance="?android:attr/textAppearanceSmall" />
-              
-   
-       <TextView
-           android:id="@+id/tvSoftwareUsed"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_margin="8dp"
-           android:text="@string/software_used"
-           android:textColor="@color/black"
-           android:textAppearance="?android:attr/textAppearanceMedium" />
-       
-       <TextView
-           android:id="@+id/tvUIL"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:layout_marginTop="4dp"
-           android:text="@string/uil_software"
-           android:textAppearance="?android:attr/textAppearanceSmall"
-           android:textColor="@color/black" />
-       
-       <TextView
-           android:id="@+id/tvUILCopyright"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:layout_marginTop="4dp"
-           android:text="@string/uil_copyright"
-           android:textColor="@color/black"
-           android:textAppearance="?android:attr/textAppearanceSmall" />
-       
-        <TextView
-           android:id="@+id/tvCrouton"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:layout_marginTop="12dp"
-           android:text="@string/crouton_software"
-           android:textColor="@color/black"
-           android:textAppearance="?android:attr/textAppearanceSmall" />
-       
-       <TextView
-           android:id="@+id/tvCroutonCopyright"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:layout_marginTop="4dp"
-           android:text="@string/crouton_copyright"
-           android:textColor="@color/black"
-           android:textAppearance="?android:attr/textAppearanceSmall" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/linen"
+        android:orientation="vertical" >
 
-       
         <TextView
-           android:id="@+id/tvGuava"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:layout_marginTop="12dp"
-           android:text="@string/guava_software"
-           android:textColor="@color/black"
-           android:textAppearance="?android:attr/textAppearanceSmall" />
-       
-       <TextView
-           android:id="@+id/tvGuavaCopyright"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:layout_marginTop="4dp"
-           android:layout_marginBottom="8dp"
-           android:text="@string/guava_copyright"
-           android:textColor="@color/black"
-           android:textAppearance="?android:attr/textAppearanceSmall" />
-       
-      <TextView
-           android:id="@+id/tvAppCopyright"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginLeft="8dp"
-           android:layout_marginRight="8dp"
-           android:layout_marginTop="4dp"
-           android:layout_marginBottom="8dp"
-           android:textColor="@color/black"
-           android:textAppearance="?android:attr/textAppearanceSmall" />  
-</LinearLayout>
+            android:id="@+id/tvDataset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="@string/strDatasetSource"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+	            android:id="@+id/tv3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginTop="4dp"
+	            android:layout_marginRight="8dp"
+	            android:text="@string/strChi"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="@color/black" />
+            
+             <TextView
+		            android:id="@+id/tvChiDS"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_toRightOf="@+id/tv3"
+		            android:layout_alignTop="@+id/tv3"
+		            android:text="@string/strChiDS"
+		            android:textAppearance="?android:attr/textAppearanceSmall"
+		            android:textColor="@color/black" />
+			
+             <TextView
+	            android:id="@+id/tv4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@+id/tvChiDS"
+	            android:layout_marginTop="4dp"
+	            android:text="@string/strEng"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="@color/black" />
+       	 
+       	 	<TextView
+	            android:id="@+id/tvEngDS"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/tvChiDS"
+	            android:layout_alignTop="@+id/tv4"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:text="@string/strEngDS"
+	            android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        <TextView
+            android:id="@+id/tvGovWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="@string/strGovHK"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content" >
+            
+	        <TextView
+	            android:id="@+id/tv1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginTop="4dp"
+	            android:layout_marginRight="8dp"
+	            android:text="@string/strChi"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="@color/black" />
+	        
+	        <TextView
+	            android:id="@+id/tvChiWebsite"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/tv1"
+	            android:layout_alignTop="@+id/tv1"
+	            android:text="@string/strGovHK_ch_page"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="@color/black" />
+	
+	         <TextView
+	            android:id="@+id/tv2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@+id/tvChiWebsite"
+	            android:layout_marginTop="4dp"
+	            android:text="@string/strEng"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="@color/black" />
+	            
+	        <TextView
+	            android:id="@+id/tvEngWebsite"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/tvChiWebsite"
+	            android:layout_alignTop="@+id/tv2"
+	            android:text="@string/strGovHK_en_page"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="@color/black" />
+        </RelativeLayout>
+
+        
+        <TextView
+            android:id="@+id/tvSoftwareUsed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="@string/software_used"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvUIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/uil_software"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvUILCopyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/uil_copyright"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvCrouton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/crouton_software"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvCroutonCopyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/crouton_copyright"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvGuava"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/guava_software"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvGuavaCopyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/guava_copyright"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvAppCopyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</ScrollView>
