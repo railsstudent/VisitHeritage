@@ -164,35 +164,29 @@ public class LocationMapFragment extends BaseFragment {
 	                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
 	                     map.setMyLocationEnabled(true);
 
-	                     try {
-		                 	if (lstPlace != null) {
-		                    	 LatLng latlng = null;
-		                    	 int lastPlaceId = -1;
-		                    	 
-			                     // 1) loop the lstPlace list 
-			              	     // 1a)  create markeroption, set title, snippet and icon, and add to map  
-			                     for (Place place : lstPlace) {
-			                    	latlng = new LatLng(place.getLat(), place.getLng());
-			                    	lastPlaceId = place.getId();
-			                        Marker marker = map.addMarker(new MarkerOptions().position(latlng)
-			                                 .title(String.valueOf(place.getId()))
-			                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
-			                        markerArray.put(lastPlaceId, marker);
-			                     }
-			                     
-			                     try {
-		
-				                 	 // load the marker from shared preference
-				                     loadPreference(lastPlaceId);
-			                     } catch (Exception ex1) {
-			             			 Crouton.makeText(getActivity(), "onResume: loadPreference error. " + ex1.getMessage(),
-		            					Style.ALERT).show();	                    	 
-			                     }
-		                 	}
-	                     } catch (Exception ex) {
-	             			Crouton.makeText(getActivity(), "onResume: Unable to add markers to map, please reinstall app.",
+	                 	if (lstPlace != null) {
+	                    	 LatLng latlng = null;
+	                    	 int lastPlaceId = -1;
+	                    	 
+		                     // 1) loop the lstPlace list 
+		              	     // 1a)  create markeroption, set title, snippet and icon, and add to map  
+		                     for (Place place : lstPlace) {
+		                    	latlng = new LatLng(place.getLat(), place.getLng());
+		                    	lastPlaceId = place.getId();
+		                        Marker marker = map.addMarker(new MarkerOptions().position(latlng)
+		                                 .title(String.valueOf(place.getId()))
+		                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
+		                        markerArray.put(lastPlaceId, marker);
+		                     }
+		                     try {
+	
+			                 	 // load the marker from shared preference
+			                     loadPreference(lastPlaceId);
+		                     } catch (Exception ex1) {
+		             			 Crouton.makeText(getActivity(), "onResume: loadPreference error. " + ex1.getMessage(),
 	            					Style.ALERT).show();	                    	 
-	                     }
+		                     }
+	                 	} 
 					}
 					mapView.onResume();				
 				}
@@ -331,18 +325,26 @@ public class LocationMapFragment extends BaseFragment {
         pref_placeId = pref.getInt(region_key, defaultPlaceId);
         if (pref_placeId > -1) {
            Place sharedPrefPlace = hmNamePlace.get(pref_placeId);
-   		   // update shared preference 
-       	   pref.edit().putInt(region_key, pref_placeId).commit();
-       	   // open marker window
-       	   if (markerClickListener != null) {
-       		   Marker marker = markerArray.get(pref_placeId, null);
-       		   if (marker != null) {
-       			   markerClickListener.onMarkerClick(marker);
-       		   }
-       	   }
-           LatLng latlng = new LatLng(sharedPrefPlace.getLat(), sharedPrefPlace.getLng());
-       	   map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
-           map.animateCamera(CameraUpdateFactory.zoomTo(14));
+           if (sharedPrefPlace == null) {
+               pref_placeId = defaultPlaceId;
+               sharedPrefPlace = hmNamePlace.get(pref_placeId);
+           }
+           if (sharedPrefPlace != null) {
+               // update shared preference 
+               pref.edit().putInt(region_key, pref_placeId).commit();
+        	   // open marker window
+	           if (markerClickListener != null) {
+	       		   Marker marker = markerArray.get(pref_placeId, null);
+	       		   if (marker != null) {
+	       			   markerClickListener.onMarkerClick(marker);
+	       		   }
+	       	   }
+	           LatLng latlng = new LatLng(sharedPrefPlace.getLat(), sharedPrefPlace.getLng());
+	       	   map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+	           map.animateCamera(CameraUpdateFactory.zoomTo(14));
+           } else {
+        	   Crouton.makeText(getActivity(), "sharedPrefPlace is null.", Style.INFO).show();        	   
+           }
         }
 	}
 	
@@ -351,5 +353,15 @@ public class LocationMapFragment extends BaseFragment {
         SharedPreferences pref = getActivity().getSharedPreferences(SHARE_PREF_NAME, Context.MODE_PRIVATE);
  		// update shared preference 
        	pref.edit().putInt(region_key, pref_placeId).commit();
+       	Crouton.makeText(getActivity(), "savePreference - region_key = " + region_key + 
+       			", pref_placeId = " + pref_placeId, Style.INFO).show();
 	}
+
+	@Override
+	public void onPrepareOptionsMenu(Menu menu) {
+		// TODO Auto-generated method stub
+		super.onPrepareOptionsMenu(menu);
+	}
+	
+	
 }

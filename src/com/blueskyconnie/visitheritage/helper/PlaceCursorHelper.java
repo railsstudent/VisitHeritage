@@ -6,6 +6,7 @@ import java.util.List;
 import android.database.Cursor;
 import android.util.Log;
 
+import com.blueskyconnie.visitheritage.Constants;
 import com.blueskyconnie.visitheritage.model.Place;
 import com.blueskyconnie.visitheritage.sqllite.CursorUtils;
 import com.blueskyconnie.visitheritage.sqllite.PlaceSqliteOpenHelper;
@@ -14,7 +15,15 @@ import com.blueskyconnie.visitheritage.sqllite.PlaceSqliteOpenHelper;
 public final class PlaceCursorHelper {
 
    private static final String TAG = "PlaceCursorHelper";
-	
+
+   public static String getUrlByLanguage(String url, String deviceLang) {
+	   String folderLang = "b5";
+	   if (deviceLang.equals(Constants.LANG_CODE_EN)) {
+		   folderLang = "en";
+	   }
+	   return String.format(url, folderLang);
+   }
+   
    public static List<Place> loadFromCursor(Cursor cursor) {
 	   
 	   List<Place> places = new ArrayList<Place>();

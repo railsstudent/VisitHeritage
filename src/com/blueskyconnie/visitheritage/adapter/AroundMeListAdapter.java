@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.blueskyconnie.visitheritage.Constants;
 import com.blueskyconnie.visitheritage.R;
+import com.blueskyconnie.visitheritage.helper.PlaceCursorHelper;
 import com.blueskyconnie.visitheritage.model.Place;
 import com.google.common.base.Strings;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -122,7 +123,8 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		Locale locale = Locale.getDefault();
 		String language = locale.getLanguage();
 		
-		if (Constants.LANG_CODE_EN.equals(Strings.nullToEmpty(language).toUpperCase(locale))) {
+		String deviceLang = Strings.nullToEmpty(language).toUpperCase(locale);
+		if (Constants.LANG_CODE_EN.equals(deviceLang)) {
 			name = Strings.nullToEmpty(place.getName_en()); // English
 			location = Strings.nullToEmpty(place.getLocation_en());
 		} else {
@@ -141,7 +143,7 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		holder.tvDistance.setText(strDistance + " " + bdDist.toPlainString() + " " + strMeter);
 		
 		if (holder.img != null && !Strings.isNullOrEmpty(place.getUrl())) {
-			imageLoader.displayImage(place.getUrl(), holder.img, 
+			imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(place.getUrl(), deviceLang), holder.img, 
 					new SimpleImageLoadingListener() {
 							@Override
 							public void onLoadingFailed(String imageUri,

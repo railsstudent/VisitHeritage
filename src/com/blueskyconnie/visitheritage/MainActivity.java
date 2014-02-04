@@ -33,6 +33,7 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 //public class MainActivity extends  FragmentActivity {
 public class MainActivity extends ActionBarActivity {
 
+	private static final String TAG = "MainActivity";
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
@@ -87,6 +88,7 @@ public class MainActivity extends ActionBarActivity {
 		mDrawerList.setAdapter(adapter);
 
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
 
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.drawable.ic_drawer, // nav menu toggle icon
@@ -119,9 +121,8 @@ public class MainActivity extends ActionBarActivity {
 			 	.commit();
 		 }
 		 
-		 // TODO: willl change it package name before deployment
- 		 // String packageName = getPackageName();
-		 String packageName = "com.blueskyconnie.heritagefiesta";
+ 		 String packageName = getPackageName();
+		 //String packageName = "com.blueskyconnie.heritagefiesta";
 		 appPath = "market://details?id=" + packageName;
 		 appUrl = "http://play.google.com/store/apps/details?id=" + packageName;
 		 
@@ -182,7 +183,7 @@ public class MainActivity extends ActionBarActivity {
 			case 4:
 				 // rate my app 
 				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(appPath));
-				Log.i("MainActivity", "Rate My App path - " + appPath);
+				Log.i(TAG, "Rate My App path - " + appPath);
 				 startActivity(intent);
 				 break;
 			default:
@@ -208,7 +209,7 @@ public class MainActivity extends ActionBarActivity {
 			 mDrawerLayout.closeDrawer(mDrawerList);
 		} else {
 			 // error in creating fragment
-			 Log.e("MainActivity", "Error in creating fragment");
+			 Log.e(TAG, "Error in creating fragment");
 		 }
 	}
 
@@ -229,19 +230,19 @@ public class MainActivity extends ActionBarActivity {
 		switch (item.getItemId()) {
 			case R.id.item_clear_disc_cache:
 				imageLoader.clearDiscCache();
-				Log.i("MainActivity", "Clear memory from disc");
+				Log.i(TAG, "Clear memory from disc");
 				return true;
 			case R.id.item_clear_memory_cache:
 				imageLoader.clearMemoryCache();
-				Log.i("MainActivity", "Clear memory from memory");
+				Log.i(TAG, "Clear memory from memory");
 				return true;
 			case R.id.item_share:
-				Log.i("MainActivity", "Tell a friend about application");
+				Log.i(TAG, "Tell a friend about application");
 				createShareIntent();
 				return true;
 			// launch setting activity
 			case R.id.item_setting:
-				Log.i("MainActivity", "Show settings activity");
+				Log.i(TAG, "Show settings activity");
 				Intent intent = new Intent(this, SettingActivity.class);
 				startActivity(intent);
 				return true;
@@ -365,14 +366,14 @@ public class MainActivity extends ActionBarActivity {
 	public ArrayList<Place> getLstIsland() {
 		return lstIsland;
 	}
+
+	public ArrayList<Place> getLstAll() {
+		return lstAll;
+	}
 	
 	// expose a method to click item in nav drawer item
 	public void selectItem(int position) {
 		// get the navigation drawer item
 		mDrawerList.performItemClick(mDrawerList, position, mDrawerList.getItemIdAtPosition(position));
-	}
-
-	public ArrayList<Place> getLstAll() {
-		return lstAll;
 	}
 }

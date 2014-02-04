@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blueskyconnie.visitheritage.helper.PlaceCursorHelper;
 import com.blueskyconnie.visitheritage.model.Place;
 import com.google.common.base.Strings;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -67,15 +68,14 @@ public class PlaceFragment extends BaseFragment {
         	
     		Locale locale = Locale.getDefault();
     		String language = locale.getLanguage();
-    		String folderLang = "b5";
-    		if (Constants.LANG_CODE_EN.equals(language.toUpperCase(Locale.getDefault()))) {
+    		String deviceLang = language.toUpperCase(Locale.getDefault());
+    		if (Constants.LANG_CODE_EN.equals(deviceLang)) {
     			tvName.setText(Strings.nullToEmpty(place.getName_en()));
     			tvAddress.setText(Strings.nullToEmpty(place.getAddress_en()));
     			tvHour.setText(Strings.nullToEmpty(place.getOpeningHour_en()));
     			tvDescription.setText(Strings.nullToEmpty(place.getDescription_en()));
     			tvRemark.setText(Strings.nullToEmpty(place.getRemark_en()));
     			tvLocation.setText(Strings.nullToEmpty(place.getLocation_en()));
-    			folderLang = "en";
     		} else {
     			tvName.setText(Strings.nullToEmpty(place.getName()));
     			tvAddress.setText(Strings.nullToEmpty(place.getAddress()));
@@ -84,13 +84,13 @@ public class PlaceFragment extends BaseFragment {
     			tvRemark.setText(Strings.nullToEmpty(place.getRemark()));
     			tvLocation.setText(Strings.nullToEmpty(place.getLocation()));
     		}
-			tvHomePage.setText(String.format(Strings.nullToEmpty(place.getHomepage()), folderLang));
+			tvHomePage.setText(PlaceCursorHelper.getUrlByLanguage(place.getHomepage(), deviceLang));
 			tvEmail.setText(Strings.nullToEmpty(place.getEmail()));
 			tvPhone.setText(Strings.nullToEmpty(place.getPhone()));
 			Linkify.addLinks(tvPhone, Linkify.PHONE_NUMBERS);
     		
 			if (!Strings.isNullOrEmpty(place.getUrl())) {
-	    		imageLoader.displayImage(String.format(place.getUrl(), folderLang), 
+	    		imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(place.getUrl(), deviceLang), 
 	    				imgPlace, new SimpleImageLoadingListener(){
 					@Override
 					public void onLoadingFailed(String imageUri, View view,
