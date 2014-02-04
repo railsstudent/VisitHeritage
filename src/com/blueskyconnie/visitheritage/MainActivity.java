@@ -56,6 +56,7 @@ public class MainActivity extends ActionBarActivity {
 	private ArrayList<Place> lstKowloon;
 	private ArrayList<Place> lstNT;
 	private ArrayList<Place> lstIsland;
+	private ArrayList<Place> lstAll;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -132,6 +133,13 @@ public class MainActivity extends ActionBarActivity {
 			 lstKowloon = intent.getParcelableArrayListExtra(Constants.KOWLOON_KEY);
 			 lstNT = intent.getParcelableArrayListExtra(Constants.NT_KEY);
 			 lstIsland = intent.getParcelableArrayListExtra(Constants.ISLAND_KEY);
+			 lstAll = intent.getParcelableArrayListExtra(Constants.ALL_KEY);
+		 } else {
+			 lstHK = new ArrayList<Place>(); 
+			 lstKowloon = new ArrayList<Place>();
+			 lstNT = new ArrayList<Place>();
+			 lstIsland = new ArrayList<Place>();
+			 lstAll = new ArrayList<Place>();
 		 }
 	}
 
@@ -362,5 +370,9 @@ public class MainActivity extends ActionBarActivity {
 	public void selectItem(int position) {
 		// get the navigation drawer item
 		mDrawerList.performItemClick(mDrawerList, position, mDrawerList.getItemIdAtPosition(position));
+	}
+
+	public ArrayList<Place> getLstAll() {
+		return lstAll;
 	}
 }

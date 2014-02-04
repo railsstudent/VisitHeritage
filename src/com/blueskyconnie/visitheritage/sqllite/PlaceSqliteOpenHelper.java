@@ -1,17 +1,23 @@
 package com.blueskyconnie.visitheritage.sqllite;
 
-import com.blueskyconnie.visitheritage.Constants;
+import java.util.Locale;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.blueskyconnie.visitheritage.Constants;
+
 public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 
 	public static final String TABLE_PLACE = "place";
 	
 	public static final String SQL_CREATE_TABLE;
+	
+	private static final String IMG_FMT = "http://www.amo.gov.hk/graphics/%%s/monuments/%1$s.jpg";
+
+	private static final String HOMEPAGE_FMT = "http://www.amo.gov.hk/%%s/monuments_%1$s.php";
 	
 	public static final String COLUMN_ID = "id";
 	public static final String COLUMN_NAME = "name";
@@ -112,14 +118,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 	private void createData(SQLiteDatabase database) {
 		ContentValues values = new ContentValues(); //data1
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "大潭水塘");
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("88"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("88"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -148,14 +154,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "黃泥涌水塘"); //data2
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/b5/monuments/89.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("89"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("89"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_89.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -185,14 +191,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "香港仔水塘"); //data3
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/b5/monuments/90.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("90"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("90"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_90.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -223,14 +229,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "九龍水塘"); //data4
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("91"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("91"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -261,14 +267,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "薄扶林水塘"); //data5
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("87"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("87"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -299,14 +305,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "鶴咀燈塔"); //data6
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("80"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("80"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -337,14 +343,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "中區警署"); //data7
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("53"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("53"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -374,14 +380,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "張氏宗祠"); //data8
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("68"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("68"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -412,14 +418,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "長山古寺"); //data9
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("66"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("66"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -449,14 +455,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "植桂書室"); //data10
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("82"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("82"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -487,14 +493,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "都爹利街石階及煤氣路燈"); //data11
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("08"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("08"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -524,14 +530,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "覲龍圍圍牆及更樓"); //data12
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("48"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("48"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -561,14 +567,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "老圍門樓及圍牆"); //data13
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("64"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("64"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -599,14 +605,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "麻笏圍門樓"); //data14
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("50"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("50"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -636,14 +642,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "分流炮台"); //data15
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("11"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("11"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -673,14 +679,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "樊仙宮"); //data16
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("69"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("69"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -710,14 +716,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊三軍司令官邸"); //data17
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("36"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("36"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -747,14 +753,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "前中央裁判司署"); //data18
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("54"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("54"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -784,14 +790,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "前法國外方傳道會大樓"); //data19
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("37"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("37"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -822,14 +828,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "前九龍英童學校"); //data20
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("45"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("45"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -860,14 +866,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "前九廣鐵路鐘樓"); //data21
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("43"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("43"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -898,14 +904,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "前水警總部"); //data22
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("51"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("51"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -936,14 +942,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "前九龍寨城衙門"); //data23
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("63"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("63"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -974,14 +980,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "下白泥55號碉堡"); //data24
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("99"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("99"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1012,14 +1018,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊總督山頂別墅守衛室"); //data25
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("52"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("52"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1050,14 +1056,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "香港禮賓府"); //data26
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("59"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("59"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1088,14 +1094,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "青洲燈塔建築群"); //data27
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("86"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("86"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1127,14 +1133,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "居石侯公祠"); //data28
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("78"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("78"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1165,14 +1171,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "香港天文台"); //data29
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("24"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("24"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1203,14 +1209,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "滘西洲洪聖古廟"); //data30
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("76"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("76"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1241,14 +1247,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "二聖宮"); //data31
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("61"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("61"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1278,14 +1284,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "前政務司官邸"); //data32
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("17"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("17"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1316,14 +1322,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "鏡蓉書屋"); //data33
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("44"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("44"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1354,14 +1360,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "敬羅家塾"); //data34
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("67"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("67"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1392,14 +1398,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "景賢里"); //data35
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("85"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("85"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1429,14 +1435,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "英皇書院"); //data36
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("101"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("101"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1467,14 +1473,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "甘棠第"); //data37
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("98"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("98"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1504,14 +1510,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "覲龍圍門樓"); //data38
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("33"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("33"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1542,14 +1548,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "羅屋"); //data39
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("38"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("38"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1579,14 +1585,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "李鄭屋漢墓"); //data40
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/b5/monuments/35.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("35"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("35"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_35.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1617,14 +1623,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "八鄉梁氏宗祠"); //data41
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("81"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("81"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1655,14 +1661,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "廖萬石堂"); //data42
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("30"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("30"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1693,14 +1699,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "聖士提反女校中學主樓"); //data43
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("46"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("46"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1731,14 +1737,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "麟峯文公祠"); //data44
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("19"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("19"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1768,14 +1774,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "文武二帝廟"); //data45
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("23"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("23"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1806,14 +1812,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "上環文武廟"); //data46
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("96"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("96"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1844,14 +1850,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "瑪利諾修院學校"); //data47
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("84"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("84"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1882,14 +1888,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "城門水塘紀念碑"); //data48
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("92"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("92"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1919,14 +1925,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "馬禮遜樓"); //data49
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("79"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("79"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物為私人物業，不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1956,14 +1962,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "聖約瑟書院北座及西座"); //data50
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("70"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("70"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -1994,14 +2000,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊北區理民府"); //data51
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("12"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("12"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2031,14 +2037,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "海壩村古屋"); //data52
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/b5/monuments/31.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("31"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("31"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_31.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2069,14 +2075,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "王屋村古屋"); //data53
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("39"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("39"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2107,14 +2113,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊病理學院"); //data54
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("41"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("41"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2145,14 +2151,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊赤柱警署"); //data55
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("25"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("25"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2183,14 +2189,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊大埔墟火車站"); //data56
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("29"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("29"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2221,14 +2227,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊灣仔郵政局"); //data57
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("40"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("40"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2259,14 +2265,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "碗窰村碗窰"); //data58
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("20"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("20"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2297,14 +2303,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "九龍寨城南門遺蹟"); //data59
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("62"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("62"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2335,14 +2341,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "葉定仕故居"); //data60
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("93"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("93"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2372,14 +2378,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "大浪灣石刻"); //data61
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("01"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("01"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2409,14 +2415,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "龍蝦灣石刻"); //data62
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("16"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("16"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2446,14 +2452,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "石壁石刻"); //data63
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("05"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("05"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2483,14 +2489,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "滘西洲石刻"); //data64
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("02"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("02"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2520,14 +2526,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "東龍洲石刻"); //data65
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("03"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("03"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2558,14 +2564,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "黃竹坑石刻"); //data66
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("28"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("28"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2595,14 +2601,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "長洲石刻"); //data67
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("14"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("14"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2632,14 +2638,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "蒲台石刻"); //data68
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("06"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("06"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2669,14 +2675,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "大廟灣刻石"); //data69
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("04"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("04"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2707,14 +2713,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "三棟屋村"); //data70
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/b5/monuments/10.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("10"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("10"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_10.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2745,14 +2751,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "聖士提反書院的書院大樓"); //data71
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("100"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("100"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2783,14 +2789,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "上窰村"); //data72
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("13"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("13"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2820,14 +2826,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "佛頭洲稅關遺址"); //data73
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("18"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("18"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2858,14 +2864,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "聖約翰座堂"); //data74
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("60"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("60"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2896,14 +2902,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "分流石圓環"); //data75
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("21"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("21"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2934,14 +2940,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "大夫第"); //data76
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("32"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("32"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -2972,14 +2978,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "廈村鄧氏宗祠"); //data77
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("83"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("83"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3009,14 +3015,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "屏山鄧氏宗祠"); //data78
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("73"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("73"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3047,14 +3055,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "松嶺鄧公祠"); //data79
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("65"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("65"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3085,14 +3093,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "廣瑜鄧公祠"); //data80
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("97"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("97"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3122,14 +3130,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "燈籠洲燈塔"); //data81
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/b5/monuments/72.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("72"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("72"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_72.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3159,14 +3167,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "香港大學孔慶熒樓外部"); //data82
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("57"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("57"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3196,14 +3204,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "香港大學鄧志昂樓外部"); //data83
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("58"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("58"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3234,14 +3244,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "香港大學大學堂外部"); //data84
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("56"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("56"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3272,14 +3284,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "梅夫人婦女會主樓外部"); //data85
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("49"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("49"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3309,14 +3323,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "香港大學本部大樓外部"); //data86
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("27"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("27"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3346,14 +3362,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊最高法院外部"); //data87
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("26"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("26"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3384,14 +3402,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "銅鑼灣天后廟"); //data88
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("15"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("15"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/15.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_15.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3421,14 +3441,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "龍躍頭天后宮"); //data89
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("77"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("77"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/77.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_77.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3458,14 +3480,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "聚星樓"); //data90
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("75"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("75"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/75.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_75.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3495,14 +3519,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "東涌小炮台"); //data91
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("22"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("22"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/07.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_07.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3533,14 +3559,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "東涌炮台"); //data92
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("07"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("07"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3571,14 +3599,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "東龍洲炮台"); //data93
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("09"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("09"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/09.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_09.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3609,14 +3639,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "東華三院文物館"); //data94
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("95"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("95"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/95.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_95.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3645,14 +3677,17 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "域多利監獄"); //data95
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("55"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("55"));
+
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/55.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_55.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3683,14 +3718,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "橫瀾燈塔"); //data96
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("71"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("71"));
+		//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/71.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_71.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3721,14 +3758,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊上環街市"); //data97
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("42"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("42"));
+		//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/42.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_42.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3758,14 +3797,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "仁敦岡書室"); //data98
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("94"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("94"));
+		//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/94.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_94.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3792,18 +3833,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 		
-		
-		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "廈村楊侯宮"); //data99
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("34"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("34"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3834,14 +3873,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "二帝書院"); //data100
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("47"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("47"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/47.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_47.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3872,14 +3913,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		
 		values = new ContentValues();
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "愈喬二公祠"); //data101
-		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("74"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("74"));
+//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/74.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
 								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
 								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
 								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
 								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
+//		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
@@ -3906,5 +3949,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 	}
-		
+
+	private static String buildImageUrl (String id) {
+		return String.format(Locale.US, IMG_FMT, id);
+	}
+	
+	private static String buildHomePageUrl (String id) {
+		return String.format(Locale.US, HOMEPAGE_FMT, id);
+	}
 }

@@ -30,6 +30,7 @@ public class SplashActivity extends Activity {
 		private ArrayList<Place> lstKowloon;
 		private ArrayList<Place> lstNT;
 		private ArrayList<Place> lstIsland;
+		private ArrayList<Place> lstAll;
 		
 		public SplashHandler(SplashActivity activity) {
 			this.activity = new WeakReference<SplashActivity>(activity);
@@ -46,6 +47,7 @@ public class SplashActivity extends Activity {
 					lstKowloon = bundle.getParcelableArrayList(Constants.KOWLOON_KEY);
 					lstNT = bundle.getParcelableArrayList(Constants.NT_KEY);
 					lstIsland = bundle.getParcelableArrayList(Constants.ISLAND_KEY);
+					lstAll = bundle.getParcelableArrayList(Constants.ALL_KEY);
 				}
 				
 				if (lstHK == null) {
@@ -60,6 +62,9 @@ public class SplashActivity extends Activity {
 				if (lstIsland == null) {
 					lstIsland = new ArrayList<Place>();
 				}
+				if (lstAll == null) {
+					lstAll = new ArrayList<Place>();
+				}
 				
 				// start another thread to wait a few second and launch main activity
 				new Handler().postDelayed(
@@ -71,6 +76,7 @@ public class SplashActivity extends Activity {
 								intent.putParcelableArrayListExtra(Constants.KOWLOON_KEY, lstKowloon);
 								intent.putParcelableArrayListExtra(Constants.NT_KEY, lstNT);
 								intent.putParcelableArrayListExtra(Constants.ISLAND_KEY, lstIsland);
+								intent.putParcelableArrayListExtra(Constants.ALL_KEY, lstAll);
 								// launch MainActivity and finish this Activity.
 								// So backpress does not return to this screen
 								activity.get().startActivity(intent);
@@ -121,6 +127,7 @@ public class SplashActivity extends Activity {
 			ArrayList<Place> lstKowloon = new ArrayList<Place>();
 			ArrayList<Place> lstNT = new ArrayList<Place>();
 			ArrayList<Place> lstIsland = new ArrayList<Place>();
+			ArrayList<Place> lstAll = new ArrayList<Place>();
 			
 			try {
 				dao = new PlaceDao(activity.get());
@@ -129,9 +136,19 @@ public class SplashActivity extends Activity {
 				lstKowloon = (ArrayList <Place>) dao.getKowloonPlaces();
 				lstNT = (ArrayList <Place>) dao.getNTPlaces();
 				lstIsland = (ArrayList <Place>) dao.getIslandPlaces();
+
+				ArrayList<Place> tmpHK = (ArrayList <Place>) dao.getHKPlaces();
+				ArrayList<Place> tmpKowl = (ArrayList <Place>) dao.getKowloonPlaces();
+				ArrayList<Place> tmpNT = (ArrayList <Place>) dao.getNTPlaces();
+				ArrayList<Place> tmpIsland = (ArrayList <Place>) dao.getIslandPlaces();
+
+				lstAll.addAll(tmpHK);
+				lstAll.addAll(tmpKowl);
+				lstAll.addAll(tmpNT);
+				lstAll.addAll(tmpIsland);
 			} catch (SQLException ex) {
 				Log.i("SplashActivity", ex.getLocalizedMessage());
-				Crouton.makeText(activity.get(), ex.getMessage(), Style.ALERT);
+				Crouton.makeText(activity.get(), ex.getMessage(), Style.ALERT).show();
 			} finally {
 				if (dao != null) {
 					dao.close();
@@ -145,6 +162,7 @@ public class SplashActivity extends Activity {
 			data.putParcelableArrayList(Constants.KOWLOON_KEY, lstKowloon);
 			data.putParcelableArrayList(Constants.NT_KEY, lstNT);
 			data.putParcelableArrayList(Constants.ISLAND_KEY, lstIsland);
+			data.putParcelableArrayList(Constants.ALL_KEY, lstAll);
 			msg.setData(data);
 			handler.sendMessage(msg);
 		}

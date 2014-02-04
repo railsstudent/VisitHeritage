@@ -14,6 +14,7 @@ public class ChooseAreaFragment extends BaseFragment {
 	private Button btnKowloon;
 	private Button btnNT;
 	private Button btnIsland;
+	private Button btnAll;
 	private MainActivity mainActivity;
 	
 	private OnClickListener clickListener =  new OnClickListener() {
@@ -64,6 +65,16 @@ public class ChooseAreaFragment extends BaseFragment {
 						.addToBackStack(null)
 						.commit();
 					break;
+				case R.id.btnAll:
+					bundle.putString(Constants.PLACE_KEY, getString(R.string.strAll));
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstAll());
+					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_ALL);
+					fragment.setArguments(bundle);
+					fragmentManager.beginTransaction()
+						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
+						.addToBackStack(null)
+						.commit();
+					break;
 			}
 		}
 	};
@@ -77,11 +88,14 @@ public class ChooseAreaFragment extends BaseFragment {
         btnKowloon = (Button) rootView.findViewById(R.id.btnKowloon); 
         btnNT = (Button) rootView.findViewById(R.id.btnNT); 
         btnIsland = (Button) rootView.findViewById(R.id.btnIsland); 
+        btnAll = (Button) rootView.findViewById(R.id.btnAll);
         
         btnHK.setOnClickListener(clickListener);
         btnKowloon.setOnClickListener(clickListener);
         btnNT.setOnClickListener(clickListener);
         btnIsland.setOnClickListener(clickListener);
+        btnAll.setOnClickListener(clickListener);
+        
         return rootView;
     }
 	

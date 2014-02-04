@@ -61,11 +61,12 @@
     <string name="close">Close</string>
     
     <string name="software_used">Software Used:</string>
-     <string name="strHK">Hong Kong</string>
-     <string name="strKowloon">Kowloon</string>
-     <string name="strNT">New Territories</string>
-     <string name="strIsland">Island</string>
-
+    <string name="strHK">Hong Kong</string>
+    <string name="strKowloon">Kowloon</string>
+    <string name="strNT">New Territories</string>
+    <string name="strIsland">Island</string>
+    <string name="strAll">All</string>
+     
     <string name="placeholder">Please choose region</string> 
 	<string name="strInstruction">Click marker window to view detailed information</string>
     <string name="no_monument">No declared monuments.</string>

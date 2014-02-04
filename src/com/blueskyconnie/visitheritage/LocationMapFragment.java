@@ -179,9 +179,15 @@ public class LocationMapFragment extends BaseFragment {
 			                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
 			                        markerArray.put(lastPlaceId, marker);
 			                     }
-	
-			                 	 // load the marker from shared preference
-			                     loadPreference(lastPlaceId);
+			                     
+			                     try {
+		
+				                 	 // load the marker from shared preference
+				                     loadPreference(lastPlaceId);
+			                     } catch (Exception ex1) {
+			             			 Crouton.makeText(getActivity(), "onResume: loadPreference error. " + ex1.getMessage(),
+		            					Style.ALERT).show();	                    	 
+			                     }
 		                 	}
 	                     } catch (Exception ex) {
 	             			Crouton.makeText(getActivity(), "onResume: Unable to add markers to map, please reinstall app.",

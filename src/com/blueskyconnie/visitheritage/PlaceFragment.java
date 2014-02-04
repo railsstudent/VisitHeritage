@@ -67,7 +67,7 @@ public class PlaceFragment extends BaseFragment {
         	
     		Locale locale = Locale.getDefault();
     		String language = locale.getLanguage();
-    		
+    		String folderLang = "b5";
     		if (Constants.LANG_CODE_EN.equals(language.toUpperCase(Locale.getDefault()))) {
     			tvName.setText(Strings.nullToEmpty(place.getName_en()));
     			tvAddress.setText(Strings.nullToEmpty(place.getAddress_en()));
@@ -75,6 +75,7 @@ public class PlaceFragment extends BaseFragment {
     			tvDescription.setText(Strings.nullToEmpty(place.getDescription_en()));
     			tvRemark.setText(Strings.nullToEmpty(place.getRemark_en()));
     			tvLocation.setText(Strings.nullToEmpty(place.getLocation_en()));
+    			folderLang = "en";
     		} else {
     			tvName.setText(Strings.nullToEmpty(place.getName()));
     			tvAddress.setText(Strings.nullToEmpty(place.getAddress()));
@@ -83,13 +84,14 @@ public class PlaceFragment extends BaseFragment {
     			tvRemark.setText(Strings.nullToEmpty(place.getRemark()));
     			tvLocation.setText(Strings.nullToEmpty(place.getLocation()));
     		}
-			tvHomePage.setText(Strings.nullToEmpty(place.getHomepage()));
+			tvHomePage.setText(String.format(Strings.nullToEmpty(place.getHomepage()), folderLang));
 			tvEmail.setText(Strings.nullToEmpty(place.getEmail()));
 			tvPhone.setText(Strings.nullToEmpty(place.getPhone()));
 			Linkify.addLinks(tvPhone, Linkify.PHONE_NUMBERS);
     		
 			if (!Strings.isNullOrEmpty(place.getUrl())) {
-	    		imageLoader.displayImage(place.getUrl(), imgPlace, new SimpleImageLoadingListener(){
+	    		imageLoader.displayImage(String.format(place.getUrl(), folderLang), 
+	    				imgPlace, new SimpleImageLoadingListener(){
 					@Override
 					public void onLoadingFailed(String imageUri, View view,
 							FailReason failReason) {
