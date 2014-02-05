@@ -15,14 +15,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.blueskyconnie.visitheritage.adapter.NavDrawerListAdapter;
+import com.blueskyconnie.visitheritage.dao.PlaceDao;
 import com.blueskyconnie.visitheritage.model.NavDrawerItem;
 import com.blueskyconnie.visitheritage.model.Place;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -30,7 +31,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 
-//public class MainActivity extends  FragmentActivity {
 public class MainActivity extends ActionBarActivity {
 
 	private static final String TAG = "MainActivity";
@@ -88,7 +88,6 @@ public class MainActivity extends ActionBarActivity {
 		mDrawerList.setAdapter(adapter);
 
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setHomeButtonEnabled(true);
 
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.drawable.ic_drawer, // nav menu toggle icon
@@ -125,25 +124,32 @@ public class MainActivity extends ActionBarActivity {
 		 //String packageName = "com.blueskyconnie.heritagefiesta";
 		 appPath = "market://details?id=" + packageName;
 		 appUrl = "http://play.google.com/store/apps/details?id=" + packageName;
+
+//		 lstAll = new ArrayList<Place>();
+//		 if (getIntent() != null) {
+//			 
+//			 Intent intent = getIntent();
+//			 // get data pass from SplashActivity. Will use in Map Fragment, Detail Place Fragment
+//			 lstHK = intent.getParcelableArrayListExtra(Constants.HK_KEY);
+//			 lstKowloon = intent.getParcelableArrayListExtra(Constants.KOWLOON_KEY);
+//			 lstNT = intent.getParcelableArrayListExtra(Constants.NT_KEY);
+//			 lstIsland = intent.getParcelableArrayListExtra(Constants.ISLAND_KEY);
+//			 
+//			 lstAll.addAll(lstHK);
+//			 lstAll.addAll(lstKowloon);
+//			 lstAll.addAll(lstNT);
+//			 lstAll.addAll(lstIsland);
+//		 } else {
+//			 lstHK = new ArrayList<Place>(); 
+//			 lstKowloon = new ArrayList<Place>();
+//			 lstNT = new ArrayList<Place>();
+//			 lstIsland = new ArrayList<Place>();
+//		 }
 		 
-		 if (getIntent() != null) {
-			 
-			 Intent intent = getIntent();
-			 // get data pass from SplashActivity. Will use in Map Fragment, Detail Place Fragment
-			 lstHK = intent.getParcelableArrayListExtra(Constants.HK_KEY);
-			 lstKowloon = intent.getParcelableArrayListExtra(Constants.KOWLOON_KEY);
-			 lstNT = intent.getParcelableArrayListExtra(Constants.NT_KEY);
-			 lstIsland = intent.getParcelableArrayListExtra(Constants.ISLAND_KEY);
-			 lstAll = intent.getParcelableArrayListExtra(Constants.ALL_KEY);
-		 } else {
-			 lstHK = new ArrayList<Place>(); 
-			 lstKowloon = new ArrayList<Place>();
-			 lstNT = new ArrayList<Place>();
-			 lstIsland = new ArrayList<Place>();
-			 lstAll = new ArrayList<Place>();
-		 }
+		this.mDrawerLayout.openDrawer(Gravity.LEFT);
 	}
 
+	
 	/**
 	 * Slide menu item click listener
 	 * */
@@ -155,8 +161,8 @@ public class MainActivity extends ActionBarActivity {
 			displayView(position);
 		}
 	}
-
-	 private void displayView(int position) {
+	
+	private void displayView(int position) {
 		 // update the main content by replacing fragments
 		 Fragment fragment = null;
 		 String tagname = "";
@@ -328,22 +334,17 @@ public class MainActivity extends ActionBarActivity {
 		 }
 	 }
 
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-	}
-
-	// http://stackoverflow.com/questions/7137742/simpleongesturelistener-not-working-for-scrollview
-	@Override
-	public boolean dispatchTouchEvent(MotionEvent event) {
-		// find current fragment
-		FragmentManager fm = this.getSupportFragmentManager();
-  	    Fragment currentFragment = fm.findFragmentById(R.id.frame_container);
-		if (currentFragment != null && Constants.CONTACT_TAG.equals(currentFragment.getTag())) {
-			((ContactUsFragment) currentFragment).getGestureDetector().onTouchEvent(event);
-		}
-		return super.dispatchTouchEvent(event);
-	}
+//	// http://stackoverflow.com/questions/7137742/simpleongesturelistener-not-working-for-scrollview
+//	@Override
+//	public boolean dispatchTouchEvent(MotionEvent event) {
+//		// find current fragment
+//		FragmentManager fm = this.getSupportFragmentManager();
+//  	    Fragment currentFragment = fm.findFragmentById(R.id.frame_container);
+//		if (currentFragment != null && Constants.CONTACT_TAG.equals(currentFragment.getTag())) {
+//			((ContactUsFragment) currentFragment).getGestureDetector().onTouchEvent(event);
+//		}
+//		return super.dispatchTouchEvent(event);
+//	}
 
 	@Override
 	protected void onDestroy() {
@@ -352,22 +353,82 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 	public ArrayList<Place> getLstHK() {
+		if (lstHK == null) {
+			PlaceDao dao = null;
+			try {
+				dao = new PlaceDao(this);
+				dao.open();
+				lstHK = (ArrayList<Place>)dao.getHKPlaces();
+			} finally {
+				if (dao != null) {
+					dao.close();
+				}
+			}
+		}
 		return lstHK;
 	}
 
 	public ArrayList<Place> getLstKowloon() {
+		if (lstKowloon == null) {
+			PlaceDao dao = null;
+			try {
+				dao = new PlaceDao(this);
+				dao.open();
+				lstKowloon = (ArrayList<Place>)dao.getKowloonPlaces();
+			} finally {
+				if (dao != null) {
+					dao.close();
+				}
+			}
+		}
 		return lstKowloon;
 	}
 
 	public ArrayList<Place> getLstNT() {
+		if (lstNT == null) {
+			PlaceDao dao = null;
+			try {
+				dao = new PlaceDao(this);
+				dao.open();
+				lstNT = (ArrayList<Place>)dao.getNTPlaces();
+			} finally {
+				if (dao != null) {
+					dao.close();
+				}
+			}
+		}
 		return lstNT;
 	}
 
 	public ArrayList<Place> getLstIsland() {
+		if (lstIsland == null) {
+			PlaceDao dao = null;
+			try {
+				dao = new PlaceDao(this);
+				dao.open();
+				lstIsland = (ArrayList<Place>)dao.getIslandPlaces();
+			} finally {
+				if (dao != null) {
+					dao.close();
+				}
+			}
+		}
 		return lstIsland;
 	}
 
 	public ArrayList<Place> getLstAll() {
+		if (lstAll == null) {
+			PlaceDao dao = null;
+			try {
+				dao = new PlaceDao(this);
+				dao.open();
+				lstAll = (ArrayList<Place>)dao.getAll();
+			} finally {
+				if (dao != null) {
+					dao.close();
+				}
+			}
+		}
 		return lstAll;
 	}
 	
@@ -376,4 +437,9 @@ public class MainActivity extends ActionBarActivity {
 		// get the navigation drawer item
 		mDrawerList.performItemClick(mDrawerList, position, mDrawerList.getItemIdAtPosition(position));
 	}
+	
+	public boolean isDrawerOpen() {
+		return mDrawerLayout.isDrawerOpen(mDrawerList);
+	}
+	
 }

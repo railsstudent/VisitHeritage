@@ -194,7 +194,7 @@ public class LocationMapFragment extends BaseFragment {
 				 GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(), RQS_GooglePlayServices).show();
 			}
 		} catch (Exception ex) {
-			Crouton.makeText(getActivity(), "onResume: unknown exception captured, please reinstall app.",
+			Crouton.makeText(getActivity(), "onResume: unknown exception captured.",
 					Style.ALERT).show();
 		}
 	}
@@ -342,9 +342,7 @@ public class LocationMapFragment extends BaseFragment {
 	           LatLng latlng = new LatLng(sharedPrefPlace.getLat(), sharedPrefPlace.getLng());
 	       	   map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
 	           map.animateCamera(CameraUpdateFactory.zoomTo(14));
-           } else {
-        	   Crouton.makeText(getActivity(), "sharedPrefPlace is null.", Style.INFO).show();        	   
-           }
+           } 
         }
 	}
 	
@@ -353,13 +351,12 @@ public class LocationMapFragment extends BaseFragment {
         SharedPreferences pref = getActivity().getSharedPreferences(SHARE_PREF_NAME, Context.MODE_PRIVATE);
  		// update shared preference 
        	pref.edit().putInt(region_key, pref_placeId).commit();
-       	Crouton.makeText(getActivity(), "savePreference - region_key = " + region_key + 
-       			", pref_placeId = " + pref_placeId, Style.INFO).show();
 	}
 
 	@Override
 	public void onPrepareOptionsMenu(Menu menu) {
-		// TODO Auto-generated method stub
+		boolean drawerOpen = ((MainActivity)getActivity()).isDrawerOpen();
+		menu.findItem(R.id.menu_legalnotices).setVisible(!drawerOpen);
 		super.onPrepareOptionsMenu(menu);
 	}
 	

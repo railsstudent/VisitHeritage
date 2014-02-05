@@ -35,16 +35,23 @@ public class PlaceDao {
 		List<Place> lstPlace = new ArrayList<Place>();
 		String[] selectArg = { String.valueOf(district) };
 		
-		Cursor cursor = database.query(PlaceSqliteOpenHelper.TABLE_PLACE, PlaceSqliteOpenHelper.ALL_COLUMNS, 
-							"district = ?", selectArg, null, null, null);
-		
-		// iterate cursor and convert the sql object to Place bean
-		lstPlace = PlaceCursorHelper.loadFromCursor(cursor);
-		for (Place place : lstPlace) {
-			place.setDistance(0);
+		Cursor cursor = null;
+		try {
+			cursor = database.query(PlaceSqliteOpenHelper.TABLE_PLACE, PlaceSqliteOpenHelper.ALL_COLUMNS, 
+								"district = ?", selectArg, null, null, null);
+			
+			// iterate cursor and convert the sql object to Place bean
+			lstPlace = PlaceCursorHelper.loadFromCursor(cursor);
+			for (Place place : lstPlace) {
+				place.setDistance(0);
+			}
+			// sort by id
+			Collections.sort(lstPlace);
+		} finally {
+			if (cursor != null) {
+				cursor.close();
+			}
 		}
-		// sort by id
-		Collections.sort(lstPlace);
 		return lstPlace;
 	}
 	
@@ -63,30 +70,26 @@ public class PlaceDao {
 	public List<Place> getIslandPlaces() {
 		return getPlaceByDistrict(Constants.INT_ISLAND);
 	}
-
-//	private Place convertToPlace(Cursor cursor) {
-//		Place.PlaceBuilder builder = new Place.PlaceBuilder();
-//		Place place = builder
-//						.id(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_ID, cursor))
-//						.name(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME, cursor))
-//						.imgUrl(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_IMG_URL, cursor))
-//						.description(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC, cursor))
-//						.email(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_EMAIL, cursor))
-//						.homepage(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, cursor))
-//						.remark(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK, cursor))
-//						.openingHour(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR, cursor))
-//						.phone(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_PHONE, cursor))
-//						.name_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_NAME_EN, cursor))
-//						.description_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_DESC_EN, cursor))
-//						.remark_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, cursor))
-//						.openingHour_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, cursor))
-//						.lat(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LAT, cursor))
-//						.lng(CursorUtils.getDouble(PlaceSqliteOpenHelper.COLUMN_LNG, cursor))
-//						.district(CursorUtils.getInt(PlaceSqliteOpenHelper.COLUMN_DISTRICT, cursor))
-//						.distance(0)
-//						.address(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS, cursor))
-//						.address_en(CursorUtils.getString(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, cursor))
-//						.build();
-//		return place;
-//	}
+	
+	public List<Place> getAll() {
+		List<Place> lstPlace = new ArrayList<Place>();
+		Cursor cursor = null;
+		try {
+			cursor = database.query(PlaceSqliteOpenHelper.TABLE_PLACE, PlaceSqliteOpenHelper.ALL_COLUMNS, 
+								null, null, null, null, null);
+			
+			// iterate cursor and convert the sql object to Place bean
+			lstPlace = PlaceCursorHelper.loadFromCursor(cursor);
+			for (Place place : lstPlace) {
+				place.setDistance(0);
+			}
+			// sort by id
+			Collections.sort(lstPlace);
+		} finally {
+			if (cursor != null) {
+				cursor.close();
+			}
+		}
+		return lstPlace;
+	}
 }

@@ -1,14 +1,10 @@
 package com.blueskyconnie.visitheritage;
 
 import android.os.Bundle;
-import android.support.v4.view.GestureDetectorCompat;
 import android.text.util.Linkify;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -27,7 +23,7 @@ public class ContactUsFragment extends BaseFragment {
 	private Animation slide_in_right;
 	private Animation slide_out_right;
 	
-	private GestureDetectorCompat gestureDetector;
+//	private GestureDetectorCompat gestureDetector;
 	
 	private OnClickListener listener = new OnClickListener() {
 
@@ -47,21 +43,21 @@ public class ContactUsFragment extends BaseFragment {
 		
 	};
 	
-	private GestureDetector.SimpleOnGestureListener myGestureListener = new GestureDetector.SimpleOnGestureListener() {
-
-		@Override
-		public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
-				float velocityY) {
-
-			final float sensitivity = 50;
-			if ((e1.getX() - e2.getX()) > sensitivity) {
-				swipeLeft();
-			} else if (e2.getX() - e1.getX() > sensitivity) {
-				swipeRight();
-			}
-			return true;
-		}
-	};
+//	private GestureDetector.SimpleOnGestureListener myGestureListener = new GestureDetector.SimpleOnGestureListener() {
+//
+//		@Override
+//		public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+//				float velocityY) {
+//
+//			final float sensitivity = 50;
+//			if ((e1.getX() - e2.getX()) > sensitivity) {
+//				swipeLeft();
+//			} else if (e2.getX() - e1.getX() > sensitivity) {
+//				swipeRight();
+//			}
+//			return true;
+//		}
+//	};
 	
 	private void swipeRight() {
 		// show layout of monument office
@@ -102,14 +98,14 @@ public class ContactUsFragment extends BaseFragment {
         slide_in_right = AnimationUtils.loadAnimation(getActivity(), R.anim.slide_in_right);
         slide_out_right = AnimationUtils.loadAnimation(getActivity(), R.anim.slide_out_right);
         
-        gestureDetector = new GestureDetectorCompat(getActivity(), myGestureListener);
+//        gestureDetector = new GestureDetectorCompat(getActivity(), myGestureListener);
         
 		viewFlipper = (ViewFlipper) rootView.findViewById(R.id.flipper);
-		rootView.setOnTouchListener(new OnTouchListener() {
-			public boolean onTouch(View v, MotionEvent event) {
-				return gestureDetector.onTouchEvent(event);
-			}
-		});
+//		rootView.setOnTouchListener(new OnTouchListener() {
+//			public boolean onTouch(View v, MotionEvent event) {
+//				return gestureDetector.onTouchEvent(event);
+//			}
+//		});
 
         // add button on click listener
         btnHeritage = (Button) rootView.findViewById(R.id.btnHeritage);
@@ -122,9 +118,9 @@ public class ContactUsFragment extends BaseFragment {
         return rootView;
     }
 	
-	public GestureDetectorCompat getGestureDetector() {
-		return gestureDetector;
-	}
+//	public GestureDetectorCompat getGestureDetector() {
+//		return gestureDetector;
+//	}
 }
 
 

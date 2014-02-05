@@ -3,6 +3,7 @@ package com.blueskyconnie.visitheritage;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -54,5 +55,16 @@ public class SettingActivity extends ActionBarListActivity {
 			}
 			
 		});
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		 switch (item.getItemId()) {
+		    // Respond to the action bar's Up/Home button
+		    case android.R.id.home:
+		    	supportNavigateUpTo(getSupportParentActivityIntent());
+		    	return true;
+		    }
+		    return super.onOptionsItemSelected(item);
 	}
 }
