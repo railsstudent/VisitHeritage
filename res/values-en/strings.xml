@@ -120,4 +120,8 @@
     <string name="monument_source">Source: http://en.wikipedia.org/wiki/Declared_monuments_of_Hong_Kong</string>
 	
     <string name="errUnknownBtnAction">Unknown button action is triggered.</string>
+    <string-array name="strDepts">
+        <item>@string/dept_heritage</item>
+        <item>@string/dept_monument</item>
+    </string-array>
 </resources>

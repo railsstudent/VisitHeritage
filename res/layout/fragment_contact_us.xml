@@ -14,32 +14,18 @@
         android:text="@string/contact_title"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-     <LinearLayout
-        android:id="@+id/RelativeLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <Button
-            android:id="@+id/btnHeritage"
-            style="@style/ButtonMyTheme"
-            android:layout_width="0dp"
+        <Spinner
+            android:id="@+id/spDept"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/dept_heritage"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-    
-         <Button
-            android:id="@+id/btnMonument"
-            style="@style/ButtonMyTheme"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/dept_monument"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-    </LinearLayout>
+            android:layout_marginTop="8dp"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:entries="@array/strDepts"
+         />
 
     <ViewFlipper
         android:id="@+id/flipper"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 

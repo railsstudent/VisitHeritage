@@ -4,18 +4,17 @@ import android.os.Bundle;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
-public class ContactUsFragment extends BaseFragment {
+public class ContactUsFragment extends BaseFragment implements OnItemSelectedListener {
 	
-	private Button btnMonument;
-	private Button btnHeritage;
 	private ViewFlipper viewFlipper;
 	
 	private Animation slide_in_left;
@@ -24,24 +23,6 @@ public class ContactUsFragment extends BaseFragment {
 	private Animation slide_out_right;
 	
 //	private GestureDetectorCompat gestureDetector;
-	
-	private OnClickListener listener = new OnClickListener() {
-
-		@Override
-		public void onClick(View view) {
-			switch (view.getId()) {
-				case R.id.btnHeritage:
-					swipeLeft();
-					break;
-				case R.id.btnMonument:
-					swipeRight();
-					break;
-				default:
-					break;
-			}
-		}
-		
-	};
 	
 //	private GestureDetector.SimpleOnGestureListener myGestureListener = new GestureDetector.SimpleOnGestureListener() {
 //
@@ -64,23 +45,13 @@ public class ContactUsFragment extends BaseFragment {
 		viewFlipper.setInAnimation(slide_in_left);
 		viewFlipper.setOutAnimation(slide_out_right);
 		viewFlipper.showNext();
-		controlButtons();
 	}
 	
 	private void swipeLeft() {
 		// show layout of heritage office
 		viewFlipper.setInAnimation(slide_out_left);
 		viewFlipper.setOutAnimation(slide_in_right);
-		
 		viewFlipper.showPrevious();
-		controlButtons();
-	}
-	
-	private void controlButtons() {
-		// determine the layout that is currently visible in viewflipper
-		int childIndex = viewFlipper.getDisplayedChild();
-		btnMonument.setEnabled(childIndex == 0);
-		btnHeritage.setEnabled(childIndex == 1);
 	}
 	
 	@Override
@@ -107,16 +78,27 @@ public class ContactUsFragment extends BaseFragment {
 //			}
 //		});
 
-        // add button on click listener
-        btnHeritage = (Button) rootView.findViewById(R.id.btnHeritage);
-        btnMonument = (Button) rootView.findViewById(R.id.btnMonument);
-
-        btnHeritage.setOnClickListener(listener);
-        btnMonument.setOnClickListener(listener);
-        controlButtons();
-        
+		Spinner spDepts = (Spinner) rootView.findViewById(R.id.spDept);
+		spDepts.setOnItemSelectedListener(this);
+		
         return rootView;
     }
+
+	@Override
+	public void onItemSelected(AdapterView<?> arg0, View view, int position, long id) {
+		int displayedChild = viewFlipper.getDisplayedChild();
+		if (position == displayedChild) {
+			return;
+		} else if (position > displayedChild) {
+			swipeLeft();
+		} else {
+			swipeRight();
+		}
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+	}
 	
 //	public GestureDetectorCompat getGestureDetector() {
 //		return gestureDetector;

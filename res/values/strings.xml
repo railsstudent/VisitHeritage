@@ -137,5 +137,9 @@
     <string name="strGovHK">GovHK 香港政府一站通</string>
     <string name="strGovHK_ch_page">http://www.amo.gov.hk/b5/monuments.php</string>
     <string name="strGovHK_en_page">http://www.amo.gov.hk/en/monuments.php</string>
-    
+
+    <string-array name="strDepts">
+        <item>@string/dept_heritage</item>
+        <item>@string/dept_monument</item>
+    </string-array>
 </resources>
