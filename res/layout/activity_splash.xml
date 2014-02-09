@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/linen"
     tools:context=".SplashActivity" >
-
-      <ImageView
+     <ImageView
         android:id="@+id/imgSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -96,6 +96,7 @@
 	<string name="lblRemark">Remark:</string>
 	
 	<string name="dist_remark">Distance from nearest to farthest (Measured in meters)</string>
+	<string name="strUpdateFreq">Update every five minutes</string>
 	<string name="menu_legalnotices">Legal Notice</string>
 	<string name="no_monument_errmsg">Monument information does not exist.</string>
 	<string name="strInfo">Info</string>

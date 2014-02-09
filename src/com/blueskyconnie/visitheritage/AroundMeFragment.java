@@ -65,16 +65,13 @@ public class AroundMeFragment extends BaseListFragment implements
 	private Location mCurrentLocation;
 
 	private TextView tvHeader;
-	//private View headerView;
 	private Activity activity;
 	private boolean isItemClicked = false;
 	private String strLat;
 	private String strLng;
-	//private boolean isHeaderViewAdded;
 
 	private DistanceComparator distanceComparator;
 	private ConnectionDetector connectionDetector;
-	
 	
 	public AroundMeFragment() {
 		topFragment = true;
@@ -97,7 +94,6 @@ public class AroundMeFragment extends BaseListFragment implements
 				.setFastestInterval(FIVE_MIN).setSmallestDisplacement(DIST) // in
 																			// meter
 				.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-		//isHeaderViewAdded = false;
 		mGeocoder = new Geocoder(getActivity());
 	}
 

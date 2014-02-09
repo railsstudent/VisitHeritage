@@ -108,6 +108,7 @@
     <string name="lblHour">開放時間：</string>
     <string name="lblRemark">備註：</string>
     <string name="dist_remark">從最近到最遠的距離 (以米計算)</string>
+    <string name="strUpdateFreq">每隔五分鐘更新一次</string>
     <string name="menu_legalnotices">法律聲明</string>
     <string name="no_monument_errmsg">法定古蹟資料不存在。</string>
     <string name="strInfo">資訊</string>
