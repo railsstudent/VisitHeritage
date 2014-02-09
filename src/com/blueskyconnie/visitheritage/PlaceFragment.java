@@ -3,6 +3,7 @@ package com.blueskyconnie.visitheritage;
 import java.util.Locale;
 
 import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.util.Linkify;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.blueskyconnie.visitheritage.helper.PlaceCursorHelper;
+import com.blueskyconnie.visitheritage.helper.QRCodeHelper;
 import com.blueskyconnie.visitheritage.model.Place;
 import com.google.common.base.Strings;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -22,6 +24,8 @@ import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 public class PlaceFragment extends BaseFragment {
 
 	private static final String TAG = "AroundMeListAdapter";
+	private static final int WIDTH = 300;
+	private static final int HEIGHT = 300;
 
 	private TextView tvName;
 	private TextView tvAddress;
@@ -33,6 +37,8 @@ public class PlaceFragment extends BaseFragment {
 	private TextView tvRemark;
 	private ImageView imgPlace;
 	private TextView tvLocation;
+	private Bitmap qrBitmap;
+	private ImageView imgQRCode;
 
 	private ImageLoader imageLoader = ImageLoader.getInstance();
 	
@@ -41,6 +47,16 @@ public class PlaceFragment extends BaseFragment {
 		super(false);
 	}
 	
+	@Override
+	public void onPause() {
+		// release memory of qr code
+		if (qrBitmap != null) {
+			qrBitmap.recycle();
+			qrBitmap = null;
+		}
+		super.onPause();
+	}
+
 	@SuppressLint("DefaultLocale")
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -84,11 +100,18 @@ public class PlaceFragment extends BaseFragment {
     			tvRemark.setText(Strings.nullToEmpty(place.getRemark()));
     			tvLocation.setText(Strings.nullToEmpty(place.getLocation()));
     		}
-			tvHomePage.setText(PlaceCursorHelper.getUrlByLanguage(place.getHomepage(), deviceLang));
+    		
+    		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(place.getHomepage(), deviceLang);
+			tvHomePage.setText(homepageUrl);
 			tvEmail.setText(Strings.nullToEmpty(place.getEmail()));
 			tvPhone.setText(Strings.nullToEmpty(place.getPhone()));
 			Linkify.addLinks(tvPhone, Linkify.PHONE_NUMBERS);
-    		
+			
+			qrBitmap = QRCodeHelper.generateCode(getActivity(), homepageUrl, WIDTH, HEIGHT);
+			imgQRCode = (ImageView) rootView.findViewById(R.id.imgQRCode);
+			imgQRCode.setImageBitmap(qrBitmap);
+			imgQRCode.setVisibility(qrBitmap == null ? View.INVISIBLE : View.VISIBLE);
+			
 			if (!Strings.isNullOrEmpty(place.getUrl())) {
 	    		imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(place.getUrl(), deviceLang), 
 	    				imgPlace, new SimpleImageLoadingListener(){

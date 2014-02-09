@@ -83,6 +83,7 @@
 	<string name="content_thumbnail">Thumbnail</string>
 	<string name="content_rightarrow">Right arrow</string>
 	<string name="content_image">Image</string>
+	<string name="content_qr_code">QR Code</string>
 	<string name="content_pin">marker</string>
 		
 	<string name="lblName">Name:</string>
@@ -94,6 +95,7 @@
 	<string name="lblLocation">Location:</string>
 	<string name="lblHour">Opening Hour:</string>
 	<string name="lblRemark">Remark:</string>
+	<string name="lblQRCode">QR Code Of Homepage:</string>
 	
 	<string name="dist_remark">Distance from nearest to farthest (Measured in meters)</string>
 	<string name="strUpdateFreq">Update every five minutes</string>

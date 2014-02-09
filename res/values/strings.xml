@@ -77,6 +77,8 @@
     <string name="crouton_copyright">Copyright 2013, Benjamin Weiss</string>
     <string name="guava_software">Google Guava</string>
     <string name="guava_copyright">Copyright 2011, Guava Authors</string>
+    <string name="zxing_software">ZXing ("Zebra Crossing")</string>
+    <string name="zxing_copyright">Copyright 2014, Sean Owen</string>
     <string name="loading">載入&#8230;</string>
     <string name="strHK">香港島</string>
     <string name="strKowloon">九龍</string>
@@ -97,6 +99,7 @@
     <string name="content_thumbnail">縮圖</string>
     <string name="content_rightarrow">右箭嘴</string>
     <string name="content_image">圖片</string>
+    <string name="content_qr_code">二維條碼</string>
     <string name="content_pin">標記</string>
     <string name="lblName">名稱：</string>
     <string name="lblDescription">介紹：</string>
@@ -107,6 +110,7 @@
     <string name="lblLocation">地區：</string>
     <string name="lblHour">開放時間：</string>
     <string name="lblRemark">備註：</string>
+    <string name="lblQRCode">網頁二維條碼：</string>
     <string name="dist_remark">從最近到最遠的距離 (以米計算)</string>
     <string name="strUpdateFreq">每隔五分鐘更新一次</string>
     <string name="menu_legalnotices">法律聲明</string>

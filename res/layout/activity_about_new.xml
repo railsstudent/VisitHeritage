@@ -210,6 +210,31 @@
             android:text="@string/guava_copyright"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/black" />
+        
+       <TextView
+            android:id="@+id/tvZxing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/zxing_software"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvZxingCopyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/zxing_copyright"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/tvAppCopyright"
