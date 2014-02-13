@@ -34,6 +34,9 @@ public final class Constants {
 	
 	public static final String LANG_CODE_EN = "EN";
 	
+	public static final String FAVORITE_SET = "favorite_set";
+	public static final String SHARE_PREF_FAV = "share_pref_favorite";
+	
 	private Constants() {}
 	
 }

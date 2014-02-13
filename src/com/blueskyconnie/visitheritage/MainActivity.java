@@ -23,9 +23,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.blueskyconnie.visitheritage.adapter.NavDrawerListAdapter;
-import com.blueskyconnie.visitheritage.dao.PlaceDao;
 import com.blueskyconnie.visitheritage.model.NavDrawerItem;
-import com.blueskyconnie.visitheritage.model.Place;
+import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
@@ -53,11 +52,8 @@ public class MainActivity extends ActionBarActivity {
 	private List<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
 	
-	private ArrayList<Place> lstHK;
-	private ArrayList<Place> lstKowloon;
-	private ArrayList<Place> lstNT;
-	private ArrayList<Place> lstIsland;
-	private ArrayList<Place> lstAll;
+	private VisitHeritageState state;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -120,32 +116,13 @@ public class MainActivity extends ActionBarActivity {
 			 	.commit();
 		 }
 		 
+		 state = new VisitHeritageState(this);
+		 
  		 String packageName = getPackageName();
 		 //String packageName = "com.blueskyconnie.heritagefiesta";
 		 appPath = "market://details?id=" + packageName;
 		 appUrl = "http://play.google.com/store/apps/details?id=" + packageName;
 
-//		 lstAll = new ArrayList<Place>();
-//		 if (getIntent() != null) {
-//			 
-//			 Intent intent = getIntent();
-//			 // get data pass from SplashActivity. Will use in Map Fragment, Detail Place Fragment
-//			 lstHK = intent.getParcelableArrayListExtra(Constants.HK_KEY);
-//			 lstKowloon = intent.getParcelableArrayListExtra(Constants.KOWLOON_KEY);
-//			 lstNT = intent.getParcelableArrayListExtra(Constants.NT_KEY);
-//			 lstIsland = intent.getParcelableArrayListExtra(Constants.ISLAND_KEY);
-//			 
-//			 lstAll.addAll(lstHK);
-//			 lstAll.addAll(lstKowloon);
-//			 lstAll.addAll(lstNT);
-//			 lstAll.addAll(lstIsland);
-//		 } else {
-//			 lstHK = new ArrayList<Place>(); 
-//			 lstKowloon = new ArrayList<Place>();
-//			 lstNT = new ArrayList<Place>();
-//			 lstIsland = new ArrayList<Place>();
-//		 }
-		 
 		this.mDrawerLayout.openDrawer(Gravity.LEFT);
 	}
 
@@ -351,87 +328,11 @@ public class MainActivity extends ActionBarActivity {
 		Crouton.cancelAllCroutons();
 		super.onDestroy();
 	}
-
-	public ArrayList<Place> getLstHK() {
-		if (lstHK == null) {
-			PlaceDao dao = null;
-			try {
-				dao = new PlaceDao(this);
-				dao.open();
-				lstHK = (ArrayList<Place>)dao.getHKPlaces();
-			} finally {
-				if (dao != null) {
-					dao.close();
-				}
-			}
-		}
-		return lstHK;
-	}
-
-	public ArrayList<Place> getLstKowloon() {
-		if (lstKowloon == null) {
-			PlaceDao dao = null;
-			try {
-				dao = new PlaceDao(this);
-				dao.open();
-				lstKowloon = (ArrayList<Place>)dao.getKowloonPlaces();
-			} finally {
-				if (dao != null) {
-					dao.close();
-				}
-			}
-		}
-		return lstKowloon;
-	}
-
-	public ArrayList<Place> getLstNT() {
-		if (lstNT == null) {
-			PlaceDao dao = null;
-			try {
-				dao = new PlaceDao(this);
-				dao.open();
-				lstNT = (ArrayList<Place>)dao.getNTPlaces();
-			} finally {
-				if (dao != null) {
-					dao.close();
-				}
-			}
-		}
-		return lstNT;
-	}
-
-	public ArrayList<Place> getLstIsland() {
-		if (lstIsland == null) {
-			PlaceDao dao = null;
-			try {
-				dao = new PlaceDao(this);
-				dao.open();
-				lstIsland = (ArrayList<Place>)dao.getIslandPlaces();
-			} finally {
-				if (dao != null) {
-					dao.close();
-				}
-			}
-		}
-		return lstIsland;
-	}
-
-	public ArrayList<Place> getLstAll() {
-		if (lstAll == null) {
-			PlaceDao dao = null;
-			try {
-				dao = new PlaceDao(this);
-				dao.open();
-				lstAll = (ArrayList<Place>)dao.getAll();
-			} finally {
-				if (dao != null) {
-					dao.close();
-				}
-			}
-		}
-		return lstAll;
-	}
 	
+	public VisitHeritageState getState() {
+		return state;
+	}
+
 	// expose a method to click item in nav drawer item
 	public void selectItem(int position) {
 		// get the navigation drawer item

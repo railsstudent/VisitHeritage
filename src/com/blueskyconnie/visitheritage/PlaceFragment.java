@@ -8,14 +8,19 @@ import android.os.Bundle;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blueskyconnie.visitheritage.helper.FavoritePlaceHolder;
 import com.blueskyconnie.visitheritage.helper.PlaceCursorHelper;
 import com.blueskyconnie.visitheritage.helper.QRCodeHelper;
 import com.blueskyconnie.visitheritage.model.Place;
+import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 import com.google.common.base.Strings;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
@@ -27,6 +32,10 @@ public class PlaceFragment extends BaseFragment {
 	private static final int WIDTH = 300;
 	private static final int HEIGHT = 300;
 
+	private Place currentPlace;
+	private VisitHeritageState state;
+	private FavoritePlaceHolder favoriteHolder;
+	
 	private TextView tvName;
 	private TextView tvAddress;
 	private TextView tvHour;
@@ -48,12 +57,62 @@ public class PlaceFragment extends BaseFragment {
 	}
 	
 	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setHasOptionsMenu(true);
+	}
+
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		super.onCreateOptionsMenu(menu, inflater);
+		inflater.inflate(R.menu.menu_place, menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.item_favorite:
+				// update favorite id set 
+				if (favoriteHolder.isFavorite(currentPlace.getId())) {
+					// remove from favorite
+					favoriteHolder.removeFavorite(currentPlace.getId());
+				} else {
+					favoriteHolder.addFavorite(currentPlace.getId());
+				}
+				// invalidate menu to show different icon and text
+				getActivity().supportInvalidateOptionsMenu();
+				return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onPrepareOptionsMenu(Menu menu) {
+		MenuItem itemFavorite = menu.findItem(R.id.item_favorite);
+		if (favoriteHolder.isFavorite(currentPlace.getId())) {
+			itemFavorite.setIcon(android.R.drawable.btn_star_big_on);
+			itemFavorite.setTitle(R.string.menu_item_favorite);
+		} else {
+			itemFavorite.setIcon(android.R.drawable.btn_star_big_off);
+			itemFavorite.setTitle(R.string.menu_item_unfavorite);
+		}
+		
+		// show/hide favorite menu item
+		boolean drawerOpen = ((MainActivity)getActivity()).isDrawerOpen();
+		menu.findItem(R.id.item_favorite).setVisible(!drawerOpen);
+		super.onPrepareOptionsMenu(menu);
+	}
+
+	@Override
 	public void onPause() {
 		// release memory of qr code
 		if (qrBitmap != null) {
 			qrBitmap.recycle();
 			qrBitmap = null;
 		}
+		
+		// write favorite ids to share preference
+		favoriteHolder.saveFavorites();
 		super.onPause();
 	}
 
@@ -63,10 +122,10 @@ public class PlaceFragment extends BaseFragment {
             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_place, container, false);
         
-        Place place = null;
+       // Place place = null;
         if (getArguments() != null) {
         	Bundle bundle = getArguments();
-        	place = bundle.getParcelable(Constants.PLACE_KEY);
+        	currentPlace = bundle.getParcelable(Constants.PLACE_KEY);
         }
         
         tvName = (TextView) rootView.findViewById(R.id.tvName);
@@ -80,40 +139,40 @@ public class PlaceFragment extends BaseFragment {
         imgPlace = (ImageView) rootView.findViewById(R.id.imgPlace);
         tvLocation = (TextView) rootView.findViewById(R.id.tvLocation);
 
-        if (place != null) {
+        if (currentPlace != null) {
         	
     		Locale locale = Locale.getDefault();
     		String language = locale.getLanguage();
     		String deviceLang = language.toUpperCase(Locale.getDefault());
     		if (Constants.LANG_CODE_EN.equals(deviceLang)) {
-    			tvName.setText(Strings.nullToEmpty(place.getName_en()));
-    			tvAddress.setText(Strings.nullToEmpty(place.getAddress_en()));
-    			tvHour.setText(Strings.nullToEmpty(place.getOpeningHour_en()));
-    			tvDescription.setText(Strings.nullToEmpty(place.getDescription_en()));
-    			tvRemark.setText(Strings.nullToEmpty(place.getRemark_en()));
-    			tvLocation.setText(Strings.nullToEmpty(place.getLocation_en()));
+    			tvName.setText(Strings.nullToEmpty(currentPlace.getName_en()));
+    			tvAddress.setText(Strings.nullToEmpty(currentPlace.getAddress_en()));
+    			tvHour.setText(Strings.nullToEmpty(currentPlace.getOpeningHour_en()));
+    			tvDescription.setText(Strings.nullToEmpty(currentPlace.getDescription_en()));
+    			tvRemark.setText(Strings.nullToEmpty(currentPlace.getRemark_en()));
+    			tvLocation.setText(Strings.nullToEmpty(currentPlace.getLocation_en()));
     		} else {
-    			tvName.setText(Strings.nullToEmpty(place.getName()));
-    			tvAddress.setText(Strings.nullToEmpty(place.getAddress()));
-    			tvHour.setText(Strings.nullToEmpty(place.getOpeningHour()));
-    			tvDescription.setText(Strings.nullToEmpty(place.getDescription()));
-    			tvRemark.setText(Strings.nullToEmpty(place.getRemark()));
-    			tvLocation.setText(Strings.nullToEmpty(place.getLocation()));
+    			tvName.setText(Strings.nullToEmpty(currentPlace.getName()));
+    			tvAddress.setText(Strings.nullToEmpty(currentPlace.getAddress()));
+    			tvHour.setText(Strings.nullToEmpty(currentPlace.getOpeningHour()));
+    			tvDescription.setText(Strings.nullToEmpty(currentPlace.getDescription()));
+    			tvRemark.setText(Strings.nullToEmpty(currentPlace.getRemark()));
+    			tvLocation.setText(Strings.nullToEmpty(currentPlace.getLocation()));
     		}
     		
-    		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(place.getHomepage(), deviceLang);
+    		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(currentPlace.getHomepage(), deviceLang);
 			tvHomePage.setText(homepageUrl);
-			tvEmail.setText(Strings.nullToEmpty(place.getEmail()));
-			tvPhone.setText(Strings.nullToEmpty(place.getPhone()));
+			tvEmail.setText(Strings.nullToEmpty(currentPlace.getEmail()));
+			tvPhone.setText(Strings.nullToEmpty(currentPlace.getPhone()));
 			Linkify.addLinks(tvPhone, Linkify.PHONE_NUMBERS);
 			
-			qrBitmap = QRCodeHelper.generateCode(getActivity(), homepageUrl, WIDTH, HEIGHT);
+//			qrBitmap = QRCodeHelper.generateCode(getActivity(), homepageUrl, WIDTH, HEIGHT);
 			imgQRCode = (ImageView) rootView.findViewById(R.id.imgQRCode);
-			imgQRCode.setImageBitmap(qrBitmap);
-			imgQRCode.setVisibility(qrBitmap == null ? View.INVISIBLE : View.VISIBLE);
+//			imgQRCode.setImageBitmap(qrBitmap);
+//			imgQRCode.setVisibility(qrBitmap == null ? View.INVISIBLE : View.VISIBLE);
 			
-			if (!Strings.isNullOrEmpty(place.getUrl())) {
-	    		imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(place.getUrl(), deviceLang), 
+			if (!Strings.isNullOrEmpty(currentPlace.getUrl())) {
+	    		imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(currentPlace.getUrl(), deviceLang), 
 	    				imgPlace, new SimpleImageLoadingListener(){
 					@Override
 					public void onLoadingFailed(String imageUri, View view,
@@ -142,4 +201,23 @@ public class PlaceFragment extends BaseFragment {
         }
         return rootView;
     }
+
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		state = ((MainActivity) getActivity()).getState();
+		favoriteHolder = state.getFavorites();
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		favoriteHolder.loadFavorites();
+		
+		String deviceLang = Locale.getDefault().getLanguage().toUpperCase(Locale.getDefault());
+		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(currentPlace.getHomepage(), deviceLang);
+		qrBitmap = QRCodeHelper.generateCode(getActivity(), homepageUrl, WIDTH, HEIGHT);
+		imgQRCode.setImageBitmap(qrBitmap);
+		imgQRCode.setVisibility(qrBitmap == null ? View.INVISIBLE : View.VISIBLE);
+	}
 }

@@ -27,7 +27,7 @@ public class ChooseAreaFragment extends BaseFragment {
 			switch (v.getId()) {
 				case R.id.btnHK:
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strHK));
-					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstHK());
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstHK());
 					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_HK);
 					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()
@@ -37,7 +37,7 @@ public class ChooseAreaFragment extends BaseFragment {
 					break;
 				case R.id.btnKowloon:
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strKowloon));
-					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstKowloon());
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstKowloon());
 					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_KLN);
 					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()
@@ -47,7 +47,7 @@ public class ChooseAreaFragment extends BaseFragment {
 					break;
 				case R.id.btnNT:
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strNT));
-					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstNT());
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstNT());
 					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_NT);
 					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()
@@ -57,7 +57,7 @@ public class ChooseAreaFragment extends BaseFragment {
 					break;
 				case R.id.btnIsland:
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strIsland));
-					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstIsland());
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstIsland());
 					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_ISLAND);
 					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()
@@ -67,7 +67,7 @@ public class ChooseAreaFragment extends BaseFragment {
 					break;
 				case R.id.btnAll:
 					bundle.putString(Constants.PLACE_KEY, getString(R.string.strAll));
-					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getLstAll());
+					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstAll());
 					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_ALL);
 					fragment.setArguments(bundle);
 					fragmentManager.beginTransaction()

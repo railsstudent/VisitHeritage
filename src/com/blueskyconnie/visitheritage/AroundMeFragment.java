@@ -104,7 +104,6 @@ public class AroundMeFragment extends BaseListFragment implements
 		View rootView = inflater.inflate(R.layout.fragment_around_me,
 				container, false);
 
-
 		aroundmeListAdapter = new AroundMeListAdapter(activity,
 				R.layout.list_item_aroundme, new ArrayList<Place>());
 		tvHeader = (TextView) rootView.findViewById(R.id.tvHeader);

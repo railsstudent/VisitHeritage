@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:myapp="http://schemas.android.com/apk/res-auto"  
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+     <item
+        android:id="@+id/item_favorite"
+        android:showAsAction="ifRoom" 
+        myapp:showAsAction="ifRoom"
+        android:orderInCategory="10"
+        android:icon="@android:drawable/btn_star_big_off"
+        android:title="@string/menu_item_favorite"/>
+</menu>
