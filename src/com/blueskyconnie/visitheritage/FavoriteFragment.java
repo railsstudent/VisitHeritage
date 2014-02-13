@@ -11,6 +11,8 @@ import com.blueskyconnie.visitheritage.model.Place;
 import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,7 @@ public class FavoriteFragment extends BaseListFragment {
 
 	private VisitHeritageState state;
 	private PlaceDao dao;
+	private boolean isItemClicked = false;
 	
 	public FavoriteFragment() {
 		topFragment = true;
@@ -61,6 +64,7 @@ public class FavoriteFragment extends BaseListFragment {
 	public void onResume() {
 		super.onResume();
 		try {
+			isItemClicked = false;
 			FavoritePlaceHolder holder = state.getFavorites();
 			Set<Integer> setFavIds = holder.getFavoriteIds();
 			dao.open();
@@ -75,9 +79,27 @@ public class FavoriteFragment extends BaseListFragment {
 		}
 	}
 
+	
 	@Override
-	public void onListItemClick(ListView l, View v, int position, long id) {
-		// TODO Auto-generated method stub
-		super.onListItemClick(l, v, position, id);
+	public void onListItemClick(ListView listView, View v, int position, long id) {
+		
+		if (!isItemClicked) {
+			isItemClicked = true;
+			// show place fragment
+			Place place = (Place) listView.getItemAtPosition(position);
+			if (place != null) {
+				Bundle bundle = new Bundle();
+				bundle.putParcelable(Constants.PLACE_KEY, place);
+				Fragment placeFragment = new PlaceFragment();
+				placeFragment.setArguments(bundle);
+				FragmentManager fragManager = this.getFragmentManager();
+				fragManager.beginTransaction()
+					.replace(R.id.frame_container, placeFragment)
+					.addToBackStack(null)
+					.commit();
+			}  else {
+				isItemClicked = false;
+			}
+		}
 	}
 }
