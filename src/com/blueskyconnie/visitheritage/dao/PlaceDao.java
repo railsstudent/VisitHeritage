@@ -97,6 +97,10 @@ public class PlaceDao {
 	public List<Place> getFavorites(Set<Integer> setFavIds) {
 
 		List<Place> lstPlace = new ArrayList<Place>();
+		if (setFavIds.isEmpty()) {
+			return lstPlace;
+		}
+		
 		Cursor cursor = null;
 		try {
 			String selectClause = "";
