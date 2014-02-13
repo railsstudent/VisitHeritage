@@ -79,24 +79,18 @@ public class HomeFragment extends BaseFragment implements OnClickListener {
 				position = 1;
 				break;
 			case R.id.btnNotice:
-				position = 2;
-				break;
-			case R.id.btnContactOffice:
 				position = 3;
 				break;
-			case R.id.btnRating:
+			case R.id.btnContactOffice:
 				position = 4;
+				break;
+			case R.id.btnRating:
+				position = 5;
 				break;
 			default:
 				Crouton.makeText(getActivity(), getString(R.string.errUnknownBtnAction), Style.INFO).show();
 				return;
 		}
-		
-//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-//			((MainActivity) this.getActivity()).selectItem(position);
-//		} else {
-//			((MainActivity) this.getActivity()).displayViewFromHome(position);
-//		}
 		((MainActivity) this.getActivity()).selectItem(position);
 	}
 }
