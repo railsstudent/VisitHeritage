@@ -19,6 +19,7 @@ public class FavoritePlaceHolder {
 	
 	public FavoritePlaceHolder(Context context) {
 		share_pref_favorite = context.getSharedPreferences(Constants.SHARE_PREF_FAV, Context.MODE_PRIVATE);
+		loadFavorites();
 	}
 	
 	public FavoritePlaceHolder(Set<Integer> favoriteIds) {

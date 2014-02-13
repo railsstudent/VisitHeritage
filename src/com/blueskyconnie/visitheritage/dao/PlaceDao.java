@@ -3,6 +3,7 @@ package com.blueskyconnie.visitheritage.dao;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -91,5 +92,40 @@ public class PlaceDao {
 			}
 		}
 		return lstPlace;
+	}
+	
+	public List<Place> getFavorites(Set<Integer> setFavIds) {
+
+		List<Place> lstPlace = new ArrayList<Place>();
+		Cursor cursor = null;
+		try {
+			String selectClause = "";
+			String[] selectArgs = new String[setFavIds.size()]; 
+			int i = 0;
+			for (int id : setFavIds) {
+				if (selectClause.length() > 0) {
+					selectClause += " OR ";
+				}
+				selectClause += PlaceSqliteOpenHelper.COLUMN_ID + "= ? ";
+				selectArgs[i++] = String.valueOf(id);
+			}
+			
+			cursor = database.query(PlaceSqliteOpenHelper.TABLE_PLACE, PlaceSqliteOpenHelper.ALL_COLUMNS, 
+								selectClause, selectArgs, null, null, null);
+			
+			// iterate cursor and convert the sql object to Place bean
+			lstPlace = PlaceCursorHelper.loadFromCursor(cursor);
+			for (Place place : lstPlace) {
+				place.setDistance(0);
+			}
+			// sort by id
+			Collections.sort(lstPlace);
+		} finally {
+			if (cursor != null) {
+				cursor.close();
+			}
+		}
+		return lstPlace;
+		
 	}
 }

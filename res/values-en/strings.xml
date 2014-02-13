@@ -2,17 +2,21 @@
 <resources>
 
     <string name="app_name">Heritage On The Go</string>
-
+    <string name="strFavorite">My Favorites</string>
+    
     <string name="monument">Hong Kong Monuments</string>
     <string name="around_me">Monuments Around Me</string>
     <string name="visitor_notice">Notes to Monument Visitors</string>
     <string name="contact_office">Contact Office</string>
     <string name="rating">Rate My App</string>
+    <string name="favorite">@string/strFavorite</string>
+    
         
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item>@string/monument</item>
         <item>@string/around_me</item>
+        <item>@string/favorite</item>
         <item>@string/visitor_notice</item>
         <item>@string/contact_office</item>
         <item>@string/rating</item>

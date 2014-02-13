@@ -11,6 +11,7 @@ public final class Constants {
 	public static final String HOT_TAG = "hot_tag";
 	public static final String MAP_TAG = "map_tag";
 	public static final String DETAIL_TAG = "detail_tag";
+	public static final String FAVORITE_TAG = "favorite_tag";
 	
 	public static final int INT_HK = 0;
 	public static final int INT_KOWLOON = 1;

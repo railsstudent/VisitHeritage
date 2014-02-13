@@ -166,10 +166,7 @@ public class PlaceFragment extends BaseFragment {
 			tvPhone.setText(Strings.nullToEmpty(currentPlace.getPhone()));
 			Linkify.addLinks(tvPhone, Linkify.PHONE_NUMBERS);
 			
-//			qrBitmap = QRCodeHelper.generateCode(getActivity(), homepageUrl, WIDTH, HEIGHT);
 			imgQRCode = (ImageView) rootView.findViewById(R.id.imgQRCode);
-//			imgQRCode.setImageBitmap(qrBitmap);
-//			imgQRCode.setVisibility(qrBitmap == null ? View.INVISIBLE : View.VISIBLE);
 			
 			if (!Strings.isNullOrEmpty(currentPlace.getUrl())) {
 	    		imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(currentPlace.getUrl(), deviceLang), 
@@ -212,8 +209,7 @@ public class PlaceFragment extends BaseFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		favoriteHolder.loadFavorites();
-		
+//		favoriteHolder.loadFavorites();
 		String deviceLang = Locale.getDefault().getLanguage().toUpperCase(Locale.getDefault());
 		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(currentPlace.getHomepage(), deviceLang);
 		qrBitmap = QRCodeHelper.generateCode(getActivity(), homepageUrl, WIDTH, HEIGHT);

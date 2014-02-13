@@ -28,6 +28,7 @@ public class VisitHeritageState {
 	}
 	
 	public FavoritePlaceHolder getFavorites() {
+		favPlaceHolder.loadFavorites();
 		return favPlaceHolder;
 	}
 	

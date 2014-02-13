@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+   <ImageView
+       android:id="@+id/imgPlaceThumbnail"
+       android:layout_width="60dp"
+       android:layout_height="60dp"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentTop="true"
+       android:layout_marginLeft="8dp"
+       android:layout_marginRight="8dp"
+       android:contentDescription="@string/content_thumbnail"
+       android:scaleType="centerInside"
+       android:src="@drawable/img_stub" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgPlaceThumbnail"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+   
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvCount"
+        android:layout_toLeftOf="@+id/imgRightArrow"
+        android:singleLine="false"
+        android:layout_marginLeft="8dp"
+        android:color="@color/black"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+     <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgPlaceThumbnail"
+        android:layout_below="@+id/tvName"
+		android:color = "@color/black"        
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+     <TextView
+        android:id="@+id/tvLat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgPlaceThumbnail"
+        android:layout_below="@+id/tvLocation"
+		android:color = "@color/black"        
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+	<TextView
+        android:id="@+id/tvLng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvLat"
+        android:layout_toLeftOf="@+id/imgRightArrow"
+        android:layout_below="@+id/tvLocation"
+		android:color = "@color/black"   
+        android:layout_marginLeft="8dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+     
+    <ImageView
+        android:id="@+id/imgRightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgPlaceThumbnail"
+        android:layout_alignBottom="@+id/tvLng"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/content_rightarrow"
+        android:src="@drawable/img_right_arrow" />
+    
+</RelativeLayout>

@@ -14,6 +14,7 @@ encoding//src/com/blueskyconnie/visitheritage/SplashActivity.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/VisitHeritageApplication.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/VisitorFragment.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/adapter/AroundMeListAdapter.java=UTF-8
+encoding//src/com/blueskyconnie/visitheritage/adapter/FavoriteListAdapter.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/adapter/NavDrawerListAdapter.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/contentprovider/AbstractContentProvider.java=UTF-8
 encoding//src/com/blueskyconnie/visitheritage/contentprovider/PlaceContentProvider.java=UTF-8

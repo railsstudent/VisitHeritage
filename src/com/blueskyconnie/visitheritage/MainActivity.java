@@ -153,17 +153,21 @@ public class MainActivity extends ActionBarActivity {
   			    fragment = new AroundMeFragment();
 			    tagname = Constants.AROUND_ME_TAG;
 			    break;
-			case 2:
+		 	case 2:
+		 		fragment = new FavoriteFragment();
+		 		tagname = Constants.FAVORITE_TAG;
+		 		break;
+			case 3:
 				 // Notes To Visitor
 				 fragment = new VisitorFragment();
 				 tagname = Constants.VISITOR_TAG;
 				 break;
-			case 3:
+			case 4:
 				 // contact us
 				 fragment = new ContactUsFragment();
 				 tagname = Constants.CONTACT_TAG;
 				 break;
-			case 4:
+			case 5:
 				 // rate my app 
 				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(appPath));
 				Log.i(TAG, "Rate My App path - " + appPath);
