@@ -26,6 +26,9 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
+
 public class PlaceFragment extends BaseFragment {
 
 	private static final String TAG = "AroundMeListAdapter";
@@ -72,13 +75,17 @@ public class PlaceFragment extends BaseFragment {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 			case R.id.item_favorite:
+				String msg = "";
 				// update favorite id set 
 				if (favoriteHolder.isFavorite(currentPlace.getId())) {
 					// remove from favorite
 					favoriteHolder.removeFavorite(currentPlace.getId());
+				  	msg = getResources().getString(R.string.article_remove_from_favorites);
 				} else {
 					favoriteHolder.addFavorite(currentPlace.getId());
+				  	msg = getResources().getString(R.string.article_add_to_favorites);
 				}
+				Crouton.makeText(getActivity(), msg, Style.INFO).show();
 				// invalidate menu to show different icon and text
 				getActivity().supportInvalidateOptionsMenu();
 				return true;
@@ -209,7 +216,6 @@ public class PlaceFragment extends BaseFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-//		favoriteHolder.loadFavorites();
 		String deviceLang = Locale.getDefault().getLanguage().toUpperCase(Locale.getDefault());
 		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(currentPlace.getHomepage(), deviceLang);
 		qrBitmap = QRCodeHelper.generateCode(getActivity(), homepageUrl, WIDTH, HEIGHT);

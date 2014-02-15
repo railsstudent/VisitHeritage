@@ -134,4 +134,7 @@
         <item>@string/dept_heritage</item>
         <item>@string/dept_monument</item>
     </string-array>
+    
+    <string name="article_add_to_favorites">Your article is already added to favorites.</string>
+    <string name="article_remove_from_favorites">Your article is already removed from favorites.</string>
 </resources>

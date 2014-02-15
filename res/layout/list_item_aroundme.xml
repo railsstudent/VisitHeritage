@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent" 
+    android:descendantFocusability="blocksDescendants">
     
    <ImageView
        android:id="@+id/imgPlaceThumbnail"
@@ -83,4 +84,14 @@
         android:contentDescription="@string/content_rightarrow"
         android:src="@drawable/img_right_arrow" />
     
+      <ImageButton
+          android:id="@+id/imgBtnFavorite"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@+id/tvDistance"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="8dp"
+          android:background="@android:color/transparent"
+          android:src="@android:drawable/btn_star_big_off" />
+
 </RelativeLayout>

@@ -72,5 +72,5 @@
         android:layout_marginRight="10dp"
         android:contentDescription="@string/content_rightarrow"
         android:src="@drawable/img_right_arrow" />
-    
+          
 </RelativeLayout>

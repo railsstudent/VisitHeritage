@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 import android.app.Activity;
 import android.database.Cursor;
 import android.location.Address;
@@ -103,9 +102,6 @@ public class AroundMeFragment extends BaseListFragment implements
 
 		View rootView = inflater.inflate(R.layout.fragment_around_me,
 				container, false);
-
-		aroundmeListAdapter = new AroundMeListAdapter(activity,
-				R.layout.list_item_aroundme, new ArrayList<Place>());
 		tvHeader = (TextView) rootView.findViewById(R.id.tvHeader);
 		strLat = getString(R.string.strLat);
 		strLng = getString(R.string.strLng);
@@ -118,6 +114,9 @@ public class AroundMeFragment extends BaseListFragment implements
 		ListView lv = getListView();
 		lv.setOnScrollListener(new PauseOnScrollListener(ImageLoader
 				.getInstance(), false, true));
+		aroundmeListAdapter = new AroundMeListAdapter(activity,
+				R.layout.list_item_aroundme, new ArrayList<Place>(), 
+				((MainActivity) getActivity()).getState());
 		setListAdapter(aroundmeListAdapter);
 		connectionDetector = new ConnectionDetector(getActivity());
 	}
@@ -289,6 +288,5 @@ public class AroundMeFragment extends BaseListFragment implements
 			}
 		}
 	}
-
 
 }

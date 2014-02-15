@@ -3,7 +3,6 @@ package com.blueskyconnie.visitheritage;
 import java.util.List;
 import java.util.Set;
 
-import com.blueskyconnie.visitheritage.adapter.AroundMeListAdapter;
 import com.blueskyconnie.visitheritage.adapter.FavoriteListAdapter;
 import com.blueskyconnie.visitheritage.dao.PlaceDao;
 import com.blueskyconnie.visitheritage.helper.FavoritePlaceHolder;
@@ -44,20 +43,7 @@ public class FavoriteFragment extends BaseListFragment {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		dao = new PlaceDao(getActivity());
-		try {
-			state = ((MainActivity) getActivity()).getState();
-			FavoritePlaceHolder holder = state.getFavorites();
-			Set<Integer> setFavIds = holder.getFavoriteIds();
-			dao.open();
-			List<Place> places = dao.getFavorites(setFavIds);
-			AroundMeListAdapter favoriteListAdapter = new AroundMeListAdapter(getActivity(),
-					R.layout.list_item_aroundme, places);
-			setListAdapter(favoriteListAdapter);
-		} finally {
-			if (dao != null) {
-				dao.close();
-			}
-		}
+		state = ((MainActivity) getActivity()).getState();
 	}
 
 	@Override
@@ -78,7 +64,6 @@ public class FavoriteFragment extends BaseListFragment {
 			}
 		}
 	}
-
 	
 	@Override
 	public void onListItemClick(ListView listView, View v, int position, long id) {

@@ -1280,6 +1280,7 @@ containing a value of this type.
         public static final int icon=0x7f05002d;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f05002a;
+        public static final int imgBtnFavorite=0x7f0500cc;
         public static final int imgHeritage=0x7f050082;
         public static final int imgMonu=0x7f050098;
         public static final int imgPlace=0x7f0500a3;
@@ -1287,11 +1288,11 @@ containing a value of this type.
         public static final int imgQRCode=0x7f0500b9;
         public static final int imgRightArrow=0x7f0500c8;
         public static final int imgSplash=0x7f05005e;
-        public static final int item_clear_disc_cache=0x7f0500cf;
-        public static final int item_clear_memory_cache=0x7f0500ce;
-        public static final int item_favorite=0x7f0500d1;
-        public static final int item_setting=0x7f0500cd;
-        public static final int item_share=0x7f0500cc;
+        public static final int item_clear_disc_cache=0x7f0500d0;
+        public static final int item_clear_memory_cache=0x7f0500cf;
+        public static final int item_favorite=0x7f0500d2;
+        public static final int item_setting=0x7f0500ce;
+        public static final int item_share=0x7f0500cd;
         public static final int lblAddress=0x7f0500aa;
         public static final int lblDescription=0x7f0500af;
         public static final int lblEmail=0x7f0500b5;
@@ -1311,7 +1312,7 @@ containing a value of this type.
         public static final int list_slidermenu=0x7f05005d;
         public static final int ll_vert=0x7f050061;
         public static final int mapView=0x7f0500a1;
-        public static final int menu_legalnotices=0x7f0500d0;
+        public static final int menu_legalnotices=0x7f0500d1;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
@@ -1564,6 +1565,8 @@ containing a value of this type.
         public static final int app_name=0x7f0a0027;
         public static final int app_not_found=0x7f0a0057;
         public static final int around_me=0x7f0a002c;
+        public static final int article_add_to_favorites=0x7f0a009c;
+        public static final int article_remove_from_favorites=0x7f0a009d;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
          */

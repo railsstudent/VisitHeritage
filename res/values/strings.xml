@@ -155,4 +155,7 @@
         <item>@string/dept_heritage</item>
         <item>@string/dept_monument</item>
     </string-array>
+    
+    <string name="article_add_to_favorites">你的文章已加到入我的喜愛。</string>
+    <string name="article_remove_from_favorites">你的文章已從我的喜愛中刪除。</string>
 </resources>

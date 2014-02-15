@@ -1,5 +1,6 @@
 package com.blueskyconnie.visitheritage.adapter;
 
+import java.lang.ref.WeakReference;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
@@ -13,19 +14,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.blueskyconnie.visitheritage.Constants;
+import com.blueskyconnie.visitheritage.MainActivity;
 import com.blueskyconnie.visitheritage.R;
+import com.blueskyconnie.visitheritage.helper.FavoritePlaceHolder;
 import com.blueskyconnie.visitheritage.helper.PlaceCursorHelper;
 import com.blueskyconnie.visitheritage.model.Place;
+import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 import com.google.common.base.Strings;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 
-public class AroundMeListAdapter extends ArrayAdapter<Place> {
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
+
+public class AroundMeListAdapter extends ArrayAdapter<Place>  {
 
 	private static final String TAG = "AroundMeListAdapter";
 	
@@ -39,7 +47,12 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 	private String strDistance = "";
 	private String strLocation = "";
 	
-	public AroundMeListAdapter(Context context, int resourceId, List<Place> lstPlace) {
+	//private VisitHeritageState state;
+	private FavoritePlaceHolder favoriteHolder;
+	
+	public AroundMeListAdapter(Context context, int resourceId, List<Place> lstPlace, 
+			VisitHeritageState state) {
+		
 		super(context, resourceId, lstPlace);
 		this.context = context;
 		this.resourceId = resourceId;
@@ -50,6 +63,7 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		strMeter = context.getString(R.string.strMeter);
 		strDistance = context.getString(R.string.strDistance);
 		strLocation = context.getString(R.string.lblLocation);
+		favoriteHolder = state.getFavorites();
 	}
 
 	@Override
@@ -111,6 +125,7 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 			holder.img = (ImageView) view.findViewById(R.id.imgPlaceThumbnail);
 			holder.tvCount = (TextView) view.findViewById(R.id.tvCount);
 			holder.tvLocation = (TextView) view.findViewById(R.id.tvLocation);
+			holder.imgBtnFavorite = (ImageButton) view.findViewById(R.id.imgBtnFavorite);
 			view.setTag(holder);
 		} else {
 			holder = (AroundMeHolder) view.getTag();
@@ -137,6 +152,12 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		holder.tvLat.setText(strLat + " " + String.valueOf(place.getLat())); 
 		holder.tvLng.setText(strLng + " " + String.valueOf(place.getLng()));
 		holder.tvLocation.setText(strLocation + " " + location);
+		holder.imgBtnFavorite.setOnClickListener(new AroundMeFavoriteListener(place, 
+				new WeakReference<ImageButton>(holder.imgBtnFavorite)));
+		// set icon image 
+		holder.imgBtnFavorite.setImageResource(
+				favoriteHolder.isFavorite(place.getId()) ? android.R.drawable.btn_star_big_on :
+				android.R.drawable.btn_star_big_off);
 		
 		BigDecimal bdDist = new BigDecimal(place.getDistance(), MathContext.UNLIMITED);
 		bdDist = bdDist.setScale(2, RoundingMode.HALF_DOWN);
@@ -180,5 +201,41 @@ public class AroundMeListAdapter extends ArrayAdapter<Place> {
 		ImageView img;
 		TextView tvCount;
 		TextView tvLocation;
+		ImageButton imgBtnFavorite;
+	}
+		
+	private class AroundMeFavoriteListener implements View.OnClickListener {
+
+		private Place currentPlace;
+		private WeakReference<ImageButton> imgButton;
+		
+		AroundMeFavoriteListener(Place currentPlace, 
+				WeakReference<ImageButton> imgButton) {
+			
+			this.currentPlace = currentPlace;
+			this.imgButton = imgButton;
+		}
+		
+		@Override
+		public void onClick(View v) {
+			String msg = "";
+			// update favorite id set 
+			if (favoriteHolder.isFavorite(currentPlace.getId())) {
+				// remove from favorite
+				favoriteHolder.removeFavorite(currentPlace.getId());
+				if (imgButton.get() != null) {
+					imgButton.get().setImageResource(android.R.drawable.btn_star_big_off);
+				}
+			  	msg = context.getResources().getString(R.string.article_remove_from_favorites);
+			} else {
+				favoriteHolder.addFavorite(currentPlace.getId());
+				if (imgButton.get() != null) {
+					imgButton.get().setImageResource(android.R.drawable.btn_star_big_on);
+				}
+				msg = context.getResources().getString(R.string.article_add_to_favorites);
+			}
+			Crouton.makeText(((MainActivity)context), msg, Style.INFO).show();
+			favoriteHolder.saveFavorites();
+		}
 	}
 }
