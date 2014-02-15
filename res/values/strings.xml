@@ -95,6 +95,7 @@
     <string name="placeholder">請選擇地區</string>
     <string name="strInstruction">按一下座標視窗來查看詳細資料</string>
     <string name="no_monument">沒有古蹟。</string>
+    <string name="no_favorite">沒有喜愛。</string>
     <string name="city_name">不詳</string>
     <string name="error_connectionfailed">連線失敗</string>
     <string name="not_avail">不詳</string>
