@@ -94,6 +94,14 @@ public class FavoriteFragment extends BaseListFragment {
 			}
 		}
 	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		if (edtSearch != null) {
+			hideSoftKeyboard(edtSearch);
+		}
+	}
 	
 	@Override
 	public void onListItemClick(ListView listView, View view, int position, long id) {
@@ -103,11 +111,12 @@ public class FavoriteFragment extends BaseListFragment {
 			Place place = (Place) listView.getItemAtPosition(position);
 			if (place != null) {
 				isItemClicked = true;
-				// hide soft key board
-				InputMethodManager in = (InputMethodManager) FavoriteFragment.this.getActivity()
-						.getSystemService(Context.INPUT_METHOD_SERVICE);
-				in.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-				in = null;
+//				// hide soft key board
+//				InputMethodManager in = (InputMethodManager) FavoriteFragment.this.getActivity()
+//						.getSystemService(Context.INPUT_METHOD_SERVICE);
+//				in.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+//				in = null;
+				hideSoftKeyboard(edtSearch);
 				Bundle bundle = new Bundle();
 				bundle.putParcelable(Constants.PLACE_KEY, place);
 				Fragment placeFragment = new PlaceFragment();
@@ -119,5 +128,13 @@ public class FavoriteFragment extends BaseListFragment {
 					.commit();
 			}
 		}
+	}
+
+	private void hideSoftKeyboard(View view) {
+		// hide soft key board
+		InputMethodManager in = (InputMethodManager) FavoriteFragment.this.getActivity()
+				.getSystemService(Context.INPUT_METHOD_SERVICE);
+		in.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+		in = null;
 	}
 }

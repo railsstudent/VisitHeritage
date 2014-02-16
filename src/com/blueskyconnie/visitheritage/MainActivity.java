@@ -186,8 +186,8 @@ public class MainActivity extends ActionBarActivity {
 			 			FragmentManager.POP_BACK_STACK_INCLUSIVE);
 			 
 			 fragmentManager.beginTransaction()
-			 .replace(R.id.frame_container, fragment, tagname)
-			 .commit();
+				 .replace(R.id.frame_container, fragment, tagname)
+				 .commit();
 		
 			 // update selected item and title, then close the drawer
 			 mDrawerList.setItemChecked(position, true);
