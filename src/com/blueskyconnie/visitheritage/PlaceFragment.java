@@ -1,7 +1,5 @@
 package com.blueskyconnie.visitheritage;
 
-import java.util.Locale;
-
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -147,11 +145,7 @@ public class PlaceFragment extends BaseFragment {
         tvLocation = (TextView) rootView.findViewById(R.id.tvLocation);
 
         if (currentPlace != null) {
-        	
-    		Locale locale = Locale.getDefault();
-    		String language = locale.getLanguage();
-    		String deviceLang = language.toUpperCase(Locale.getDefault());
-    		if (Constants.LANG_CODE_EN.equals(deviceLang)) {
+    		if (PlaceCursorHelper.IsDeviceEngLang()) {
     			tvName.setText(Strings.nullToEmpty(currentPlace.getName_en()));
     			tvAddress.setText(Strings.nullToEmpty(currentPlace.getAddress_en()));
     			tvHour.setText(Strings.nullToEmpty(currentPlace.getOpeningHour_en()));
@@ -167,7 +161,7 @@ public class PlaceFragment extends BaseFragment {
     			tvLocation.setText(Strings.nullToEmpty(currentPlace.getLocation()));
     		}
     		
-    		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(currentPlace.getHomepage(), deviceLang);
+    		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(currentPlace.getHomepage());
 			tvHomePage.setText(homepageUrl);
 			tvEmail.setText(Strings.nullToEmpty(currentPlace.getEmail()));
 			tvPhone.setText(Strings.nullToEmpty(currentPlace.getPhone()));
@@ -176,7 +170,7 @@ public class PlaceFragment extends BaseFragment {
 			imgQRCode = (ImageView) rootView.findViewById(R.id.imgQRCode);
 			
 			if (!Strings.isNullOrEmpty(currentPlace.getUrl())) {
-	    		imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(currentPlace.getUrl(), deviceLang), 
+	    		imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(currentPlace.getUrl()), 
 	    				imgPlace, new SimpleImageLoadingListener(){
 					@Override
 					public void onLoadingFailed(String imageUri, View view,
@@ -216,8 +210,7 @@ public class PlaceFragment extends BaseFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		String deviceLang = Locale.getDefault().getLanguage().toUpperCase(Locale.getDefault());
-		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(currentPlace.getHomepage(), deviceLang);
+		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(currentPlace.getHomepage());
 		qrBitmap = QRCodeHelper.generateCode(getActivity(), homepageUrl, WIDTH, HEIGHT);
 		imgQRCode.setImageBitmap(qrBitmap);
 		imgQRCode.setVisibility(qrBitmap == null ? View.INVISIBLE : View.VISIBLE);

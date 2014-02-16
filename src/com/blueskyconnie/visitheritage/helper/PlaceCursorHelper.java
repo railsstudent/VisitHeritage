@@ -2,6 +2,7 @@ package com.blueskyconnie.visitheritage.helper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import android.database.Cursor;
 import android.util.Log;
@@ -10,15 +11,25 @@ import com.blueskyconnie.visitheritage.Constants;
 import com.blueskyconnie.visitheritage.model.Place;
 import com.blueskyconnie.visitheritage.sqllite.CursorUtils;
 import com.blueskyconnie.visitheritage.sqllite.PlaceSqliteOpenHelper;
+import com.google.common.base.Strings;
 
 
 public final class PlaceCursorHelper {
 
    private static final String TAG = "PlaceCursorHelper";
 
-   public static String getUrlByLanguage(String url, String deviceLang) {
+   public static boolean IsDeviceEngLang() {
+		return Constants.LANG_CODE_EN.equals(getDeviceLang()); 
+   }
+   
+   public static String getDeviceLang() {
+		Locale locale = Locale.getDefault();
+		return Strings.nullToEmpty(locale.getLanguage()).toUpperCase(locale);
+   }
+   
+   public static String getUrlByLanguage(String url) {
 	   String folderLang = "b5";
-	   if (deviceLang.equals(Constants.LANG_CODE_EN)) {
+	   if (IsDeviceEngLang()) {
 		   folderLang = "en";
 	   }
 	   return String.format(url, folderLang);

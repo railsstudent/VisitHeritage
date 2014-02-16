@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imgPlaceThumbnail"
-        android:layout_alignBottom="@+id/tvDistance"
+        android:layout_alignBottom="@+id/tvLng"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"
         android:contentDescription="@string/content_rightarrow"
@@ -88,10 +88,10 @@
           android:id="@+id/imgBtnFavorite"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_alignTop="@+id/tvDistance"
+          android:layout_alignTop="@+id/tvLng"
           android:layout_alignParentRight="true"
-          android:layout_marginRight="8dp"
-          android:background="@android:color/transparent"
+          android:layout_marginRight="10dp"
+          android:contentDescription="@string/content_imgBtnFav"
           android:src="@android:drawable/btn_star_big_off" />
 
 </RelativeLayout>

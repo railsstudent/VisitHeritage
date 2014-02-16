@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.List;
-import java.util.Locale;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -18,7 +17,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.blueskyconnie.visitheritage.Constants;
 import com.blueskyconnie.visitheritage.MainActivity;
 import com.blueskyconnie.visitheritage.R;
 import com.blueskyconnie.visitheritage.helper.FavoritePlaceHolder;
@@ -47,7 +45,6 @@ public class AroundMeListAdapter extends ArrayAdapter<Place>  {
 	private String strDistance = "";
 	private String strLocation = "";
 	
-	//private VisitHeritageState state;
 	private FavoritePlaceHolder favoriteHolder;
 	
 	public AroundMeListAdapter(Context context, int resourceId, List<Place> lstPlace, 
@@ -135,11 +132,7 @@ public class AroundMeListAdapter extends ArrayAdapter<Place>  {
 		String name = "";
 		String location = "";
 		// check current language of the device
-		Locale locale = Locale.getDefault();
-		String language = locale.getLanguage();
-		
-		String deviceLang = Strings.nullToEmpty(language).toUpperCase(locale);
-		if (Constants.LANG_CODE_EN.equals(deviceLang)) {
+		if (PlaceCursorHelper.IsDeviceEngLang()) {
 			name = Strings.nullToEmpty(place.getName_en()); // English
 			location = Strings.nullToEmpty(place.getLocation_en());
 		} else {
@@ -164,7 +157,7 @@ public class AroundMeListAdapter extends ArrayAdapter<Place>  {
 		holder.tvDistance.setText(strDistance + " " + bdDist.toPlainString() + " " + strMeter);
 		
 		if (holder.img != null && !Strings.isNullOrEmpty(place.getUrl())) {
-			imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(place.getUrl(), deviceLang), holder.img, 
+			imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(place.getUrl()), holder.img, 
 					new SimpleImageLoadingListener() {
 							@Override
 							public void onLoadingFailed(String imageUri,
