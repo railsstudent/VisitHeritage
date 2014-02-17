@@ -33,7 +33,7 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class AroundMeListAdapter extends ArrayAdapter<Place>  {
 
-	private static final String TAG = "AroundMeListAdapter";
+	private static final String TAG = AroundMeListAdapter.class.getSimpleName();
 	
 	private Context context;
 	private int resourceId;

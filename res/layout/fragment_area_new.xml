@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rellayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView 
+        android:id="@+id/tvRegion"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="8dp"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:text="@string/placeholder" />
+    
+     <ListView
+        android:id="@id/android:list"
+        android:divider="@color/magenta"
+        android:layout_marginTop="8dp"
+        android:dividerHeight="1dp"
+        android:layout_below="@+id/tvRegion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+</RelativeLayout>

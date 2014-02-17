@@ -70,7 +70,7 @@ public class FavoriteListAdapter extends ArrayAdapter<Place>  {
 			holder = new FavoriteHolder();
 			holder.tvName = (TextView) view.findViewById(R.id.tvName);
 			holder.img = (ImageView) view.findViewById(R.id.imgPlaceThumbnail);
-			holder.tvCount = (TextView) view.findViewById(R.id.tvCount);
+		//	holder.tvCount = (TextView) view.findViewById(R.id.tvCount);
 			view.setTag(holder);
 		} else {
 			holder = (FavoriteHolder) view.getTag();
@@ -83,7 +83,7 @@ public class FavoriteListAdapter extends ArrayAdapter<Place>  {
 					Strings.nullToEmpty(place.getName_en()) :  // English Name
 					Strings.nullToEmpty(place.getName());  // Chinese Name
 					
-		holder.tvCount.setText(String.valueOf((position + 1) + ")"));
+		//holder.tvCount.setText(String.valueOf((position + 1) + ")"));
 		holder.tvName.setText(name);
 		
 		if (holder.img != null && !Strings.isNullOrEmpty(place.getUrl())) {
@@ -120,7 +120,7 @@ public class FavoriteListAdapter extends ArrayAdapter<Place>  {
 	private static class FavoriteHolder {
 		TextView tvName;
 		ImageView img;
-		TextView tvCount;
+		//TextView tvCount;
 	}
 
 	@Override

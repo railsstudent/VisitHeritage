@@ -8,12 +8,13 @@
        android:id="@+id/imgPlaceThumbnail"
        android:layout_width="60dp"
        android:layout_height="60dp"
+       android:layout_alignBottom="@+id/tvDistance"
        android:layout_alignParentLeft="true"
        android:layout_alignParentTop="true"
        android:layout_marginLeft="8dp"
        android:layout_marginRight="8dp"
        android:contentDescription="@string/content_thumbnail"
-       android:scaleType="centerInside"
+       android:scaleType="centerCrop"
        android:src="@drawable/img_stub" />
 
     <TextView
@@ -89,6 +90,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignTop="@+id/tvLng"
+          android:layout_alignBottom="@+id/tvDistance"
           android:layout_alignParentRight="true"
           android:layout_marginRight="10dp"
           android:contentDescription="@string/content_imgBtnFav"

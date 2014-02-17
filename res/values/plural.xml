@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals
+        name="monuments">
+        <item quantity="other">%d個古蹟</item>
+    </plurals>
+</resources>

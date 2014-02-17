@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals
+        name="monuments">
+        <item quantity="one">1 Monument</item>
+        <item quantity="other">%d Monuments</item>
+    </plurals>
+</resources>

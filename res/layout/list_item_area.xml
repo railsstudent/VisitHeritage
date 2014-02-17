@@ -7,24 +7,34 @@
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true" 
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:singleLine="false"
         android:layout_marginLeft="8dp"
-        android:color="@color/black"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:singleLine="false"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#0000ff" />
+
+      <TextView
+        android:id="@+id/tvNumMonument"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvName" 
+		android:layout_below="@+id/tvName"
+        android:singleLine="false"
+        android:textColor="@color/gray"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
     
     <ImageView
         android:id="@+id/imgPlaceThumbnail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tvName"
-        android:layout_below="@+id/tvName"
+        android:layout_below="@+id/tvNumMonument"
+        android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:contentDescription="@string/content_thumbnail"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:src="@drawable/img_stub" />
           
 </RelativeLayout>

@@ -3731,8 +3731,166 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
 		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		
+		
+		
+		values = new ContentValues();
+		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "和平紀念碑"); //data102
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("102"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("102"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "和平紀念碑於一九二三年五月二十四日由當時的香港總督司徒拔爵士揭幕，" +
+				"是香港首座為紀念第一次世界大戰的死難者而正式建造的紀念碑。" +
+				"和平紀念碑最初只刻有“The Glorious Dead”的字樣和第一次世界大戰的年份（即「1914-1918」），" +
+				"後來再刻上「1939-1945」的年份，以悼念第二次世界大戰的死難者。一九八○年代和平紀念碑側面再刻上「英魂不朽　浩氣長存」八個中文字，" +
+				"對應 “The Glorious Dead”三個英文字，清楚表示和平紀念碑為紀念所有死難者，特別是為港捐軀的陣亡將士而建。" +
+				"香港特別行政區政府及其他相關團體每年仍會在和平紀念碑舉行悼念活動。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Cenotaph");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Cenotaph was unveiled on 24 May 1923 by the then Governor Sir Edward Stubbs. " +
+				"It is the earliest memorial formally constructed to commemorate the dead of the First World War in Hong Kong." +
+				"The Cenotaph was initially inscribed with the words “The Glorious Dead” and the years of the First World War, i.e. “1914-1918”. " +
+				"The years “1939-1945” were subsequently added to honour victims of the Second World War. " +
+				"In the 1980s, eight Chinese characters “英魂不朽 浩氣長存” ( meaning “May their martyred souls be immortal, " +
+				"and their noble spirits endure”) were carved on one side of the Cenotaph corresponding to the inscription \"The Glorious Dead\"" +
+				" to make it clear that the Cenotaph commemorates all who fell, especially those who fell in the defence of Hong Kong. " +
+				"Commemorative activities are still held by the Government of the Hong Kong Special Administrative Region and other " +
+				"relevant associations at the Cenotaph every year.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.281631");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.160539");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Central, Hong Kong");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "香港中環");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		
+		
+		
+		values = new ContentValues();
+		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "伯大尼修院"); //data103
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("103"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("103"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "伯大尼修院於一八七五年由法國外方傳道會興建，是傳道會在東亞地區首間療養院，" +
+				"為罹患熱帶疾病的傳教士提供休養的地方，待他們康復後返回各自的傳教區。伯大尼修院自一八七五年建成至一九七四年關閉期間，共接待了約六千名傳教士，" +
+				"是法國天主教會在東亞地區從事傳道工作的重要地點。伯大尼修院其後由政府接管，並於一九七八至一九九七年期間被租予香港大學使用。二○○二年，" +
+				"政府決定將伯大尼修院租予香港演藝學院，改建為其電影電視學系的校舍。伯大尼修院的修復及改建工程於二○○六年完成，修院自此成為演藝學院的第二校舍。" +
+				"伯大尼修院具新哥德式建築風格，主要由小教堂、療養院和僱工區三部分組成，設計布局對稱。建築物四面均有外廊，外牆由底層基座的毛石及硺石牆、裝飾扶欄，" +
+				"以及尖拱柱組游廊構成。整幢建築物以其美侖美奐的小教堂最具特色。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "請致電查詢導賞團詳情");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2584 8918");
+		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Bethanie");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Bethanie was completed in 1875 by the Society of Foreign Missions " +
+				"(Société des Missions Étrangères) as their first sanatorium in the East Asia for sick missionaries to recover from " +
+				"tropical diseases before returning to their missions. Since 1875, the Bethanie received some 6,000 missionaries and " +
+				"served as an important base of the French Catholic missionary work in the East Asia until its closure in 1974. " +
+				"The premises was later taken over by the Government and was leased to The University of Hong Kong from 1978 to 1997. In 2002, " +
+				"the Government decided to lease the Bethanie to The Hong Kong Academy for Performing Arts for conversion into the School of " +
+				"Film and Television of the Academy. The restoration and conversion works were completed in 2006 and the Bethanie has served as " +
+				"the second campus of the Academy since then. " +
+				"The building is of Neo-Gothic style. It consists of three parts, i.e. the chapel, the sanatorium and the service wing, " +
+				"in symmetrical form with verandahs on all four sides. Rubble and ashlar plinth wall at the basement level, ornamental " +
+				"balustrade and arched colonnades to verandahs form the elevations of the building. The most impressive part of the " +
+				"building is its beautiful chapel.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE ARRANGEMENT OF GUIDED VISITS.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.262223");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.13553");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "No. 139 Pok Fu Lam Road, Hong Kong ");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "香港薄扶林道一百三十九號");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		
+		
+		values = new ContentValues();
+		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "發達堂"); //data104
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("104"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("104"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "建於1933年的發達堂不但見證區內一個顯赫的客家家族的歷史，亦是折衷主義住宅建築的典型例子，" +
+				"這種建築風格廣為香港20世紀初期海外歸僑所採用。發達堂由「李道環祖」（由李道環四個兒子組成的受託人）在新界沙頭角下禾坑興建；李道環是禾坑李氏宗族的後裔。" +
+				"正如沙頭角許多在19世紀末遠赴海外謀生的年輕人一樣，李道環年輕時前往越南謀生，後與家人衣錦還鄉，在下禾坑定居。" +
+				"李道環的長子李鈞蘭是沙頭角區內舉足輕重的社區領袖，於1936年獲總督委任為沙頭角區三名「諮議」之一，負責就區內事務和糾紛提供意見。" +
+				"當時獲總督委任為「諮議」被視為莫大的榮譽。發達堂樓高兩層，建有長長的客家式人字瓦頂，正面有平頂外廊。建築物以傳統的青磚和木材，" +
+				"以及現代的鋼筋混凝土建成。為加強保安，大宅所有正門均設金屬製的中式趟櫳門，樓下多排窗戶亦裝有金屬窗罩。" +
+				"時至今日，發達堂仍是李道環後人的居所。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物為私人物業，不對外開放。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Fat Tat Tong");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Fat Tat Tong, built in 1933, is not only a testimony of the history of a renowned Hakka family in the area, " +
+				"but also a typical example of residences of eclectic style popular with the returned overseas Chinese in the early 20th century in the territory." +
+				"Fat Tat Tong was built by Li To Wan Tso, a trustee formed by the four sons of Li To-wan, in Ha Wo Hang, Sha Tau Kok, New Territories. " +
+				"Li To-wan was a descendant of the Li clan of Wo Hang. Like many young adults of Sha Tau Kok going abroad to make a livelihood in the late 19th century, " +
+				"Li To-wan went to Vietnam to earn a living at a young age. He and his family returned to Ha Wo Hang with a modest fortune. " +
+				"Li To-wan's eldest son, Li Kwan-lan, was an influential community leader of Sha Tau Kok and was appointed as one of the three \"Tsz Yi\" " +
+				"of Sha Tau Kok District in 1936 by the Governor to give advice on matters of local affairs and disputes. The appointment of Tsz Yi was regarded " +
+				"as an honorary offer of the Governor at the time. " +
+				"Fat Tat Tong is a two-storey residence with a long pitched Hakka style tiled roof and fronted by a flat-roofed verandah. " +
+				"Traditional green brick and timber as well as modern reinforced concrete are used for the construction. Chinese-style sliding doors constructed of " +
+				"metal at all front entrances and rows of windows with metal hoods at the ground floor level are used to enhance the security of the building. Nowadays, " +
+				"Fat Tat Tong still serves as a residence for the descendants of Li To-wan.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PRIVATE PROPERTY, NOT OPEN TO PUBLIC");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.529683");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.198497");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Nos. 1 -5 Ha Wo Hang, Sha Tau Kok, New Territories");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界沙頭角下禾坑1至5號");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
+		
+		
+		values = new ContentValues();
+		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "達德公所"); //data105
+		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("105"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("105"));
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "達德公所是本港現存唯一專為村落聯盟(鄉約)聚會、祭祀，以及作為露天市集管理處而建的公所。" +
+				"公所由屏山鄉紳鄧勳猷及其族人於1857年興建，以供更練和「達德約」成員聚會之用，以及用作屏山市的管理處。" +
+				"達德公所亦是現存與1899年新界抗英行動有直接關係的少數遺址之一。據說，鄉民於1899年3月28日在公所開會後，發出了一份「抗英揭貼」，呼籲屏山區內的鄉民支持武裝抗英行動。" +
+				"作為議事的地點，達德公所設計簡單實用。公所原為一座兩進三開間式建築，後來，於1866年，建築物左右兩邊各加建了「慰寂祠」和「英勇祠」。建築物以青磚建成，配以人字屋頂，底層以花崗石建造。" +
+				"古物古蹟辦事處在2013年於達德公所進行第一期修復工程。至於公所的第二期修復工程，則待公所後方的斜坡改善工程完成後，於2015年再作安排。整個修復工程預計於2016年峻工。" +
+				"達德公所將會在全面修復後，開放予公眾參觀。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "修復期間，不對外開放。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tat Tak Communal Hall");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tat Tak Communal Hall is the only remaining purpose-built communal hall in Hong Kong which served as an assembling " +
+				"cum worshipping place for a joint village alliance and a management office of an open market." +
+				"The communal hall was built in 1857 by Tang Fan-yau, a gentry of Ping Shan, and his clansmen as an assembling place for village guards and members " +
+				"of Tat Tak Alliance, as well as the management office of Ping Shan Shi." +
+				"Tat Tak Communal Hall is also one of the few remaining sites in direct connection with the anti-British resistance in the New Territories in 1899. " +
+				"It is said that a public notice calling for support to the armed resistance was issued in Ping Shan area after a meeting had been held at " +
+				"Tat Tak Communal Hall on 28 March 1899. As a venue for holding meetings, Tat Tak Communal Hall was built in a simple but functional design. " +
+				"The communal hall was originally a two-hall and three-bay structure and was later expanded with the addition of Hall of Lonesome Consolation and Hall of " +
+				"Bravery on its left and right in 1866. The building is constructed of green bricks with pitched roofs and granite blocks as the lower course. " +
+				"Phase I restoration works for Tat Tak Communal Hall was conducted by the Antiquities and Monuments Office in 2013. " +
+				"Phase II restoration works for the communal hall will be arranged in 2015 after the completion of improvement works to the slope behind the communal hall. " +
+				"The whole restoration project is expected to be completed in 2016. Tat Tak Communal Hall will be open for public after the full restoration.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "CLOSED FOR RESTORATION WORKS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.443567");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.010689");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
+		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
+		database.insert(PlaceSqliteOpenHelper.TABLE_PLACE, null, values);
 	}
 
+	
+	
 	private static String buildImageUrl (String id) {
 		return String.format(Locale.US, IMG_FMT, id);
 	}
