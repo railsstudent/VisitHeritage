@@ -124,7 +124,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"進行大潭計劃和大潭篤計劃，建造了多個容量更大的水塘，以及一些更為複雜的供水系統。在該兩項計劃下，多個水塘相繼落成，包括大潭上水塘（一八八八年）、" +
 				"大潭副水塘（一九〇四年）、大潭中水塘（一九〇七年）和大潭篤水塘（一九一七年）（現統稱大潭水塘群）。隨供水系統得到改善，" +
 				"都市的發展逐漸從中西區擴展至港島東部，擴大了香港的市區面積。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
@@ -153,7 +153,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("89"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "黃泥涌水塘是本港現存第三個最古老的水務建築。水塘於一八九九年落成後，" +
 				"成為大潭水塘群以外的輔助水源，進一步增加了港島的儲水設施。黃泥涌水塘範圍內現存具歷史價值的建築，包括石砌水壩、水掣房和溢流口。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
@@ -180,7 +180,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("90"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "香港仔水塘由上水塘（一九三一年）和下水塘（一九三二年）組成，是為了在薄扶林水塘以" +
 				"外增加儲水量以解決港島西區食水短缺的問題而興建。這是繼薄扶林水塘、大潭水塘群和黃泥涌水塘後，最後一個在港島興建的水塘。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
@@ -207,7 +207,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("91"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "九龍水塘是本港的第四個水塘，於一九〇一至一九一〇年間興建，是因應九龍半島人口不斷增加而在九龍興建的首個水塘。" +
 				"九龍半島的供水方式隨著九龍水塘的落成而急劇轉變。居民的食水自此依賴水塘所儲存的雨水，正式取代了慣用的井水以及由油麻地抽水站所運送的地下水源。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
@@ -235,7 +235,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("87"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "一八六〇年代以前，食水主要依靠水井和溪流等原始水源。十九世紀中葉開始，香港人口不斷增加，城市面積也隨之不斷擴展，" +
 				"穩定的食水供應成為沉重壓力，促使政府興建水塘。港督羅便臣爵士於一八五九至一八六五年在任期間，政府首次提出供水的構思。薄扶林水塘建於一八六三年，成為本港第一個水塘。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
@@ -267,7 +267,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"拱形門口及螺旋式樓梯均由石塊砌成，工藝精湛。位於入口的鐵門上方，飾有幾何圖案，別具特色。一八九三年，橫瀾燈塔落成啟用，鶴咀燈塔從此失去其原有的功能，" +
 				"至一八九六年停止運作。一九Ｏ五年，當局決定將鶴咀燈塔上已停用的一級號燈及其附屬設備遷往青洲，以取代青洲燈塔的的四級號燈。及至一九七五年，" +
 				"鶴咀燈塔改為自動化操作，燈塔的燈光再次亮起。鶴咀燈塔在香港海事史上佔著重要的一頁。該燈塔現由海事處管理。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "此燈塔現由海事處管理及操作。基於保安理由及避免影響日常運作，燈塔並不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
@@ -303,10 +303,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "中區警署內歷史最悠久的建築物是建於一八六四年之大樓，大樓原高三層，與域多利監獄毗鄰，" +
 				"一九〇五年加建一層。其後，警署逐漸擴建。面對荷李活道的四層高大樓則於一九一九年加建，一九二五年，在廣場的西北端又增建另一所兩層高樓房，" +
 				"作為軍械倉庫。它與毗鄰的前中央裁判司署及域多利監獄，組成了一組標誌著法律及紀律的歷史建築群。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "保育和活化中區警署建築群進行中，不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Central Police Station Compound");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Central Police Station Compound, is situated adjacent to Tang Ancestral Hall, "
 				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
@@ -364,8 +364,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Boxing Day, New Year's Day and the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.432332");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.017523");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Shan Ha Tsuen, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗山廈村");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "SHAN HA TSUEN, PING SHAN, YUEN LONG, NEW TERRITORIES");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界元朗屏山山下村");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
@@ -398,8 +398,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"New Year's Day and the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.529455");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.175649");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Che, Fanling");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "粉嶺坪輋");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "WO KENG SHAN, PING CHE, FANLING, NEW TERRITORIES");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界粉嶺坪輋禾徑山");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
@@ -464,16 +464,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("08"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "中環都爹利街的石階約建於一八七五至一八八九年間。四座煤氣路燈置於石階兩端的欄杆上，" +
 				"是本港僅存的煤氣路燈，現仍由原為本港提供街道照明而開辦的香港中華煤氣公司繼續操作。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Duddell Street Steps and Gas Lamps");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The stone steps at Duddell Street, Central were built between 1875 and 1889. " +
 				"Four gas lamps surmounting the balustrades at the top and foot of the steps are the only surviving working gas " +
 				"street lamps in Hong Kong. The Hong Kong and China Gas Company which was originally founded to provide street " +
 				"lighting in Hong Kong continues to operate the lamps as objects of historical interest.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.279874");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.156724");
@@ -491,16 +491,16 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("48"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "覲龍圍門樓公告為古蹟後數年，圍村司理進一步同意將該村的圍牆及四角更樓列為古蹟。" +
 				"當時圍牆及更樓部分已倒塌，修繕工程由政府資助，於一九九四年完成。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Enclosing Walls and Corner Watch Towers of Kun Lung Wai");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Some years after the declaration of the gate house of Kun Lung Wai as a monument, " +
 				"the managers of the walled village further agreed to the protection of the enclosing walls and corner watch " +
 				"towers under the Antiquities and Monuments Ordinance. The walls and watch towers were then in a dilapidated " +
 				"condition, which were subsequently fully restored in 1994 with funding from the Government.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.507235");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.148452");
@@ -520,10 +520,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"老圍四周築有圍牆。原先的圍門是北向，但由於風水理由，圍門被改建為東向。老圍雖曾經歷多次改建，但其原本的圍牆結構和圍村布局仍保存得頗為完整。" +
 				"老圍部分圍牆於一九九一年由北區政務處撥款維修。老圍門樓及圍牆於一九九七年一月三十一日被列為法定古蹟，同年年初隨即展開全面修復工程，" +
 				"工程由古物古蹟辦事處及建築署古蹟復修組監督，於翌年完成。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午五時。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Entrance Tower & Enclosing Walls of Lo Wai");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Lo Wai is the first built of the five renowned walled villages " +
 				"in Lung Yeuk Tau, Fanling established by the Tang clan whose ancestors branched out from the main Tang settlement " +
@@ -535,7 +535,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"wall was undertaken in 1991 with funds provided by the North District Office. " +
 				"The entrance tower and enclosing walls of Lo Wai were declared a monument on 31 January 1997. " +
 				"Full restoration works were completed in 1998.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 5:00pm daily.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.497848");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.15181");
@@ -556,10 +556,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"龍躍頭鄧族由錦田鄧族分支而來，據鄧族族譜記載，龍躍頭先祖乃南宋皇姑的長子，因此皇姑的神位仍供奉於龍躍頭主祠松嶺鄧公祠之內。麻笏圍原本四周建有磚牆，" +
 				"四角則建有更樓，但現時大部分圍牆及四個更樓已遭拆卸，只留下這極具歷史價值之門樓。門樓上刻有「鬱」字樣，寓意春生長茂盛之地。" +
 				"門樓於一九九四年被列為法定古蹟，由政府斥資重修。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Entrance Tower of Ma Wat Wai");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Ma Wat Wai was built by the Tang lineage during the Qianlong reign (1736-1795) of the Qing Dynasty. " +
 				"It is one of the renowned Five Wais (walled villages) and Six Tsuens (villages) in the area of Lung Yeuk Tau in Fanling." +
@@ -572,7 +572,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Chinese characters denoting a place with flourishing growth of spring onions was embedded at the facade of " +
 				"the entrance tower. The entrance tower was declared a monument in 1994 and was fully restored with funds " +
 				"from the Government.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.499751");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.149874");
@@ -591,10 +591,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "分流炮台位於大嶼山西南端，俯瞰來往珠江的航道。《澳門記略》載雍正七年(一七二九年)時大嶼山「兩山各設炮台」，" +
 				"分流炮台該為其中之一。炮台長約四十六米，闊二十一米，牆身以花崗石及青磚疊砌而成。炮台曾遭海盜所據，及至一八一〇年間，海盜先後向清廷投降，炮台才再恢復戍守。" +
 				"估計至一八九八年新界租借予英國後，炮台才正式棄置。炮台在一九八五年完成初步修繕工程，一九九〇年再進行大規模修葺，並改善附近的環境與設施。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Fan Lau Fort");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Fan Lau Fort is located at the south-western tip of Lantau, overlooking a sea passage " +
 				"leading into the Pearl River Estuary. According to the Macau Gazetteer, the fort can be dated reliably to the 7th year of Yongzheng (1729), " +
@@ -603,7 +603,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"by pirates. However, after the surrender of pirates to the Qing government in 1810, the fort would have been retaken by government troops. " +
 				"It was probably abandoned around 1898 after the lease of the New Territories to Britain.Initial restoration work was undertaken in early 1985. " +
 				"This was followed by a large scale restoration and repair project in 1990 which also provided for the clearance of the surrounding area.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.197995");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.853761");
@@ -660,11 +660,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "中區紅棉路的舊三軍司令官邸是本港現存歷史最悠久的西式建築。這座大樓建於一八四六年，" +
 				"原名「司令總部大樓」，為德己立少將而建。約於一九三二年易名為「旗杆屋」。大樓至一九七八年前一直是三軍司令的官邸。現已用作茶具文物館，" +
 				"展出有關茶藝的文物資料。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "enquiries@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午十時至下午六時。聖誕前夕及農曆新年除夕提前於下午五時休館。" +
 				" 逢星期二（公眾假期除外）、農曆新年年初一及初二休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2869 0690");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Flagstaff House");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Flagstaff House in Hong Kong Park Central is the oldest existing " +
 				"Western building in Hong Kong. Built in 1846 for Major General George Charles D'Aguilar, it was formerly known as " +
@@ -676,8 +676,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Closed on Tuesday (except Public Holidays) and on the first two days of Lunar New Year");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.281949");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.16217");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Cotton Tree Drive, Central");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "中環紅棉路");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "HONG KONG PARK, COTTON TREE DRIVE, CENTRAL, HONG KONG");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "香港中環紅棉道香港公園");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -691,10 +691,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "中央裁判司署於一九一三年動工興建，翌年落成。原址為另一所可能建於一八四七年的裁判司署，" +
 				"後來被拆卸，以便興建現時之中央裁判司署。因為要建造大型的地下室，裁判司署之建築工程因而受到拖延。整座建築物十分雄偉，正面採用希臘復興式建築，" +
 				"建有宏偉的石柱，護土牆則以花崗岩砌築而成。裁判司署於一九七九年遷出，建築物曾為警察附屬之組織所使用。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "保育和活化中區警署建築群進行中，不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Former Central Magistracy");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The construction of the Central Magistracy commenced in 1913 and was completed in 1914. " +
 				"The site was originally occupied by the first Hong Kong Magistracy which was probably erected in 1847 but was later demolished to make " +
@@ -702,7 +702,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				" The building has a majestic appearance with imposing pillars of the facade and other features in the Greek-revival style. " +
 				"The massive retaining walls were constructed with granite blocks. The Central Magistracy was closed in 1979 and had been used by " +
 				"different associations affiliated to the Police.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "CLOSED FOR CONSERVATION AND REVITALISATION OF THE CENTRAL POLICE STATION COMPOUND");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.285284");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.155132");
@@ -721,10 +721,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "前法國外方傳道會大樓坐落於中環炮台里，建於一九一七年，前身是昔日的「拱北樓」。" +
 				"大樓樓高三層，而北隅建有一座圓頂的小教堂，整座建築以花崗石和紅磚蓋成，屬新古典風格。大樓曾先後用作教育署總部、維多利亞地方法院、" +
 				"最高法院及政府新聞處。大樓現用作香港終審法院。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物為辦公用途，不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Former French Mission Building");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The former French Mission Building on Battery Path, Central, " +
 				"was built in 1917 on the foundation of a previous structure. A chapel is incorporated in the north-west " +
@@ -732,7 +732,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"red bricks in neo-classical style. It was occupied successively by the Education Department, the " +
 				"Victoria District Court, the Supreme Court, and the Information Services Department. " +
 				"It is now used as the Hong Kong Court of Final Appeal.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "BUILDING NOW USED AS OFFICE, NOT OPEN TO PUBLIC");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.283061");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.159424");
@@ -782,21 +782,21 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("43"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "九廣鐵路英段於一九一〇年十月一日通車。尖沙咀火車站興建工程於一九一三年展開。" +
 				"一九一五年鐘樓建成。火車總站於一九七八年拆卸，只留下鐘樓，成為本港的標記。鐘樓高四十四米，樓頂裝有七米高的避雷針。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物內部不對外開放");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Former Kowloon-Canton Railway Clock Tower");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Hong Kong Section of the Kowloon-Canton Railway was opened for traffic " +
 				"on 1 October 1910. The construction of a terminus in Tsim Sha Tsui started in 1913 and the clock tower was completed " +
 				"in 1915 to form part of the complex. The main terminus building was demolished in 1978 leaving only the clock tower " +
 				"which has become a landmark of Hong Kong. The clock tower is 44m high surmounted by a 7m lightning rod.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "INTERIOR NOT OPEN TO PUBLIC");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.296879");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.169552");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tsim Sha Tsui");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "尖沙咀");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "HONG KONG CULTURAL CENTRE, TSIM SHA TSUI, KOWLOON");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "九龍尖沙咀香港文化中心");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "油尖旺");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yau Tsim Mong");
@@ -813,10 +813,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"後於一九二〇年代加建一層，主樓東南及東西兩翼為已婚職員宿舍。日佔期間於水警總部前草地下建有大規模地下通道。二次大戰後，" +
 				"為安全起見，封閉地下通道，及重鋪草地。報時塔可謂整座水警總部最具特色之建築，為海港船隻報時。其作用於一九〇七年大包米的訊號塔落成啟用後而消失。" +
 				"前水警總部為現存最古老的政府建築之一。於一九九四年被列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物現為酒店及商店。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Former Marine Police Headquarters Compound");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The former Marine Police Headquarters was constructed in 1884, " +
 				"comprises a main building, a stable block and signal tower (commonly known as Round House)." +
@@ -830,7 +830,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"signals to ships in the harbour. Its use diminished in 1907 when the time ball apparatus was removed to " +
 				"Signal Hill. Being one of the oldest surviving government buildings in Hong Kong, the former Marine " +
 				"Police Headquarters Compound was declared a monument in 1994.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "BUILDINGS NOW USED AS HOTEL & RETAIL SHOPS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.299261");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.169037");
@@ -850,10 +850,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "一八四七年，清廷修建九龍寨城，駐兵數百，以加強海防。寨城衙門，原為九龍司巡檢辦公地方，深三進，" +
 				"二進為公堂，後進為官邸。自一八九九年清朝官兵撤離寨城後，衙門曾被不同的教會團體租用，先後作老人院、孤兒寡婦所、學校、醫務所等用途。" +
 				"一九八七年政府宣布清拆寨城，於原址興建公園，衙門得以保留並全面復修，成為公園內的重要古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "kwcp@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午六時半至下午十一時。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2716 9962");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Former Yamen Building of Kowloon Walled City");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Kowloon Walled City was orginally a garrison town built by " +
 				"the Qing government in 1847 as a military outpost occupied by several hundred soldiers to reinforce the " +
@@ -888,10 +888,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"主要作監視用途。碉堡樓高兩層，為一長方形構築物，以青磚修築而成。一樓與天台之間設有閣樓，天台建有伸出的梯間結構。外牆上下各處仍有槍眼。" +
 				"內部房間設計簡單，以砂漿鋪地。為了達到防禦的目的，碉堡設有錐形凹入式窗口，令該建築物從裏面外望的視野更為廣闊。古物古蹟辦事處已於碉堡附近安放展示設施，" +
 				"以介紹該古蹟的歷史。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Fortified Structure at No. 55 Ha Pak Nai");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Built around 1910, the fortified structure at No. 55 Ha Pak Nai, " +
 				"Yuen Long is the only remaining building in Hong Kong with solid evidence of having direct connection with " +
@@ -908,7 +908,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"various levels on the elevations can still be found.  Internally, the plain rooms have screeded floors. To serve defence purposes, " +
 				"tapered and recessed window openings allowed a greater viewing angle from the inside of the building.The Antiquities and Monuments Office " +
 				"has provided display facilities near the fortified structure to introduce the history of the monument.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.424755");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.940913");
@@ -928,10 +928,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "這座建築物原本是總督山頂別墅守衛室，於一九〇〇至一九〇二年間興建。" +
 				"山頂別墅採用蘇格蘭大宅建築特色，被當時傳媒形容為山頂區最宏偉及壯觀之建築。守衛室則採用文藝復興建築風格，與山頂別墅迴然不同。" +
 				"山頂別墅於一九四六年拆卸，只剩下這所守衛室。守衛室雖然面積不大，但建築規格嚴謹。守衛室於一九九五年被列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Gate Lodge of the Former Mountain Lodge");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Gate Lodge originally served as living quarters for the keeper of Mountain Lodge, " +
 				"the summer Peak residence of the Governor. It was built between 1900 and 1902. Mountain Lodge was constructed in " +
@@ -939,11 +939,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				" Gate Lodge, however, is in Renaissance style which is a major deviation from Mountain Lodge. " +
 				"Mountain Lodge was demolished in 1946, leaving only Gate Lodge. Although Gate Lodge is a small building, " +
 				"it was planned in a very functional way. It was declared a monument in 1995.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.277819");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.145691");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Mount Austin Road, the Peak");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "山頂柯士甸山道");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
@@ -960,10 +960,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"歷時四年完竣。禮賓府建成之初，附近尚未建有現今所見的高樓大廈，故海港景色飽覽無遺。禮賓府原屬英喬治亞時代建築，富有濃厚殖民地色彩。" +
 				"建築物曾經歷多次大規模修繕，最後一次工程在一九四二年日佔期間進行。日軍佔領香港期間，把禮賓府用作司令部，並委派日本工程師藤村清一設計一座高塔樓，" +
 				"加建於原有兩座建築之間，把兩座建築物連接起來；在屋頂加上日式瓦片，淡化建築物的歐陸風味。這座典雅的建築物現為香港特別行政區行政長官官邸。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2878 3300");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Government House");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Government House was formerly the office and residence of previous " +
 				"Governors of Hong Kong. Construction works started in 1851 and took four years to complete. " +
@@ -973,7 +973,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"central tower to link the two original buildings; the roofs were also modified to add in more Japanese flavour, " +
 				"thus diminishing the strong European style of the mansion. It was then used as the military headquarters for the " +
 				"Japanese until 1945. Government House is now the residence for the Chief Executive.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.282266");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.156849");
@@ -1004,7 +1004,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"前看守員房舍連同四周範圍（不包括兩座燈塔）均租予基督教互愛中心作為青少年戒毒治療及康復中心之用。舊和新青洲燈塔是香港現存五座戰前燈塔的其中兩座。" +
 				"至於其餘三座，位於橫瀾島和燈籠洲的燈塔已於二〇〇〇年根據《古物及古蹟條例》列為法定古蹟，位於鶴咀的則於二〇〇六年列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "此燈塔建築群現為海事處(新青洲燈塔)及政府產業署管理，並用作戒毒治療中心。 基於保安理由及避免影響日常運作，建築群並不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Green Island Lighthouse Compound");
@@ -1039,7 +1039,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"five surviving pre-war lighthouses in Hong Kong. For the other three lighthouses, the two on " +
 				"Waglan Island and Tang Lung Chau were declared monuments under the Antiquities and Monuments Ordinance " +
 				"in 2000 while the one at Cape D’Aguilar in 2006.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "This lighthouse compound is managed by the Marine Department (New Green Island Lighthouse) " +
 				"and the Government Property Agency and reused as a drug treatment and rehabilitation centre. " +
 				"For security and operational reasons, the complex is not open to the public.");
@@ -1106,17 +1106,17 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "香港天文台建於一八八三年，坐落於九龍一小山丘上，為一殖民地式建築。" +
 				"一九一二年正式命名為皇家香港天文台。天文台樓高兩層，呈長方形，外牆經過粉飾，拱形窗和長廊別具特色。隨著附近之新大樓落成，" +
 				"天文台各技術及職務部門已遷往新廈。不過，舊大樓仍為台長辦公室及行政中心。隨著一九九七年七月一日香港主權回歸中國，復稱「香港天文台」。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "mailbox@hko.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2926 8200");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Hong Kong Observatory");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Hong Kong Observatory was established in 1883 and was " +
 				"built on a small hill in Kowloon. Built in the colonial style, it is a rectangular two-storey plastered " +
 				"brick structure characterised by arched windows and long verandas. The technical and operational units " +
 				"of the Observatory have been moved to new premises nearby, leaving the old building to continue to house " +
 				"the office of the directorate and to serve as a centre of administration.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.305932");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.173843");
@@ -1139,10 +1139,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"洪聖古廟為兩進三開間建築，門廳置有擋中。正殿神壇供奉洪聖、財帛星君及水仙爺。該廟最近一次的修復工程於一九九九年進行，獲香港賽馬會資助。" +
 				"工程以恢復古廟原貌為原則，在古物古蹟辦事處的監督下，於二〇〇〇年竣工。在當地村民全力支持及積極參與下，" +
 				"是項修復工程榮獲聯合國教科文組織「亞太區二千年文物古蹟保護獎」傑出項目獎。洪聖古廟於二〇〇二年十一月十五日被列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午六時至下午六時。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Hung Shing Temple, Hau Ku She");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Situated on Kau Sai Chau (Island), Sai Kung, " +
 				"Hung Shing Temple is a typical example of a rural temple. The temple was constructed as a result of " +
@@ -1158,7 +1158,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"With the full support and active participation of the local villagers, the restoration project " +
 				"was awarded an 'Outstanding Project' in the UNESCO Asia-Pacific Heritage 2000 Awards. " +
 				"The temple was declared a monument on 15 November 2002.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "6:00am – 6:00pm daily.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.342614");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.321669");
@@ -1208,10 +1208,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "前政務司官邸於一九〇五年興建之時，坐落於吐露港一小島元洲仔上，原由一條基堤與陸地連接。" +
 				"官邸是兩層高建築，建有游廊，是一座二十世紀初的典型殖民地式建築。建築物原用作當時新界理民官宿舍之用，後改為政務司官邸，" +
 				"建築物與新界民政息息相關。現已改用作世界自然(香港)基金會的自然環境保護研究中心。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Island House");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "When it was built in 1905, Island House stood on a small islet " +
 				"called Yuen Chau Tsai near the head of Tolo Harbours, which was connected to the mainland by a causeway. " +
@@ -1219,7 +1219,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"the turn of the century. It was erected as quarters for government officers and was long associated with " +
 				"the former New Territories Administration. It is now used by the World Wide Fund for Nature as a " +
 				"Conservation Studies Centre.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.445945");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.178743");
@@ -1312,10 +1312,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"和娛樂工業中所扮演的角色。這幢大宅曾在國際知名的電影中出現，包括《江湖客》（一九五五年）和本地製作的電視劇《京華春夢》（一九八Ｏ年）" +
 				"也曾在此取景。這些例子都反映出該址的景致極為優美。大宅於二ＯＯ七年八月售予上任業主。當局在二ＯＯ七年九月初發現該址進行一些工程，以移除屋頂瓦片、" +
 				"石製器具及窗框。景賢里的全面修復工程於二ＯＯ八年九月展開，並於二Ｏ一Ｏ年十二月竣工。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "活化歷史建築伙伴計劃進行中，不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "King Yin Lei");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "King Yin Lei is a rare surviving example of Chinese Renaissance " +
 				"style that reflected the design and construction excellence in both Chinese and Western architecture of Hong Kong. " +
@@ -1336,7 +1336,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 										"and works to remove the roof tiles, stone features and window frames were noticed on site " +
 										"in early September 2007. Full restoration of Kin Yin Lei commenced in September 2008 and " +
 										"was completed in December 2010.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "CLOSED FOR REVITALISING HISTORIC BUILDINGS THROUGH PARTNERSHIP SCHEME");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.266719");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.180862");
@@ -1361,10 +1361,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"校舍於一九二六年落成時，建有東翼、南翼和北翼，而位於般咸道和西邊街交界正門入口的弧形柱廊上則建有鐘樓（現已拆除）。" +
 				"校舍內，新古典主義風格的建築特色舉目可見，例如拱形柱廊、飾有石柱的外廊、粗琢隅石、模製檐楣、圍繞窗戶的古典風格石砌緣飾等，" +
 				"令這幢文物建築顯得古典雅致。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物現為學校用途，一般情況下不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "King's College");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "King's College, built in 1926, is one of the six surviving " +
 				"pre-war government school buildings in Hong Kong. The other five pre-war government school buildings are " +
@@ -1382,7 +1382,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"(now removed) above the colonnaded curved entrance porch at the junction of Bonham Road and Western Street. " +
 				"The notable Neo-classical style features such as arched colonnades, colonnaded verandahs, rusticated quoins, " +
 				"moulded cornices and classical stone surrounds make it an interesting piece of built heritage.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "BUILDINGS NOW USED AS SCHOOL, NOT OPEN TO PUBLIC UNDER NORMAL CIRCUMSTANCES");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.285523");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.14069");
@@ -1407,11 +1407,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"甘棠第是本港最先以鋼架興建，並鋪設入牆電線的構築物之一。建築物內部富麗堂皇，糅合了巴洛克及洛可可風格的建築特色。" +
 				"地庫至二樓之間以寬闊華麗的樓梯連接，梯上設有精緻的扶欄。主要房間的天花均飾有以金箔點綴的灰塑鑲板，" +
 				"而主樓梯及其他當眼位置亦裝設了色彩斑斕的玻璃窗，並以當時流行的新藝術風格圖案作為裝飾。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "sysm@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午十時至下午六時；星期六、日及公眾假期延長至下午七時。" +
 				"聖誕前夕及農曆新年除夕提前於下午五時休館。逢星期四（公眾假期、11月12日孫中山先生誕辰及3月12日孫中山先生忌辰除外）、農曆新年年初一及初二休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2367 6373");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Kom Tong Hall");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Built in 1914, Kom Tong Hall was named after its first owner, " +
 				"Ho Kom Tong. Ho Kom Tong (1866-1950), alias Ho Kai Tong, otherwise known as Ho Tai Sang, was the younger " +
@@ -1451,10 +1451,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "覲龍圍又名新圍，是粉嶺龍躍頭十一鄧姓村落之一。鄧氏宗族據說在十四世紀時已在此建村，" +
 				"但圍牆很可能於一七四四年才興建。圍村門樓的石額刻有「覲龍乾隆甲子歲」字樣，乾隆甲子即一七四四年。覲龍圍四面有磚牆環繞，圍內布局基本依舊，" +
 				"為本區保存最完好的圍村。圍村門樓於一九八八年被列為法定古蹟並已修復完好。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Kun Lung Gate Tower");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Kun Lung Wai, presently known as San Wai, is one of the eleven Tang villages " +
 				"in Lung Yeuk Tau, Fanling. Although this village was reportedly settled by members of the Tang clan during the 14th century, " +
@@ -1462,7 +1462,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"engraved with 'Kun Lung, dated this Jiazi of the Qianlong reign'. Kun Lung Wai is enclosed with brick walls on " +
 				"all four sides. It is the most authentic and undisturbed walled village left in the area. The gate house of " +
 				"the walled village was declared a monument in 1988 and has since been properly restored.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.508236");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.148075");
@@ -1481,11 +1481,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("38"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "羅屋是一間有二百多年歷史的客家村屋，乃柴灣區數條古老村落碩果僅存的村屋。屋主羅氏先祖在清朝康熙年間" +
 				"（一六六二至一七二二年）在柴灣定居，以種稻為生，生活刻苦。羅屋現已重修及闢作羅屋民俗館。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "hkmh@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午十時至下午六時。聖誕前夕及農曆新年除夕提前於下午五時休館。 " +
 				"逢星期四（公眾假期除外）、農曆新年年初一及初二休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2896 7006");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Law Uk Hakka House");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Law Uk is a simple Hakka residence built over 200 years ago by the Law family, " +
 				"whose ancestors settled in Chai Wan early in the Kangxi reign (1662-1722) of the Qing Dynasty. The Laws were poor peasants" +
@@ -1510,10 +1510,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("35"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "一九五五年平整地盤興建李鄭屋邨時，建築工人發現這座磚室古墓。出土明器共五十八件，" +
 				"包括陶製器皿及青銅器物。墓室形制及出土明器式樣顯示，這座古墓的建造年代應在東漢期間(公元二十五至二百二十年)。古墓現已闢作李鄭屋漢墓博物館。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "hkmh@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午十時至下午六時。聖誕前夕及農曆新年除夕提前於下午五時休館。逢星期四（公眾假期除外）、農曆新年年初一及初二休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2386 2863");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Lei Cheng Uk Han Tomb");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "This ancient brick tomb was discovered in 1955 when workmen were " +
 				"levelling a hill slope to make way for the present Lei Cheng Uk Estate. A total of 58 pottery and bronze " +
@@ -1525,8 +1525,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Lunar New Year's Eve. Closed on Thursday (except Public Holidays) and on the first two days of Lunar New Year");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.338138");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.159985");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Lei Cheng Uk Estate, Sham Shui Po");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "深水埗李鄭屋邨");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "NO. 41 TONKIN STREET, SHAM SHUI PO, KOWLOON");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "九龍深水埗東京街41號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "深水埗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sham Shui Po");
@@ -1630,10 +1630,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "聖士提反女子中學是本港首批女子學校之一，多年來作育英才，部分學生更是香港大學首批畢業的女學生。" +
 				"該校原址在堅道二十七號，一九二三年始遷往列堤頓道現址。主樓的西翼和中央部分在一九二三年完成；東翼則在一九二八年加建。" +
 				"建築物樓高四層，學校禮堂圍攏於中央。這座西式建築物的設計概念和布局與中國傳統合院式建築風格相類似，別具特色。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物現為學校用途，一般情況下不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Main Building of St. Stephen's Girls' College");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "St. Stephen's Girls' College is one of the first schools to " +
 				"devote itself to the education of girls in Hong Kong. Many of its students became prominent members of " +
@@ -1643,7 +1643,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"erected in 1928. The building is a four-storey structure enclosing a school hall in the centre. " +
 				"The design concept and layout of this Classical-style building is of particular interest because " +
 				"of its similarities in style to a traditional Chinese courtyard house.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "BUILDING NOW USED AS SCHOOL, NOT OPEN TO PUBLIC UNDER NORMAL CIRCUMSTANCES");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.287985");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.144146");
@@ -1693,21 +1693,21 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("23"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "文武二帝廟約於一百多年前由大埔七約鄉民合力興建，以紀念現位於富善街的太和市落成，" +
 				"該址現時通常稱為大埔墟。該廟於一九八五年由七約鄉公所進行修葺，政府則提供專業意見及資助部分修葺費用。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "上午九時至下午六時");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Man Mo Temple");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Man Mo Temple was built about 100 years ago by the Tsat Yeuk " +
 				"Community of Tai Po to mark the founding of Tai Wo Shi (Tai Wo Market Town) which is now commonly known " +
 				"as Tai Po Market. Full restoration of the temple was undertaken by the Tai Po Tsat Yeuk Rural Committee " +
 				"in 1985 with technical advice and a subsidy from the Government.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am to 6:00pm daily");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.452283");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.164917");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Fu Shin Street, Tai Po");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "大埔富善街");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "FU SHIN STREET, TAI PO MARKET, TAI PO, NEW TERRITORIES");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界大埔大埔墟富善街");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
@@ -1727,10 +1727,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"屋頂由天井四角的花崗石柱支撐，兩側為捲棚頂的廂房。位於文武廟左側的列聖宮原為三進兩院式建築，其後兩個天井加築鋼架屋面。公所為簡單的一進式建築，" +
 				"其花崗石門框至今保存完好，上面刻有公所的建築年份，甚具歷史價值。文武廟組群屬典型的傳統中式民間建築，飾有精緻的陶塑，花崗石雕、木雕、" +
 				"灰塑和壁畫，盡顯精湛的傳統工藝技術。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午八時至下午六時");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Man Mo Temple Compound, Sheung Wan");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Man Mo Temple Compound on Hollywood Road, " +
 				"Sheung Wan comprising three blocks, namely Man Mo Temple, Lit Shing Kung and Kung Sor, was " +
@@ -1755,7 +1755,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"of Kung Sor can be found is still well preserved.The magnificent Man Mo Temple Compound is a fine " +
 				"example of traditional Chinese vernacular architecture. It is exquisitely decorated with ceramic figurines, " +
 				"granite carvings, wood carvings, plaster mouldings and murals, reflecting superb traditional craftsmanship.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "8:00am to 6:00pm daily");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.287349");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.150669");
@@ -1783,10 +1783,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"均是主樓顯著的建築特色。瑪利諾修院學校的布局和一九三七年落成的主樓保存甚佳，多年來並沒有經過明顯的改動或改建，校舍內仍保存著古色古香的裝飾和地台。" +
 				"校內優美的花園和園景，亦提高了該建築群的整體性價值。在校方及瑪利諾女修會的支持下，" +
 				"瑪利諾修院學校包括一九三七年落成的學校主樓和修院根據《古物及古蹟條例》於二〇〇八年被宣布為法定古蹟，並受該條例保護。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Maryknoll Convent School");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Maryknoll Convent School was first established at Austin Road in " +
 				"1925 as a kindergarten by the Maryknoll Sisters of St. Dominic (originally named as 'The Foreign Mission " +
@@ -1815,7 +1815,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 								"gardens also enhance the setting of the school complex. With the support of the school and the " +
 								"Maryknoll Sisters of St. Dominic, the 1937-built Main Building and the Convent are declared " +
 								"as a monument for protection under the Antiquities and Monuments Ordinance in 2008.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.32747");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.179231");
@@ -1835,17 +1835,17 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "城門水塘的建造工程始於一九二三年，歷時十四年完成。這項工程規模龐大，" +
 				"水塘除了為九龍半島供水，滿足九龍居民的食水需要外，也通過跨海水管把食水輸往人口密集的香港島，幫助紓緩港島所面對的食水需求壓力。" +
 				"城門水塘是戰前最大和最主要的水塘，同時為九龍和港島供應食水。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Memorial Stone of Shing Mun Reservoir");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The construction of Shing Mun Reservoir commenced in 1923 and took 14 years to complete. " +
 				"The enormous size of the project not only brought water to cater for the needs of people in Kowloon Peninsula, " +
 				"but also helped to relieve pressure on water demand in the densely populated Hong Kong Island via the " +
 				"cross-harbour mains, making it the largest and major reservoir in the pre-war period to supply water " +
 				"for both Kowloon and Hong Kong Island.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.386984");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.147127");
@@ -1865,10 +1865,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"別墅一部分。一九四六年至一九四九年間，該別墅被用作達德學院的校舍。達德學院是在周恩來和董必武指示下創辦，多位當時著名的中國學者均曾在此講學。" +
 				"學院培育了不少年青知識份子。建築物見証了香港在近代中國歷史和中華人民共和國建國史中所扮演的獨特角色。馬禮遜樓建築特色獨特，選用上海批盪，" +
 				"並以裝飾派藝術建築風格建成，廡殿式的屋頂以青釉中式瓦片砌築，四角飾以瑞龍，反映了中西相容的風格。馬禮遜樓於二OO四年三月被列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物為私人物業，不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Morrison Building");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Morrison Building in Hoh Fuk Tong Centre, " +
 				"Tuen Mun was originally part of a villa built in 1936 by General Cai Tingjie (1892-1968), " +
@@ -1881,12 +1881,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Shanghai plaster, and has a green glazed Chinese tiled hipped roof decorated with dragon shaped " +
 				"ornaments at four corners, representing a harmonious blend of Chinese and Western styles. " +
 				"The Morrison Building was declared a monument in 26 March 2004.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PRIVATE PROPERTY, NOT OPEN TO PUBLIC");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.396914");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.977477");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Hoh Fuk Tong Centre, Castle Peak Road (Sun Hui Section), Tuen Mun");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "屯門青山公路新新墟段何福堂會所");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "NO. 28 CASTLE PEAK ROAD (SAN HUI), TUEN MUN, NEW TERRITORIES");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界屯門青山道(新墟段)28號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "屯門");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tuen Mun");
@@ -1902,10 +1902,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"改名為聖約瑟書院。一九一八年，新校舍設於堅尼地道七號德國會所，即書院現址。書院的教學樓(即現北座)於一九二〇年啟用，" +
 				"科學樓或稱教堂樓(即現西座)則於一九二五年啟用。書院的北座和西座是該校現存的戰前建築物。北座樓高四層，兩側建有鐘樓，" +
 				"一邊建有遊廊；西座亦是樓高四層，頂部建有塔樓。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物現為學校用途，一般情況下不對外開放。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "North and West Blocks of St. Joseph's College");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The North Block and West Block of St. Joseph's College at 7 Kennedy Road, " +
 				"Hong Kong were declared historical monuments on 18 August 2000. St. Joseph's College is a Roman Catholic " +
@@ -1917,7 +1917,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"opened in 1925. The North Block and West Block are currently the only existing pre-War buildings of the college. " +
 				"The former is a four-storey building flanked by two clock towers at both ends and has verandahs on one side " +
 				"whereas the latter is also a four-storey structure with a turret on top.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "BUILDINGS NOW USED AS SCHOOL, NOT OPEN TO PUBLIC UNDER NORMAL CIRCUMSTANCES");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.276555");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.158726");
@@ -1934,33 +1934,24 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊北區理民府"); //data51
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("12"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("12"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "舊北區理民府約於一九〇七年興建，是租借新界後最早的民政中心。" +
+				"新界北部的行政及土地註冊工作均在此辦理。直至一九六一年，理民府內仍有一個裁判司法庭。現為香港童軍總會新界東地域總部。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old District Office North");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Old District Office North, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Old District Office North was erected around 1907 and was " +
+				"the earliest seat of the civil administration of the newly-leased New Territories. Administration and" +
+				" land registration of the northern part of the New Territories were carried out in this building. " +
+				"Until 1961, the building still housed a magistrate's court. It is now used by the New Territories " +
+				"Eastern Region Headquarters of the Scout Association of Hong Kong.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.445898");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.170682");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "NO.15 WAN TAU KOK LANE, TAI PO, NEW TERRITORIES");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界大埔運頭角里15號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
@@ -1971,27 +1962,22 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "海壩村古屋"); //data52
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("31"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("31"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "古屋建於一九〇四年，坐落於荃灣海壩村第九一七號地段。" +
+				"業主邱元璋(一八六五至一九三七年)為海壩村飽學之士。客籍人士早於十八及十九世紀期間於此建村立業。" +
+				"村落及附近一帶現已發展為德華街公園。僅存的古屋以夯土、青磚、青瓦和杉木建造而成，富有中國南方傳統鄉村建築特色。" +
+				"現作環境資源中心。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old House, Hoi Pa Village");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Old House, Hoi Pa Village, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The house which was situated at Lot 917 of Hoi Pa Village, " +
+				"Tsuen Wan was built in 1904 by Mr. Yau Yuen-cheung (1865-1937), a village scholar of Hoi Pa. " +
+				"The Village was originally a Hakka mixed-lineage village established during the 18th and 19th centuries. " +
+				"The site, together with the adjacent areas, has now been developed into the Tak Wah Street Park. " +
+				"This remaining old house, built with rammed earth, green bricks, green tiles and timber, " +
+				"is a fine example of traditional southern Chinese village architecture. It is now used as the " +
+				"Environmental Resource Centre.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.370714");
@@ -2009,27 +1995,24 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "王屋村古屋"); //data53
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("39"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("39"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "王屋村位於圓洲角西南端，約二百多年前由一對來自廣東興寧的王姓夫婦所建。" +
+				"十九世紀時，從廣東南下九龍的旅客和貨物均以圓洲角為交通樞紐，王屋村遂成為商旅的貿易站，直至十九世紀末葉才開始式微。" +
+				"隨著沙田海不斷填土以發展沙田新市鎮，王屋村很多古老建築已荒廢及拆卸。現時剩下來的只有這間古屋，成為圓洲角歷史的標記。" +
+				"這間百年古屋樓高兩層，以青磚砌成，內有精美的壁畫和傳統裝飾。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old House, Wong Uk Village");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Old House, Wong Uk Village, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Located at the south-west corner of Yuen Chau Kok, " +
+				"Wong Uk Village was founded some 200 years ago by a couple surnamed Wong from Xingning county " +
+				"of Guangdong province. In the 19th century, the island was a major station for travellers and " +
+				"goods plying between Guangdong and Kowloon. The village became a trading station for merchants " +
+				"and travellers, which prospered until the late 19th century. Most of the old buildings of " +
+				"the village fell into ruins or demolition due to the reclamation of Tide Cove for the development " +
+				"of the Sha Tin New Town. What remains is this old house standing as the only reminder of the history " +
+				"of Yuen Chau Kok. The building is a two-storey green-brick structure of about 100 years old, " +
+				"with fine mural paintings and traditional decorations.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.388809");
@@ -2047,27 +2030,20 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊病理學院"); //data54
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("41"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("41"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "十九世紀末，香港的細菌學研究仍十分落後。直至一九〇五年，" +
+				"第一所正式的細菌學院才在堅巷建立。這座典雅的紅磚建築，於第二次世界大戰後改名為病理學院。後由生署用作醫療用品倉庫，" +
+				"現改作香港醫學博物館，由香港醫學博物館學會管理。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old Pathological Institute");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Old Pathological Institute, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "At the end of the 19th century, bacteriological studies " +
+				"in Hong Kong were still underdeveloped. It was not until 1905 that a permanent Bacteriological " +
+				"Institute was constructed at Caine Lane. This elegant red-brick building was renamed the " +
+				"Pathological Institute after World War II and was later occupied by the Department of " +
+				"Health as a medical store. It has been recently converted to the Hong Kong Museum of Medical " +
+				"Sciences managed by the Hong Kong Museum of Medical Sciences Society.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.283527");
@@ -2085,27 +2061,22 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊赤柱警署"); //data55
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("25"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("25"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "舊赤柱警署建於一八五九年，是本港現存最古老的警署建築。" +
+				"警署早期作為港島最南端的前哨站，戰略地位重要，因此常供警隊及英軍聯合使用。二次大戰期間日軍曾徵用為分區總部，" +
+				"並加建殮房。戰後恢復用作警署，直至一九七四年。後由南區政務處分處使用，曾用作餐廳，現為超級市場。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old Stanley Police Station");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Old Stanley Police Station, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Old Stanley Police Station was constructed in 1859 and is " +
+				"now the oldest surviving police station building in the territory. The Army, during the early years, " +
+				"used the station from time to time in conjunction with the police because of its strategic position " +
+				"as the most southerly outpost on Hong Kong Island. During the Japanese Occupation, the " +
+				"Japanese Gendarmerie used the station as a local headquarters and a mortuary was built " +
+				"onto the building. After the war, the building reverted to its original use as police " +
+				"station until 1974. Since then it had been used as a sub-office of the Southern District " +
+				"Office and a restaurant. It now becomes a supermarket.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.218258");
@@ -2123,27 +2094,20 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊大埔墟火車站"); //data56
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("29"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("29"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "鐵路沿線火車站以往均有劃一設計，唯獨大埔墟火車站按照中國傳統建築風格建成。" +
+				"火車站建於一九一三年，正面、屋頂及裝飾等均具中國建築特色，但火車站的內部則按火車站運作需要而設計。一九八三年新大埔墟火車站建成，" +
+				"代替原來的車站。舊大埔墟火車站經全面修復後，改作香港鐵路博物館。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old Tai Po Market Railway Station");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Old Tai Po Market Railway Station, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "While the other stations along the Kowloon to canton " +
+				"Railway were built to a standard design, the station at Tai Po Market was built in Chinese style. " +
+				"Construction work was completed in 1913. The external features of the facade, roof and decorations " +
+				"were patterned upon a Chinese structure. Internally, it was designed to function as a railway station. " +
+				"The station was made redundant by a new one in a nearby location in 1983. It was then fully " +
+				"restored and now houses the Hong Kong Railway Museum.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.451173");
@@ -2161,27 +2125,19 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "舊灣仔郵政局"); //data57
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("40"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("40"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "舊灣仔郵政局是本港現存歷史最悠久的郵政局建築。" +
+				"這座曲尺形建築物坐落於灣仔峽道和皇后大道東交界，建於一九一二至一九一三年間。一九一五年三月一日正式開放作為灣仔郵政局。" +
+				"這是一座簡單的金字頂建築，山牆及灰塑甚具特色。現由環境保護署用作環境資源中心。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old Wan Chai Post Office");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Old Wan Chai Post Office, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Old Wan Chai Post Office is the oldest surviving post " +
+				"office building in Hong Kong. This L-shaped building situated at the junction of Wan Chai Gap Road and " +
+				"Queen's Road East, was erected between 1912 and 1913, and opened on 1 March 1915 as the Wan Chai Post " +
+				"Office. It is a simple pitched-roof structure with attractive gable ends and mouldings. " +
+				"The building is now operated by the Environmental Protection Department as a resource centre.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.274513");
@@ -2199,27 +2155,25 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "碗窰村碗窰"); //data58
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("20"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("20"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "大埔碗窰曾是新界的陶瓷工業中心，早在明代（一三六八—一六四四年）文、" +
+				"謝兩族已經營窰場，生產青花瓷器。清朝康熙十三年（一六七四年）從廣東長樂縣南遷至大埔的客籍馬氏族人，向文氏出資購入窰場。" +
+				"二十世紀初期，由於廣東沿海其他窰場的廉價產品競爭，碗窰的陶瓷業日趨式微，至一九三二年終告停產。碗窰的考古調查，" +
+				"發現從採礦到入窰裝燒各項工序的遺蹟，包括礦坑、水碓作坊、碾磨作坊、淘洗池及龍窰等，均是香港重要的文化遺產。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Pottery Kilns at Wun Yiu Village");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Pottery Kilns at Wun Yiu Village, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Wun Yiu, Tai Po was once a center of porcelain industry " +
+				"in the New Territories. As early as the Ming dynasty (1368-1644), clans of Man and Tse had started " +
+				"manufacturing the blue and white porcelain. The Ma clan, a group of Hakka people originated from " +
+				"Changle county in Guangdong province, settled in Tai Po and purchased the kilns from the Man clan " +
+				"in 1674 (the 13th year of Kangxi reign of the Qing dynasty). The industry declined in the early " +
+				"20th century due to the competition from good quality and inexpensive porcelain produced by other" +
+				" coastal kilns in Guangdong. The kilns at Wun Yiu finally ceased to operate in 1932." +
+				"Archaeological investigations at Wun Yiu discovered the remains illustrating the complete process" +
+				" of porcelain production such as china clay quarrying pits, water-mills, animal-driven grinder, " +
+				"clay soaking tanks and dragon kilns. They all are important cultural heritage of Hong Kong.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.430666");
@@ -2237,27 +2191,27 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "九龍寨城南門遺蹟"); //data59
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("62"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("62"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "一八四七年，清廷修建九龍寨城，駐兵數百，以加強海防。" +
+				"城牆用花崗石條構築，有六座瞭望台和四道城門，南門為正門。日佔期間，城牆被完全拆毀，作擴建啟德機場的建築材料。" +
+				"一九八七年政府宣布清拆寨城，於原址興建公園。在清拆期間，曾進行考古勘查，發現寨城東門和南門的牆基和石板通道保存完好，" +
+				"並在南門原址發現兩塊石額，上刻「南門」和「九龍寨城」等字。 南門遺蹟原地保留，供市民參觀。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Remnants of the South Gate of Kowloon Walled City");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Remnants of the South Gate of Kowloon Walled City, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Kowloon Walled City was originally a garrison town " +
+				"built by the Qing government in 1847 as a military outpost occupied by several hundred soldiers " +
+				"to reinforce the coastal defence of the region. The City wall was built with large granite slabs " +
+				"and incorporated six watch towers and four gateways. The South Gate was officially recognised " +
+				"as the 'main gate'. During the Japanese Occupation, the wall was completely torn down to provide " +
+						"material to extend Kai Tak Airport. In 1987, the government decided to demolish and replace" +
+						" the Walled City by a park. Archaeological investigations were conducted in the course of " +
+						"demolition of the buildings. Archaeologists and found that foundations of the original " +
+						"South and East Gates were particularly well preserved. The most important discovery was " +
+						"the two stone plaques bearing the characters 'South Gate' and 'Kowloon Walled City'" +
+								" of the original South Gate. Consequently, the Government decided to preserve " +
+								"the remnants of the South Gate in-situ for display to the public.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.33531");
@@ -2275,27 +2229,37 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "葉定仕故居"); //data60
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("93"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("93"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "葉定仕故居約建於一九〇八年，外觀仿照孫中山先生於中山翠亨村的故居興建。" +
+				"葉定仕先生（一八七九年至一九四三年），又名天發，號廣新，為沙頭角蓮麻坑葉氏第八世祖。他早年到泰國當裁縫學徒，" +
+				"其後成立服裝廠，承包軍服生產工作。根據泰國中華會館的資料，孫中山先生於一九〇七年成立泰國中華會所(後改名為泰國中華會館)，" +
+				"爭取海外華人對革命活動的支持，葉定仕為共同發起人及創辦人之一。其後，葉氏曾擔任暹羅同盟會會長及振興書報社社長，" +
+				"積極推動當地同盟會的發展及捐助革命運動。一九三六年，葉定仕偕家人重回蓮麻坑定居，一九四三年逝世。葉定仕故居為一座三開間建築，" +
+				"樓高兩層，正面建有門廊，以方柱支撐上層的陽台。故居主要以青磚及木材建造，屋頂為金字瓦頂。正面入口上方飾以中式吉祥圖案壁畫，" +
+				"一樓陽台則有琉璃花瓶，糅合中西建築風格。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Residence of Ip Ting-sz");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Residence of Ip Ting-sz, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Residence of Ip Ting-sz, which was built in around 1908, " +
+				"is modelled on Dr Sun Yat-sen’s residence in Cuiheng Village, Zhongshan. " +
+				"Mr. Ip Ting-sz (1879-1943), alias Tin-fat, was also known by his literary name " +
+				"Kwong-san, was the eighth generation ancestor of the Ips in Lin Ma Hang, Sha Tau Kok. " +
+				"He went to Thailand at an early age to work as an apprentice tailor before setting up a " +
+				"garment factory manufacturing military uniforms later.According to the information from the " +
+				"Chinese Association in Thailand, Dr Sun Yat-sen founded the Chinese Club in Thailand (later " +
+				"renamed the Chinese Association in Thailand) in 1907 to rally support for his revolutionary " +
+				"activities among overseas Chinese. Ip Ting-sz was one of the originators and co-founders of " +
+				"the Chinese Association at its initial founding stage. He was later assigned to be the " +
+				"president of the Tong Meng Hui (Chinese Revolutionary Alliance) Siam Branch and a revolutionary " +
+				"newspaper. Ip was active in promoting development of the Tong Meng Hui in the territory and " +
+				"contributing funds for the revolutionary campaign. In 1936, Ip Ting-sz returned to Lin Ma Hang " +
+				"with his family, where he passed away in 1943.The Residence of Ip Ting-sz is a three-bay, " +
+				"two-storey building fronted by a covered porchway with columns supporting the balcony. " +
+				"The building is principally constructed of grey brick and timber with a traditional pitched roof. " +
+				"Murals of Chinese auspicious motifs are found atop the front doors while the balcony is " +
+				"decorated with ceramic vase-shaped balusters, demonstrating a blend of Chinese and Western " +
+				"architectural features.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.55071");
@@ -2312,27 +2276,25 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "大浪灣石刻"); //data61
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("01"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("01"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "香港沿海一帶，發現了幾處古代石刻，風格十分相近，紋飾基本呈幾何形，隱約可見人物或鳥獸圖案。" +
+				"要確定石刻的刻鑿年代、原因、方法及出自何人之手，殊非易事，但從風化情況推測，石刻的年代應該十分久遠。" +
+				"大浪灣石刻於一九七〇年由一位警務人員發現，面積約九十厘米乘一百八十厘米，紋飾為幾何圖紋及抽象的鳥獸紋。此石刻與本港大部分石刻一樣，" +
+				"都是位於臨海的石崖上。早期居民多以海為生，於海濱刻石，相信有鎮撫怒海，護佑航海人士之意。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving at Big Wave Bay");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carving at Big Wave Bay, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Scattered along the boulder strewn coastline of Hong Kong, " +
+				"groups of ancient rock carvings are found. Their patterns are basically geometric with hints here " +
+				"and there of human or animal images. It is difficult to establish when, why, how and by whom the " +
+				"carvings were made. However, their state of weathering tells us that they must have had a long history." +
+				"Big Wave Bay Rock Carving was first reported in 1970 by a police officer. The design shows very " +
+				"dynamic geometric and animal patterns with a worked surface measuring 90cm x 180cm. Like most " +
+				"other carvings, apart from those at Shek Pik and Wong Chuk Hang, it is situated on a headland " +
+				"embracing the beautiful bay. There is some evidence that early inhabitants who created these " +
+				"carvings depended on the sea for their livelihood. The carvings might have been intended to " +
+				"propitiate the power of the sea and to protect its sea-faring population.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.246145");
@@ -2349,27 +2311,21 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "龍蝦灣石刻"); //data62
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("16"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("16"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "此石刻於一九七八年由一群旅行人士發現。紋飾刻於一塊向東的岩石面上。" +
+				"因久經風雨侵蝕，已極之模糊。紋飾呈幾何形，部分狀似鳥獸。但有些學者認為這些紋飾純因天然侵蝕所致，爭論仍未解決。" +
+				"石刻已公告為法定古蹟，加以保護，確保研究能持續下去。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving at Lung Ha Wan");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carving at Lung Ha Wan, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Discovered in 1978 by a group of hikers, " +
+				"the Lung Ha Wan Rock Carving is located on a vertical face of a badly weathered boulder facing east. " +
+				"The design shows geometric patterns, some may resemble stylised animals or bird forms. " +
+				"There is though another school of thought suggesting that it is purely the work of nature. " +
+				"While this academic discussion still continues, the rock carving, or pattern, has been protected " +
+				"under the Antiquities & Monuments Ordinance. This would allow the opportunity for it to be " +
+				"further studied.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.31016");
@@ -2386,27 +2342,20 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "石壁石刻"); //data63
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("05"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("05"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "香港大多數古代石刻都瀕臨海濱，石壁石刻卻離開海岸約三百米。" +
+				"相信此處昔日也是海邊，其後海岸變遷始成今日之地貌。石刻紋飾由正方及圓形幾何紋構成，與古代青銅器上的圖案極相似。" +
+				"故此或可推斷，這石刻大約是青銅時代，即約三千年前，由本區先民所刻鑿。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving at Shek Pik");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carving at Shek Pik, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Most of the ancient rock carvings in the territory " +
+				"overlook the sea, but Shek Pik Rock Carving is about 300m from the coastline. However, " +
+				"it is believed that in the past, the sea inlet might have extended up to this point. " +
+				"The design shows geometric patterns composed of spiral squares and circles which closely " +
+				"resemble those on Bronze Age artefacts. It is thus quite safe to deduce that they were " +
+				"carved by early inhabitants of this area in the local Bronze Age some 3,000 years ago.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.236989");
@@ -2423,27 +2372,20 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "滘西洲石刻"); //data64
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("02"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("02"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "此石刻發現於一九七六年。位於滘西洲西北岸。該處幾無陸路通達。" +
+				"石刻上的紋飾飽經風雨侵蝕，尤以石刻下半部為甚。如仔細觀察，仍依稀可見獸形紋樣。石刻離開最高水位約二米，就同類型石刻的位置而言，" +
+				"這是一個頗低的位置。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving on Kau Sai Chau");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carving on Kau Sai Chau, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Kau Sai Chau Rock Carving was discovered in 1976. " +
+				"It is located at the north-western coast of Kau Sai Island where accessibility by land " +
+				"is extremely poor. The design itself is badly weathered, especially on its lower half. " +
+				"However, a zoomorphic motif is still visible when examined closely and carefully. " +
+				"The worked surface is approximately 2m above the highest water mark, which is a rather " +
+				"low position compared to similar rock carvings.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.36357");
@@ -2460,27 +2402,17 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "東龍洲石刻"); //data65
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("03"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("03"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "這是本地最早有文獻記載的石刻。王崇熙於一八一九年編制的《新安縣志》有「石壁畫龍，" +
+				"在佛堂門，有龍形刻於石側」的記載。此石刻高約1.8米，長約2.4米，為現時香港境內所知最大的石刻。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving on Tung Lung Island");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carving on Tung Lung Island, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "This is the earliest recorded in-situ rock carving in " +
+				"the territory. There was an entry in the 1819 Xinan Gazetteer, compiled by Wang Chong Xi, " +
+				"stating that the impression depicts the image of a dragon. It is also the largest carving " +
+				"ever found in Hong Kong, measuring 1.8m by 2.4m.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.253553");
@@ -2498,27 +2430,18 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "黃竹坑石刻"); //data66
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("28"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("28"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "石刻位於港島黃竹坑一小溪之旁。石上有三組明顯的回旋紋，狀似動物的眼睛。香港石刻多分布於海濱地區。" +
+				"黃竹坑石刻則深入內陸約一公里，但下有小溪流經，仍可算臨近水邊。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carvings at Wong Chuk Hang");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carvings at Wong Chuk Hang, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carvings at Wong Chuk Hang are located beside a " +
+				"stream course at Wong Chuk Hang on Hong Kong Island. Three main groups of carved patterns can be recognised." +
+				" They consist of meandering and spiral designs suggesting stylised animal eyes. It is most unusual " +
+				"that they stand at least a kilometre from the sea, unlike other rock carvings in Hong Kong, although" +
+				" they still overlook 'a small expanse of water', i.e. the stream running below them.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.253314");
@@ -2535,27 +2458,20 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "長洲石刻"); //data67
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("14"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("14"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "一九七〇年，即發現大浪灣石刻的同年，一位地質學家亦發現了長洲石刻。" +
+				"它位於連島沙洲的東南部，即華威酒店對下。石刻上的兩組紋飾均由數條曲線環繞著小凹槽構成。其中一組紋飾在發現時尚未完全暴露，" +
+				"經清理泥土後方展現全貌。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carvings on Cheung Chau");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carvings on Cheung Chau, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Cheung Chau Rock Carvings were reported by a geologist " +
+				"in 1970, the same year when Big Wave Bay Rock Carving was discovered. They are situated at " +
+				"the south-eastern end of the tombolo forming the island, immediately below the Warwick Hotel. " +
+				"They consist of two groups of similar design with several carved lines surrounding small depressions. " +
+				"The second group was not completely exposed when found and could only be fully revealed after removal " +
+				"of soil.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.207988");
@@ -2572,27 +2488,19 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "蒲台石刻"); //data68
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("06"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("06"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "一直以來，漁民都流傳說蒲台上有數組石刻。終於在六十年代，" +
+				"在該島的南端發現了一組石刻。該石刻分左右兩部分，石刻由一條闊七十厘米的石縫分隔。紋飾各異，左邊的一組狀似動物和魚，" +
+				"而右邊的一組則由螺旋紋連結組成。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carvings on Po Toi");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carvings on Po Toi, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "There had long been a local legend among the fisherfolk " +
+				"of the existence of several rock carvings on Po Toi. Finally, groups of carvings were found at " +
+				"the southern part of Po Toi in the 1960's. They are of different motifs and separated by a rock " +
+				"fracture 70cm wide. One group on the left consists of lines resembling stylized animal and fish patterns, " +
+				"while the other on the right is composed of spirals in an inter-locking arrangement.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.161891");
@@ -2609,27 +2517,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "大廟灣刻石"); //data69
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("04"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("04"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "此刻石刻於南宋咸淳甲戌年間，即一二七四年，為香港最早有紀年的刻石，記載鹽官與友到南北佛堂門遊覽的事蹟，" +
+				"以及這處兩所廟宇的歷史。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Inscription at Joss House Bay");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Inscription at Joss House Bay, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The inscription carved on the rock is dated as the cyclical year jiaxu of the Xianchun reign during the Southern Song Dynasty (i.e. the year 1274) and is the oldest dated inscription known in Hong Kong. It records a visit by a salt administration officer and his friend and gives the history of two temples at the north and south of Fat Tong Mun.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.274324");
@@ -2647,27 +2542,24 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "三棟屋村"); //data70
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("10"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("10"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "三棟屋是典型的客家圍村，一九八七年修繕後，成為康樂及文化事務署的博物館，" +
+				"供公眾人士參觀。三棟屋於一七八六年由陳姓客家人建立，陳氏家族於十八世紀中期從廣東移居本港，擇居荃灣，並且填平沿海的土地作耕種之用。" +
+				"三棟屋原先只有三列房舍，由族長陳任盛所建，他的後人先後在村的兩旁及後面加建房子。位於中軸線上的正廳，擺放了陳氏先祖的神位，面向正門，" +
+				"正門石楣上刻有「陳氏家祠」四字。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Sam Tung Uk Village");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Sam Tung Uk Village, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Sam Tung Uk Village is a Hakka walled village restored in 1987 " +
+				"and opened to the public as a museum of the Leisure and Cultural Services Department. It was built " +
+				"by the Chan clan in 1786. The Chan clan moved from Guangdong in the 1750s, and settled in " +
+				"Tsuen Wan, where they reclaimed land along the seashore for cultivation. Chan Yam-shing, " +
+				"a clan leader, first constructed three rows of village houses on the site. His descendants " +
+				"later built annex houses to the sides and at the back of the village house. The family " +
+				"ancestral altar was placed in the main hall lying on the central axis facing the entrance. " +
+				"The four Chinese characters signifying 'Chan' Family Ancestral Hall', were engraved on " +
+				"the granite lintel above the door frame.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.380516");
@@ -2685,27 +2577,33 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "聖士提反書院的書院大樓"); //data71
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("100"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("100"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "聖士提反書院的書院大樓不但是本港仍提供寄宿服務的校舍建築中歷史最悠久的一棟，" +
+				"亦是赤柱拘留營的少數遺址之一。聖士提反書院由聖公會班為蘭會吏長，以及何啟爵士、曹善允博士等多位華人賢達所創立，祈能以教育救國。" +
+				"聖士提反書院最初於一九Ｏ三年在西邊街建校，在一九二四年遷往般咸道。現時的赤柱校園於一九二八年施工，而書院大樓是最先落成的建築物，" +
+				"於一九三Ｏ年三月二十五日開幕。日軍於一九四一年入侵香港，並於同年聖誕節佔領了聖士提反書院，發動「聖士提反書院大屠殺」。" +
+				"日佔時期（一九四一至一九四五年），聖士提反書院連同鄰近的赤柱監獄守衛宿舍被用作赤柱拘留營。戰後，聖士提反書院於一九四七年重開。" +
+				"書院大樓的建築具晚期過渡時期的工藝美術運動風格特色，同時受現代主義風格影響。大樓呈H形，包括東、西兩翼，由中座連接起來。" +
+				"大樓的粗灰批盪、寬闊懸挑的屋簷、拱形門窗和拱形迴廊均是典型的工藝美術風格建築特色。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "School House of St. Stephen's College");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "School House of St. Stephen's College, is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The School House of St. Stephen’s College is not only the " +
+				"oldest surviving school building which still provides boarding services in Hong Kong, but also one " +
+				"of the very few remaining sites of the Stanley Internment Camp.St. Stephen's College was established by " +
+				"Rev. Bishop Banister of the Anglican Church and a number of prominent Chinese such as Sir Ho Kai and " +
+				"Dr Tso Seen-wan, who wished to save China by means of education. It was first opened on Western Street " +
+				"in 1903 and moved to Bonham Road in 1924. Construction of the present Stanley campus started in 1928. " +
+				"Opened on 25 March 1930, the School House was the first building completed under the project." +
+				"The Japanese attacked Hong Kong in 1941 and captured St. Stephen's College on Christmas Day in " +
+				"the same year. They broke into the School House and initiated the 'St. Stephen's College Massacre'. " +
+				"St. Stephen's College, together with the nearby Stanley Prison Warders’ Quarters, were used as the " +
+				"Stanley Internment Camp during the Japanese Occupation (1941 – 1945). After the war, the school " +
+				"was re-opened in 1947.The School House is of late transitional Arts and Crafts style bearing Modernist" +
+				" influence. It is an H-shaped building consisting of an east wing and a west wing connected by a " +
+				"central block. Rough-cast rendering, wide overhanging eaves, arched windows and doorways and" +
+				" arcaded verandahs are typical features of the Arts and Crafts style.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.215745");
@@ -2723,27 +2621,23 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "上窰村"); //data72
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("13"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("13"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "上窰村位於西貢郊野公園內，該村建於一高出地面的平台上，" +
+				"於入口處築有塔樓。村內共有一排八所並列的房舍，由黃姓的客家人於一百五十年前所建。村民因建窰燒造殼灰，" +
+				"作灰泥及肥田料之用而致富，及後由於英泥及造磚行業的競爭，窰燒工業遂告沒落。上窰村於一九八三年修葺後，" +
+				"闢作民俗文物館。館內陳列各種耕種工具及農村傢具，使人如同置身於客家村落之中。村中的殼灰窰亦已修妥，開放給市民參觀。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Sheung Yiu Village ");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Sheung Yiu Village , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Sheung Yiu is a Hakka village situated inside the Sai Kung " +
+				"Country Park. Constructed on a raised platform with a watch tower at its entrance, the village has " +
+				"a row of eight houses and was built by a Hakka family surnamed Wong approximately 150 years ago. " +
+				"The village became prosperous due to its lime kiln whose produce was much sought-after for use " +
+				"in mortar and fertilizer. It began to decline in prosperity when modern bricks and cement came into use. " +
+				"The village after its full restoration in 1983, opened as Sheung Yiu Folk Museum. Furnished with " +
+				"farming implements and village period furniture, the folk museum recreates the atmosphere and " +
+				"environment of a small Hakka village. The original lime kiln has also been restored for public viewing.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.401824");
@@ -2760,27 +2654,23 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "佛頭洲稅關遺址"); //data73
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("18"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("18"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "鑑於香港開埠後鴉片走私活動猖獗，兩廣總督於同治七年（一八六八年）下令，於佛頭洲、" +
+				"長洲及汲水門（馬灣）設置稅關，對鴉片貿易抽取厘金。當新界租借予英國後，這些稅關於光緒二十四年（一八九九年）停止運作。" +
+				"遺址於一九六二年發現。因遺址內先後發現由四闕斷碑組成的一通石碑，上刻︰「德懷交趾國貢賦遙通」，" +
+				"下刻︰「稅廠值理重修」，故被認為是一稅關遺址。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Site of Chinese Customs Station, Fat Tau Chau ");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Site of Chinese Customs Station, Fat Tau Chau , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "In view of the furious opium smuggling, the Viceroy of " +
+				"Guangdong and Guangxi ordered the establishment of three customs stations in 1868 at Fat Tau Chau, " +
+				"Cheung Chau and Kap Shui Mun (Ma Wan) respectively to collect likin on opium trade. " +
+				"These stations ceased to operate in 1899 after the lease of the New Territories to Britain." +
+				"Fat Tau Chau Old Chinese Customs Station was discovered in 1962. The ruin is so regarded as a " +
+				"customs station after the discovery of a stone slab broken into four pieces with inscriptions: 'By " +
+				"the Grace (of the Emperor), tributes are accepted from and customs exchange with Annam, " +
+				"which is far away (from China). Renovated by the Manager of the Customs Station'.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.321495");
@@ -2798,27 +2688,20 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "聖約翰座堂"); //data74
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("60"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("60"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "聖約翰座堂是本港現存歷史最悠久的西式教會建築物，於一八四七年三月十一日" +
+				"由當時的香港總督戴維斯爵士(一八四四至四八年)奠基，並於一八四九年落成啟用。座堂曾於一八七三年局部改建。日佔時期" +
+				"(一九四一至四五年)曾用作日本人會所，座堂因此受到破壞。戰後座堂委員會將建築物重新修復開放。聖約翰座堂於一九九六年被列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "St. John's Cathedral");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "St. John's Cathedral , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "St. John's Cathedral is the oldest surviving Western " +
+				"ecclesiastical building in Hong Kong. The foundation stone was laid by the Governor, " +
+				"Sir John Davis on 11 March 1847 and the construction was completed in 1849. The Cathedral " +
+				"underwent extension in 1873. During the Japanese Occupation, it was converted into a club " +
+				"house for the Japanese and thus suffered damage. The Cathedral was fully repaired after the " +
+				"War and then reopened. It was declared a monument in 1996.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.282743");
@@ -2836,27 +2719,22 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "分流石圓環"); //data75
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("21"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("21"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "這圈未經琢磨的石塊，似是刻意堆疊，形成一組長2.7米、寬1.7米的橢圓形結構。" +
+				"石塊排列有序，正好說明人工砌築的痕蹟。用大塊石頭堆疊成形形色色的結構，是新石器時代晚期及青銅時代早期文化特徵之一，" +
+				"分佈範圍遍及世界各地；分流的石圓環，很可能也屬這類結構。相類的巨石結構，在中國也有發現；香港出土新石器和青銅時代的文物既然十分豐富，" +
+				"石圓環的發現，當非偶然。堆疊石圓環的目的已無法稽考，但大抵與祭祀儀式有關。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Stone Circle at Fan Lau");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Stone Circle at Fan Lau , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "This circular arrangement of unhewn stones appears to be laid out " +
+				"deliberately to form an oval-shaped enclosure, measuring 2.7 m by 1.7m, the careful and orderly layout of the " +
+				"stones points to human agency. It is a reasonable assumption that this is a megalithic structure of a type " +
+				"which became common during the late Neolithic (i.e. New Stone Age) and early Bronze Age and which spread throughout " +
+				"the world. Similar structures are known in China and there is no reason why a stone circle should not occur in " +
+				"Hong Kong which is rich in Neolithic and Bronze Age artefacts. The purpose of the circle is not known, " +
+				"but possibly ritualistic.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.197895");
@@ -2874,27 +2752,18 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "大夫第"); //data76
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("32"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("32"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "這座華麗的府第於清同治四年(一八六五年)由文頌鑾所建。文氏的先祖自十五世紀已在新田定居。" +
+				"大夫第是本港最華麗的傳統建築之一，並以其精巧的建築裝飾而著名。修葺工程由香港賽馬會資助，於一九八八年完成，現已開放供市民參觀。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tai Fu Tai Mansion");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tai Fu Tai Mansion , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "This elegant house was built in the 4th year of Tongzhi " +
+				"(1865) of the Qing Dynasty as a residence by Man Chung-luen whose ancestors had settled in " +
+				"San Tin since the 15th century. The building is considered as one of the most beautifully-embellished " +
+				"traditional Chinese buildings in Hong Kong and is renowned for its fine architectural decorations. " +
+				"Restoration was completed in 1988 with donations from the Hong Kong Jockey Club.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.502566");
@@ -2912,27 +2781,68 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "廈村鄧氏宗祠"); //data77
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("83"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("83"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "鄧氏宗祠又名友恭堂，是廈村鄧族為了紀念鄧洪贄和鄧洪惠兩位祖先開基勤勞之功而興建。" +
+				"據置於宗祠中進的「鼎建贄惠二公祠配享碑」所載，現時的鄧氏宗祠於乾隆己巳年（即一七四九年）立基上樑，並於乾隆庚午年（即一七五〇年）竣工，" +
+				"翌年正式奉主陞座。宗祠曾分別於道光十七年（即一八三七年）和光緒九年（即一八八三年）進行過大規模修葺，祠內具歷史價值的建築構件和" +
+				"文物至今仍保存完好。中進懸有多塊功名牌匾，展示鄧族祖先在清朝取得的顯赫功名。鄧氏宗祠屬三進兩院式的清代民間建築，後院建有廂房兩間，" +
+				"祖先神位供奉在後進明間的木神龕內，莊嚴肅穆。宗祠的主要建築結構是以青磚牆和石柱支撐著木構瓦片天面，樑架上裝有優美精緻的斗栱。" +
+				"宗祠的前中後進和廂房均飾有以花卉圖案裝飾的精美檐板，部分橫樑雕刻了精巧的傳統中式吉祥圖案。鄧氏宗祠是廈村鄧族重要的祭祀和節慶活動場所，" +
+				"每年的春秋二祭和點燈等宗族傳統習俗仍然在宗祠內舉行。此外，宗祠也是舉行廈村十年一屆打醮儀式的重要場地。 " +
+				"鄰接鄧氏宗祠的禮賓樓和友恭學校相信在一九二四年以前已建成。禮賓樓位於宗祠左側，是鄧族招待客人留宿的地方，" +
+				"約於一九五〇年代用作友恭學校的教師宿舍，時至今日，禮賓樓內依舊放置著供奉文昌及武曲的神龕。禮賓樓由兩幢建築物組成，" +
+				"中間以庭院分隔。該樓以青磚建造，牆身支撐著由檁條和椽子構成的金字瓦面屋頂。牆楣以花卉和幾何圖案灰塑裝飾。右堂仍保存著琉璃漏窗，" +
+				"兩側有一副灰塑對聯。位於鄧氏宗祠後面的友恭學校，是為當地孩童提供教育而建。學校最初是一幢三開間的建築物，" +
+				"至一九五二年成為政府資助學校時加以擴建。由於學生增多，鄧氏宗祠的部分地方和禮賓樓也曾用作課室和教師宿舍。友恭學校的校舍以青磚築砌，" +
+				"前面有一露天操場。校舍的主建築有兩組屋脊，綴有吉祥和幾何圖案灰塑。山牆上仍可看到草尾灰塑裝飾。 總括而言，鄧氏宗祠、" +
+				"禮賓樓和友恭學校構成了一組獨特的歷史建築群，見證了廈村鄧氏族人的歷史、宗族活動和傳統教育情況。" +
+				"廈村鄧氏宗祠及其鄰近建築物於二〇〇七年十二月七日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Ancestral Hall, Ha Tsuen");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tang Ancestral Hall, Ha Tsuen , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Tang Ancestral Hall, alias Yau Kung Tong, " +
+				"was constructed by the Ha Tsuen Tang clan to commemorate their two ancestors, Tang Hung Chi " +
+				"and Tang Hung Wai, for establishing the village settlements in Ha Tsuen. According to a stone " +
+				"inscription named 'Dingjian Zhehui Ergongci Peixiangbei' placed in the middle hall, construction " +
+				"of the Tang Ancestral Hall began in the 'jisi' year of the Qianlong reign (1749) and was completed " +
+				"in the 'gengwu' year of the Qianlong reign (1750). The ancestral hall came into use in 1751. " +
+						"The Tang Ancestral Hall underwent two major renovations in the 17th year of the Daoguang reign " +
+						"(1837) and the ninth year of the Guangxu reign(1883) respectively.　Most of the historic " +
+						"building fabric and relics are still preserved in the hall. There are a number of " +
+						"honorary plaques hanging in the middle hall, indicating the glorious history of the Tangs " +
+						"in the Qing imperial government.The magnificent ancestral hall is an example of " +
+						"three-hall-two-courtyard Qing vernacular architecture, having two side chambers built in " +
+						"the second courtyard. The ancestral tablets of the Tangs are placed in a dignified timber " +
+						"altar in the main bay of the rear hall. The building structure was built with green brick walls " +
+						"and stone columns supporting the timber-framed and tiled roof. Fine and delicate brackets are " +
+						"fixed onto the truss system. Exquisite fascia boards with floral patterns are found in the " +
+						"three halls and the side chambers, while some of the beams are elaborately carved with " +
+						"traditional Chinese propitious motifs.The Tang Ancestral Hall has played an important role in " +
+						"religious and ceremonial events of the Tang clan in Ha Tsuen. Traditional clan activities, " +
+						"such as the ancestor worship of the Spring and Autumn Equinox and the Ceremony of Lighting " +
+						"Lanterns, still take place in the hall every year. Moreover, the hall is also an essential " +
+						"venue for holding the rituals of the decennial Dajiao festival at Ha Tsuen.The Guesthouse " +
+						"and the Yau Kung School situated close to the Tang Ancestral Hall are believed to have been " +
+						"built before 1924. Situated to the left of the Tang Ancestral Hall, the Guesthouse was built " +
+						"to provide hospitality for guests of the clan. It was then used as quarters for teachers " +
+						"of Yau Kung School in the 1950s. An altar to Man Cheong (god of literacy) and Mo Kuk (god " +
+						"of martial art) is still placed in the building for sacrificial offerings. The Guesthouse " +
+						"comprises two halls, with an open courtyard in between. It is built of green bricks, with its " +
+						"walls supporting the pitched roofs constructed of timber purlins, rafters and tiles. Wall " +
+						"cornices are decorated with mouldings with floral motifs. Glazed ceramic grilles are preserved " +
+						"in the hall on the right, flanked by a pair of plaster couplets. Situated behind the Tang " +
+						"Ancestral Hall, the Yau Kung School was built for provision of education to the children " +
+						"in the area. The school began as a three-bay structure, which was extended in 1952 when it " +
+						"became a government-aided school. Due to the increase in student numbers, part of the Tang " +
+						"Ancestral Hall and the Guesthouse was once used as classrooms and dormitories for teachers. " +
+						"The school is constructed of green bricks with an open playground in front. The main " +
+						"building has two sets of ridges decorated with mouldings of auspicious and geometric motifs. " +
+						"Plaster mouldings of curling grass can still be seen on the gable frieze. " +
+						"Together, the Tang Ancestral Hall, the Guesthouse and Yau Kung School form a unique historic " +
+						"building compound which reminds people of the history, folk culture and education of the " +
+						"Tangs in the area. The Tang Ancestral Hall and its adjoining buildings were declared as " +
+						"monuments on 7 December 2007.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.447603");
@@ -2950,28 +2860,25 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("73"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("73"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "鄧氏宗祠是屏山鄧族的祖祠，由五世祖馮遜公興建，至今已有七百多年歷史。" +
+				"鄧氏宗祠是三進兩院式的宏偉建築，為香港同類古建築的表表者。建築物三進大廳上的樑架雕刻精美，刻有各種動植物和吉祥圖案，" +
+				"屋脊飾有石灣鰲魚和麒麟。後進祖龕供奉鄧族先祖神位。宗祠現仍用作屏山鄧族祭祖、慶祝節日、舉行各種儀式及父老子孫聚會等用途。" +
+				"鄧氏宗祠於二〇〇一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Ancestral Hall, Ping Shan");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tang Ancestral Hall, Ping Shan , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Tang Ancestral Hall, was constructed by Tang Fung-shun," +
+				" the fifth generation ancestor of Tang Clan about 700 years ago. The building is the main ancestral " +
+				"hall of the Tang clan of Ping Shan. It is a magnificent three-hall structure with two internal " +
+				"courtyards and is one of the finest examples of its kind in Hong Kong. The wooden brackets and " +
+				"beams of the three halls are elegantly carved with auspicious Chinese motifs. The main ridges " +
+				"and roofs are decorated with fine Shiwan dragon-fish and pottery unicorns. Ancestral tablets " +
+				"re located at the altar at the rear hall. This ancestral hall is used regularly for worship and " +
+				"celebrations of traditional festivals and ceremonies, as well as a meeting place for the Tang clan " +
+				"of Ping Shan.his hall was declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.438282");
@@ -2989,27 +2896,25 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "松嶺鄧公祠"); //data79
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("65"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("65"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "位於粉嶺龍山西北面山麓的松嶺鄧公祠是本港最重要及規模最宏大的祠堂之一。" +
+				"該祠堂約於一五二五年為紀念開基祖鄧松嶺公(一三〇二至一三八七年)而建，乃龍躍頭鄧族的宗祠。建築物內外均飾有以吉祥圖案為題材的精緻木刻、" +
+				"彩塑、陶塑及壁畫，充分反映了昔日工匠的精湛技藝。松嶺鄧公祠的全面維修工程得香港賽馬會及政府撥款，於一九九一年展開。" +
+				"工程在古物古蹟辦事處及建築署古蹟復修組監督下，於一九九二年中完成。祠堂於一九九七年被列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Chung Ling Ancestral Hall");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tang Chung Ling Ancestral Hall , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Situated to the northwest at the foot of Lung Shan, " +
+				"Fanling, Tang Chung Ling Ancestral Hall is one of the largest ancestral halls in Hong Kong. Evidence " +
+				"suggest that the original building dates from 1525 to honour the founding ancestor, Tang Chung Ling " +
+				"(1302-1387) and has since then been the main ancestral hall of the Lung Yeuk Tau lineage. " +
+				"The whole building is exquisitely decorated with fine wood carvings, polychrome plaster mouldings, " +
+				"ceramic sculptures and murals of auspicious Chinese motifs, fully reflecting the superb " +
+				"craftsmanship of the olden days.A major restoration was carried out in 1991 with a generous " +
+				"donation from the Hong Kong Jockey Club together with a modest contribution from the Government. " +
+				"The project was completed in mid 1992 under the supervision of the Antiquities and Monuments " +
+				"Office and the Architectural Services Department. It was declared a monument in 1997.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.497858");
@@ -3027,27 +2932,32 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "廣瑜鄧公祠"); //data80
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("97"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("97"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "廣瑜鄧公祠，又名來成堂，位於錦田水頭。祠堂建於清朝康熙四十年（一七Ｏ一年），" +
+				"乃鄧氏第二十一世祖鄧像六（又名鄧直見）為紀念第十七世祖鄧廣瑜（又名鄧松）而興建。據祠堂的石碑記載，" +
+				"鄧氏族人曾於清朝乾隆四十七年（一七八二年）籌募經費重修祠堂。廣瑜鄧公祠為清朝民間建築，屬兩進一院三開間布局。天井兩旁為廂房，" +
+				"後進正廳設有神龕，以供奉鄧氏歷代祖先。建築物牆身以青磚築砌而成，屋面蓋以傳統的木結構金字瓦頂。" +
+				"祠堂正面外牆獨特的灰塑裝飾和祠內刻工精細的木雕，至今仍然保留下來。過往，廣瑜鄧公祠曾先後改建為店舖和工廠。" +
+				"祠堂的全面修復工程於一九九六年竣工，工程由古物古蹟辦事處及建築署監督。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Kwong U Ancestral Hall");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tang Kwong U Ancestral Hall , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tang Kwong U Ancestral Hall, also known as Loi Shing Tong, " +
+				"is situated in Shui Tau, Kam Tin. It was built in the 40th year of the Kangxi reign (1701) during " +
+				"the Qing dynasty by Tang Tseung Luk, alias Tang Chik Kin, the 21st generation of the Tang clan, " +
+				"in commemoration of the 17th generation ancestor of the clan, Tang Kwong U, alias Tang Chung Fung. " +
+				"According to a stone tablet in the Ancestral Hall, it underwent renovation with donations from the " +
+				"Tang clansmen in the 47th year of the Qianlong reign (1782) during the Qing dynasty." +
+				"The Ancestral Hall is an example of Qing vernacular architecture with a two- hall-one-courtyard " +
+				"layout of three bays. There is a side chamber on both sides of the open courtyard. An ancestral " +
+				"altar is placed in the main bay of the rear hall for the worship of the past generations of the " +
+				"Tang ancestors. The walls of the building are built of green bricks, and the tiled pitched roof " +
+				"is constructed with traditional timber structure. The unique plaster mouldings on the facade and " +
+				"the elaborate wood carvings inside the building are still preserved.Tang Kwong U Ancestral Hall " +
+				"was converted into a shop and later a factory in the past. Full restoration to the ancestral " +
+				"hall was completed in 1996 under the supervision of the Antiquities and Monuments Office and " +
+				"the Architectural Services Department.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.446354");
@@ -3064,27 +2974,25 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "燈籠洲燈塔"); //data81
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("72"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("72"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "燈籠洲燈塔於二〇〇〇年十二月二十九日列為法定古蹟。燈籠洲燈塔位於" +
+				"香港島以西一個小島---燈籠洲之上，亦稱為汲星燈塔。是香港現存五座戰前燈塔的其中一座。燈塔高十一點八米、由鋼鑄骨架建成，" +
+				"塔頂髹上白色，於一九一二年四月二十九日啟用。鋼架及照明儀器均為英國製造。以往的燈塔管理員居於燈塔旁的磚構建築，內設睡房、" +
+				"廚房、廁所及儲物室各一。由於島上並沒有井水或食水供應，因此只能從屋頂收集雨水，再將雨水引入地下儲水箱備用。燈塔現時已改為自動操作，" +
+				"無須派員駐守。該座燈塔現由海事處管理。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Lung Chau Lighthouse");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tang Lung Chau Lighthouse , is situated adjacent to Tang Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tang Lung Chau Lighthouse was declared a monument on " +
+				"29 December 2000. It is situated on Tang Lung Chau, a small island to the west of Hong Kong Island, " +
+				"and is also commonly known as Kap Sing Lighthouse. It was put into service on 29 April 1912 and is one " +
+				"of the five surviving pre-war lighthouses in Hong Kong. It is a skeletal steel tower of 11.8 metres " +
+				"high with a white lantern on top. The steel tower and light apparatus were obtained from England. " +
+				"The adjoining brick light keeper's house has a bedroom, a kitchen, a latrine and a store room. " +
+				"Rainwater was collected from the roof and diverted into an underground tank for use as there was " +
+				"no spring or fresh water supply on the island. The lighthouse is now unmanned and automated. " +
+				"It is now under the management of Marine Department.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.339676");
@@ -3101,27 +3009,20 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "香港大學孔慶熒樓外部"); //data82
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("57"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("57"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "孔慶熒樓是由遮打爵士、佐敦教授及其他人士捐款建成，原用作學生會之用，" +
+				"於一九一九年二月由當時之總督司徒拔爵士正式揭幕。第二次世界大戰後，建築物曾暫作行政大樓之用，其後於一九七四年改用作高級職員休息室。" +
+				"香港大學為感謝孔慶熒先生家人慷慨捐助，於一九八六年正式將建築物命名為孔慶熒樓。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of Hung Hing Ying Building, the University of Hong Kong");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Exterior of Hung Hing Ying Building, the University of Hong Kong, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The building which was built with the financial assistance " +
+				"from Sir Paul Chater, Professor G. P. Jordan and others, was originally designed to house the student " +
+				"union. It was officially opened by the Governor, Sir Reginald Stubbs in February 1919. The building " +
+				"was temporarily used for administrative purpose after World War II but was later converted into the " +
+				"Senior Common Room in 1974. The building was named in honour of Mr. Hung Hing-ying in 1986 in " +
+				"recognition of his family's donations to the University.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.285602");
@@ -3139,28 +3040,20 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("58"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("58"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "鄧志昂樓由鄧肇堅爵士父親鄧志昂先生於一九二九年捐助建成，作為中文學院之用，" +
+				"建築物因此以他命名。鄧志昂樓為一座樓高三層之平頂建築，外牆鋪以洗水批盪。大樓於一九三一年九月二十八日由當時之總督貝璐爵士揭幕。" +
+				"大樓現為亞洲研究中心。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of Tang Chi Ngong Building, the University of Hong Kong");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Exterior of Tang Chi Ngong Building, the University of Hong Kong, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The building which was constructed in 1929 with a generous " +
+				"donation from Mr. Tang Chi-ngong, father of Sir Shiu-kin Tang, was opened as a School of Chinese " +
+				"in accordance with his wishes. It is a three-storey flat-roofed building with Shanghai plaster " +
+				"surfacing and was officially opened by Sir William Peel, the Governor of Hong Kong on " +
+				"28 September 1931. It now houses the Centre of Asian Studies.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.283974");
@@ -3179,28 +3072,25 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("56"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("56"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "聳立於薄扶林一山頭上的大學堂是一座揉合了都鐸及哥德式建築風格的華麗建築。" +
+				"大學堂約於一八六一年由蘇格蘭商人杜格拉斯．林柏建成，作為其公司總部及寓所之用，建築物亦因此命名為杜格拉斯堡。" +
+				"法國傳道會其後於一八九四年購入杜格拉斯堡，還將它易名為拿撒勒樓，並進行大規模重建，其中還加建了一所印刷工場。" +
+				"法國傳道會於一九五三年撤離拿撒勒樓，香港大學翌年將之購入，一九五六年正式用作大學男生宿舍及命名為大學堂。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of University Hall, the University of Hong Kong");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Exterior of University Hall, the University of Hong Kong, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "University Hall which is situated on top of a hill at " +
+				"Pokfulam is a charming edifice in a blend of Tudor and Gothic architectural styles. It " +
+				"was built in about 1861 by a Scottish business, Douglas Lapraik as his headquarters and " +
+				"residence and named after him as 'Douglas Castle'. The French Mission later bought the Castle " +
+						"in 1894 and renamed it Nazareth House. Considerable alterations and extensions to the " +
+						"building were carried out by the French Mission, and a printing house was added. In 1953, " +
+						"the French Mission gave up the building which was then acquired by the University of " +
+						"Hong Kong in 1954. Since 1956 the building has been used by the University as a hall " +
+						"of residence for male students and renamed University Hall.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.263879");
@@ -3219,28 +3109,23 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("49"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("49"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "梅夫人婦女會建於一九一四年，一九一六年九月十二日正式落成啟用。" +
+				"婦女會初時只為單身的歐籍職業女性提供宿舍。但自一九八五年起，住宿的女性已無分任何國籍。主樓除宿舍外，還設有圖書館、" +
+				"閱讀室、課室等。主樓經歷多次改動，宿舍房間已增到二十八個。日佔期間，建築物為日軍所佔用，樓內的傢俬及圖書館內的書籍全失。" +
+				"二次大戰後，主樓於一九四六年重開使用，為職業婦女提供住宿地方。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of the Main Building, the Helena May");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Exterior of the Main Building, the Helena May, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Helena May was built in 1914 and officially opened on " +
+				"12 September 1916. It was originally used as a hostel for single working women of European origin. " +
+				"However, since 1985 women of all nationalities have been accepted as residents. Apart from quarters, " +
+				"the Main Building also comprises a library, a reading room and some classrooms. After several " +
+				"renovations, the Main Building was upgraded to provide 28 bedrooms. During the Japanese " +
+				"Occupation Period, all the furniture in the Main Building and the books in the library were lost. " +
+				"After World War II, the building was reopened in 1946 to provide accommodation for working women.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.277749");
@@ -3258,28 +3143,19 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("27"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("27"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "香港大學本部大樓是該校最古老的建築，一九一〇年動工興建，一九一二年落成。" +
+				"大樓宏偉壯觀，以富有文藝復興風格的花崗石柱支撐，頂部矗立著鐘樓，四角則有塔樓。大樓內有庭院四個，其中兩個植有高近九米的棕櫚樹。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of the Main Building, the University of Hong Kong");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Exterior of the Main Building, the University of Hong Kong, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Main Building of the University of Hong Kong is the oldest " +
+				"of the University's structures. Construction of the building started in 1910 and was completed in 1912. " +
+				"It is an imposing institutional structure, supported by granite colonnades in Renaissance style and " +
+				"surmounted by a tall clock tower and four turrets. There are four internal courtyards, two of which " +
+				"have palm trees over 9m tall.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.284282");
@@ -3297,28 +3173,21 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("26"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("26"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "舊最高法院坐落於填海區，屋基由數以百計的杉樹樁組成，於一九一二年一月十五日由" +
+				"當時總督盧押爵士宣告正式啟用。這座兩層高花崗石大樓，採用新古典主義派的建築風格，地面以愛奧尼亞式石柱環抱。最具特色的是中央" +
+				"部分的三角形山牆，山牆頂部矗立著一座希臘特彌斯女神蒙眼雕像，用以代表公義。建築物於一九八五至二〇一一年期間用作立法會大樓。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of the Old Supreme Court");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Exterior of the Old Supreme Court, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Old Supreme Court, which housed the Legislative Council " +
+				"Chambers from 1985 to 2011, was built on reclaimed land using hundreds of Chinese fir-tree piles as " +
+				"foundations. The building was opened on 15 January 1912 by the Governor, Sir Frederick Lugard. " +
+				"The two-storey granite building is neo-classical in style supported by tall Ionic columns. " +
+				"The most outstanding feature of the building is the pediment in the centre portion which is " +
+				"surmounted by a blind-folded statue of Justice, represented by the Greek goddess Themis.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.28183");
@@ -3337,28 +3206,25 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("15"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("15"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/15.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "銅鑼灣天后廟約於十八世紀初由戴氏家族所建。戴氏原為廣東客家人，" +
+				"初時在九龍舊啟德機場附近一條今已湮沒的村落定居。戴氏常到銅鑼灣岸邊割草，相傳其中一些族人在岸邊拾得一具神像，並為其立祠供奉。" +
+				"由於到來上香的漁民日漸眾多，遂籌募經費，興建一座正式的天后廟。銅鑼灣天后廟是本港眾多供奉天后的廟宇之一，雖曾數度修繕，" +
+				"但大致仍維持原狀，是同類廟宇建築的佳作。該廟現時仍由戴氏家族管理。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_15.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tin Hau Temple, Causeway Bay");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tin Hau Temple, Causeway Bay, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Tin Hau Temple in Causeway Bay was built by the " +
+				"Tai family probably in the early 18th century. The Tai family are Hakkas from Guangdong who " +
+				"first settled in Kowloon in a village now lost beneath the former Kai Tak Airport. The family " +
+				"used to go to Causeway Bay to gather grass and, according to legends, some members of the family " +
+				"found a statue of Tin Hau in the rocks near the shore. They then erected a shelter for it and, " +
+				"as the shrine became popular with the boat people who made donations, a proper temple building was " +
+				"subsequently constructed.This Temple is one of the many dedicated to Tin Hau, goddess of the sea, " +
+				"and is a fine example of temple architecture of the period, still largely in its original form despite " +
+				"subsequent renovations. The temple is still under the management of the Tai family.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.284093");
@@ -3376,28 +3242,28 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("77"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("77"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/77.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "天后宮坐落於粉嶺龍躍頭的松嶺鄧公祠及老圍之間，是當地的主要廟宇，其始建年份已難以稽考" +
+				"天后宮為傳統兩進式建築，內以天井分隔。廟宇正面飾有精緻的灰塑及壁畫，寓意吉祥。正殿則供奉天后及其侍神千里眼和順風耳。" +
+				"後進東面偏殿的兩個銅鐘，是廟內現存最古老的文物。其中一個古鐘鑄於一六九五年，乃鄧氏族人為子投契天后的許願酬神之物；" +
+				"另一古鐘則於一七〇〇年鑄造，為村中子弟出門往省城應試，祈求路上平安的酬神之物。天后宮於二〇〇二年十一月十五日被列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_77.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tin Hau Temple, Lung Yeuk Tau");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tin Hau Temple, Lung Yeuk Tau, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Situated between the Tang Chung Ling Ancestral Hall " +
+				"and Lo Wai, Lung Yeuk Tau, Fanling, the Tin Hau Temple is the main temple in the area, and the " +
+				"construction year of which is not known.This Temple is a traditional two-hall building with a " +
+				"central courtyard. The facade of the temple is exquisitely decorated with plaster mouldings " +
+				"and murals of auspicious motifs. The main hall of the temple is devoted to the worship of " +
+				"Tin Hau and her guards, Chin Lei Ngan (who is believed to see things a thousand " +
+				"li [Chinese miles] away) and Shun Fung Yi (whose ears can hear sounds as far away as from heaven). " +
+				"The oldest relics surviving in the temple are two cast iron bells which are kept in the east " +
+				"chamber of the rear hall. One of the bells was cast in 1695 as a gift from the Tang clan to thank " +
+				"Tin Hau after having their sons adopted by her. The other bell was cast in 1700 as an offering to " +
+				"Tin Hau so that the young men of the clan could be blessed during their journey to the city for " +
+				"taking the provincial examinations. The temple was declared a monument on 15 November 2002.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.50098");
@@ -3415,28 +3281,26 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("75"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("75"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/75.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "聚星樓是香港現存唯一的古塔。據屏山鄧氏族譜所載，聚星樓由鄧族第七世祖彥通公所興建，" +
+				"已有超過六百年的歷史。這座六角形的古塔以青磚砌成，約十三公尺高。塔分三層，上層供奉魁星。聚星樓是為了鎮水災及改善地方風水而興建。" +
+				"而聚星樓與青山風水遙相配合，亦可護佑族中子弟在科舉中考取功名。事實上，鄧氏歷代人材輩出，士人及當官者不計其數。" +
+				"聚星樓於二〇〇一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_75.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tsui Sing Lau Pagoda");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tsui Sing Lau Pagoda, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tsui Sing Lau Pagoda (Pagoda of Gathering Stars) is the only " +
+				"surviving ancient pagoda in Hong Kong. According to the genealogy of the Tang clan of Ping Shan, " +
+				"the pagoda was built by Tang Yin-tung, the seventh generation ancestor, more than 600 years ago. " +
+				"This hexagonal-shaped pagoda is a three-storey green-brick structure about thirteen metres high. " +
+				"A statue of Fui Shing (Champion Star) is worshipped on the upper floor. The pagoda was built to " +
+				"improve fung shui of the locality in order to prevent flooding disasters to the village. Furthermore, " +
+				"it was believed that its auspicious location, which is in alignment with Castle Peak, would ensure " +
+				"success for clan members in the Imperial Civil Service Examinations. In fact, the Tang clan of " +
+				"Ping Shan has produced numerous scholars and officials.Tsui Sing Lau Pagoda was declared a monument " +
+				"on 14 December 2001");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.4491");
@@ -3454,28 +3318,22 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("22"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("22"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/07.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "根據《廣東通志》記載，嘉慶二十二年(一八一七年)曾在大嶼山東涌石獅山腳建造兩座炮台。" +
+				"一九八〇年，東涌碼頭附近臨海的山坡上發現炮台遺蹟。清除叢生雜草後，顯露了一道曲尺形的圍牆，牆角有一處平台，可能是擺放大炮所用。" +
+				"若如《廣東通志》所載，該地建有兩座炮台，這一遺蹟無疑是其中一座。小炮台修復工作已完成，不過仍待深入研究。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_07.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tung Chung Battery");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tung Chung Battery, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "According to the Guangdong Annals, two military forts were " +
+				"built in the 22nd year of Jiaqing reign (1817) at the foot of the 'Rocky Lion Hill' at Tung Chung, " +
+				"Lantau Island. In 1980, the remains of a battery were discovered on a hill slope facing the sea near " +
+				"Tung Chung Pier. After clearing the dense undergrowth, an L-shaped wall with a platform at the corner, " +
+				"probably for gun emplacements, was revealed. There is little doubt that this ruin is one of the two " +
+				"forts built in 1817 as mentioned in the Guangdong Annals. Although some restoration has been " +
+				"carried out, the battery remains to be studied in greater detail.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.287806");
@@ -3494,28 +3352,20 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("07"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("07"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "東涌炮台在清代稱為東涌所城，為大鵬右營的水師總部。炮台入口之花崗石額刻有道光十二年(一八三二年)字樣，" +
+				"當為建造年代。自新界在一八九八年租借給英國，清兵自炮台撤退後，炮台先用作警署，後用作華英中學校舍、東涌鄉事委員會及東涌公立學校。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tung Chung Fort");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tung Chung Fort, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tung Chung Fort, referred to in the Qing Dynasty as the " +
+				"Tung Chung Suocheng (Tung Chung Battalion), was the naval headquarters of the Right Battalion of " +
+				"Dapeng. The carved granite slab above the entrance gives the date of the Fort as 1832. In 1898 " +
+				"when the New Territories was leased to Britain, the Fort was evacuated by the Qing authorities, " +
+				"then occupied, first as a police station, and then by Wa Ying College, the Rural Committee Office " +
+				"and the Public Primary School of Tung Chung.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.278712");
@@ -3534,28 +3384,29 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("09"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("09"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/09.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "東龍洲炮台位於東龍洲東北面，俯瞰佛堂門海峽。據《新安縣志》記載，" +
+				"東龍洲炮台是為了防禦海盜而於康熙年間(一六六二至一七二二年)興建。但亦有資料記載，炮台為兩廣總督楊琳於任內(一七一九至一七二四年)" +
+				"下令建造。炮台呈長方形，外牆長33.5米，闊22.5米，圍牆高度約為三米，入口設於北牆。炮台有營房十五所及大炮八門。炮台建成後，" +
+				"一直駐有守軍，及至十九世紀初，海盜日益猖獗，而炮台位於孤島上，補給和支援困難，遂在一八一Ｏ年被九龍炮台取代。炮台修繕工程於" +
+				"一九七九至八二年期間進行。當進行修繕工程時，古物古蹟辦事處在義工協助下，在炮台內部進行有系統的考古發掘工作，出土器物數量甚豐。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_09.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tung Lung Fort");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tung Lung Fort, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Located at the north eastern tip of Tung Lung Chau, " +
+				"Tung Lung Fort was built in the reign of Kangxi (1662-1722) to guard against pirates according " +
+				"to the Xinan Gazetteer. Another historical document describes it as being built by order of Yang Lin, " +
+				"Viceroy of Guangdong and Guangxi from 1719 to 1724.Measured 33.5m by 22.5m, the rectangular fort " +
+				"was enclosed by wall of 3m high with its main entrance at north wall. It consisted of fifteen " +
+				"guardhouses and was armed with eight cannons. A small detachment was stationed at the fort until " +
+				"the beginning of the 19th century, when it proved difficult to cope with a marked increase in piracy. " +
+				"Because of the difficulty in keeping this remote fort supplied, it was replaced by Kowloon Fort in 1810." +
+				"Repairs and partial restoration were then carried out to the fort between 1979 and 1982. " +
+				"While the restoration work was in progress, a systematic archaeological excavation of the " +
+				"interior of the fort was conducted by the Antiquities and Monuments Office with the " +
+				"assistance of volunteers. A large quantity of artefacts was unearthed.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.255618");
