@@ -950,11 +950,12 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070019;
+        public static final int abc_search_url_text_holo=0x7f07001a;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
         public static final int black=0x7f070016;
+        public static final int blue=0x7f070018;
         public static final int common_action_bar_splitter=0x7f07000c;
         /**  Sign-in Button Colors 
          */
@@ -967,8 +968,8 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f070009;
         public static final int common_signin_btn_light_text_focused=0x7f07000a;
         public static final int common_signin_btn_light_text_pressed=0x7f070008;
-        public static final int common_signin_btn_text_dark=0x7f07001a;
-        public static final int common_signin_btn_text_light=0x7f07001b;
+        public static final int common_signin_btn_text_dark=0x7f07001b;
+        public static final int common_signin_btn_text_light=0x7f07001c;
         public static final int gray=0x7f070017;
         public static final int lightblue=0x7f070015;
         public static final int linen=0x7f070013;
@@ -978,7 +979,7 @@ containing a value of this type.
         public static final int list_item_title=0x7f070010;
         public static final int list_setting_divider=0x7f070014;
         public static final int magenta=0x7f070011;
-        public static final int mytheme_color=0x7f070018;
+        public static final int mytheme_color=0x7f070019;
         public static final int white=0x7f070012;
     }
     public static final class dimen {
@@ -1073,6 +1074,7 @@ containing a value of this type.
          */
         public static final int activity_horizontal_margin=0x7f080011;
         public static final int activity_vertical_margin=0x7f080012;
+        public static final int list_item_bottom_padding=0x7f080013;
     }
     public static final class drawable {
         public static final int abc_ab_bottom_solid_dark_holo=0x7f020000;
@@ -1289,7 +1291,7 @@ containing a value of this type.
         public static final int imgPlace=0x7f0500a6;
         public static final int imgPlaceThumbnail=0x7f0500ca;
         public static final int imgQRCode=0x7f0500bc;
-        public static final int imgRightArrow=0x7f0500cd;
+        public static final int imgRightArrow=0x7f0500cc;
         public static final int imgSplash=0x7f05005e;
         public static final int item_clear_disc_cache=0x7f0500d4;
         public static final int item_clear_memory_cache=0x7f0500d3;
@@ -1382,14 +1384,14 @@ containing a value of this type.
         public static final int tvChiDS=0x7f050042;
         public static final int tvChiWebsite=0x7f050047;
         public static final int tvContactTitle=0x7f05006f;
-        public static final int tvCount=0x7f0500cc;
+        public static final int tvCount=0x7f0500cb;
         public static final int tvCrouton=0x7f05004d;
         public static final int tvCroutonCopyright=0x7f05004e;
         public static final int tvDataset=0x7f050040;
         public static final int tvDeptHeritage=0x7f050074;
         public static final int tvDeptMonument=0x7f050087;
         public static final int tvDescription=0x7f0500b3;
-        public static final int tvDistance=0x7f0500cb;
+        public static final int tvDistance=0x7f0500cf;
         public static final int tvEmail=0x7f0500b9;
         public static final int tvEngDS=0x7f050044;
         public static final int tvEngWebsite=0x7f050049;
@@ -1410,8 +1412,8 @@ containing a value of this type.
         public static final int tvInstruction=0x7f0500a3;
         public static final int tvLabelMap=0x7f050083;
         public static final int tvLabelMap1=0x7f050099;
-        public static final int tvLat=0x7f0500ce;
-        public static final int tvLng=0x7f0500cf;
+        public static final int tvLat=0x7f0500cd;
+        public static final int tvLng=0x7f0500ce;
         public static final int tvLocation=0x7f0500a9;
         public static final int tvMonuAddress=0x7f05008b;
         public static final int tvMonuEmail=0x7f050097;
