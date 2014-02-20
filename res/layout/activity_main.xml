@@ -8,11 +8,8 @@
       android:id="@+id/frame_container"
       android:layout_width="match_parent"
       android:layout_height="match_parent" >
-
-
   </FrameLayout>
 
-  <!--          android:listSelector="@drawable/list_selector"  -->
   <!--  Listview to display slider menu -->
     <ListView
         android:id="@+id/list_slidermenu"

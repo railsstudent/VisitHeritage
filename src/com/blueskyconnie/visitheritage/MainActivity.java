@@ -37,9 +37,9 @@ public class MainActivity extends ActionBarActivity {
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
 	private ImageLoader imageLoader = ImageLoader.getInstance();
-	private String appPath =  "";
-	private String appUrl =  "";
-	
+	private String appPath = "";
+	private String appUrl = "";
+
 	// nav drawer title
 	private CharSequence mDrawerTitle;
 
@@ -51,10 +51,9 @@ public class MainActivity extends ActionBarActivity {
 
 	private List<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
-	
+
 	private VisitHeritageState state;
-	
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -105,32 +104,29 @@ public class MainActivity extends ActionBarActivity {
 			}
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		
+
 		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
-		 if (savedInstanceState == null) {
-			 // on first time display home screen
-			 getSupportFragmentManager()
-			 	.beginTransaction()
-			 	.replace(R.id.frame_container, new HomeFragment(), Constants.HOME_TAG)
-			 	.commit();
-		 }
-		 
-		 state = new VisitHeritageState(this);
-		 
- 		 String packageName = getPackageName();
-		 //String packageName = "com.blueskyconnie.heritagefiesta";
-		 appPath = "market://details?id=" + packageName;
-		 appUrl = "http://play.google.com/store/apps/details?id=" + packageName;
+		if (savedInstanceState == null) {
+			// on first time display home screen
+			getSupportFragmentManager()
+					.beginTransaction()
+					.replace(R.id.frame_container, new HomeFragment(),
+							Constants.HOME_TAG).commit();
+		}
+
+		state = new VisitHeritageState(this);
+		appPath = "market://details?id=" + getPackageName();
+		appUrl = "http://play.google.com/store/apps/details?id=" + getPackageName();
 
 		this.mDrawerLayout.openDrawer(Gravity.LEFT);
 	}
 
-	
 	/**
 	 * Slide menu item click listener
 	 * */
-	private class SlideMenuClickListener implements ListView.OnItemClickListener {
+	private class SlideMenuClickListener implements
+			ListView.OnItemClickListener {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
@@ -138,120 +134,122 @@ public class MainActivity extends ActionBarActivity {
 			displayView(position);
 		}
 	}
-	
+
 	private void displayView(int position) {
-		 // update the main content by replacing fragments
-		 Fragment fragment = null;
-		 String tagname = "";
-		
-		 switch (position) {
-		 	case 0:
-			    fragment = new ChooseAreaFragment();
-			    tagname = Constants.CHOOSE_AREA_TAG;
-			    break;
-		 	case 1:
-  			    fragment = new AroundMeFragment();
-			    tagname = Constants.AROUND_ME_TAG;
-			    break;
-		 	case 2:
-		 		fragment = new FavoriteFragment();
-		 		tagname = Constants.FAVORITE_TAG;
-		 		break;
-			case 3:
-				 // Notes To Visitor
-				 fragment = new VisitorFragment();
-				 tagname = Constants.VISITOR_TAG;
-				 break;
-			case 4:
-				 // contact us
-				 fragment = new ContactUsFragment();
-				 tagname = Constants.CONTACT_TAG;
-				 break;
-			case 5:
-				 // rate my app 
-				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(appPath));
-				Log.i(TAG, "Rate My App path - " + appPath);
-				 startActivity(intent);
-				 break;
-			default:
-				break;
-		 }
-	
-		 if (fragment != null) {
-			 FragmentManager fragmentManager = getSupportFragmentManager();
-			 
-			 // clear all fragments in backstack 
-			 Fragment currentFragment = fragmentManager.findFragmentById(R.id.frame_container);
-			 currentFragment.getFragmentManager().popBackStack(null,
-			 			FragmentManager.POP_BACK_STACK_INCLUSIVE);
-			 
-			 fragmentManager.beginTransaction()
-				 .replace(R.id.frame_container, fragment, tagname)
-				 .commit();
-		
-			 // update selected item and title, then close the drawer
-			 mDrawerList.setItemChecked(position, true);
-			 mDrawerList.setSelection(position);
-			 setTitle(navMenuTitles[position]);
-			 mDrawerLayout.closeDrawer(mDrawerList);
+		// update the main content by replacing fragments
+		Fragment fragment = null;
+		String tagname = "";
+
+		switch (position) {
+		case 0:
+			fragment = new ChooseAreaFragment();
+			tagname = Constants.CHOOSE_AREA_TAG;
+			break;
+		case 1:
+			fragment = new AroundMeFragment();
+			tagname = Constants.AROUND_ME_TAG;
+			break;
+		case 2:
+			fragment = new FavoriteFragment();
+			tagname = Constants.FAVORITE_TAG;
+			break;
+		case 3:
+			// Notes To Visitor
+			fragment = new VisitorFragment();
+			tagname = Constants.VISITOR_TAG;
+			break;
+		case 4:
+			// contact us
+			fragment = new ContactUsFragment();
+			tagname = Constants.CONTACT_TAG;
+			break;
+		case 5:
+			// rate my app
+			Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(appPath));
+			Log.i(TAG, "Rate My App path - " + appPath);
+			startActivity(intent);
+			break;
+		default:
+			break;
+		}
+
+		if (fragment != null) {
+			FragmentManager fragmentManager = getSupportFragmentManager();
+
+			// clear all fragments in backstack
+			Fragment currentFragment = fragmentManager
+					.findFragmentById(R.id.frame_container);
+			currentFragment.getFragmentManager().popBackStack(null,
+					FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+			fragmentManager.beginTransaction()
+					.replace(R.id.frame_container, fragment, tagname).commit();
+
+			// update selected item and title, then close the drawer
+			mDrawerList.setItemChecked(position, true);
+			mDrawerList.setSelection(position);
+			setTitle(navMenuTitles[position]);
+			mDrawerLayout.closeDrawer(mDrawerList);
 		} else {
-			 // error in creating fragment
-			 Log.e(TAG, "Error in creating fragment");
-		 }
+			// error in creating fragment
+			Log.e(TAG, "Error in creating fragment");
+		}
 	}
 
-	 @Override
-	 public boolean onCreateOptionsMenu(Menu menu) {
-		 getMenuInflater().inflate(R.menu.main, menu);
-		 return true;
-	 }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// toggle nav drawer on selecting action bar app icon/title
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
 			return true;
-		} 
-		
+		}
+
 		// Handle action bar actions click
 		switch (item.getItemId()) {
-			case R.id.item_clear_disc_cache:
-				imageLoader.clearDiscCache();
-				Log.i(TAG, "Clear memory from disc");
-				return true;
-			case R.id.item_clear_memory_cache:
-				imageLoader.clearMemoryCache();
-				Log.i(TAG, "Clear memory from memory");
-				return true;
-			case R.id.item_share:
-				Log.i(TAG, "Tell a friend about application");
-				createShareIntent();
-				return true;
+		case R.id.item_clear_disc_cache:
+			imageLoader.clearDiscCache();
+			Log.i(TAG, "Clear memory from disc");
+			return true;
+		case R.id.item_clear_memory_cache:
+			imageLoader.clearMemoryCache();
+			Log.i(TAG, "Clear memory from memory");
+			return true;
+		case R.id.item_share:
+			Log.i(TAG, "Tell a friend about application");
+			createShareIntent();
+			return true;
 			// launch setting activity
-			case R.id.item_setting:
-				Log.i(TAG, "Show settings activity");
-				Intent intent = new Intent(this, SettingActivity.class);
-				startActivity(intent);
-				return true;
+		case R.id.item_setting:
+			Log.i(TAG, "Show settings activity");
+			Intent intent = new Intent(this, SettingActivity.class);
+			startActivity(intent);
+			return true;
 		}
 		return false;
 	}
 
 	private void createShareIntent() {
-		
+
 		// http://stackoverflow.com/questions/10922762/open-link-of-google-play-store-in-mobile-version-android
 		Intent intent = new Intent(Intent.ACTION_SEND);
-		//intent.setType("text/plain");
+		// intent.setType("text/plain");
 		intent.setType("message/rfc882");
 		intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subject));
-		intent.putExtra(Intent.EXTRA_TEXT, String.format(getString(R.string.body), appUrl));
+		intent.putExtra(Intent.EXTRA_TEXT,
+				String.format(getString(R.string.body), appUrl));
 		try {
-			startActivity(Intent.createChooser(intent, getString(R.string.share_app)));
+			startActivity(Intent.createChooser(intent,
+					getString(R.string.share_app)));
 		} catch (ActivityNotFoundException ex) {
 			Crouton.makeText(this, R.string.app_not_found, Style.ALERT).show();
 		}
 	}
-	
+
 	/***
 	 * Called when invalidateOptionsMenu() is triggered
 	 */
@@ -260,16 +258,16 @@ public class MainActivity extends ActionBarActivity {
 		// if nav drawer is opened, hide the action items
 		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
 		menu.findItem(R.id.item_clear_disc_cache).setVisible(!drawerOpen);
-  	    menu.findItem(R.id.item_clear_memory_cache).setVisible(!drawerOpen);
-  	    menu.findItem(R.id.item_share).setVisible(!drawerOpen);
-  	    menu.findItem(R.id.item_setting).setVisible(!drawerOpen);
-  	    return super.onPrepareOptionsMenu(menu);
+		menu.findItem(R.id.item_clear_memory_cache).setVisible(!drawerOpen);
+		menu.findItem(R.id.item_share).setVisible(!drawerOpen);
+		menu.findItem(R.id.item_setting).setVisible(!drawerOpen);
+		return super.onPrepareOptionsMenu(menu);
 	}
 
 	@Override
 	public void setTitle(CharSequence title) {
 		mTitle = title;
-		getSupportActionBar().setTitle(mTitle); 
+		getSupportActionBar().setTitle(mTitle);
 	}
 
 	/**
@@ -290,49 +288,52 @@ public class MainActivity extends ActionBarActivity {
 		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
 
-	 @Override
-	 public void onBackPressed() {
-	
-		 // See bug:
-		 //http://stackoverflow.com/questions/13418436/android-4-2-back-stack-behaviour-with-nested-fragments/14030872#14030872
-		 // If the fragment exists and has some back-stack entry
-		 FragmentManager fm = this.getSupportFragmentManager();
-		 Fragment currentFragment = fm.findFragmentById(R.id.frame_container);
-		 if (currentFragment != null && currentFragment instanceof FragmentLevel) {
-			 //Fragment baseFragment = (BaseFragment) currentFragment;
-			 String tagname = currentFragment.getTag();
-			 if (((FragmentLevel) currentFragment).isTopFragment()) {
-				 if (!Constants.HOME_TAG.equals(tagname)) {
-					 fm.beginTransaction().replace(R.id.frame_container, new HomeFragment(),
-							 Constants.HOME_TAG)
-							 .commit();
-					 return;
-				 } 
-			 }
-			 super.onBackPressed();
-		 } else {
-			 super.onBackPressed();
-		 }
-	 }
+	@Override
+	public void onBackPressed() {
 
-//	// http://stackoverflow.com/questions/7137742/simpleongesturelistener-not-working-for-scrollview
-//	@Override
-//	public boolean dispatchTouchEvent(MotionEvent event) {
-//		// find current fragment
-//		FragmentManager fm = this.getSupportFragmentManager();
-//  	    Fragment currentFragment = fm.findFragmentById(R.id.frame_container);
-//		if (currentFragment != null && Constants.CONTACT_TAG.equals(currentFragment.getTag())) {
-//			((ContactUsFragment) currentFragment).getGestureDetector().onTouchEvent(event);
-//		}
-//		return super.dispatchTouchEvent(event);
-//	}
+		// See bug:
+		// http://stackoverflow.com/questions/13418436/android-4-2-back-stack-behaviour-with-nested-fragments/14030872#14030872
+		// If the fragment exists and has some back-stack entry
+		FragmentManager fm = this.getSupportFragmentManager();
+		Fragment currentFragment = fm.findFragmentById(R.id.frame_container);
+		if (currentFragment != null && currentFragment instanceof FragmentLevel) {
+			// Fragment baseFragment = (BaseFragment) currentFragment;
+			String tagname = currentFragment.getTag();
+			if (((FragmentLevel) currentFragment).isTopFragment()) {
+				if (!Constants.HOME_TAG.equals(tagname)) {
+					fm.beginTransaction()
+							.replace(R.id.frame_container, new HomeFragment(),
+									Constants.HOME_TAG).commit();
+					return;
+				}
+			}
+			super.onBackPressed();
+		} else {
+			super.onBackPressed();
+		}
+	}
+
+	// //
+	// http://stackoverflow.com/questions/7137742/simpleongesturelistener-not-working-for-scrollview
+	// @Override
+	// public boolean dispatchTouchEvent(MotionEvent event) {
+	// // find current fragment
+	// FragmentManager fm = this.getSupportFragmentManager();
+	// Fragment currentFragment = fm.findFragmentById(R.id.frame_container);
+	// if (currentFragment != null &&
+	// Constants.CONTACT_TAG.equals(currentFragment.getTag())) {
+	// ((ContactUsFragment)
+	// currentFragment).getGestureDetector().onTouchEvent(event);
+	// }
+	// return super.dispatchTouchEvent(event);
+	// }
 
 	@Override
 	protected void onDestroy() {
 		Crouton.cancelAllCroutons();
 		super.onDestroy();
 	}
-	
+
 	public VisitHeritageState getState() {
 		return state;
 	}
@@ -340,11 +341,12 @@ public class MainActivity extends ActionBarActivity {
 	// expose a method to click item in nav drawer item
 	public void selectItem(int position) {
 		// get the navigation drawer item
-		mDrawerList.performItemClick(mDrawerList, position, mDrawerList.getItemIdAtPosition(position));
+		mDrawerList.performItemClick(mDrawerList, position,
+				mDrawerList.getItemIdAtPosition(position));
 	}
-	
+
 	public boolean isDrawerOpen() {
 		return mDrawerLayout.isDrawerOpen(mDrawerList);
 	}
-	
+
 }

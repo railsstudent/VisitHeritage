@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -22,13 +23,14 @@ import com.blueskyconnie.visitheritage.model.Place;
 import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 
 // http://www.survivingwithandroid.com/2013/01/android-listview-filterable.html
-public class FavoriteFragment extends BaseListFragment {
+public class FavoriteFragment extends BaseListFragment implements View.OnClickListener {
 
 	private VisitHeritageState state;
 	private PlaceDao dao;
 	private boolean isItemClicked = false;
 	private EditText edtSearch;
 	private FavoriteListAdapter favoriteListAdapter;
+	private Button btnLoadMore;
 	
 	public FavoriteFragment() {
 		topFragment = true;
@@ -47,17 +49,13 @@ public class FavoriteFragment extends BaseListFragment {
 		edtSearch.addTextChangedListener(new TextWatcher() {
 
 			@Override
-			public void afterTextChanged(Editable s) {
-			}
+			public void afterTextChanged(Editable s) {	}
 
 			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
-			}
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {	}
 
 			@Override
-			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				if (before > count) {
 					// We're deleting char so we need to reset the adapter data 
 					favoriteListAdapter.resetData();
@@ -67,6 +65,9 @@ public class FavoriteFragment extends BaseListFragment {
 			}
 			
 		});
+		btnLoadMore = (Button) view.findViewById(R.id.btnLoadMore);
+		btnLoadMore.setOnClickListener(this);
+		
 		return view;
 	}
 
@@ -111,11 +112,6 @@ public class FavoriteFragment extends BaseListFragment {
 			Place place = (Place) listView.getItemAtPosition(position);
 			if (place != null) {
 				isItemClicked = true;
-//				// hide soft key board
-//				InputMethodManager in = (InputMethodManager) FavoriteFragment.this.getActivity()
-//						.getSystemService(Context.INPUT_METHOD_SERVICE);
-//				in.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-//				in = null;
 				hideSoftKeyboard(edtSearch);
 				Bundle bundle = new Bundle();
 				bundle.putParcelable(Constants.PLACE_KEY, place);
@@ -131,10 +127,15 @@ public class FavoriteFragment extends BaseListFragment {
 	}
 
 	private void hideSoftKeyboard(View view) {
-		// hide soft key board
 		InputMethodManager in = (InputMethodManager) FavoriteFragment.this.getActivity()
 				.getSystemService(Context.INPUT_METHOD_SERVICE);
 		in.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 		in = null;
+	}
+
+	@Override
+	public void onClick(View v) {
+		favoriteListAdapter.updateShowCount();
+		favoriteListAdapter.notifyDataSetChanged();
 	}
 }

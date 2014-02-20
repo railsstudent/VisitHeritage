@@ -139,4 +139,5 @@
     <string name="article_remove_from_favorites">Your article is already removed from favorites.</string>
     <string name="content_imgBtnFav">Image button of my favorites</string>
     <string name="strSearchMonument">Search (max. 30 chars)</string>
+    <string name="strLoadMore">Load More</string>
 </resources>

@@ -160,4 +160,5 @@
     <string name="article_remove_from_favorites">你的文章已從我的喜愛中刪除。</string>
     <string name="content_imgBtnFav">我的喜愛按鈕</string>
     <string name="strSearchMonument">尋找 (最多三十字)</string>
+    <string name="strLoadMore">載入更多</string>
 </resources>

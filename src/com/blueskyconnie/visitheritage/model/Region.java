@@ -8,40 +8,23 @@ public class Region implements Serializable {
 
 	private int nameResId;
 	private int numMonument;
-	private String imgUrl;
+	private int resId;
 	
-	public Region(int nameResId, int numMonument, String imgUrl) {
+	public Region(int nameResId, int numMonument, int resId) {
 		this.nameResId = nameResId;
 		this.numMonument = numMonument;
-		this.imgUrl = imgUrl;
+		this.resId = resId;
 	}
-	
 
 	public int getNameResId() {
 		return nameResId;
-	}
-
-	public void setName(int nameResId) {
-		this.nameResId = nameResId;
 	}
 
 	public int getNumMonument() {
 		return numMonument;
 	}
 
-
-	public void setNumMonument(int numMonument) {
-		this.numMonument = numMonument;
+	public int getImageResId() {
+		return resId;
 	}
-
-
-	public String getImgUrl() {
-		return imgUrl;
-	}
-
-
-	public void setImgUrl(String imgUrl) {
-		this.imgUrl = imgUrl;
-	}
-	
 }

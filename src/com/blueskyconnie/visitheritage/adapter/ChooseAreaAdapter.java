@@ -4,7 +4,6 @@ import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,20 +12,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.blueskyconnie.visitheritage.R;
-import com.blueskyconnie.visitheritage.helper.PlaceCursorHelper;
 import com.blueskyconnie.visitheritage.model.Region;
-import com.google.common.base.Strings;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 
 public class ChooseAreaAdapter extends ArrayAdapter<Region>  {
 
-	private static final String TAG = ChooseAreaAdapter.class.getSimpleName();
-	
 	private Context context;
 	private int resourceId;
-	private ImageLoader imageLoader = ImageLoader.getInstance();
 	private List<Region> lstRegion;
 	
 	public ChooseAreaAdapter(Context context, int resourceId, List<Region> lstRegion) {
@@ -73,33 +64,7 @@ public class ChooseAreaAdapter extends ArrayAdapter<Region>  {
 		Region region = getItem(position);
 		holder.tvName.setText(context.getString(region.getNameResId()));
 		holder.tvNumMonument.setText(context.getResources().getQuantityString(R.plurals.monuments, region.getNumMonument(), region.getNumMonument())); 
-		if (holder.img != null && !Strings.isNullOrEmpty(region.getImgUrl())) {
-			imageLoader.displayImage(PlaceCursorHelper.getUrlByLanguage(region.getImgUrl()), holder.img, 
-					new SimpleImageLoadingListener() {
-							@Override
-							public void onLoadingFailed(String imageUri,
-									View view, FailReason failReason) {
-								super.onLoadingFailed(imageUri, view, failReason);
-								switch (failReason.getType()) {
-									case IO_ERROR:
-										Log.e(TAG, "Input/Output error");
-										break;
-									case DECODING_ERROR:
-										Log.e(TAG, "Image can't be decoded");
-										break;
-									case NETWORK_DENIED:
-										Log.e(TAG, "Downloads are denied");
-										break;
-									case OUT_OF_MEMORY:
-										Log.e(TAG, "Out Of Memory error");
-										break;
-									case UNKNOWN:
-										Log.e(TAG, "Unknown error");
-										break;
-								}
-							}
-					});
-		}
+		holder.img.setImageResource(region.getImageResId());
 		return view;
 	}
 	

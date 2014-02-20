@@ -6,8 +6,8 @@
     
    <ImageView
        android:id="@+id/imgPlaceThumbnail"
-       android:layout_width="80dp"
-       android:layout_height="80dp"
+       android:layout_width="65dp"
+       android:layout_height="65dp"
        android:layout_alignParentLeft="true"
        android:layout_alignParentTop="true"
        android:layout_margin="8dp"
@@ -19,6 +19,7 @@
         android:id="@+id/tvCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/blue"
         android:layout_alignTop="@+id/imgPlaceThumbnail"
         android:layout_toRightOf="@+id/imgPlaceThumbnail"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -32,7 +33,7 @@
         android:layout_alignTop="@+id/imgPlaceThumbnail"
         android:singleLine="false"
         android:layout_marginLeft="8dp"
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     
      <TextView
