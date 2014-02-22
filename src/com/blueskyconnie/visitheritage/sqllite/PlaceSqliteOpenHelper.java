@@ -1467,7 +1467,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.508236");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.148075");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "粉嶺龍躍頭覲龍圍(新圍)");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
@@ -1936,18 +1936,18 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("12"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "舊北區理民府約於一九〇七年興建，是租借新界後最早的民政中心。" +
 				"新界北部的行政及土地註冊工作均在此辦理。直至一九六一年，理民府內仍有一個裁判司法庭。現為香港童軍總會新界東地域總部。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old District Office North");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Old District Office North was erected around 1907 and was " +
 				"the earliest seat of the civil administration of the newly-leased New Territories. Administration and" +
 				" land registration of the northern part of the New Territories were carried out in this building. " +
 				"Until 1961, the building still housed a magistrate's court. It is now used by the New Territories " +
 				"Eastern Region Headquarters of the Scout Association of Hong Kong.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.445898");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.170682");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "NO.15 WAN TAU KOK LANE, TAI PO, NEW TERRITORIES");
@@ -1966,10 +1966,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"業主邱元璋(一八六五至一九三七年)為海壩村飽學之士。客籍人士早於十八及十九世紀期間於此建村立業。" +
 				"村落及附近一帶現已發展為德華街公園。僅存的古屋以夯土、青磚、青瓦和杉木建造而成，富有中國南方傳統鄉村建築特色。" +
 				"現作環境資源中心。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "twerc@greenpower.org.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "星期一、星期二、星期四、星期五及星期六上午九時三十分至下午一時及" +
+				"下午二時至下午六時三十分星期三下午二時至下午六時三十分星期日及公眾假期休息");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2944 8204");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old House, Hoi Pa Village");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The house which was situated at Lot 917 of Hoi Pa Village, " +
 				"Tsuen Wan was built in 1904 by Mr. Yau Yuen-cheung (1865-1937), a village scholar of Hoi Pa. " +
@@ -1979,7 +1980,9 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"is a fine example of traditional southern Chinese village architecture. It is now used as the " +
 				"Environmental Resource Centre.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "Mondays, Tuesdays, Thursdays, Fridays and Saturdays" +
+				"9:30am to 1:00pm and 2:00pm to 6:30pm, Wednesdays 2:00 to 6:30pm" +
+				"Closed on Sundays and Public Holidays");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.370714");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.118036");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tak Wah Park, Tak Wah Street, Tsuen Wan");
@@ -2001,7 +2004,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"這間百年古屋樓高兩層，以青磚砌成，內有精美的壁畫和傳統裝飾。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。逢星期二、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old House, Wong Uk Village");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Located at the south-west corner of Yuen Chau Kok, " +
@@ -2014,11 +2017,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"of Yuen Chau Kok. The building is a two-storey green-brick structure of about 100 years old, " +
 				"with fine mural paintings and traditional decorations.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily. " +
+				"Closed on Tuesdays, Christmas Day, Boxing Day, New Year's Day and the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.388809");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.197334");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "沙田圓洲角王屋村");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "沙田");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Shatin");
@@ -2033,10 +2037,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "十九世紀末，香港的細菌學研究仍十分落後。直至一九〇五年，" +
 				"第一所正式的細菌學院才在堅巷建立。這座典雅的紅磚建築，於第二次世界大戰後改名為病理學院。後由生署用作醫療用品倉庫，" +
 				"現改作香港醫學博物館，由香港醫學博物館學會管理。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "info@hkmms.org.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "星期二至星期六，上午十時至下午五時；星期日及公眾假期，下午一時至五時。" +
+				"逢星期一、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息。" +
+				"聖誕前夕及農曆新年除夕於下午三時休館。 ");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2549 5123");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old Pathological Institute");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "At the end of the 19th century, bacteriological studies " +
 				"in Hong Kong were still underdeveloped. It was not until 1905 that a permanent Bacteriological " +
@@ -2045,11 +2051,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Health as a medical store. It has been recently converted to the Hong Kong Museum of Medical " +
 				"Sciences managed by the Hong Kong Museum of Medical Sciences Society.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "Tuesdays to Saturdays: 10:00am – 5:00pm. " +
+				"Sundays and Public Holidays: 1:00pm – 5:00pm. Closed on Mondays, Christmas Day, Boxing Day, " +
+				"New Year's Day and the first 3 days of the Lunar New Year. " +
+				"Closed at 3:00pm on Christmas Eve and Chinese New Year's Eve.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.283527");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.148055");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Caine Lane, Sheung Wan");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "香港半山堅巷2號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -2064,10 +2073,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "舊赤柱警署建於一八五九年，是本港現存最古老的警署建築。" +
 				"警署早期作為港島最南端的前哨站，戰略地位重要，因此常供警隊及英軍聯合使用。二次大戰期間日軍曾徵用為分區總部，" +
 				"並加建殮房。戰後恢復用作警署，直至一九七四年。後由南區政務處分處使用，曾用作餐廳，現為超級市場。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物現為商店");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old Stanley Police Station");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Old Stanley Police Station was constructed in 1859 and is " +
 				"now the oldest surviving police station building in the territory. The Army, during the early years, " +
@@ -2077,12 +2086,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"onto the building. After the war, the building reverted to its original use as police " +
 				"station until 1974. Since then it had been used as a sub-office of the Southern District " +
 				"Office and a restaurant. It now becomes a supermarket.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "BUILDING NOW USED AS RETAIL SHOPS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.218258");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.213435");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "88 Stanley Village Road, Stanley");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "赤柱赤柱村道八十八號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");  
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
@@ -2097,10 +2106,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "鐵路沿線火車站以往均有劃一設計，唯獨大埔墟火車站按照中國傳統建築風格建成。" +
 				"火車站建於一九一三年，正面、屋頂及裝飾等均具中國建築特色，但火車站的內部則按火車站運作需要而設計。一九八三年新大埔墟火車站建成，" +
 				"代替原來的車站。舊大埔墟火車站經全面修復後，改作香港鐵路博物館。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "hkrm@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午十時至下午六時。聖誕前夕及農曆新年除夕提前於下午五時休館。" +
+				"逢星期二（公眾假期除外）、農曆新年年初一及初二休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2653 3455");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old Tai Po Market Railway Station");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "While the other stations along the Kowloon to canton " +
 				"Railway were built to a standard design, the station at Tai Po Market was built in Chinese style. " +
@@ -2109,11 +2119,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"The station was made redundant by a new one in a nearby location in 1983. It was then fully " +
 				"restored and now houses the Hong Kong Railway Museum.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "10:00am – 6:00pm daily Closed at 5:00pm on Christmas Eve and Lunar New Year's Eve Closed on Tuesday " +
+				"(except Public Holidays) and on the first two days of Lunar New Year");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.451173");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.164402");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tai Po Market");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "大埔墟");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
@@ -2128,10 +2139,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "舊灣仔郵政局是本港現存歷史最悠久的郵政局建築。" +
 				"這座曲尺形建築物坐落於灣仔峽道和皇后大道東交界，建於一九一二至一九一三年間。一九一五年三月一日正式開放作為灣仔郵政局。" +
 				"這是一座簡單的金字頂建築，山牆及灰塑甚具特色。現由環境保護署用作環境資源中心。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "wcerc@greenpower.org.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "星期一至星期日，上午十時至下午五時。逢星期二及公眾假期休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2893 2856");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Old Wan Chai Post Office");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Old Wan Chai Post Office is the oldest surviving post " +
 				"office building in Hong Kong. This L-shaped building situated at the junction of Wan Chai Gap Road and " +
@@ -2139,11 +2150,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Office. It is a simple pitched-roof structure with attractive gable ends and mouldings. " +
 				"The building is now operated by the Environmental Protection Department as a resource centre.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "10:00AM – 5:00PM. CLOSED ON TUE AND PUBLIC HOLIDAYS");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.274513");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.173278");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "221 Queen's Road East, Wan Cha");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "灣仔皇后大道東二百二十一號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "灣仔");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Wan Chai");
@@ -2159,10 +2170,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"謝兩族已經營窰場，生產青花瓷器。清朝康熙十三年（一六七四年）從廣東長樂縣南遷至大埔的客籍馬氏族人，向文氏出資購入窰場。" +
 				"二十世紀初期，由於廣東沿海其他窰場的廉價產品競爭，碗窰的陶瓷業日趨式微，至一九三二年終告停產。碗窰的考古調查，" +
 				"發現從採礦到入窰裝燒各項工序的遺蹟，包括礦坑、水碓作坊、碾磨作坊、淘洗池及龍窰等，均是香港重要的文化遺產。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Pottery Kilns at Wun Yiu Village");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Wun Yiu, Tai Po was once a center of porcelain industry " +
 				"in the New Territories. As early as the Ming dynasty (1368-1644), clans of Man and Tse had started " +
@@ -2174,12 +2185,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Archaeological investigations at Wun Yiu discovered the remains illustrating the complete process" +
 				" of porcelain production such as china clay quarrying pits, water-mills, animal-driven grinder, " +
 				"clay soaking tanks and dragon kilns. They all are important cultural heritage of Hong Kong.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.430666");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.162791");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Sheung Wun Yiu Village, Tai Po");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "大埔上碗窰村");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "大埔");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tai Po");
@@ -2195,10 +2206,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"城牆用花崗石條構築，有六座瞭望台和四道城門，南門為正門。日佔期間，城牆被完全拆毀，作擴建啟德機場的建築材料。" +
 				"一九八七年政府宣布清拆寨城，於原址興建公園。在清拆期間，曾進行考古勘查，發現寨城東門和南門的牆基和石板通道保存完好，" +
 				"並在南門原址發現兩塊石額，上刻「南門」和「九龍寨城」等字。 南門遺蹟原地保留，供市民參觀。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "kwcp@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午六時半至下午十一時");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2716 9962");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Remnants of the South Gate of Kowloon Walled City");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Kowloon Walled City was originally a garrison town " +
 				"built by the Qing government in 1847 as a military outpost occupied by several hundred soldiers " +
@@ -2213,11 +2224,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 								" of the original South Gate. Consequently, the Government decided to preserve " +
 								"the remnants of the South Gate in-situ for display to the public.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "6:30am – 11:00pm daily.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.33531");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.190494");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Kowloon Walled City Park, Kowloon City");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "九龍城九龍寨城公園");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "九龍城");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Kowloon City");
@@ -2238,7 +2249,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"一樓陽台則有琉璃花瓶，糅合中西建築風格。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。" +
+				"逢星期二、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Residence of Ip Ting-sz");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Residence of Ip Ting-sz, which was built in around 1908, " +
@@ -2261,11 +2273,14 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"decorated with ceramic vase-shaped balusters, demonstrating a blend of Chinese and Western " +
 				"architectural features.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily. " +
+				"Closed on Tuesdays, Christmas Day, Boxing Day, New Year’s Day and the first three days of the Lunar New Year." +
+				"This building is located in Frontier Closed Area.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.55071");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.222363");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Lin Ma Hang Tusen, Sha Tau Kok " +
+				"(This building is located in Frontier Closed Area)");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "沙頭角蓮麻坑村 (此建築物位於禁區內)");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
@@ -2280,10 +2295,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"要確定石刻的刻鑿年代、原因、方法及出自何人之手，殊非易事，但從風化情況推測，石刻的年代應該十分久遠。" +
 				"大浪灣石刻於一九七〇年由一位警務人員發現，面積約九十厘米乘一百八十厘米，紋飾為幾何圖紋及抽象的鳥獸紋。此石刻與本港大部分石刻一樣，" +
 				"都是位於臨海的石崖上。早期居民多以海為生，於海濱刻石，相信有鎮撫怒海，護佑航海人士之意。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving at Big Wave Bay");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Scattered along the boulder strewn coastline of Hong Kong, " +
 				"groups of ancient rock carvings are found. Their patterns are basically geometric with hints here " +
@@ -2295,12 +2310,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"embracing the beautiful bay. There is some evidence that early inhabitants who created these " +
 				"carvings depended on the sea for their livelihood. The carvings might have been intended to " +
 				"propitiate the power of the sea and to protect its sea-faring population.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.246145");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.248831");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Big Wave Bay, Southern District, Hong Kong Island");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "南區大浪灣");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
@@ -2314,10 +2329,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "此石刻於一九七八年由一群旅行人士發現。紋飾刻於一塊向東的岩石面上。" +
 				"因久經風雨侵蝕，已極之模糊。紋飾呈幾何形，部分狀似鳥獸。但有些學者認為這些紋飾純因天然侵蝕所致，爭論仍未解決。" +
 				"石刻已公告為法定古蹟，加以保護，確保研究能持續下去。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving at Lung Ha Wan");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Discovered in 1978 by a group of hikers, " +
 				"the Lung Ha Wan Rock Carving is located on a vertical face of a badly weathered boulder facing east. " +
@@ -2326,12 +2341,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"While this academic discussion still continues, the rock carving, or pattern, has been protected " +
 				"under the Antiquities & Monuments Ordinance. This would allow the opportunity for it to be " +
 				"further studied.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.31016");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.298859");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Lung Ha Wan, Sai Kung");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "西貢龍蝦灣");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
@@ -2345,10 +2360,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "香港大多數古代石刻都瀕臨海濱，石壁石刻卻離開海岸約三百米。" +
 				"相信此處昔日也是海邊，其後海岸變遷始成今日之地貌。石刻紋飾由正方及圓形幾何紋構成，與古代青銅器上的圖案極相似。" +
 				"故此或可推斷，這石刻大約是青銅時代，即約三千年前，由本區先民所刻鑿。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving at Shek Pik");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Most of the ancient rock carvings in the territory " +
 				"overlook the sea, but Shek Pik Rock Carving is about 300m from the coastline. However, " +
@@ -2356,12 +2371,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"The design shows geometric patterns composed of spiral squares and circles which closely " +
 				"resemble those on Bronze Age artefacts. It is thus quite safe to deduce that they were " +
 				"carved by early inhabitants of this area in the local Bronze Age some 3,000 years ago.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily.Closed on the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.236989");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.883483");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Shek Pik, Lantau Island");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "大嶼山石壁");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
@@ -2375,10 +2390,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "此石刻發現於一九七六年。位於滘西洲西北岸。該處幾無陸路通達。" +
 				"石刻上的紋飾飽經風雨侵蝕，尤以石刻下半部為甚。如仔細觀察，仍依稀可見獸形紋樣。石刻離開最高水位約二米，就同類型石刻的位置而言，" +
 				"這是一個頗低的位置。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving on Kau Sai Chau");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Kau Sai Chau Rock Carving was discovered in 1976. " +
 				"It is located at the north-western coast of Kau Sai Island where accessibility by land " +
@@ -2386,12 +2401,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"However, a zoomorphic motif is still visible when examined closely and carefully. " +
 				"The worked surface is approximately 2m above the highest water mark, which is a rather " +
 				"low position compared to similar rock carvings.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.36357");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.313417");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Kau Sai Chau, Sai Kung");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "西貢滘西洲");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
@@ -2404,21 +2419,21 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("03"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "這是本地最早有文獻記載的石刻。王崇熙於一八一九年編制的《新安縣志》有「石壁畫龍，" +
 				"在佛堂門，有龍形刻於石側」的記載。此石刻高約1.8米，長約2.4米，為現時香港境內所知最大的石刻。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carving on Tung Lung Island");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "This is the earliest recorded in-situ rock carving in " +
 				"the territory. There was an entry in the 1819 Xinan Gazetteer, compiled by Wang Chong Xi, " +
 				"stating that the impression depicts the image of a dragon. It is also the largest carving " +
 				"ever found in Hong Kong, measuring 1.8m by 2.4m.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.253553");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.283194");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tung Lung Chau, Sai Kung");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "西貢東龍洲");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
@@ -2432,22 +2447,22 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("28"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "石刻位於港島黃竹坑一小溪之旁。石上有三組明顯的回旋紋，狀似動物的眼睛。香港石刻多分布於海濱地區。" +
 				"黃竹坑石刻則深入內陸約一公里，但下有小溪流經，仍可算臨近水邊。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carvings at Wong Chuk Hang");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Rock Carvings at Wong Chuk Hang are located beside a " +
 				"stream course at Wong Chuk Hang on Hong Kong Island. Three main groups of carved patterns can be recognised." +
 				" They consist of meandering and spiral designs suggesting stylised animal eyes. It is most unusual " +
 				"that they stand at least a kilometre from the sea, unlike other rock carvings in Hong Kong, although" +
 				" they still overlook 'a small expanse of water', i.e. the stream running below them.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.253314");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.175065");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Wong Chuk Hang, Southern District ");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "南區黃竹坑");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
@@ -2461,10 +2476,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "一九七〇年，即發現大浪灣石刻的同年，一位地質學家亦發現了長洲石刻。" +
 				"它位於連島沙洲的東南部，即華威酒店對下。石刻上的兩組紋飾均由數條曲線環繞著小凹槽構成。其中一組紋飾在發現時尚未完全暴露，" +
 				"經清理泥土後方展現全貌。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carvings on Cheung Chau");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Cheung Chau Rock Carvings were reported by a geologist " +
 				"in 1970, the same year when Big Wave Bay Rock Carving was discovered. They are situated at " +
@@ -2472,12 +2487,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"They consist of two groups of similar design with several carved lines surrounding small depressions. " +
 				"The second group was not completely exposed when found and could only be fully revealed after removal " +
 				"of soil.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.207988");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.032709");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tung Wan, Cheung Chau");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "長洲東灣");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
@@ -2491,22 +2506,22 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "一直以來，漁民都流傳說蒲台上有數組石刻。終於在六十年代，" +
 				"在該島的南端發現了一組石刻。該石刻分左右兩部分，石刻由一條闊七十厘米的石縫分隔。紋飾各異，左邊的一組狀似動物和魚，" +
 				"而右邊的一組則由螺旋紋連結組成。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Carvings on Po Toi");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "There had long been a local legend among the fisherfolk " +
 				"of the existence of several rock carvings on Po Toi. Finally, groups of carvings were found at " +
 				"the southern part of Po Toi in the 1960's. They are of different motifs and separated by a rock " +
 				"fracture 70cm wide. One group on the left consists of lines resembling stylized animal and fish patterns, " +
 				"while the other on the right is composed of spirals in an inter-locking arrangement.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.161891");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.256175");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Po Toi");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "蒲台");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
@@ -2519,18 +2534,21 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("04"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "此刻石刻於南宋咸淳甲戌年間，即一二七四年，為香港最早有紀年的刻石，記載鹽官與友到南北佛堂門遊覽的事蹟，" +
 				"以及這處兩所廟宇的歷史。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Rock Inscription at Joss House Bay");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The inscription carved on the rock is dated as the cyclical year jiaxu of the Xianchun reign during the Southern Song Dynasty (i.e. the year 1274) and is the oldest dated inscription known in Hong Kong. It records a visit by a salt administration officer and his friend and gives the history of two temples at the north and south of Fat Tong Mun.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The inscription carved on the rock is dated as the cyclical year jiaxu of " +
+				"the Xianchun reign during the Southern Song Dynasty (i.e. the year 1274) and is the oldest dated inscription known in " +
+				"Hong Kong. It records a visit by a salt administration officer and his friend and gives the history of two temples at " +
+				"the north and south of Fat Tong Mun.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily. Closed on the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.274324");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.290573");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tei Tong Tsui, Joss House Bay, Sai Kung");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "西貢大廟灣地堂咀");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
@@ -2546,10 +2564,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"供公眾人士參觀。三棟屋於一七八六年由陳姓客家人建立，陳氏家族於十八世紀中期從廣東移居本港，擇居荃灣，並且填平沿海的土地作耕種之用。" +
 				"三棟屋原先只有三列房舍，由族長陳任盛所建，他的後人先後在村的兩旁及後面加建房子。位於中軸線上的正廳，擺放了陳氏先祖的神位，面向正門，" +
 				"正門石楣上刻有「陳氏家祠」四字。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "stum@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午十時至下午六時。聖誕前夕及農曆新年除夕提前於下午五時休館。" +
+				"逢星期二（公眾假期除外）、農曆新年年初一及初二休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2411 2001");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Sam Tung Uk Village");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Sam Tung Uk Village is a Hakka walled village restored in 1987 " +
 				"and opened to the public as a museum of the Leisure and Cultural Services Department. It was built " +
@@ -2561,11 +2580,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"The four Chinese characters signifying 'Chan' Family Ancestral Hall', were engraved on " +
 				"the granite lintel above the door frame.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "10:00am – 6:00pm daily Closed at 5:00pm on Christmas Eve and Lunar " +
+				"New Year's Eve Closed on Tuesday (except Public Holidays) and on the first two days of Lunar New Year");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.380516");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.130862");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "NO.2 KWU UK LANE, TSUEN WAN, NEW TERRITORIES");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "荃灣古屋里2號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "荃灣");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tsuen Wan");
@@ -2584,10 +2604,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"日佔時期（一九四一至一九四五年），聖士提反書院連同鄰近的赤柱監獄守衛宿舍被用作赤柱拘留營。戰後，聖士提反書院於一九四七年重開。" +
 				"書院大樓的建築具晚期過渡時期的工藝美術運動風格特色，同時受現代主義風格影響。大樓呈H形，包括東、西兩翼，由中座連接起來。" +
 				"大樓的粗灰批盪、寬闊懸挑的屋簷、拱形門窗和拱形迴廊均是典型的工藝美術風格建築特色。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "請致電查詢導賞團詳情");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2813 0360");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "School House of St. Stephen's College");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The School House of St. Stephen’s College is not only the " +
 				"oldest surviving school building which still provides boarding services in Hong Kong, but also one " +
@@ -2604,12 +2624,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				" influence. It is an H-shaped building consisting of an east wing and a west wing connected by a " +
 				"central block. Rough-cast rendering, wide overhanging eaves, arched windows and doorways and" +
 				" arcaded verandahs are typical features of the Arts and Crafts style.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE EMAIL TO CHECK THE ARRANGEMENT OF GUIDED VISITS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.215745");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.215948");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "22 Tung Tau Wan Road, Stanley, Hong Kong");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "香港赤柱東頭灣道22號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
@@ -2625,10 +2645,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"於入口處築有塔樓。村內共有一排八所並列的房舍，由黃姓的客家人於一百五十年前所建。村民因建窰燒造殼灰，" +
 				"作灰泥及肥田料之用而致富，及後由於英泥及造磚行業的競爭，窰燒工業遂告沒落。上窰村於一九八三年修葺後，" +
 				"闢作民俗文物館。館內陳列各種耕種工具及農村傢具，使人如同置身於客家村落之中。村中的殼灰窰亦已修妥，開放給市民參觀。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午十時至下午六時。十月至二月提前於下午五時休館。" +
+				"逢星期二（公眾假期除外）、農曆新年年初一及初二休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2792 6365");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Sheung Yiu Village ");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Sheung Yiu is a Hakka village situated inside the Sai Kung " +
 				"Country Park. Constructed on a raised platform with a watch tower at its entrance, the village has " +
@@ -2639,11 +2660,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"farming implements and village period furniture, the folk museum recreates the atmosphere and " +
 				"environment of a small Hakka village. The original lime kiln has also been restored for public viewing.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "10:00am – 6:00pm daily Closed at 5:00pm from October to February Closed on Tuesday" +
+				" (except Public Holidays) and on the first two days of Lunar New Year");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.401824");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.322674");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Pak Tam Chung, Sai Kung");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "西貢北潭涌");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
@@ -2658,10 +2680,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"長洲及汲水門（馬灣）設置稅關，對鴉片貿易抽取厘金。當新界租借予英國後，這些稅關於光緒二十四年（一八九九年）停止運作。" +
 				"遺址於一九六二年發現。因遺址內先後發現由四闕斷碑組成的一通石碑，上刻︰「德懷交趾國貢賦遙通」，" +
 				"下刻︰「稅廠值理重修」，故被認為是一稅關遺址。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Site of Chinese Customs Station, Fat Tau Chau ");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "In view of the furious opium smuggling, the Viceroy of " +
 				"Guangdong and Guangxi ordered the establishment of three customs stations in 1868 at Fat Tau Chau, " +
@@ -2671,12 +2693,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"customs station after the discovery of a stone slab broken into four pieces with inscriptions: 'By " +
 				"the Grace (of the Emperor), tributes are accepted from and customs exchange with Annam, " +
 				"which is far away (from China). Renovated by the Manager of the Customs Station'.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.321495");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.268745");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Junk Island, Sai Kung");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "西貢佛頭洲");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
@@ -2691,10 +2713,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "聖約翰座堂是本港現存歷史最悠久的西式教會建築物，於一八四七年三月十一日" +
 				"由當時的香港總督戴維斯爵士(一八四四至四八年)奠基，並於一八四九年落成啟用。座堂曾於一八七三年局部改建。日佔時期" +
 				"(一九四一至四五年)曾用作日本人會所，座堂因此受到破壞。戰後座堂委員會將建築物重新修復開放。聖約翰座堂於一九九六年被列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "general@stjohnscathedral.org.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午七時至下午六時。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2523 4157");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "St. John's Cathedral");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "St. John's Cathedral is the oldest surviving Western " +
 				"ecclesiastical building in Hong Kong. The foundation stone was laid by the Governor, " +
@@ -2703,11 +2725,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"house for the Japanese and thus suffered damage. The Cathedral was fully repaired after the " +
 				"War and then reopened. It was declared a monument in 1996.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "7:00am – 6:00pm daily.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.282743");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.158909");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "4-8 Garden Road, Central ");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "中環花園道四至八號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -2723,10 +2745,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"石塊排列有序，正好說明人工砌築的痕蹟。用大塊石頭堆疊成形形色色的結構，是新石器時代晚期及青銅時代早期文化特徵之一，" +
 				"分佈範圍遍及世界各地；分流的石圓環，很可能也屬這類結構。相類的巨石結構，在中國也有發現；香港出土新石器和青銅時代的文物既然十分豐富，" +
 				"石圓環的發現，當非偶然。堆疊石圓環的目的已無法稽考，但大抵與祭祀儀式有關。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Stone Circle at Fan Lau");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "This circular arrangement of unhewn stones appears to be laid out " +
 				"deliberately to form an oval-shaped enclosure, measuring 2.7 m by 1.7m, the careful and orderly layout of the " +
@@ -2735,12 +2757,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"the world. Similar structures are known in China and there is no reason why a stone circle should not occur in " +
 				"Hong Kong which is rich in Neolithic and Bronze Age artefacts. The purpose of the circle is not known, " +
 				"but possibly ritualistic.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.197895");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.84771");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Fan Lau, Lantau Island");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "大嶼山分流");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
@@ -2756,7 +2778,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"大夫第是本港最華麗的傳統建築之一，並以其精巧的建築裝飾而著名。修葺工程由香港賽馬會資助，於一九八八年完成，現已開放供市民參觀。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時" +
+				"逢星期二、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tai Fu Tai Mansion");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "This elegant house was built in the 4th year of Tongzhi " +
@@ -2765,11 +2788,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"traditional Chinese buildings in Hong Kong and is renowned for its fine architectural decorations. " +
 				"Restoration was completed in 1988 with donations from the Hong Kong Jockey Club.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily. " +
+				"Closed on Tuesdays, Christmas Day, Boxing Day, New Year's Day and the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.502566");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.077198");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Wing Ping Tsuen, San Tin, Yuen Long ");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗新田永平村");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
@@ -2798,7 +2822,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"廈村鄧氏宗祠及其鄰近建築物於二〇〇七年十二月七日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。逢星期二、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Ancestral Hall, Ha Tsuen");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Tang Ancestral Hall, alias Yau Kung Tong, " +
@@ -2844,11 +2868,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 						"Tangs in the area. The Tang Ancestral Hall and its adjoining buildings were declared as " +
 						"monuments on 7 December 2007.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily. " +
+				"Closed on Tuesdays, Christmas Day, Boxing Day, New Year's Day and the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.447603");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.986323");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ha Tsuen, Yuen Long");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗廈村");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
@@ -2867,7 +2892,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Ancestral Hall, Ping Shan");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Tang Ancestral Hall, was constructed by Tang Fung-shun," +
@@ -2880,7 +2905,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"celebrations of traditional festivals and ceremonies, as well as a meeting place for the Tang clan " +
 				"of Ping Shan.his hall was declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily. Closed on the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.438282");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.010227");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
@@ -2902,7 +2927,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"工程在古物古蹟辦事處及建築署古蹟復修組監督下，於一九九二年中完成。祠堂於一九九七年被列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。" +
+				"逢星期二、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Chung Ling Ancestral Hall");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Situated to the northwest at the foot of Lung Shan, " +
@@ -2916,11 +2942,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"The project was completed in mid 1992 under the supervision of the Antiquities and Monuments " +
 				"Office and the Architectural Services Department. It was declared a monument in 1997.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily. Closed on Tuesdays, " +
+				"Christmas Day, Boxing Day, New Year's Day and the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.497858");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.152818");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Lung Yeuk Tau, Fanling");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "粉嶺龍躍頭");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
@@ -2940,7 +2967,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"祠堂的全面修復工程於一九九六年竣工，工程由古物古蹟辦事處及建築署監督。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "星期六、日及公眾假期：上午九時至下午一時；下午二時至五時." +
+				"逢星期一至五（公眾假期除外）及農曆年初一至初三休息");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Kwong U Ancestral Hall");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tang Kwong U Ancestral Hall, also known as Loi Shing Tong, " +
@@ -2959,11 +2987,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"hall was completed in 1996 under the supervision of the Antiquities and Monuments Office and " +
 				"the Architectural Services Department.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "Saturday, Sunday and public holidays: 9:00am – 1:00pm & 2:00pm – 5:00pm." +
+				"Closed on Monday to Friday (except public holidays) and the first 3 days of the Lunar New Year");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.446354");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.060969");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "No. 32, Shui Tau, Kam Tin, Yuen Long, New Territories");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界元朗錦田水頭32號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
@@ -2979,10 +3008,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"塔頂髹上白色，於一九一二年四月二十九日啟用。鋼架及照明儀器均為英國製造。以往的燈塔管理員居於燈塔旁的磚構建築，內設睡房、" +
 				"廚房、廁所及儲物室各一。由於島上並沒有井水或食水供應，因此只能從屋頂收集雨水，再將雨水引入地下儲水箱備用。燈塔現時已改為自動操作，" +
 				"無須派員駐守。該座燈塔現由海事處管理。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "此燈塔現由海事處管理及操作。基於保安理由及避免影響日常運作，燈塔並不對外開放。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tang Lung Chau Lighthouse");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tang Lung Chau Lighthouse was declared a monument on " +
 				"29 December 2000. It is situated on Tang Lung Chau, a small island to the west of Hong Kong Island, " +
@@ -2993,12 +3022,13 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Rainwater was collected from the roof and diverted into an underground tank for use as there was " +
 				"no spring or fresh water supply on the island. The lighthouse is now unmanned and automated. " +
 				"It is now under the management of Marine Department.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "This lighthouse is still running under the management of the Marine Department. " +
+				"For security and operational reasons, it is not open to the public.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.339676");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.063082");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "TANG LUNG CHAU, KAP SHUI MUN, HONG KONG");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "荃灣汲水門燈籠洲");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "荃灣");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Tsuen Wan");
@@ -3012,10 +3042,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "孔慶熒樓是由遮打爵士、佐敦教授及其他人士捐款建成，原用作學生會之用，" +
 				"於一九一九年二月由當時之總督司徒拔爵士正式揭幕。第二次世界大戰後，建築物曾暫作行政大樓之用，其後於一九七四年改用作高級職員休息室。" +
 				"香港大學為感謝孔慶熒先生家人慷慨捐助，於一九八六年正式將建築物命名為孔慶熒樓。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "hkutour@hku.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "請致電郵查詢導賞團詳情");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of Hung Hing Ying Building, the University of Hong Kong");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The building which was built with the financial assistance " +
 				"from Sir Paul Chater, Professor G. P. Jordan and others, was originally designed to house the student " +
@@ -3023,12 +3053,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"was temporarily used for administrative purpose after World War II but was later converted into the " +
 				"Senior Common Room in 1974. The building was named in honour of Mr. Hung Hing-ying in 1986 in " +
 				"recognition of his family's donations to the University.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE EMAIL TO CHECK THE ARRANGEMENT OF GUIDED VISITS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.285602");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.137857");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "The University of Hong Kong, Pok Fu Lam Road");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "薄扶林道香港大學");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -3043,23 +3073,23 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "鄧志昂樓由鄧肇堅爵士父親鄧志昂先生於一九二九年捐助建成，作為中文學院之用，" +
 				"建築物因此以他命名。鄧志昂樓為一座樓高三層之平頂建築，外牆鋪以洗水批盪。大樓於一九三一年九月二十八日由當時之總督貝璐爵士揭幕。" +
 				"大樓現為亞洲研究中心。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "hkutour@hku.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "請致電郵查詢導賞團詳情");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of Tang Chi Ngong Building, the University of Hong Kong");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The building which was constructed in 1929 with a generous " +
 				"donation from Mr. Tang Chi-ngong, father of Sir Shiu-kin Tang, was opened as a School of Chinese " +
 				"in accordance with his wishes. It is a three-storey flat-roofed building with Shanghai plaster " +
 				"surfacing and was officially opened by Sir William Peel, the Governor of Hong Kong on " +
 				"28 September 1931. It now houses the Centre of Asian Studies.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE EMAIL TO CHECK THE ARRANGEMENT OF GUIDED VISITS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.283974");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.139942");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "The University of Hong Kong, Pok Fu Lam Road");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "薄扶林道香港大學");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -3076,11 +3106,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"大學堂約於一八六一年由蘇格蘭商人杜格拉斯．林柏建成，作為其公司總部及寓所之用，建築物亦因此命名為杜格拉斯堡。" +
 				"法國傳道會其後於一八九四年購入杜格拉斯堡，還將它易名為拿撒勒樓，並進行大規模重建，其中還加建了一所印刷工場。" +
 				"法國傳道會於一九五三年撤離拿撒勒樓，香港大學翌年將之購入，一九五六年正式用作大學男生宿舍及命名為大學堂。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "hkutour@hku.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "請致電郵查詢導賞團詳情");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of University Hall, the University of Hong Kong");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "University Hall which is situated on top of a hill at " +
 				"Pokfulam is a charming edifice in a blend of Tudor and Gothic architectural styles. It " +
@@ -3091,12 +3121,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 						"the French Mission gave up the building which was then acquired by the University of " +
 						"Hong Kong in 1954. Since 1956 the building has been used by the University as a hall " +
 						"of residence for male students and renamed University Hall.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE EMAIL TO CHECK THE ARRANGEMENT OF GUIDED VISITS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.263879");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.135243");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "144 Pok Fu Lam Road");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "薄扶林道一百四十四號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "南區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Southern");
@@ -3113,11 +3143,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"婦女會初時只為單身的歐籍職業女性提供宿舍。但自一九八五年起，住宿的女性已無分任何國籍。主樓除宿舍外，還設有圖書館、" +
 				"閱讀室、課室等。主樓經歷多次改動，宿舍房間已增到二十八個。日佔期間，建築物為日軍所佔用，樓內的傢俬及圖書館內的書籍全失。" +
 				"二次大戰後，主樓於一九四六年重開使用，為職業婦女提供住宿地方。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "info@helenamay.com");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物現為會所，請致電查詢開放日及導賞團詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2522 6766");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of the Main Building, the Helena May");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Helena May was built in 1914 and officially opened on " +
 				"12 September 1916. It was originally used as a hostel for single working women of European origin. " +
@@ -3126,12 +3156,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"renovations, the Main Building was upgraded to provide 28 bedrooms. During the Japanese " +
 				"Occupation Period, all the furniture in the Main Building and the books in the library were lost. " +
 				"After World War II, the building was reopened in 1946 to provide accommodation for working women.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "BUILDING NOW USED AS CLUBHOUSE; PLEASE CALL TO CHECK THE ARRANGEMENT OF OPEN DAY & GUIDED TOURS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.277749");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.15858");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "35 Garden Road, Central ");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "中環花園道三十五號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -3145,10 +3175,10 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/en/monuments/small/74/742.jpg");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "香港大學本部大樓是該校最古老的建築，一九一〇年動工興建，一九一二年落成。" +
 				"大樓宏偉壯觀，以富有文藝復興風格的花崗石柱支撐，頂部矗立著鐘樓，四角則有塔樓。大樓內有庭院四個，其中兩個植有高近九米的棕櫚樹。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "hkutour@hku.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "請致電郵查詢導賞團詳情。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of the Main Building, the University of Hong Kong");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Main Building of the University of Hong Kong is the oldest " +
@@ -3156,12 +3186,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"It is an imposing institutional structure, supported by granite colonnades in Renaissance style and " +
 				"surmounted by a tall clock tower and four turrets. There are four internal courtyards, two of which " +
 				"have palm trees over 9m tall.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE EMAIL TO CHECK THE ARRANGEMENT OF GUIDED VISITS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.284282");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.137916");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Pok Fu Lam Road");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "薄扶林道香港大學");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -3176,11 +3206,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "舊最高法院坐落於填海區，屋基由數以百計的杉樹樁組成，於一九一二年一月十五日由" +
 				"當時總督盧押爵士宣告正式啟用。這座兩層高花崗石大樓，採用新古典主義派的建築風格，地面以愛奧尼亞式石柱環抱。最具特色的是中央" +
 				"部分的三角形山牆，山牆頂部矗立著一座希臘特彌斯女神蒙眼雕像，用以代表公義。建築物於一九八五至二〇一一年期間用作立法會大樓。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "建築物內部不對外開放");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "The Exterior of the Old Supreme Court");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Old Supreme Court, which housed the Legislative Council " +
 				"Chambers from 1985 to 2011, was built on reclaimed land using hundreds of Chinese fir-tree piles as " +
@@ -3188,12 +3218,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"The two-storey granite building is neo-classical in style supported by tall Ionic columns. " +
 				"The most outstanding feature of the building is the pediment in the centre portion which is " +
 				"surmounted by a blind-folded statue of Justice, represented by the Greek goddess Themis.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "INTERIOR NOT OPEN TO PUBLIC");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.28183");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.160302");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "8 Jackson Road Central");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "中環昃臣道八號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -3210,11 +3240,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"初時在九龍舊啟德機場附近一條今已湮沒的村落定居。戴氏常到銅鑼灣岸邊割草，相傳其中一些族人在岸邊拾得一具神像，並為其立祠供奉。" +
 				"由於到來上香的漁民日漸眾多，遂籌募經費，興建一座正式的天后廟。銅鑼灣天后廟是本港眾多供奉天后的廟宇之一，雖曾數度修繕，" +
 				"但大致仍維持原狀，是同類廟宇建築的佳作。該廟現時仍由戴氏家族管理。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_15.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午七時至下午五時。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tin Hau Temple, Causeway Bay");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "The Tin Hau Temple in Causeway Bay was built by the " +
 				"Tai family probably in the early 18th century. The Tai family are Hakkas from Guangdong who " +
@@ -3225,12 +3255,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"subsequently constructed.This Temple is one of the many dedicated to Tin Hau, goddess of the sea, " +
 				"and is a fine example of temple architecture of the period, still largely in its original form despite " +
 				"subsequent renovations. The temple is still under the management of the Tai family.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "7:00am – 5:00pm daily.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.284093");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.192739");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "10 Tin Hau Temple Road, Causeway Bay");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "銅鑼灣天后廟道十號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "東區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Eastern");
@@ -3246,11 +3276,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"天后宮為傳統兩進式建築，內以天井分隔。廟宇正面飾有精緻的灰塑及壁畫，寓意吉祥。正殿則供奉天后及其侍神千里眼和順風耳。" +
 				"後進東面偏殿的兩個銅鐘，是廟內現存最古老的文物。其中一個古鐘鑄於一六九五年，乃鄧氏族人為子投契天后的許願酬神之物；" +
 				"另一古鐘則於一七〇〇年鑄造，為村中子弟出門往省城應試，祈求路上平安的酬神之物。天后宮於二〇〇二年十一月十五日被列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_77.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午五時。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tin Hau Temple, Lung Yeuk Tau");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Situated between the Tang Chung Ling Ancestral Hall " +
 				"and Lo Wai, Lung Yeuk Tau, Fanling, the Tin Hau Temple is the main temple in the area, and the " +
@@ -3264,12 +3294,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Tin Hau after having their sons adopted by her. The other bell was cast in 1700 as an offering to " +
 				"Tin Hau so that the young men of the clan could be blessed during their journey to the city for " +
 				"taking the provincial examinations. The temple was declared a monument on 15 November 2002.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 5:00pm daily");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.50098");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.152729");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Lung Yeuk Tan, Fanling");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "粉嶺龍躍頭");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "北區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "North");
@@ -3288,7 +3318,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_75.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。逢星期二、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tsui Sing Lau Pagoda");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tsui Sing Lau Pagoda (Pagoda of Gathering Stars) is the only " +
@@ -3302,7 +3332,8 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"Ping Shan has produced numerous scholars and officials.Tsui Sing Lau Pagoda was declared a monument " +
 				"on 14 December 2001");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily." +
+				"Closed on Tuesdays, Christmas Day, Boxing Day, New Year's Day and the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.4491");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.006166");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
@@ -3321,11 +3352,11 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "根據《廣東通志》記載，嘉慶二十二年(一八一七年)曾在大嶼山東涌石獅山腳建造兩座炮台。" +
 				"一九八〇年，東涌碼頭附近臨海的山坡上發現炮台遺蹟。清除叢生雜草後，顯露了一道曲尺形的圍牆，牆角有一處平台，可能是擺放大炮所用。" +
 				"若如《廣東通志》所載，該地建有兩座炮台，這一遺蹟無疑是其中一座。小炮台修復工作已完成，不過仍待深入研究。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_07.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tung Chung Battery");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "According to the Guangdong Annals, two military forts were " +
 				"built in the 22nd year of Jiaqing reign (1817) at the foot of the 'Rocky Lion Hill' at Tung Chung, " +
@@ -3334,12 +3365,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"probably for gun emplacements, was revealed. There is little doubt that this ruin is one of the two " +
 				"forts built in 1817 as mentioned in the Guangdong Annals. Although some restoration has been " +
 				"carried out, the battery remains to be studied in greater detail.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.287806");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.935987");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tung Chung, Lantau Island");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "大嶼山東涌");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
@@ -3357,7 +3388,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/b5/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "展覽中心：每日上午十時至下午五時。逢星期二、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tung Chung Fort");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tung Chung Fort, referred to in the Qing Dynasty as the " +
@@ -3367,11 +3398,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"then occupied, first as a police station, and then by Wa Ying College, the Rural Committee Office " +
 				"and the Public Primary School of Tung Chung.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "10:00am – 5:00pm daily. Closed on Tuesdays, Christmas Day, Boxing Day, " +
+				"New Year's Day and the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.278712");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.935751");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tung Chung, Lantau Island");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "大嶼山東涌");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
@@ -3392,7 +3424,7 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_09.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "展覽中心：每日上午九時至下五時。逢星期二、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tung Lung Fort");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Located at the north eastern tip of Tung Lung Chau, " +
@@ -3408,11 +3440,12 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 				"interior of the fort was conducted by the Antiquities and Monuments Office with the " +
 				"assistance of volunteers. A large quantity of artefacts was unearthed.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "Information Centre9:00am – 5:00pm daily. " +
+				"Closed on Tuesdays, Christmas Day, Boxing Day, New Year's Day and the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.255618");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.296905");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tung Lung Chau, Sai Kung");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "西貢東龍洲");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "西貢");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Sai Kung");
@@ -3425,34 +3458,40 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("95"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("95"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/95.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "東華三院文物館原為廣華醫院大堂，廣華醫院是首間在九龍和新界區開辦的醫院，為公眾提供醫療服務。" +
+				"廣華醫院由東華醫院總理及九龍的華人領袖所興辦，於一九一一年落成，作為東華醫院的九龍分院。一九三一年，東華醫院、廣華醫院和東華東院三間醫院合併為「東華三院」。廣華醫院在一九五八年進行全面的重建工程，" +
+				"只有大堂得以保存。一九七Ｏ年，東華三院為慶祝成立一百周年，將廣華醫院的大堂改建為東華三院文物館，用以展示東華三院的歷史文物和收藏珍貴文獻。一九七一年一月十五日，文物館由關祖堯爵士主持開幕典禮。" +
+				"文物館自一九九三年起開放給公眾參觀。文物館糅合中西方的建築特色。館內的祠堂布局和建築物正面的中式裝飾，清楚展現中式建築特色。檐板上的花卉和吉祥圖案，以及外廊的樑架和駝峰，" +
+				"均是精緻的木刻。金字屋頂鋪有綠色琉璃瓦，目前的屋脊建於一九九一年，乃仿照一九一Ｏ年的原有屋脊重建。西方建築元素主要見於建築物的側面和背面，包括使用小圓窗和連拱頂石的弓形拱窗。" +
+				"大堂內通往展覽廳的四道拱門設有西式楣窗。大堂的屋頂由傳統的中式桁條和樑架結構支撐，而偏廳則採用了雙柱桁架。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "enquiry@tungwah.org.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_95.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "星期一至六：上午10時至下午6時. 逢星期日及公眾假期休館");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2770 0867");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Tung Wah Museum");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tung Wah Museum, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Tung Wah Museum was originally the Main Hall Building of Kwong Wah Hospital, " +
+				"the first hospital founded in Kowloon and the New Territories to provide medical services to the public." +
+				"The founding of the Kwong Wah Hospital was initiated by the directors of the Tung Wah Hospital and the community leaders of Kowloon. " +
+				"The new hospital was opened in 1911 as a Kowloon branch of the Tung Wah Hospital. In 1931, Tung Wah Hospital, Kwong Wah Hospital and " +
+				"Tung Wah Eastern Hospital were amalgamated into the Tung Wah Group of Hospitals (TWGHs). In 1958, Kwong Wah Hospital underwent complete " +
+				"reconstruction with only the Main Hall Building being preserved. In 1970, the centenary year of the TWGHs, the Main Hall Building " +
+				"was converted into the Tung Wah Museum for displaying the historic relics and housing the invaluable archives of the TWGHs. " +
+				"The opening ceremony of the Museum was officiated by Sir Kwan Cho Yiu on 15 January 1971, and the Museum has been opened to the public since 1993." +
+				"The Museum is characterised by a combination of Chinese and Western architectural features. The Chinese characteristics of the Museum are " +
+				"clearly demonstrated by the ancestral hall setting and the Chinese decorations at the front elevation. Exquisite wood carvings are found on " +
+				"the floral and auspicious motifs of the eaves board as well as the truss system and camel’s humps along the verandah. The pitched roof is laid " +
+				"with green glazed tiles whilst the ridge, which was reconstructed in 1991, imitating the original one in 1910." +
+				"The Western architectural elements are mainly found on the side and rear elevations of the building. Bull’s eye windows " +
+				"and segmental arched windows with keystones are used. Inside the main hall, the four arched doorways leading to the exhibition rooms " +
+				"are designed with western-style fanlights. While the roof of the main hall is supported by traditional Chinese purlins and truss system, " +
+				"queen post trusses are found at the side chambers.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "Monday to Saturday: 10:00am to 6:00pm. Closed on Sunday and public holidays");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.318795");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.172298");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Kwong Wah Hospital, 25 Waterloo Road, Kowloon");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "九龍窩打老道25號廣華醫院");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_KOWLOON);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "油尖旺");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yau Tsim Mong");
@@ -3464,34 +3503,23 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("55"));
 
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/55.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "域多利監獄於一八四一年落成，是香港開埠初期最先以耐久物料建造的建築物。第二次世界大戰期間，" +
+				"監獄內大部分建築物因受轟炸而嚴重損毀。當局進行修復後，於一九四六年重開作監獄之用。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_55.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "保育和活化中區警署建築群進行中，不對外開放。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Victoria Prison Compound");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Victoria Prison Compound, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Built in 1841, Victoria Prison is understood to be the first western building " +
+				"constructed of durable material in Hong Kong. Most of the buildings within the compound were damaged by bombing during " +
+				"the Second World War. The Prison was reopened in 1946 after repairs.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "CLOSED FOR CONSERVATION AND REVITALISATION OF THE CENTRAL POLICE STATION COMPOUND");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.28173");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.15346");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Old Bailey Street, Central");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "中環奧卑利街");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -3504,34 +3532,32 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("71"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("71"));
 		//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/71.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "香港橫瀾島的橫瀾燈塔於二〇〇〇年十二月二十九日宣布為法定古蹟。橫瀾燈塔於一八九三年開始投入服務，" +
+				"是香港現存五座戰前燈塔的其中一座。香港商貿發達，早在一八四一年前已是一個商港。當時政府和商界人士均認為需要在港口沿岸設置輔航照明設施。現今尚存的戰前燈塔共有五座，" +
+				"分別位於青洲(兩座)、橫瀾島、燈籠洲及鶴咀。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_71.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "此燈塔現由海事處管理及操作。基於保安理由及避免影響日常運作，燈塔並不對外開放。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Waglan Lighthouse");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Waglan Lighthouse, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "This Lighthouse declared as a monument on 29 December 2000. " +
+				"It commenced operation in 1893, is one of the five surviving pre-war lighthouses in Hong Kong i.e. " +
+				"Green Island (two on the island), Waglan Island, Tang Lung Chau and at Cape D'Aguilar.Hong Kong owes its prosperity to trade " +
+				"and its harbour was a regular port of call even before 1841. It was recognized by the Government and the business community that " +
+				"provisions should be made for lighting along the coasts.When first opened the lighthouse was equipped with an up-to-date light, " +
+				"burning mineral oil with rotating apparatus floating on mercury and was initially run by the Chinese Maritime Customs from Shanghai. " +
+				"Following the lease of the New Territories in 1898, it was transferred to the the Hong Kong Government who took over on 1 January 1901. " +
+				"During the Second World War, Waglan Lighthouse was extensively damaged by bombing. Repairs took place after 1945. It has been unmanned since August 1989. " +
+				"It acted not only as a navigation aid, but also an outpost where weather information on the eastern corner of the territory is " +
+				"collected and fed to the Hong Kong Observatory. It is now under the management of Marine Department.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "This lighthouse is still running under the management of the Marine Department. " +
+				"For security and operational reasons, it is not open to the public.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.186153");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.305329");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Waglan Island");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "橫瀾島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_ISLAND);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "離島");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Islands");
@@ -3544,34 +3570,26 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("42"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("42"));
 		//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/42.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "舊上環街市原有南北兩座大樓。南座位於皇后大道中，一八五八年建成，一九八〇年拆卸。" +
+				"現存的北座大樓建於一九〇六年，面積比南座小，但設計比較緊密，建築風格屬愛德華式，角樓外牆有帶狀磚飾。大樓自鄰近的市政大廈落成後，" +
+				"於一九八九年空置。其後修葺改建成傳統行業及手工藝中心，目前由市區重建局管理。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_42.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午十時至凌晨十二時。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Western Market");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Western Market, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Western Market consisted originally of two separate blocks. The South Block at Queen's Road Central " +
+				"was built in 1858 and demolished in 1980. The remaining North Block, smaller and more compact in design, was built in 1906. It is in Edwardian " +
+				"style highlighted with 'bandaged' brickwork on the four corner towers. When the former Urban Council's market facilities came into operation " +
+						"in 1989, the market building became vacant and was later converted into a traditional trades, arts and crafts centre. " +
+						"It is now managed by the Urban Renewal Authority.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "10:00am – 12:00m.n. daily");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.287697");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.150404");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "323 Des Voeux Road Central, Sheung Wan");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "上環德輔道中三百二十三號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_HK);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "中西區");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Central & Western");
@@ -3583,34 +3601,38 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("94"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("94"));
 		//		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/94.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "仁敦岡書室，又名「燕翼堂」，屬三進兩院式建築，書室的確實建造年份已難確定，但據當地村民相傳，" +
+				"書室是屏山鄧族為紀念十四世祖鄧懷德（號仁所）、十五世祖鄧枝芳（號敦服）及十六世祖鄧鳳（號鳴岡）而建。書室正門的木匾額刻有「同治九年歲次庚午重鐫」，" +
+				"可推斷書室曾於同治九年（一八七Ｏ年）進行大規模的修繕。仁敦岡書室原為培育族中子弟而建，讓族人參加科舉考試以晉身仕途。由於書室經常邀請廣州的學者前來講學，" +
+				"故書室兩側的耳房曾用以招待學者留宿。隨著科舉制度的廢除，仁敦岡書室亦演化為向村中孩童提供現代教育的地方，直至一九三Ｏ年代才由位於屏山的達德學校所取代。" +
+				"除教學用途外，書室亦作為鄧族的祠堂，祖先神龕置於中進，供奉了坑頭村鄧族先祖的木主。書室目前仍用作宗族聚會和舉行春秋二祭、婚嫁喜事等傳統儀式及節慶活動的場所。" +
+				"古物古蹟辦事處將會在仁敦岡書室為法定古蹟後，為這幢歷史建築物安排全面的修復工程。修復工程完竣後，建築物會開放予市民參觀。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_94.php");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "修復期間，不對外開放。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Yan Tun Kong Study Hall");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Yan Tun Kong Study Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Yan Tun Kong Study Hall, alias “Yin Yik Tong”, is a three-hall building with two open courtyards in between. " +
+				"The exact year of its construction cannot be ascertained. According to the indigenous villagers, it was originally built by the descendants " +
+				"of the Tang clan of Ping Shan to commemorate their prominent fourteenth to sixteenth generation ancestors, namely Tang Wai-tak (alias Yan-shaw), " +
+				"Tang Ji-fong (alias Tun-fuk) and Tang Fung (alias Ming-kong). The engraved characters of “re-carved in the ninth year of Tongzhi reign” (i.e. 1870)" +
+				" on the wooden plaque hanging over the main hall suggest that the study hall underwent large-scale renovation in 1870. " +
+				"The study hall was built to educate the clan youngsters so as to prepare them for the Imperial Civil Service Examinations. " +
+				"Since most instructors recruited came from Guangzhou, the side rooms in the study hall were provided as accommodation for them." +
+				" With the abolition of the Imperial Civil Service Examination, the study hall was converted into a teaching venue for village children. " +
+				"Its function as a study hall gradually faded with the founding of Tat Tak School in Ping Shan in the 1930s. Apart from teaching purposes, " +
+				"Yan Tun Kong Study Hall is also serving as an ancestral hall. Soul tablets commemorating ancestors of the Tang clan in Hang Tau Tsuen are worshipped " +
+				"at the main altar in the middle hall. Nowadays, the Tang descendants would still gather in the study hall to hold traditional clan festivals and " +
+				"activities, such as the ancestor worship of the Spring and Autumn Equinox, wedding and celebrations, etc. " +
+				"Restoration works to Yan Tun Kong Study Hall will be carried out by the Antiquities and Monuments Office upon their declaration as historical building. " +
+				"After restoration, the building will be opened for public viewing.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "CLOSED FOR RESTORATION WORKS");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.443577");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.014309");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "NO. 127 HANG TAU TSUEN, PING SHAN, YUEN LONG, NEW TERRITORIES");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "新界元朗屏山坑頭村127號");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
@@ -3620,33 +3642,23 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME, "廈村楊侯宮"); //data99
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("34"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("34"));
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "位於元朗廈村的楊侯宮相傳已有二百多年歷史，現存建築則於一八一一年改建而成。廟宇為兩進式建築，" +
+				"由庭院分隔，庭院早年已改建成香亭。楊侯宮於一九八八年被列為法定古蹟，其後由政府斥資全面重修。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Yeung Hau Temple, Ha Tsuen");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Yeung Hau Temple, Ha Tsuen, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
-		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Yeung Hau Temple in Ha Tsuen, Yuen Long was built for the worship of the immortal Hau Wong. " +
+				"The temple is reported to have a history of over 200 years and was rebuilt to its present form in 1811. It is a two-hall building " +
+				"separated by a courtyard which has been roofed over to form an incense tower. The temple was declared a monument in 1988 and " +
+				"was then fully restored by the Government.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.45383");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "113.99313");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Tung Tau Tsuen, Ha Tsuen, Yuen Long");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗廈村東頭村");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
@@ -3659,34 +3671,30 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("47"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("47"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/47.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "二帝書院位於錦田水頭村，由錦田鄧族興建。鄧族早於十一世紀已開始定居於錦田一帶的肥沃平原。相傳二帝書院建於道光" +
+				"（一八二一至一八五〇年）末年以供奉文昌和關帝，並提供講學及教學之所。二帝神像原供奉於書院附近的風水塔。該塔相傳能幫助族中子弟高中科舉，但其後遭拆卸，" +
+				"村內十六名士紳遂籌組鄧二帝會，負責建造和開辦一間以二帝命名的書院，供奉二帝。二帝書院純作教學用途，故結構簡單實用，修繕工程於一九九四年底完成，現已開放供市民參觀。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_47.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。逢星期二、聖誕日、聖誕翌日、元旦日及農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Yi Tai Study Hall");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Yi Tai Study Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Yi Tai Study Hall is situated at Shui Tau Village, Yuen Long. " +
+				"It was built by the Tang clan of Kam Tin who came to settle in this fertile plain as far back as the 11th century. According to local legends," +
+				" Yi Tai Study Hall was built towards the end of Daoguang reign (1821-1850) to accommodate the two immortals, " +
+				"Man Cheong and Kwan Tai (literary and martial gods respectively). Both were originally worshipped in a fung shui pagoda " +
+				"erected nearby to boost scholarship but the pagoda was later demolished.Subsequently, a group of 16 local scholar-gentry formed " +
+				"a society called the Tang Yi Tai Wui (The Tang Society of the Two Immortals) for the construction and operation of a new study hall " +
+				"which was named Yi Tai Study Hall, i.e. study hall of the two immortals. The building was built purely for use as a study hall and " +
+				"its architecture is therefore simple and functional. Restoration work was completed in 1994. The building is now open to the public.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily.Closed on Tuesdays, Christmas Day, " +
+				"Boxing Day, New Year's Day and the first three days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.445094");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.061194");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
-		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗屏山");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Shui Tau Tsuen, Kam Tin, Yuen Long ");
+		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS, "元朗錦田水頭村");
 		values.put(PlaceSqliteOpenHelper.COLUMN_DISTRICT, Constants.INT_NT);
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION, "元朗");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LOCATION_EN, "Yuen Long");
@@ -3699,30 +3707,26 @@ public class PlaceSqliteOpenHelper extends SQLiteOpenHelper {
 		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, buildImageUrl("74"));
 		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, buildHomePageUrl("74"));
 //		values.put(PlaceSqliteOpenHelper.COLUMN_IMG_URL, "http://www.amo.gov.hk/graphics/%s/monuments/74.jpg");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" 
-								+ "二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。"
-								+ "二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。一九三一至一九六一年間，達德學校於此開辦。"
-								+ "據祠堂正門石額所載，清光緒年間（一八七五至一九零八年）曾進行大規模修葺，但仍基本保持原來的結構和特色。"
-								+ "愈喬二公祠於二零零一年十二月十四日列為法定古蹟。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC, "愈喬二公祠坐落於鄧氏宗祠旁邊，為三進兩院式建築，結構和規模與鄧氏宗祠相若。" +
+				"二公祠由鄧族第十一世祖鄧世賢（號愈聖）和鄧世昭（號喬林）昆仲於十六世紀初興建。二公祠除用作祠堂外，亦曾經是各村子弟讀書之所。" +
+				"一九三一至一九六一年間，達德學校於此開辦。據祠堂正門石額所載，清光緒年間（一八七五至一九〇八年）曾進行大規模修葺，" +
+				"但仍基本保持原來的結構和特色。愈喬二公祠於二〇〇一年十二月十四日列為法定古蹟。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_EMAIL, "amo@lcsd.gov.hk");
 //		values.put(PlaceSqliteOpenHelper.COLUMN_HOMEPAGE, "http://www.amo.gov.hk/%s/monuments_74.php");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK, "開放時間只作參考，請致電查詢詳情。");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。\n農曆年初一至初三休息。");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR, "每日上午九時至下午一時及下午二時至五時。農曆年初一至初三休息。");
 		values.put(PlaceSqliteOpenHelper.COLUMN_PHONE, "+852 2208 4400");
 		values.put(PlaceSqliteOpenHelper.COLUMN_NAME_EN, "Yu Kiu Ancestral Hall");
-		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Yu Kiu Ancestral Hall, "
-				+ "comprises three halls and two internal courtyards. The layout and design of Yu Kiu "
-				+ "Ancestral Hall is identical to Tang Ancestral Hall. It was constructed in the early "
-				+ "sixteenth century by two eleventh generation brothers of the Tang clan of Ping Shan: "
-				+ "Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an "
-				+ "ancestral hall, the building was also used as a teaching hall for youngsters of Ping Shan. "
-				+ "From 1931 to 1961, it was occupied by Tat Tak Primary School. The last major renovation of "
-				+ "the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as "
-				+ "indicated by the engraved characters on the stone tablet above the main entrance. Most of "
-				+ "the original structure and features of the building remain intact. Yu Kiu Ancestral Hall was "
-				+ "declared a monument on 14 December 2001.");
+		values.put(PlaceSqliteOpenHelper.COLUMN_DESC_EN, "Yu Kiu Ancestral Hall, is situated adjacent to Tang Ancestral Hall, " +
+				"comprises three halls and two internal courtyards. The layout and design of Yu Kiu Ancestral Hall is identical " +
+				"to Tang Ancestral Hall. It was constructed in the early sixteenth century by two eleventh generation brothers of the " +
+				"Tang clan of Ping Shan: Tang Sai-yin (alias Yu-sing) and Tang Sai-chiu (alias Kiu-lum). Apart from serving as an ancestral hall, " +
+				"the building was also used as a teaching hall for youngsters of Ping Shan. From 1931 to 1961, it was occupied by Tat Tak Primary School. " +
+				"The last major renovation of the building probably took place during the Guangzu reign (1875-1908) of Qing dynasty as indicated by " +
+				"the engraved characters on the stone tablet above the main entrance. Most of the original structure and features of the building remain intact." +
+				"Yu Kiu Ancestral Hall was declared a monument on 14 December 2001.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_REMARK_EN, "PLEASE CALL TO CHECK THE OPENING HOURS");
-		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00AM – 1:00PM & 2:00PM – 5:00PM.\nCLOSED ON THE FIRST 3 DAYS OF THE LUNAR NEW YEAR");
+		values.put(PlaceSqliteOpenHelper.COLUMN_HOUR_EN, "9:00am – 1:00pm & 2:00pm – 5:00pm daily. Closed on the first 3 days of the Lunar New Year.");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LAT, "22.448793");
 		values.put(PlaceSqliteOpenHelper.COLUMN_LNG, "114.008362");
 		values.put(PlaceSqliteOpenHelper.COLUMN_ADDRESS_EN, "Ping Shan, Yuen Long");
