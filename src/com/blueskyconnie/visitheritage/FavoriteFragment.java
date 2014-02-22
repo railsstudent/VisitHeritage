@@ -135,7 +135,7 @@ public class FavoriteFragment extends BaseListFragment implements View.OnClickLi
 
 	@Override
 	public void onClick(View v) {
-		favoriteListAdapter.updateShowCount();
+		favoriteListAdapter.updateShowCount(edtSearch.getText().toString());
 		favoriteListAdapter.notifyDataSetChanged();
 	}
 }

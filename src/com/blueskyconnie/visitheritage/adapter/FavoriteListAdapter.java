@@ -39,29 +39,28 @@ public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 	private ImageLoader imageLoader = ImageLoader.getInstance();
 	private FavoriteFilter favoriteFilter;
 	private List<Place> lstOrigPlace;
-	private int size;
+	private int upperbound;
 	private Locale locale;
 	
 	public FavoriteListAdapter(Context context, int resourceId, List<Place> lstPlace) {
 		//super(context, resourceId, lstPlace);
 		this.context = context;
 		this.resourceId = resourceId;
-		this.lstPlace = lstPlace;
+//		this.lstPlace = lstPlace;
 		this.lstOrigPlace = lstPlace;
-		size = Math.min(lstOrigPlace.size(), NUM_LOAD_ELEMENTS);
+		upperbound = Math.min(lstOrigPlace.size(), NUM_LOAD_ELEMENTS);
+		this.lstPlace = ImmutableList.copyOf(lstOrigPlace.subList(0, upperbound)).asList();
 		locale = Locale.getDefault();
 	}
 	
 	@Override
 	public int getCount() {
-		return size;
+		Log.d(TAG, "size = " + lstPlace.size());
+		return lstPlace.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		if (position >= lstPlace.size()) {
-			return null;
-		}
 		return lstPlace.get(position);
 	}
 
@@ -69,11 +68,6 @@ public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 	public long getItemId(int position) {
 		return getItem(position).hashCode();
 	}
-
-//	@Override
-//	public int getCount() {
-//		return lstPlace.size();
-//	}
 
 	@SuppressLint("DefaultLocale")
 	@Override
@@ -92,42 +86,41 @@ public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 			holder = (FavoriteHolder) view.getTag();
 		}
 
+		Log.d(TAG, "getView");
 		Place place = (Place) getItem(position);
-		if (place != null) {
-			// check current language of the device
-			String name = PlaceCursorHelper.IsDeviceEngLang() ? 
-						Strings.nullToEmpty(place.getName_en()) :  // English Name
-						Strings.nullToEmpty(place.getName());  // Chinese Name
-			holder.tvName.setText(name);
-			
-			if (holder.img != null && !Strings.isNullOrEmpty(place.getUrl())) {
-				imageLoader.displayImage(
-						PlaceCursorHelper.getUrlByLanguage(place.getUrl()), holder.img, 
-						new SimpleImageLoadingListener() {
-								@Override
-								public void onLoadingFailed(String imageUri,
-										View view, FailReason failReason) {
-									super.onLoadingFailed(imageUri, view, failReason);
-									switch (failReason.getType()) {
-										case IO_ERROR:
-											Log.e(TAG, "Input/Output error");
-											break;
-										case DECODING_ERROR:
-											Log.e(TAG, "Image can't be decoded");
-											break;
-										case NETWORK_DENIED:
-											Log.e(TAG, "Downloads are denied");
-											break;
-										case OUT_OF_MEMORY:
-											Log.e(TAG, "Out Of Memory error");
-											break;
-										case UNKNOWN:
-											Log.e(TAG, "Unknown error");
-											break;
-									}
+		// check current language of the device
+		String name = PlaceCursorHelper.IsDeviceEngLang() ? 
+					Strings.nullToEmpty(place.getName_en()) :  // English Name
+					Strings.nullToEmpty(place.getName());  // Chinese Name
+		holder.tvName.setText(name);
+		
+		if (holder.img != null && !Strings.isNullOrEmpty(place.getUrl())) {
+			imageLoader.displayImage(
+					PlaceCursorHelper.getUrlByLanguage(place.getUrl()), holder.img, 
+					new SimpleImageLoadingListener() {
+							@Override
+							public void onLoadingFailed(String imageUri,
+									View view, FailReason failReason) {
+								super.onLoadingFailed(imageUri, view, failReason);
+								switch (failReason.getType()) {
+									case IO_ERROR:
+										Log.e(TAG, "Input/Output error");
+										break;
+									case DECODING_ERROR:
+										Log.e(TAG, "Image can't be decoded");
+										break;
+									case NETWORK_DENIED:
+										Log.e(TAG, "Downloads are denied");
+										break;
+									case OUT_OF_MEMORY:
+										Log.e(TAG, "Out Of Memory error");
+										break;
+									case UNKNOWN:
+										Log.e(TAG, "Unknown error");
+										break;
 								}
-						});
-			}
+							}
+					});
 		}
 		return view;
 	}
@@ -148,52 +141,34 @@ public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 	private class FavoriteFilter extends Filter {
 
 		protected FilterResults performFiltering(final CharSequence constraint) {
-
-//			Locale locale = Locale.getDefault();
-//			String name = "";
+			Log.d(TAG, "performFiltering - constraint: " +  constraint);
 			FilterResults results = new FilterResults();
+			ImmutableList<Place> matches;
 			if (constraint == null || constraint.length() == 0) {
-//				results.count = lstOrigPlace.size();
-//				results.values = lstOrigPlace;
-				results.count = size;
-				results.values = ImmutableList.copyOf(lstOrigPlace.subList(0, size)).asList();
+				Log.d(TAG, "performFiltering ds - lstOrigPlace");
+				matches = getMatchPlace(lstOrigPlace, "");
 			} else {
-				 // filter by the name of places and show the first size number of elements
-//				List<Place> filterResult = new ArrayList<Place>();
-//				for (Place place : lstPlace) {
-//					// check current language of the device
-//					name = PlaceCursorHelper.IsDeviceEngLang() ? 
-// 							  Strings.nullToEmpty(place.getName_en()).toUpperCase(locale) :  
-//							  Strings.nullToEmpty(place.getName()).toUpperCase(locale);  
-// 					if (name.contains(constraint.toString().toUpperCase(locale))) {
-// 						 filterResult.add(place);	
-// 					}
-//				}
-//				results.count = filterResult.size();
-//				results.values = filterResult;
-				
-				Collection<Place> colMatchedPlace = Collections2.filter(lstPlace, 
-							new MatchPlacePredicate(constraint.toString().toUpperCase(locale)));
-				ImmutableList<Place> lstNoPlace = ImmutableList.of();
-				ImmutableList<Place> lstMatched = colMatchedPlace == null || colMatchedPlace.size() == 0 ? lstNoPlace :
-														ImmutableList.copyOf(colMatchedPlace).subList(0, size);
-				results.count = lstMatched.size();
-				results.values = lstMatched;
+				Log.d(TAG, "performFiltering ds - lstPlace");
+				matches = getMatchPlace(lstPlace, constraint.toString());
 			}
+			Log.d(TAG, "performFiltering - size: " +  matches.size());
+			results.count = matches.size();
+			results.values = matches;
 			return results;
 		}
 
 		@SuppressWarnings("unchecked")
-		protected void publishResults(CharSequence constraint,
-				FilterResults results) {
+		protected void publishResults(CharSequence constraint, 	FilterResults results) {
 			
 			// See more at: http://www.survivingwithandroid.com/2012/10/android-listview-custom-filter-and.html#sthash.UcZKTLgE.dpuf
 			// Now we have to inform the adapter about the new list filtered 
+			Log.d(TAG, "publishResults - result.count = " + results.count);
 			if (results.count == 0) {
 				if (results.values != null) {
 					lstPlace = (List<Place>) results.values;
 				} else {
-					lstPlace = ImmutableList.of();
+					ImmutableList<Place> lstNoPlace = ImmutableList.of();
+					lstPlace = lstNoPlace;
 				}
 				notifyDataSetInvalidated();
 			} else {
@@ -225,48 +200,41 @@ public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 	}
 
 	public void filterFavorite(String strSearch) {
-
-//		Locale locale = Locale.getDefault();
-//		String name = "";
-		if (strSearch != null && strSearch.length() > 0) {
-			 // filter by the name of places
-//			List<Place> filterResult = new ArrayList<Place> ();
-//			for (Place place : lstPlace) {
-//				// check current language of the device
-//				name = PlaceCursorHelper.IsDeviceEngLang() ? 
-//						  Strings.nullToEmpty(place.getName_en()).toUpperCase(locale) :  
-//						  Strings.nullToEmpty(place.getName()).toUpperCase(locale);  
-//				if (name.contains(strSearch.toString().toUpperCase(locale))) {
-//					filterResult.add(place);	
-//				}
-//			}
-//		if (filterResult.size() == 0) {
-//			this.lstPlace = filterResult;
-//			this.notifyDataSetInvalidated();
-//		} else {
-//			this.lstPlace = filterResult;
-//			this.notifyDataSetChanged();
-//		}
-			Collection<Place> colMatchedPlace = Collections2.filter(lstPlace, 
-					new MatchPlacePredicate(strSearch.toString().toUpperCase(locale)));
-			ImmutableList<Place> lstNoPlace = ImmutableList.of();
-			ImmutableList<Place> lstMatched = colMatchedPlace == null || colMatchedPlace.size() == 0? lstNoPlace :
-														ImmutableList.copyOf(colMatchedPlace).subList(0, size);
-			if (lstMatched.size() == 0) {
-				this.lstPlace = lstMatched;
-				this.notifyDataSetInvalidated();
-			} else {
-				this.lstPlace = lstMatched;
-				this.notifyDataSetChanged();
-			}
-		}
+		search(lstPlace, strSearch);
 	}
 
-	public void updateShowCount() {
-		size += NUM_LOAD_ELEMENTS;
-		if (size > lstPlace.size()) {
-			size = lstPlace.size();
+	public void updateShowCount(String searchValue) {
+		upperbound += NUM_LOAD_ELEMENTS;
+		if (upperbound > lstOrigPlace.size()) {
+			upperbound = lstOrigPlace.size();
+		}
+		search(lstOrigPlace.subList(0, upperbound), searchValue);
+	}
+	
+	private ImmutableList<Place> getMatchPlace(List<Place> placeSource, String searchValue) {
+		
+		Log.d(TAG, "getMatchedPlace source' size - " + placeSource);
+		Collection<Place> colMatchedPlace = Collections2.filter(placeSource, 
+				new MatchPlacePredicate(searchValue.toString().toUpperCase(locale)));
+		ImmutableList<Place> lstNoPlace = ImmutableList.of();
+		int resultSize = colMatchedPlace.size();
+		// determine the number places that eventually get displayed 
+		int visibleElemSize = Math.min(resultSize, upperbound);
+		Log.d(TAG, "getMatchedPlace - visible element size = " + visibleElemSize);
+		ImmutableList<Place> lstMatched = colMatchedPlace == null || resultSize == 0? lstNoPlace :
+													ImmutableList.copyOf(colMatchedPlace).subList(0, visibleElemSize);		
+		return lstMatched;
+	}
+	
+	private void search(List<Place> placeSource, String searchValue) {
+		Log.d(TAG, "search value: " + searchValue);
+		ImmutableList<Place> lstMatched = getMatchPlace(placeSource, searchValue);
+		if (lstMatched.size() == 0) {
+			this.lstPlace = lstMatched;
+			this.notifyDataSetInvalidated();
+		} else {
+			this.lstPlace = lstMatched;
+			this.notifyDataSetChanged();
 		}
 	}
-
 }

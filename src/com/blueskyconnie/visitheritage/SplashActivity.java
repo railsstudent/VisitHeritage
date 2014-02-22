@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 
 public class SplashActivity extends Activity {
 
@@ -58,6 +59,7 @@ public class SplashActivity extends Activity {
 	
 			ImageView mImgView = (ImageView) findViewById(R.id.imgSplash);
 			mImgView. setImageDrawable(anim);
+			mImgView.setScaleType(ScaleType.FIT_XY);
 			anim.start();
 				
 			new Thread(new MyRunnable(mHandlerPreload, this)).start();
