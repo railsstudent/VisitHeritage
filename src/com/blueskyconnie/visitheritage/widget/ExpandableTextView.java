@@ -1,4 +1,4 @@
-package com.blueskyconnie.widget;
+package com.blueskyconnie.visitheritage.widget;
 
 import com.blueskyconnie.visitheritage.R;
 

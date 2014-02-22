@@ -43,10 +43,8 @@ public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 	private Locale locale;
 	
 	public FavoriteListAdapter(Context context, int resourceId, List<Place> lstPlace) {
-		//super(context, resourceId, lstPlace);
 		this.context = context;
 		this.resourceId = resourceId;
-//		this.lstPlace = lstPlace;
 		this.lstOrigPlace = lstPlace;
 		upperbound = Math.min(lstOrigPlace.size(), NUM_LOAD_ELEMENTS);
 		this.lstPlace = ImmutableList.copyOf(lstOrigPlace.subList(0, upperbound)).asList();
