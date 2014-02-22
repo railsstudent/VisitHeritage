@@ -182,6 +182,7 @@ public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 		public MatchPlacePredicate (String searchValue) {
 			this.searchValue = searchValue;
 		}
+		
 		public boolean apply(Place place) {
 			if (place == null) {
 				return false;
@@ -194,7 +195,8 @@ public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 	};
 
 	public void resetData() {
-		this.lstPlace = lstOrigPlace;
+//		this.lstPlace = lstOrigPlace;
+		this.lstPlace = lstOrigPlace.subList(0, upperbound);
 	}
 
 	public void filterFavorite(String strSearch) {
@@ -211,7 +213,7 @@ public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 	
 	private ImmutableList<Place> getMatchPlace(List<Place> placeSource, String searchValue) {
 		
-		Log.d(TAG, "getMatchedPlace source' size - " + placeSource);
+		Log.d(TAG, "getMatchedPlace source's size - " + placeSource);
 		Collection<Place> colMatchedPlace = Collections2.filter(placeSource, 
 				new MatchPlacePredicate(searchValue.toString().toUpperCase(locale)));
 		ImmutableList<Place> lstNoPlace = ImmutableList.of();

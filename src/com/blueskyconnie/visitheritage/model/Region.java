@@ -1,19 +1,24 @@
 package com.blueskyconnie.visitheritage.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Region implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private int nameResId;
-	private int numMonument;
-	private int resId;
+//	private int numMonument;
+	private int imgResId;
+	private List<Place> source;
+	private String sharePrefKey;
 	
-	public Region(int nameResId, int numMonument, int resId) {
+	public Region(int nameResId, int imgResId, List<Place> source, String sharePrefKey) {
 		this.nameResId = nameResId;
-		this.numMonument = numMonument;
-		this.resId = resId;
+		//this.numMonument = numMonument;
+		this.imgResId = imgResId;
+		this.source = source;
+		this.sharePrefKey = sharePrefKey;
 	}
 
 	public int getNameResId() {
@@ -21,10 +26,18 @@ public class Region implements Serializable {
 	}
 
 	public int getNumMonument() {
-		return numMonument;
+		return (source == null ? 0 : source.size());
 	}
 
 	public int getImageResId() {
-		return resId;
+		return imgResId;
+	}
+
+	public List<Place> getSource() {
+		return source;
+	}
+
+	public String getSharePrefKey() {
+		return sharePrefKey;
 	}
 }

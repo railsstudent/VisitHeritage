@@ -37,11 +37,6 @@ public class FavoriteFragment extends BaseListFragment implements View.OnClickLi
 	}
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-	}
-
-	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_favorite, null);
@@ -61,7 +56,8 @@ public class FavoriteFragment extends BaseListFragment implements View.OnClickLi
 					favoriteListAdapter.resetData();
 				}
 				// apply filter
-				favoriteListAdapter.getFilter().filter(s.toString());
+				//favoriteListAdapter.getFilter().filter(s.toString());
+				favoriteListAdapter.filterFavorite(s.toString());
 			}
 			
 		});

@@ -15,7 +15,7 @@ public class SplashActivity extends Activity {
 
 	private static class SplashHandler extends Handler {
 
-		private static final int DELAY_MILLISECONDS = 2000;
+		private static final int DELAY_MILLISECONDS = 3000;
 
 		private final WeakReference<SplashActivity> activity;
 		

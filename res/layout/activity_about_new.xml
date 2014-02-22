@@ -236,6 +236,31 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/black" />
 
+       <TextView
+            android:id="@+id/tvExpandableTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/expandableTextView"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvExpandableTextViewCopyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/expandableTextView_copyright"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />        
+        
         <TextView
             android:id="@+id/tvAppCopyright"
             android:layout_width="match_parent"

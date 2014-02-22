@@ -11,7 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.blueskyconnie.visitheritage.adapter.ChooseAreaAdapter;
+import com.blueskyconnie.visitheritage.model.Place;
 import com.blueskyconnie.visitheritage.model.Region;
+import com.google.common.collect.Lists;
 
 public class ChooseAreaFragment extends BaseListFragment {
 	
@@ -21,32 +23,30 @@ public class ChooseAreaFragment extends BaseListFragment {
 	public ChooseAreaFragment() {
 		topFragment = true;
 	}
+
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+	}
 	
-	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-
-      return inflater.inflate(R.layout.fragment_area_new, container, false);
+		return inflater.inflate(R.layout.fragment_area_new, container, false);
     }
 	
-	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		mainActivity = (MainActivity) getActivity();
-
-		List<Region> lstRegion = new ArrayList<Region>();
-		lstRegion.add(new Region(R.string.strHK, mainActivity.getState().getLstHK().size(), 
-				R.drawable.img_hk));
-		lstRegion.add(new Region(R.string.strKowloon, mainActivity.getState().getLstKowloon().size(), 
-				R.drawable.img_kln));
-		lstRegion.add(new Region(R.string.strNT, mainActivity.getState().getLstNT().size(), 
-				R.drawable.img_nt));
-		lstRegion.add(new Region(R.string.strIsland, mainActivity.getState().getLstIsland().size(), 
-				R.drawable.img_island));
-		lstRegion.add(new Region(R.string.strAll, mainActivity.getState().getLstAll().size(), R.drawable.img_hk));
+		List<Region> lstRegion = Lists.newArrayList(  
+				new Region(R.string.strHK, R.drawable.img_hk, mainActivity.getState().getLstHK(), Constants.SHARE_PREF_HK)
+			   , new Region(R.string.strKowloon, R.drawable.img_kln, mainActivity.getState().getLstKowloon(), 
+					   Constants.SHARE_PREF_KLN)	
+			   , new Region(R.string.strNT, R.drawable.img_nt, mainActivity.getState().getLstNT(), Constants.SHARE_PREF_NT)
+			   , new Region(R.string.strIsland, R.drawable.img_island, mainActivity.getState().getLstIsland(), 
+					   Constants.SHARE_PREF_ISLAND)
+			   , new Region(R.string.strAll, R.drawable.img_all, mainActivity.getState().getLstAll(), 
+					   Constants.SHARE_PREF_ALL));
 		ChooseAreaAdapter adapter = new ChooseAreaAdapter(getActivity(), R.layout.list_item_area, lstRegion);
 		setListAdapter(adapter);
-		
 	}
 	
 	@Override
@@ -59,72 +59,26 @@ public class ChooseAreaFragment extends BaseListFragment {
 	public void onListItemClick(ListView listView, View v, int position, long id) {
 		if (!isItemClicked) {
 			Region region = (Region) listView.getItemAtPosition(position);
-			LocationMapFragment fragment = new LocationMapFragment();
-			FragmentManager fragmentManager = getFragmentManager();
-			Bundle bundle = new Bundle();
-			// show locationMap fragment
-			switch (position) {
-				case 0:
-					if (region != null) {
-						isItemClicked = true;
-						bundle.putString(Constants.PLACE_KEY, getString(R.string.strHK));
-						bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstHK());
-						bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_HK);
-						fragment.setArguments(bundle);
-						fragmentManager.beginTransaction()
-							.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
-							.addToBackStack(null)
-							.commit();
-					} 
-					break;
-				case 1:
-					isItemClicked = true;
-					bundle.putString(Constants.PLACE_KEY, getString(R.string.strKowloon));
-					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstKowloon());
-					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_KLN);
-					fragment.setArguments(bundle);
-					fragmentManager.beginTransaction()
-						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
-						.addToBackStack(null)
-						.commit();
-					break;
-				case 2:
-					isItemClicked = true;
-					bundle.putString(Constants.PLACE_KEY, getString(R.string.strNT));
-					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstNT());
-					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_NT);
-					fragment.setArguments(bundle);
-					fragmentManager.beginTransaction()
-						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
-						.addToBackStack(null)
-						.commit();
-					break;
-				case 3:
-					isItemClicked = true;
-					bundle.putString(Constants.PLACE_KEY, getString(R.string.strIsland));
-					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstIsland());
-					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_ISLAND);
-					fragment.setArguments(bundle);
-					fragmentManager.beginTransaction()
-						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
-						.addToBackStack(null)
-						.commit();
-					break;
-				case 4:
-					isItemClicked = true;
-					bundle.putString(Constants.PLACE_KEY, getString(R.string.strAll));
-					bundle.putParcelableArrayList(Constants.PLACES, mainActivity.getState().getLstAll());
-					bundle.putString(Constants.REGION_KEY, Constants.SHARE_PREF_ALL);
-					fragment.setArguments(bundle);
-					fragmentManager.beginTransaction()
-						.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
-						.addToBackStack(null)
-						.commit();
-					break;
-				default:
-					break;
+			if (region != null) {
+				isItemClicked = true;
+				invokeLocationFragment(region);
 			}
 		}
+	}
+
+	private void invokeLocationFragment(Region region) {
+
+		LocationMapFragment fragment = new LocationMapFragment();
+		FragmentManager fragmentManager = getFragmentManager();
+		Bundle bundle = new Bundle();
+		bundle.putString(Constants.PLACE_KEY, getString(region.getNameResId()));
+		bundle.putParcelableArrayList(Constants.PLACES, (ArrayList<Place>) region.getSource());
+		bundle.putString(Constants.REGION_KEY, region.getSharePrefKey());
+		fragment.setArguments(bundle);
+		fragmentManager.beginTransaction()
+			.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
+			.addToBackStack(null)
+			.commit();
 	}
 	
 }
