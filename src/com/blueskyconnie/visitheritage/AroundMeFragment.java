@@ -2,6 +2,7 @@ package com.blueskyconnie.visitheritage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -37,6 +38,8 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.PauseOnScrollListener;
 
@@ -47,11 +50,12 @@ public class AroundMeFragment extends BaseListFragment implements
 		GooglePlayServicesClient.OnConnectionFailedListener, LocationListener,
 		LoaderManager.LoaderCallbacks<Cursor> {
 
-	private static final String TAG = "AroundMeFragment";
+	private static final String TAG = AroundMeFragment.class.getSimpleName();
 	
 	private static final int FIFTEEN_SEC = 15 * 1000;
 	private static final int FIVE_MIN = 5 * 60 * 1000;
 	private static final int DIST = 100;
+	private static final double DIST_PROXIMITY = 2000;
 
 	// google request code
 	private static final int RQS_GOOGLE_CONNECT = 1;
@@ -250,7 +254,18 @@ public class AroundMeFragment extends BaseListFragment implements
 			loc.setLongitude(place.getLng());
 			place.setDistance(loc.distanceTo(mCurrentLocation));
 		}
-		Collections.sort(places, distanceComparator);
+		// as per thomas's request, only show distance less than 2000m
+		Collection<Place> colPlaces = Collections2.filter(places, new Predicate<Place>() {
+			@Override
+			public boolean apply(Place place) {
+				if (place == null) {
+					return false;
+				}
+				return place.getDistance() <= DIST_PROXIMITY;
+			}
+		});
+		places = new ArrayList<Place> (colPlaces);
+		Collections.sort(places, distanceComparator);	
 		onPlaceLoadFinished(places);
 	}
 
@@ -288,5 +303,4 @@ public class AroundMeFragment extends BaseListFragment implements
 			}
 		}
 	}
-
 }

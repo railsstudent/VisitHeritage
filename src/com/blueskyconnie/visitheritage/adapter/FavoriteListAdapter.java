@@ -27,7 +27,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 
-//public class FavoriteListAdapter extends ArrayAdapter<Place>  {
 public class FavoriteListAdapter extends BaseAdapter implements Filterable {
 
 	private static final String TAG = FavoriteListAdapter.class.getSimpleName();
