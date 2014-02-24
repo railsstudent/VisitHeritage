@@ -5,14 +5,13 @@
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
     <string name="strFavorite">我的喜愛</string>
-    
     <string name="monument">香港法定古蹟</string>
     <string name="around_me">我周圍的法定古蹟</string>
     <string name="visitor_notice">參觀古蹟須知</string>
     <string name="contact_office">聯絡部門</string>
     <string name="rating">給我的程式評分</string>
     <string name="favorite">@string/strFavorite</string>
-        
+
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item>@string/monument</item>
@@ -43,7 +42,7 @@
     <string name="menu_item_info">資訊</string>
     <string name="menu_item_favorite">加入喜愛</string>
     <string name="menu_item_unfavorite">刪除喜愛</string>
-    
+    <string name="menu_item_settings">設定</string>
     <string name="visit_title">參觀古蹟須知</string>
     <string name="visit_text1">1.	法定古蹟位置資料是由古物古蹟辦事處提供，只作識別用。</string>
     <string name="visit_text2">2.	開放時間只作參考，並以相關團體或機構的最新公布為準。</string>
@@ -138,7 +137,7 @@
     <string name="strEng">英文：</string>
     <string name="copyright">版權所有</string>
     <string name="title_activity_wiki">維基百科</string>
-    
+
     <string-array name="setting_array">
         <item>法定古蹟維基百科</item>
         <item>聯絡開發人員</item>
@@ -157,10 +156,30 @@
         <item>@string/dept_heritage</item>
         <item>@string/dept_monument</item>
     </string-array>
-    
+
     <string name="article_add_to_favorites">你的文章已加到入我的喜愛。</string>
     <string name="article_remove_from_favorites">你的文章已從我的喜愛中刪除。</string>
     <string name="content_imgBtnFav">我的喜愛按鈕</string>
     <string name="strSearchMonument">尋找 (最多三十字)</string>
     <string name="strLoadMore">載入更多</string>
+
+    <string-array name="proximity_entries">
+        <item>500 米</item>
+        <item>1000 米</item>
+        <item>1500 米</item>
+        <item>2000 米</item>
+        <item>2500 米</item>
+        <item>3000 米</item>
+    </string-array>
+    <string-array name="proximity_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string name="around_me_category">尋找我周圍的法定古蹟偏好</string>
+    <string name="strDistancePref">鄰近距離</string>
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="@string/around_me_category" android:enabled="true">
+        <ListPreference android:entryValues="@array/proximity_values" 
+            android:entries="@array/proximity_entries" 
+            android:key="key_around_me_distance" 
+            android:defaultValue="1" 
+            android:title="@string/strDistancePref"/>
+    </PreferenceCategory>
+</PreferenceScreen>

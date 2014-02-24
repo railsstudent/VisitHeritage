@@ -4,26 +4,29 @@
 
     <item
         android:id="@+id/item_share"
-        android:showAsAction="ifRoom" 
-        myapp:showAsAction="ifRoom"
+        myapp:showAsAction="never"  
         android:orderInCategory="100"
         android:icon="@android:drawable/ic_menu_share"
         android:title="@string/menu_item_share"/>
-    <item
-        android:id="@+id/item_setting"
-        android:showAsAction="ifRoom" 
+   	  <item
+        android:id="@+id/item_info"
         myapp:showAsAction="ifRoom"
         android:orderInCategory="101"
         android:icon="@android:drawable/ic_menu_info_details"
         android:title="@string/menu_item_info"/>
     <item
         android:id="@+id/item_clear_memory_cache"
-        android:showAsAction="never" 
+        myapp:showAsAction="never" 
         android:orderInCategory="200"
         android:title="@string/menu_item_clear_memory_cache"/>
     <item
         android:id="@+id/item_clear_disc_cache"
-        android:showAsAction="never"
+        myapp:showAsAction="never" 
         android:orderInCategory="210"
         android:title="@string/menu_item_clear_disc_cache"/>
+   <item
+        android:id="@+id/item_settings"
+        myapp:showAsAction="never"
+        android:orderInCategory="300"
+        android:title="@string/menu_item_settings"/>
 </menu>

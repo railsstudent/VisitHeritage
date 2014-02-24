@@ -32,7 +32,7 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class MainActivity extends ActionBarActivity {
 
-	private static final String TAG = "MainActivity";
+	private static final String TAG = MainActivity.class.getSimpleName();
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
@@ -211,24 +211,27 @@ public class MainActivity extends ActionBarActivity {
 
 		// Handle action bar actions click
 		switch (item.getItemId()) {
-		case R.id.item_clear_disc_cache:
-			imageLoader.clearDiscCache();
-			Log.i(TAG, "Clear memory from disc");
-			return true;
-		case R.id.item_clear_memory_cache:
-			imageLoader.clearMemoryCache();
-			Log.i(TAG, "Clear memory from memory");
-			return true;
-		case R.id.item_share:
-			Log.i(TAG, "Tell a friend about application");
-			createShareIntent();
-			return true;
-			// launch setting activity
-		case R.id.item_setting:
-			Log.i(TAG, "Show settings activity");
-			Intent intent = new Intent(this, SettingActivity.class);
-			startActivity(intent);
-			return true;
+			case R.id.item_clear_disc_cache:
+				imageLoader.clearDiscCache();
+				Log.i(TAG, "Clear memory from disc");
+				return true;
+			case R.id.item_clear_memory_cache:
+				imageLoader.clearMemoryCache();
+				Log.i(TAG, "Clear memory from memory");
+				return true;
+			case R.id.item_share:
+				Log.i(TAG, "Tell a friend about application");
+				createShareIntent();
+				return true;
+				// launch information activity
+			case R.id.item_info:
+				Log.i(TAG, "Show information activity");
+				startActivity(new Intent(this, SettingActivity.class));
+				return true;
+			case R.id.item_settings:
+				Log.i(TAG, "Show preference activity");
+				startActivity(new Intent(this, AppPreferenceActivity.class));
+				return true;
 		}
 		return false;
 	}
@@ -260,7 +263,8 @@ public class MainActivity extends ActionBarActivity {
 		menu.findItem(R.id.item_clear_disc_cache).setVisible(!drawerOpen);
 		menu.findItem(R.id.item_clear_memory_cache).setVisible(!drawerOpen);
 		menu.findItem(R.id.item_share).setVisible(!drawerOpen);
-		menu.findItem(R.id.item_setting).setVisible(!drawerOpen);
+		menu.findItem(R.id.item_info).setVisible(!drawerOpen);
+		menu.findItem(R.id.item_settings).setVisible(!drawerOpen);
 		return super.onPrepareOptionsMenu(menu);
 	}
 

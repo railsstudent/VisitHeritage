@@ -87,7 +87,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.blueskyconnie.visitheritage.SettingActivity" />
         </activity>
-
         <activity
             android:name="com.blueskyconnie.visitheritage.WikiActivity"
             android:label="@string/title_activity_wiki"
@@ -97,15 +96,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.blueskyconnie.visitheritage.SettingActivity" />
         </activity>
-        
+        <activity
+            android:name="com.blueskyconnie.visitheritage.AppPreferenceActivity"
+            android:parentActivityName="com.blueskyconnie.visitheritage.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blueskyconnie.visitheritage.MainActivity" />
+        </activity>
+
         <!-- grant permission to content provider -->
         <provider
             android:name="com.blueskyconnie.visitheritage.contentprovider.PlaceContentProvider"
             android:authorities="com.blueskyconnie.visitheritage"
             android:exported="false" >
         </provider>
-
-  
     </application>
 
 </manifest>
