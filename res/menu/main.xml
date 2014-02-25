@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/item_share"
-        myapp:showAsAction="never"  
+        myapp:showAsAction="ifRoom"  
         android:orderInCategory="100"
         android:icon="@android:drawable/ic_menu_share"
         android:title="@string/menu_item_share"/>

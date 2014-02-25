@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -182,6 +183,7 @@ public class MainActivity extends ActionBarActivity {
 					FragmentManager.POP_BACK_STACK_INCLUSIVE);
 
 			fragmentManager.beginTransaction()
+					.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
 					.replace(R.id.frame_container, fragment, tagname).commit();
 
 			// update selected item and title, then close the drawer
@@ -305,6 +307,7 @@ public class MainActivity extends ActionBarActivity {
 			if (((FragmentLevel) currentFragment).isTopFragment()) {
 				if (!Constants.HOME_TAG.equals(tagname)) {
 					fm.beginTransaction()
+							.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
 							.replace(R.id.frame_container, new HomeFragment(),
 									Constants.HOME_TAG).commit();
 					return;

@@ -3,6 +3,7 @@ package com.blueskyconnie.visitheritage;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
@@ -78,6 +79,7 @@ public class ChooseAreaFragment extends BaseListFragment {
 		bundle.putString(Constants.REGION_KEY, region.getSharePrefKey());
 		fragment.setArguments(bundle);
 		fragmentManager.beginTransaction()
+			.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
 			.replace(R.id.frame_container, fragment, Constants.MAP_TAG)
 			.addToBackStack(null)
 			.commit();
