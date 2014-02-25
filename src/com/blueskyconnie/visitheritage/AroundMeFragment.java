@@ -32,6 +32,7 @@ import com.blueskyconnie.visitheritage.helper.DistanceComparator;
 import com.blueskyconnie.visitheritage.helper.PlaceCursorHelper;
 import com.blueskyconnie.visitheritage.model.Place;
 import com.blueskyconnie.visitheritage.sqllite.PlaceSqliteOpenHelper;
+import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -55,7 +56,7 @@ public class AroundMeFragment extends BaseListFragment implements
 	private static final int FIFTEEN_SEC = 15 * 1000;
 	private static final int FIVE_MIN = 5 * 60 * 1000;
 	private static final int DIST = 100;
-	private static final double DIST_PROXIMITY = 2000;
+	//private static final double DIST_PROXIMITY = 2000;
 
 	// google request code
 	private static final int RQS_GOOGLE_CONNECT = 1;
@@ -72,6 +73,7 @@ public class AroundMeFragment extends BaseListFragment implements
 	private boolean isItemClicked = false;
 	private String strLat;
 	private String strLng;
+	private VisitHeritageState state;
 
 	private DistanceComparator distanceComparator;
 	private ConnectionDetector connectionDetector;
@@ -120,9 +122,11 @@ public class AroundMeFragment extends BaseListFragment implements
 				.getInstance(), false, true));
 		aroundmeListAdapter = new AroundMeListAdapter(activity,
 				R.layout.list_item_aroundme, new ArrayList<Place>(), 
-				((MainActivity) getActivity()).getState());
+				((VisitHeritageApplication) getActivity().getApplicationContext()).getState());
+				//((MainActivity) getActivity()).getState());
 		setListAdapter(aroundmeListAdapter);
 		connectionDetector = new ConnectionDetector(getActivity());
+		state = ((VisitHeritageApplication) getActivity().getApplicationContext()).getState();
 	}
 
 	@Override
@@ -212,6 +216,17 @@ public class AroundMeFragment extends BaseListFragment implements
 	public Loader<Cursor> onCreateLoader(int id, Bundle bundle) {
 		try {
 			if (activity != null && mCurrentLocation != null) {
+//				StringBuffer sbSort = new StringBuffer();
+//				sbSort.append("abs( ");
+//				sbSort.append(PlaceSqliteOpenHelper.COLUMN_LAT);
+//				sbSort.append(" - ");
+//				sbSort.append(mCurrentLocation.getLatitude());
+//				sbSort.append(") + abs( ");
+//				sbSort.append(PlaceSqliteOpenHelper.COLUMN_LNG);
+//				sbSort.append(" - ");
+//				sbSort.append(mCurrentLocation.getLongitude());
+//				sbSort.append(") LIMIT 20 ");
+
 				StringBuffer sbSort = new StringBuffer();
 				sbSort.append("abs( ");
 				sbSort.append(PlaceSqliteOpenHelper.COLUMN_LAT);
@@ -221,8 +236,7 @@ public class AroundMeFragment extends BaseListFragment implements
 				sbSort.append(PlaceSqliteOpenHelper.COLUMN_LNG);
 				sbSort.append(" - ");
 				sbSort.append(mCurrentLocation.getLongitude());
-				sbSort.append(") LIMIT 20 ");
-
+				sbSort.append(") ");
 				List<Address> addresses = mGeocoder.getFromLocation(
 						mCurrentLocation.getLatitude(),
 						mCurrentLocation.getLongitude(), 1);
@@ -254,14 +268,14 @@ public class AroundMeFragment extends BaseListFragment implements
 			loc.setLongitude(place.getLng());
 			place.setDistance(loc.distanceTo(mCurrentLocation));
 		}
-		// as per thomas's request, only show distance less than 2000m
 		Collection<Place> colPlaces = Collections2.filter(places, new Predicate<Place>() {
 			@Override
 			public boolean apply(Place place) {
 				if (place == null) {
 					return false;
 				}
-				return place.getDistance() <= DIST_PROXIMITY;
+//				return place.getDistance() <= DIST_PROXIMITY;
+				return place.getDistance() <= state.getAround_me_distance();
 			}
 		});
 		places = new ArrayList<Place> (colPlaces);

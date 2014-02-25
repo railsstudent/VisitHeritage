@@ -13,11 +13,12 @@ import android.widget.ListView;
 import com.blueskyconnie.visitheritage.adapter.ChooseAreaAdapter;
 import com.blueskyconnie.visitheritage.model.Place;
 import com.blueskyconnie.visitheritage.model.Region;
+import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 import com.google.common.collect.Lists;
 
 public class ChooseAreaFragment extends BaseListFragment {
 	
-	private MainActivity mainActivity;
+	//private MainActivity mainActivity;
 	private boolean isItemClicked;
 	
 	public ChooseAreaFragment() {
@@ -35,15 +36,16 @@ public class ChooseAreaFragment extends BaseListFragment {
 	
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		mainActivity = (MainActivity) getActivity();
+		//mainActivity = (MainActivity) getActivity();
+		VisitHeritageState state = ((VisitHeritageApplication) getActivity().getApplicationContext()).getState();
 		List<Region> lstRegion = Lists.newArrayList(  
-				new Region(R.string.strHK, R.drawable.img_hk, mainActivity.getState().getLstHK(), Constants.SHARE_PREF_HK)
-			   , new Region(R.string.strKowloon, R.drawable.img_kln, mainActivity.getState().getLstKowloon(), 
+				new Region(R.string.strHK, R.drawable.img_hk, state.getLstHK(), Constants.SHARE_PREF_HK)
+			   , new Region(R.string.strKowloon, R.drawable.img_kln, state.getLstKowloon(), 
 					   Constants.SHARE_PREF_KLN)	
-			   , new Region(R.string.strNT, R.drawable.img_nt, mainActivity.getState().getLstNT(), Constants.SHARE_PREF_NT)
-			   , new Region(R.string.strIsland, R.drawable.img_island, mainActivity.getState().getLstIsland(), 
+			   , new Region(R.string.strNT, R.drawable.img_nt, state.getLstNT(), Constants.SHARE_PREF_NT)
+			   , new Region(R.string.strIsland, R.drawable.img_island, state.getLstIsland(), 
 					   Constants.SHARE_PREF_ISLAND)
-			   , new Region(R.string.strAll, R.drawable.img_all, mainActivity.getState().getLstAll(), 
+			   , new Region(R.string.strAll, R.drawable.img_all, state.getLstAll(), 
 					   Constants.SHARE_PREF_ALL));
 		ChooseAreaAdapter adapter = new ChooseAreaAdapter(getActivity(), R.layout.list_item_area, lstRegion);
 		setListAdapter(adapter);

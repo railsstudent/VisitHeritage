@@ -22,8 +22,6 @@ public class HomeFragment extends BaseFragment {
         adView = (AdView) rootView.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
         						.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-        						.addTestDevice("3be2084011b4a10a")
-        						.addTestDevice("346bc190e6be57ef")
         						.build();
         adView.loadAd(adRequest);
         return rootView;

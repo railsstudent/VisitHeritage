@@ -203,7 +203,8 @@ public class PlaceFragment extends BaseFragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		state = ((MainActivity) getActivity()).getState();
+		//state = ((MainActivity) getActivity()).getState();
+		state = ((VisitHeritageApplication) getActivity().getApplicationContext()).getState();
 		favoriteHolder = state.getFavorites();
 	}
 

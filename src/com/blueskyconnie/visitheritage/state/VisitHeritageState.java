@@ -21,6 +21,7 @@ public class VisitHeritageState {
 	private ArrayList<Place> lstNT;
 	private ArrayList<Place> lstIsland;
 	private ArrayList<Place> lstAll;
+	private int around_me_distance;
 	
 	public VisitHeritageState(Context context) {
 		this.context = context;
@@ -110,5 +111,13 @@ public class VisitHeritageState {
 			}
 		}
 		return lstAll;
+	}
+
+	public int getAround_me_distance() {
+		return around_me_distance;
+	}
+
+	public void setAround_me_distance(int around_me_distance) {
+		this.around_me_distance = around_me_distance;
 	}
 }

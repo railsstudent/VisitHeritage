@@ -4,13 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.blueskyconnie.visitheritage.R;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 public class VisitorFragment extends BaseFragment {
 	
-	private  AdView adView;
+	private AdView adView;
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -22,8 +22,6 @@ public class VisitorFragment extends BaseFragment {
         adView = (AdView) rootView.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
         						.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-        						.addTestDevice("3be2084011b4a10a")
-        						.addTestDevice("346bc190e6be57ef")
         						.build();
         adView.loadAd(adRequest);
         return rootView;

@@ -71,7 +71,8 @@ public class FavoriteFragment extends BaseListFragment implements View.OnClickLi
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		dao = new PlaceDao(getActivity());
-		state = ((MainActivity) getActivity()).getState();
+		//state = ((MainActivity) getActivity()).getState();
+		state = ((VisitHeritageApplication) getActivity().getApplicationContext()).getState();
 	}
 
 	@Override

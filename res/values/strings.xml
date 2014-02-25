@@ -87,6 +87,9 @@
     <string name="zxing_copyright">Copyright 2014, Sean Owen</string>
     <string name="expandableTextView">Expandable TextView</string>
     <string name="expandableTextView_copyright">Copyright 2013, Bazlur Rahman</string>
+    <string name="prefFragment_software">android-support-v4-preferencefragment</string>
+    <string name="prefFragment_copyright">Copyright 2013, kolavar</string>
+ 
     <string name="loading">載入&#8230;</string>
     <string name="strHK">香港島</string>
     <string name="strKowloon">九龍</string>
@@ -172,12 +175,12 @@
         <item>3000 米</item>
     </string-array>
     <string-array name="proximity_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>3000</item>
     </string-array>
 
     <string name="around_me_category">尋找我周圍的法定古蹟偏好</string>

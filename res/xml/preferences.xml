@@ -4,7 +4,7 @@
         <ListPreference android:entryValues="@array/proximity_values" 
             android:entries="@array/proximity_entries" 
             android:key="key_around_me_distance" 
-            android:defaultValue="1" 
+            android:defaultValue="1000" 
             android:title="@string/strDistancePref"/>
     </PreferenceCategory>
 </PreferenceScreen>

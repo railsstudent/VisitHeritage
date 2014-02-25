@@ -24,7 +24,6 @@ import android.widget.ListView;
 
 import com.blueskyconnie.visitheritage.adapter.NavDrawerListAdapter;
 import com.blueskyconnie.visitheritage.model.NavDrawerItem;
-import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
@@ -52,7 +51,7 @@ public class MainActivity extends ActionBarActivity {
 	private List<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
 
-	private VisitHeritageState state;
+	//private VisitHeritageState state;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +114,7 @@ public class MainActivity extends ActionBarActivity {
 							Constants.HOME_TAG).commit();
 		}
 
-		state = new VisitHeritageState(this);
+		//state = new VisitHeritageState(this);
 		appPath = "market://details?id=" + getPackageName();
 		appUrl = "http://play.google.com/store/apps/details?id=" + getPackageName();
 
@@ -338,9 +337,9 @@ public class MainActivity extends ActionBarActivity {
 		super.onDestroy();
 	}
 
-	public VisitHeritageState getState() {
-		return state;
-	}
+//	public VisitHeritageState getState() {
+//		return state;
+//	}
 
 	// expose a method to click item in nav drawer item
 	public void selectItem(int position) {

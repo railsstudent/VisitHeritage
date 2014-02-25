@@ -23,5 +23,4 @@ public class AppPreferenceActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
 }

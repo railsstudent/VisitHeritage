@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.os.Environment;
 
 import com.blueskyconnie.visitheritage.R;
+import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -15,7 +16,9 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
 public class VisitHeritageApplication extends Application {
-
+	
+	private VisitHeritageState state;
+	
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -41,5 +44,10 @@ public class VisitHeritageApplication extends Application {
 			.build();
 		
 		ImageLoader.getInstance().init(config);
+		state = new VisitHeritageState(this);
+	}
+
+	public VisitHeritageState getState() {
+		return state;
 	}
 }
