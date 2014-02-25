@@ -9,6 +9,7 @@ import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -25,6 +26,7 @@ import android.widget.ListView;
 
 import com.blueskyconnie.visitheritage.adapter.NavDrawerListAdapter;
 import com.blueskyconnie.visitheritage.model.NavDrawerItem;
+import com.blueskyconnie.visitheritage.state.VisitHeritageState;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
@@ -52,7 +54,7 @@ public class MainActivity extends ActionBarActivity {
 	private List<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
 
-	//private VisitHeritageState state;
+	private VisitHeritageState state;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +121,16 @@ public class MainActivity extends ActionBarActivity {
 		appPath = "market://details?id=" + getPackageName();
 		appUrl = "http://play.google.com/store/apps/details?id=" + getPackageName();
 
+		state = ((VisitHeritageApplication) this.getApplicationContext()).getState();
+		String strProximity = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("key_around_me_distance", "1000");
+		int intProximity = 0;
+		try {
+			intProximity = Integer.parseInt(strProximity); 
+		} catch (NumberFormatException ex) {
+			ex.printStackTrace();
+			intProximity = 1000;
+		}
+		state.setAround_me_distance(intProximity);
 		this.mDrawerLayout.openDrawer(Gravity.LEFT);
 	}
 
