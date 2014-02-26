@@ -5,10 +5,9 @@ import java.util.List;
 import java.util.Locale;
 
 import android.app.AlertDialog;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -32,6 +31,7 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.common.base.Strings;
@@ -41,7 +41,7 @@ import de.keyboardsurfer.android.widget.crouton.Style;
  
 public class LocationMapFragment extends BaseFragment {
 
-	private static final String SHARE_PREF_NAME = "pref_marker";
+//	private static final String SHARE_PREF_NAME = "pref_marker";
 	private static final int RQS_GooglePlayServices = 1;
 	
 	private MapView mapView;
@@ -50,8 +50,9 @@ public class LocationMapFragment extends BaseFragment {
 	private SparseArray<Place> hmNamePlace;
 	private String language;
 	private String region_key = "";
-	private int pref_placeId;
+	//private int pref_placeId;
 	private SparseArray<Marker> markerArray;
+	private LatLngBounds bounds;
 	
 	public LocationMapFragment() {
 		// not a top level fragment
@@ -79,7 +80,7 @@ public class LocationMapFragment extends BaseFragment {
 		super.onCreateView(inflater, container, savedInstanceState);
 		View rootView = (View) inflater.inflate(R.layout.fragment_location, null);
 		mapView = (MapView) rootView.findViewById(R.id.mapView);
-	
+		
 		String placeKey = getArguments().getString(Constants.PLACE_KEY);
 		TextView tvArea = (TextView) rootView.findViewById(R.id.tvArea);
 		tvArea.setText(placeKey);
@@ -135,7 +136,7 @@ public class LocationMapFragment extends BaseFragment {
 	@Override
 	public void onPause() {
 		super.onPause();
-		savePreference();
+//		savePreference();
 		if (mapView != null) {
 			mapView.onPause();
 		}
@@ -161,13 +162,14 @@ public class LocationMapFragment extends BaseFragment {
 	                     // show a custom information marker
 	                     map.setInfoWindowAdapter(new PlaceInfoWindowAdapter());
 	                     
-	                     map.animateCamera(CameraUpdateFactory.zoomTo(14));
+	                     //map.animateCamera(CameraUpdateFactory.zoomTo(14));
 	                     map.setMyLocationEnabled(true);
 
+                        LatLngBounds.Builder builder = new LatLngBounds.Builder();
 	                 	if (lstPlace != null) {
 	                    	 LatLng latlng = null;
 	                    	 int lastPlaceId = -1;
-	                    	 
+
 		                     // 1) loop the lstPlace list 
 		              	     // 1a)  create markeroption, set title, snippet and icon, and add to map  
 		                     for (Place place : lstPlace) {
@@ -177,15 +179,22 @@ public class LocationMapFragment extends BaseFragment {
 		                                 .title(String.valueOf(place.getId()))
 		                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.pin_red)));
 		                        markerArray.put(lastPlaceId, marker);
+		                        // create the bound to include all markers
+		                        builder.include(latlng);
 		                     }
-		                     try {
-	
-			                 	 // load the marker from shared preference
-			                     loadPreference(lastPlaceId);
-		                     } catch (Exception ex1) {
-		             			 Crouton.makeText(getActivity(), "onResume: loadPreference error. " + ex1.getMessage(),
-	            					Style.ALERT).show();	                    	 
-		                     }
+		                     bounds = builder.build();
+		                     DisplayMetrics metrics = mapView.getResources().getDisplayMetrics();
+		                     map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds,
+		                    		 metrics.widthPixels, metrics.heightPixels, 150));
+		                     
+//		                     try {
+//	
+//			                 	 // load the marker from shared preference
+//			                     loadPreference(lastPlaceId);
+//		                     } catch (Exception ex1) {
+//		             			 Crouton.makeText(getActivity(), "onResume: loadPreference error. " + ex1.getMessage(),
+//	            					Style.ALERT).show();	                    	 
+//		                     }
 	                 	} 
 					}
 					mapView.onResume();				
@@ -222,10 +231,10 @@ public class LocationMapFragment extends BaseFragment {
         @Override
         public boolean onMarkerClick(Marker marker) {
        	 	 // update shared preference
-       	     if (!Strings.isNullOrEmpty(marker.getTitle())) {
-       	    	 pref_placeId = Integer.parseInt(marker.getTitle());
-       	    	 savePreference();
-       	     }
+ //      	     if (!Strings.isNullOrEmpty(marker.getTitle())) {
+//       	    	 pref_placeId = Integer.parseInt(marker.getTitle());
+       	    	 //savePreference();
+ //      	     }
                 marker.showInfoWindow();
                 return false;
         }
@@ -241,8 +250,8 @@ public class LocationMapFragment extends BaseFragment {
         	Place place = hmNamePlace.get(placeId, null);
         	if (place != null) {
         		// update shared preference 
-        		pref_placeId = placeId;
-        		savePreference();
+   //     		pref_placeId = placeId;
+        		//savePreference();
         		
 				Bundle bundle = new Bundle();
 				bundle.putParcelable(Constants.PLACE_KEY, place);
@@ -319,39 +328,39 @@ public class LocationMapFragment extends BaseFragment {
         }
 	}
 	
-	private void loadPreference(int defaultPlaceId) {
-		// load the marker from shared preference
-        SharedPreferences pref = getActivity().getSharedPreferences(SHARE_PREF_NAME, Context.MODE_PRIVATE);
-        pref_placeId = pref.getInt(region_key, defaultPlaceId);
-        if (pref_placeId > -1) {
-           Place sharedPrefPlace = hmNamePlace.get(pref_placeId);
-           if (sharedPrefPlace == null) {
-               pref_placeId = defaultPlaceId;
-               sharedPrefPlace = hmNamePlace.get(pref_placeId);
-           }
-           if (sharedPrefPlace != null) {
-               // update shared preference 
-               pref.edit().putInt(region_key, pref_placeId).commit();
-        	   // open marker window
-	           if (markerClickListener != null) {
-	       		   Marker marker = markerArray.get(pref_placeId, null);
-	       		   if (marker != null) {
-	       			   markerClickListener.onMarkerClick(marker);
-	       		   }
-	       	   }
-	           LatLng latlng = new LatLng(sharedPrefPlace.getLat(), sharedPrefPlace.getLng());
-	       	   map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
-	           map.animateCamera(CameraUpdateFactory.zoomTo(14));
-           } 
-        }
-	}
+//	private void loadPreference(int defaultPlaceId) {
+//		// load the marker from shared preference
+//        SharedPreferences pref = getActivity().getSharedPreferences(SHARE_PREF_NAME, Context.MODE_PRIVATE);
+//        pref_placeId = pref.getInt(region_key, defaultPlaceId);
+//        if (pref_placeId > -1) {
+//           Place sharedPrefPlace = hmNamePlace.get(pref_placeId);
+//           if (sharedPrefPlace == null) {
+//               pref_placeId = defaultPlaceId;
+//               sharedPrefPlace = hmNamePlace.get(pref_placeId);
+//           }
+//           if (sharedPrefPlace != null) {
+//               // update shared preference 
+//               pref.edit().putInt(region_key, pref_placeId).commit();
+//        	   // open marker window
+//	           if (markerClickListener != null) {
+//	       		   Marker marker = markerArray.get(pref_placeId, null);
+//	       		   if (marker != null) {
+//	       			   markerClickListener.onMarkerClick(marker);
+//	       		   }
+//	       	   }
+//	           //LatLng latlng = new LatLng(sharedPrefPlace.getLat(), sharedPrefPlace.getLng());
+//	       	   //map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+//	           //map.animateCamera(CameraUpdateFactory.zoomTo(14));
+//           } 
+//        }
+//	}
 	
-	private void savePreference() {
-		// load the marker from shared preference
-        SharedPreferences pref = getActivity().getSharedPreferences(SHARE_PREF_NAME, Context.MODE_PRIVATE);
- 		// update shared preference 
-       	pref.edit().putInt(region_key, pref_placeId).commit();
-	}
+//	private void savePreference() {
+//		// load the marker from shared preference
+//        SharedPreferences pref = getActivity().getSharedPreferences(SHARE_PREF_NAME, Context.MODE_PRIVATE);
+// 		// update shared preference 
+//       	pref.edit().putInt(region_key, pref_placeId).commit();
+//	}
 
 	@Override
 	public void onPrepareOptionsMenu(Menu menu) {
