@@ -74,18 +74,20 @@ public class PlaceFragment extends BaseFragment {
 		switch (item.getItemId()) {
 			case R.id.item_favorite:
 				String msg = "";
-				// update favorite id set 
-				if (favoriteHolder.isFavorite(currentPlace.getId())) {
-					// remove from favorite
-					favoriteHolder.removeFavorite(currentPlace.getId());
-				  	msg = getResources().getString(R.string.article_remove_from_favorites);
-				} else {
-					favoriteHolder.addFavorite(currentPlace.getId());
-				  	msg = getResources().getString(R.string.article_add_to_favorites);
+				if (favoriteHolder != null && currentPlace != null) {
+					// update favorite id set 
+					if (favoriteHolder.isFavorite(currentPlace.getId())) {
+						// remove from favorite
+						favoriteHolder.removeFavorite(currentPlace.getId());
+					  	msg = getResources().getString(R.string.article_remove_from_favorites);
+					} else {
+						favoriteHolder.addFavorite(currentPlace.getId());
+					  	msg = getResources().getString(R.string.article_add_to_favorites);
+					}
+					Crouton.makeText(getActivity(), msg, Style.INFO).show();
+					// invalidate menu to show different icon and text
+					getActivity().supportInvalidateOptionsMenu();
 				}
-				Crouton.makeText(getActivity(), msg, Style.INFO).show();
-				// invalidate menu to show different icon and text
-				getActivity().supportInvalidateOptionsMenu();
 				return true;
 		}
 		return super.onOptionsItemSelected(item);
@@ -94,12 +96,14 @@ public class PlaceFragment extends BaseFragment {
 	@Override
 	public void onPrepareOptionsMenu(Menu menu) {
 		MenuItem itemFavorite = menu.findItem(R.id.item_favorite);
-		if (favoriteHolder.isFavorite(currentPlace.getId())) {
-			itemFavorite.setIcon(android.R.drawable.btn_star_big_on);
-			itemFavorite.setTitle(R.string.menu_item_favorite);
-		} else {
-			itemFavorite.setIcon(android.R.drawable.btn_star_big_off);
-			itemFavorite.setTitle(R.string.menu_item_unfavorite);
+		if (favoriteHolder != null && currentPlace != null) {
+			if (favoriteHolder.isFavorite(currentPlace.getId())) {
+				itemFavorite.setIcon(android.R.drawable.btn_star_big_on);
+				itemFavorite.setTitle(R.string.menu_item_favorite);
+			} else {
+				itemFavorite.setIcon(android.R.drawable.btn_star_big_off);
+				itemFavorite.setTitle(R.string.menu_item_unfavorite);
+			}
 		}
 		
 		// show/hide favorite menu item
@@ -117,7 +121,9 @@ public class PlaceFragment extends BaseFragment {
 		}
 		
 		// write favorite ids to share preference
-		favoriteHolder.saveFavorites();
+		if (favoriteHolder != null) {
+			favoriteHolder.saveFavorites();
+		}
 		super.onPause();
 	}
 
