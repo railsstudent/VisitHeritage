@@ -211,7 +211,9 @@ public class PlaceFragment extends BaseFragment {
 		super.onActivityCreated(savedInstanceState);
 		//state = ((MainActivity) getActivity()).getState();
 		state = ((VisitHeritageApplication) getActivity().getApplicationContext()).getState();
-		favoriteHolder = state.getFavorites();
+		if (state != null) {
+			favoriteHolder = state.getFavorites();
+		}
 	}
 
 	@Override
@@ -219,7 +221,9 @@ public class PlaceFragment extends BaseFragment {
 		super.onResume();
 		String homepageUrl = PlaceCursorHelper.getUrlByLanguage(currentPlace.getHomepage());
 		qrBitmap = QRCodeHelper.generateCode(getActivity(), homepageUrl, WIDTH, HEIGHT);
-		imgQRCode.setImageBitmap(qrBitmap);
-		imgQRCode.setVisibility(qrBitmap == null ? View.INVISIBLE : View.VISIBLE);
+		if (qrBitmap != null) {
+			imgQRCode.setImageBitmap(qrBitmap);
+			imgQRCode.setVisibility(qrBitmap == null ? View.INVISIBLE : View.VISIBLE);
+		}
 	}
 }
