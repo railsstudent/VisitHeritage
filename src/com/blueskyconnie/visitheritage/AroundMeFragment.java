@@ -7,10 +7,15 @@ import java.util.Collections;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -77,7 +82,9 @@ public class AroundMeFragment extends BaseListFragment implements
 
 	private DistanceComparator distanceComparator;
 	private ConnectionDetector connectionDetector;
-	
+	private LocationManager manager;
+	private AlertDialog dialog;
+		
 	public AroundMeFragment() {
 		topFragment = true;
 		distanceComparator = new DistanceComparator();
@@ -100,7 +107,30 @@ public class AroundMeFragment extends BaseListFragment implements
 																			// meter
 				.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
 		mGeocoder = new Geocoder(getActivity());
+		
+		// mod by Connie Leung, 2014-03-05
+		manager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 	}
+	
+	private DialogInterface.OnClickListener dialogListener = new DialogInterface.OnClickListener() {
+		
+		@Override
+		public void onClick(DialogInterface dialog, int which) {
+			switch (which) {
+				case DialogInterface.BUTTON_POSITIVE:
+					startActivity (new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+					break;
+				case DialogInterface.BUTTON_NEGATIVE:
+					if (dialog != null) {
+						dialog.dismiss();
+					}
+					break;
+				default:
+					break;
+			}
+			
+		}
+	};
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -111,6 +141,15 @@ public class AroundMeFragment extends BaseListFragment implements
 		tvHeader = (TextView) rootView.findViewById(R.id.tvHeader);
 		strLat = getString(R.string.strLat);
 		strLng = getString(R.string.strLng);
+	
+		dialog =  new AlertDialog.Builder(getActivity())
+					.setIcon(R.drawable.ic_launcher)
+					.setTitle("Enable GPS")
+					.setCancelable(false)
+					.setMessage(getString(R.string.askGPS))
+					.setPositiveButton(getString(R.string.yesGPS), dialogListener)
+					.setNegativeButton(getString(R.string.noGPS), dialogListener)
+					.create();
 		return rootView;
 	}
 	
@@ -158,6 +197,13 @@ public class AroundMeFragment extends BaseListFragment implements
 				mLocationClient.disconnect();
 			}
 		}
+		
+		if (dialog != null) {
+			if (dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			dialog = null;
+		}
 	}
 
 	@Override
@@ -167,6 +213,7 @@ public class AroundMeFragment extends BaseListFragment implements
 		int resultCode = GooglePlayServicesUtil
 				.isGooglePlayServicesAvailable(getActivity());
 		if (resultCode == ConnectionResult.SUCCESS) {
+			enableGPS();
 			if (connectionDetector.isConnectingToInternet()) {
 				if (!mLocationClient.isConnected()) {
 					mLocationClient.connect();
@@ -254,6 +301,7 @@ public class AroundMeFragment extends BaseListFragment implements
 				return null;
 			}
 		} catch (Exception ex) {
+			Log.i(TAG, ex.getMessage());
 			return null;
 		}
 	}
@@ -314,6 +362,19 @@ public class AroundMeFragment extends BaseListFragment implements
 					.commit();
 			}  else {
 				isItemClicked = false;
+			}
+		}
+	}
+
+	
+	private void enableGPS() {
+		if (manager == null) {
+			manager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+		}
+		if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+			// prompt user if he/she wants to have GPS enabled
+			if (dialog != null) {
+				dialog.show();
 			}
 		}
 	}
