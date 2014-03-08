@@ -1613,7 +1613,7 @@ containing a value of this type.
         public static final int around_me_category=0x7f0800a9;
         public static final int article_add_to_favorites=0x7f0800a4;
         public static final int article_remove_from_favorites=0x7f0800a5;
-        public static final int askGPS=0x7f0800ab;
+        public static final int askGPS=0x7f0800ac;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
          */
@@ -1742,6 +1742,7 @@ containing a value of this type.
         public static final int drawer_open=0x7f08002b;
         public static final int email_dept_heritage=0x7f08004f;
         public static final int email_dept_monu=0x7f080055;
+        public static final int enableGPS_title=0x7f0800ab;
         public static final int errUnknownBtnAction=0x7f0800a0;
         public static final int error_connectionfailed=0x7f080076;
         public static final int expandableTextView=0x7f080067;
@@ -1782,7 +1783,7 @@ containing a value of this type.
         public static final int monument_heading=0x7f08009d;
         public static final int monument_source=0x7f08009f;
         public static final int next_button_label=0x7f080001;
-        public static final int noGPS=0x7f0800ad;
+        public static final int noGPS=0x7f0800ae;
         public static final int no_favorite=0x7f080074;
         public static final int no_monument=0x7f080073;
         public static final int no_monument_errmsg=0x7f08008f;
@@ -1838,7 +1839,7 @@ containing a value of this type.
         public static final int visitor_notice=0x7f080030;
         public static final int web_dept_heritage=0x7f080050;
         public static final int web_dept_monu=0x7f080056;
-        public static final int yesGPS=0x7f0800ac;
+        public static final int yesGPS=0x7f0800ad;
         public static final int zxing_copyright=0x7f080066;
         public static final int zxing_software=0x7f080065;
     }

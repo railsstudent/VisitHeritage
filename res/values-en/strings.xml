@@ -153,6 +153,7 @@
     <string name="around_me_category">Around Me Preference</string>
     <string name="strDistancePref">Proximity</string>
     
+    <string name="enableGPS_title">Enable GPS</string>
     <string name="askGPS">Do you want to enable GPS?</string>
     <string name="yesGPS">Yes, please.</string>
     <string name="noGPS">No, thanks.</string>

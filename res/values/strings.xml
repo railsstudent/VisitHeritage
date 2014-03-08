@@ -186,6 +186,7 @@
     <string name="around_me_category">尋找我周圍的法定古蹟偏好</string>
     <string name="strDistancePref">鄰近距離</string>
     
+    <string name="enableGPS_title">啟用GPS</string>
     <string name="askGPS">你要啟用GPS嗎？</string>
     <string name="yesGPS">是的。 </string>
     <string name="noGPS">不用了，謝謝。</string>

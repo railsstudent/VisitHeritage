@@ -96,13 +96,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.blueskyconnie.visitheritage.SettingActivity" />
         </activity>
+        <!--  android:parentActivityName="com.blueskyconnie.visitheritage.MainActivity" -->
         <activity
             android:name="com.blueskyconnie.visitheritage.AppPreferenceActivity"
-            android:parentActivityName="com.blueskyconnie.visitheritage.MainActivity"
             android:screenOrientation="portrait" >
-            <meta-data
+            <!-- meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blueskyconnie.visitheritage.MainActivity" />
+                android:value="com.blueskyconnie.visitheritage.MainActivity" -->
         </activity>
 
         <!-- grant permission to content provider -->

@@ -144,7 +144,7 @@ public class AroundMeFragment extends BaseListFragment implements
 	
 		dialog =  new AlertDialog.Builder(getActivity())
 					.setIcon(R.drawable.ic_launcher)
-					.setTitle("Enable GPS")
+					.setTitle(getString(R.string.enableGPS_title))
 					.setCancelable(false)
 					.setMessage(getString(R.string.askGPS))
 					.setPositiveButton(getString(R.string.yesGPS), dialogListener)
