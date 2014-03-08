@@ -6,7 +6,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -19,6 +18,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -74,7 +74,7 @@ public class AroundMeFragment extends BaseListFragment implements
 	private Location mCurrentLocation;
 
 	private TextView tvHeader;
-	private Activity activity;
+	private FragmentActivity activity;
 	private boolean isItemClicked = false;
 	private String strLat;
 	private String strLng;
@@ -175,7 +175,8 @@ public class AroundMeFragment extends BaseListFragment implements
 			if (connectionDetector.isConnectingToInternet()) {
 				if (mLocationClient.isConnected()) {
 					mCurrentLocation = mLocationClient.getLastLocation();
-					getLoaderManager().initLoader(LOADER_ID, null, this);
+					// getLoaderManager().initLoader(LOADER_ID, null, this);
+					activity.getSupportLoaderManager().initLoader(LOADER_ID, null, this);
 				}
 			}
 		} catch (Exception ex) {
@@ -250,7 +251,8 @@ public class AroundMeFragment extends BaseListFragment implements
 							+ strLng + location.getLongitude());
 				}
 				// fire location changed, restart loader
-				getLoaderManager().restartLoader(LOADER_ID, null, this);
+				//getLoaderManager().restartLoader(LOADER_ID, null, this);
+				activity.getSupportLoaderManager().restartLoader(LOADER_ID, null, this);
 			}
 		} catch (IOException ex) {
 			Log.e(TAG, ex.getMessage());

@@ -19,7 +19,7 @@
             android:layout_margin="8dp"
             android:text="@string/strDatasetSource"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/black" />
+            android:textColor="@color/blue" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -77,7 +77,7 @@
             android:layout_margin="8dp"
             android:text="@string/strGovHK"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/black" />
+            android:textColor="@color/blue" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -136,7 +136,7 @@
             android:layout_margin="8dp"
             android:text="@string/software_used"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/black" />
+            android:textColor="@color/blue" />
 
         <TextView
             android:id="@+id/tvUIL"

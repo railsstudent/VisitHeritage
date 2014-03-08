@@ -212,6 +212,8 @@ public class PlaceFragment extends BaseFragment {
 		state = ((VisitHeritageApplication) getActivity().getApplicationContext()).getState();
 		if (state != null) {
 			favoriteHolder = state.getFavorites();
+			// re-render action bar
+			getActivity().supportInvalidateOptionsMenu(); 
 		}
 	}
 
