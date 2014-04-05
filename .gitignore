@@ -1,5 +1,7 @@
 *.class
 *.apk
 *.dex
+*.ap_
 bin/
 gen/
+libs/
