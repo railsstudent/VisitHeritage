@@ -176,7 +176,10 @@ public class AroundMeFragment extends BaseListFragment implements
 				if (mLocationClient.isConnected()) {
 					mCurrentLocation = mLocationClient.getLastLocation();
 					// getLoaderManager().initLoader(LOADER_ID, null, this);
-					activity.getSupportLoaderManager().initLoader(LOADER_ID, null, this);
+					LoaderManager loaderManager = activity.getSupportLoaderManager();
+					if (loaderManager != null) {
+						loaderManager.initLoader(LOADER_ID, null, this);
+					}
 				}
 			}
 		} catch (Exception ex) {
@@ -252,7 +255,11 @@ public class AroundMeFragment extends BaseListFragment implements
 				}
 				// fire location changed, restart loader
 				//getLoaderManager().restartLoader(LOADER_ID, null, this);
-				activity.getSupportLoaderManager().restartLoader(LOADER_ID, null, this);
+				// activity.getSupportLoaderManager().restartLoader(LOADER_ID, null, this);
+				LoaderManager loaderManager = activity.getSupportLoaderManager();
+				if (loaderManager != null) {
+					loaderManager.initLoader(LOADER_ID, null, this);
+				}
 			}
 		} catch (IOException ex) {
 			Log.e(TAG, ex.getMessage());
